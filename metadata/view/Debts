@@ -1,0 +1,80 @@
+{
+    "id": "ExtBox1-ext-gen25568",
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": null,
+        "layout": "fit",
+        "designer|userClassName": "Debts",
+        "designer|userAlias": "Debts"
+    },
+    "customConfigs": [],
+    "designerId": "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba",
+    "$viewOrder": 7,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen41266",
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "My Debts",
+                "designer|userClassName": "MyTitleBar"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen41270",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "addDebt",
+                        "itemId": null,
+                        "text": "Add",
+                        "designer|userClassName": "MyButton"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen27809",
+            "type": "dataview",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "baseCls": "x-list",
+                "cls": [
+                    "x-list-normal"
+                ],
+                "id": "myDebtDataView",
+                "itemId": null,
+                "defaultType": "myDebtListItem",
+                "itemTpl": null,
+                "store": "Debts",
+                "useComponents": true,
+                "designer|userClassName": "MyDataView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "id": "ExtBox1-ext-gen2164",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Person",
+            "Payment",
+            "Debt",
+            "Summary"
+        ],
+        "stores": [
+            "PeopleStore",
+            "DebtsStore"
+        ],
+        "views": [
+            "DebtDetail",
+            "PaymentDetail",
+            "Summary",
+            "MainView",
+            "myDebtListItem",
+            "ContactDetail",
+            "myContactListItem",
+            "Debts",
+            "Prey"
+        ],
+        "name": "Payback",
+        "controllers": [
+            "Contact",
+            "Summary",
+            "Debt"
+        ]
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "iconCls": "icon-application",
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen12319",
+            "type": "loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enabled": true,
+                "designer|userClassName": "Loader"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-loader",
+            "expanded": true
+        }
+    ]
+}

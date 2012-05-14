@@ -1,0 +1,90 @@
+{
+    "id": "ExtBox1-ext-gen2225",
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "id": null,
+        "designer|userClassName": "MainView",
+        "designer|userAlias": "MainView"
+    },
+    "customConfigs": [],
+    "designerId": "9c7e563e-7ff0-4ba7-9556-9c0d6c286927",
+    "$viewOrder": 0,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen15360",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Summary",
+                "iconCls": "info"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen2239"
+        },
+        {
+            "id": "ExtBox1-ext-gen50261",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Debts",
+                "iconCls": "info"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen25568"
+        },
+        {
+            "id": "ExtBox1-ext-gen51418",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Prey",
+                "iconCls": "team"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen2255"
+        },
+        {
+            "id": "ExtBox1-ext-gen2986",
+            "type": "tabbar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "ui": null,
+                "designer|userClassName": "MyTabBar",
+                "container|align": null
+            },
+            "customConfigs": [],
+            "iconCls": "icon-tab-bar",
+            "expanded": true
+        }
+    ]
+}

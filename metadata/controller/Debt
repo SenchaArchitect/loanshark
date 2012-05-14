@@ -1,0 +1,129 @@
+{
+    "id": "ExtBox1-ext-gen43233",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Debt"
+    },
+    "customConfigs": [],
+    "designerId": "9492a36c-015b-4b23-8dad-68f6f48b9841",
+    "$viewOrder": 2,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen43445",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAddDebtTap",
+                "implHandler": "Ext.Viewport.setActiveItem(this.getDebtDetail());",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#addDebt",
+                "designer|userClassName": "onAddDebtTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen43569",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "DebtDetail",
+                "selector": "DebtDetail",
+                "xtype": "DebtDetail",
+                "autoCreate": true,
+                "designer|userClassName": "DebtDetail"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen46395",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSaveDebtTap",
+                "implHandler": "var form = this.getDebtDetail(),\n    values = form.getValues(),\n    person = this.getDebtDetail().down('selectfield').record;\n\n\nvar debt = person.debts().add(values)[0];\nperson.debts().sync();\nperson.calcBalance();                           \n\ndebt.getPerson();\n//debt.getData(true);\nExt.getStore('Debts').load();\n\nExt.getStore('People').load(function(){\nthis.getApplication().getController('Summary').updateSummary();},\nthis);\n\nExt.Viewport.setActiveItem(0);\n\n",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#saveDebt",
+                "designer|userClassName": "onSaveDebtTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen19956",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCanelButtonTap",
+                "implHandler": "this.getDebtDetail().reset();\nExt.Viewport.setActiveItem(0);",
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#cancelDebt",
+                "designer|userClassName": "onCanelButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen16408",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDataviewItemSwipe",
+                "implHandler": "var deleteButtons = dataview.query('button');\n\nfor (var i=0; i < deleteButtons.length; i++) {\n    deleteButtons[i].hide();\n}\n\ntarget.query('button')[0].show();\n\nExt.Viewport.element.on({tap:function(){\n    target.query('button')[0].hide();\n}, single:true});\n\n\n\n",
+                "element": null,
+                "name": "itemswipe",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "#myDebtDataView",
+                "designer|userClassName": "onDataviewItemSwipe"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen29385",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "myDebtDataView",
+                "selector": "#myDebtDataView",
+                "designer|userClassName": "myDebtDataView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

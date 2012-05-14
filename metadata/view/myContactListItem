@@ -1,0 +1,100 @@
+{
+    "id": "ExtBox1-ext-gen28985",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "baseCls": "x-data-item",
+        "cls": [
+            "x-list-item"
+        ],
+        "designer|userClassName": "myContactListItem",
+        "designer|userAlias": "myContactListItem"
+    },
+    "customConfigs": [],
+    "designerId": "ed8e32a8-2bee-4972-82cc-60fdcab2e506",
+    "$viewOrder": 6,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen28989",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "baseCls": "x-list-item-label",
+                "itemId": "contactListItemDetail",
+                "tpl": "<div>{name}  ${balance}<br>\n{phone} {email} </div>",
+                "designer|userClassName": "MyContainer5"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen28993",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "hidden": true,
+                        "itemId": "mybutton12",
+                        "ui": "decline-round",
+                        "text": "delete",
+                        "designer|userClassName": "MyButton12"
+                    },
+                    "customConfigs": [],
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen28997",
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onContactDeleteButtonTap",
+                                "implHandler": "var dataview = this.up('dataview');\n\ndataview.getStore().remove(this.getRecord());\ndataview.getStore().sync();",
+                                "name": "tap",
+                                "designer|userClassName": "onContactDeleteButtonTap"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen29002",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateRecord",
+                "designer|params": [
+                    "newRecord",
+                    "oldeRecord"
+                ],
+                "implHandler": "newRecord.getData(true);\nthis.child('component').setData(newRecord.data);",
+                "designer|userClassName": "updateRecord"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

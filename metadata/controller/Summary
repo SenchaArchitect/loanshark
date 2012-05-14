@@ -1,0 +1,103 @@
+{
+    "id": "ExtBox1-ext-gen31514",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Summary"
+        ],
+        "designer|userClassName": "Summary",
+        "summaryRecord": 0
+    },
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "summaryRecord",
+            "type": "number"
+        }
+    ],
+    "designerId": "5ed004d8-012c-4630-9207-238a99ceafdf",
+    "$viewOrder": 1,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen34030",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "SummaryContents",
+                "selector": "#SummaryContents",
+                "xtype": null,
+                "designer|userClassName": "SummaryContents"
+            },
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "summaryRecord",
+                    "type": false
+                }
+            ],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen18077",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateSummary",
+                "implHandler": "this.getSummaryRecord().set({\n    totalOwed: Ext.getStore('People').sum('balance')\n});",
+                "designer|userClassName": "updateSummary"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen16843",
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": "this.getSummaryContents().setRecord(this.getSummaryRecord());\n\nExt.getStore('People').load(function(){\n    this.updateSummary();\n\n}, this);",
+                "designer|userClassName": "launch"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-basic-function",
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen28313",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "applySummaryRecord",
+                "designer|params": [
+                    "summaryRecord"
+                ],
+                "implHandler": "if (!summaryRecord){\n    summaryRecord = Ext.create('Payback.model.Summary');\n}\nreturn summaryRecord;",
+                "designer|userClassName": "applySummaryRecord"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

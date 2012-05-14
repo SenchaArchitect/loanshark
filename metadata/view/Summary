@@ -1,0 +1,85 @@
+{
+    "id": "ExtBox1-ext-gen2239",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "SummaryView",
+        "padding": null,
+        "style": "background:white;",
+        "tpl": "",
+        "layout": "fit",
+        "scrollable": false,
+        "designer|userClassName": "Summary",
+        "designer|userAlias": "Summary"
+    },
+    "customConfigs": [],
+    "designerId": "d3b832b6-4996-4c75-bb54-57aee2c88185",
+    "$viewOrder": 4,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen4005",
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Loanshark",
+                "designer|userClassName": "MyTitleBar"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen11916",
+            "type": "image",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": null,
+                "height": null,
+                "style": "background-size: auto 100%;background-position: center center;",
+                "width": null,
+                "src": "resources/images/shark.gif",
+                "designer|userClassName": "MyImage",
+                "mode": "background"
+            },
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "mode",
+                    "type": "string"
+                }
+            ],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen12065",
+            "type": "component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "height": "2em",
+                "id": "SummaryContents",
+                "tpl": "<center>You're Owed: {totalOwed}</center>",
+                "designer|userClassName": "MyComponent"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}
