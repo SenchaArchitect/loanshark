@@ -42,6 +42,7 @@ Ext.define('Payback.controller.Summary', {
     },
 
     applySummaryRecord: function(summaryRecord) {
+        //if summary doesn't exist
         if (!summaryRecord){
             summaryRecord = Ext.create('Payback.model.Summary');
         }

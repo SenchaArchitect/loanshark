@@ -56,16 +56,21 @@ Ext.define('Payback.view.myDebtListItem', {
     },
 
     onDebtDeleteButtonTap: function(button, e, options) {
+
+        //bug in framework, stops propagation of event, without this sometimes both the itemtap 
+        //and deletebuttontap would get fired after a previous record is deleted
+        e.stopEvent(); 
+
         var dataview = this.up('dataview');
 
         //remove payments from debt
         var payments = this.getRecord().payments();
         var store = Ext.getStore('Payments');
-        store.remove(payments.getData().all);
-        payments.removeAll();
-        store.sync();
+        store.remove(payments.getData().items); //remove from store
+        payments.removeAll(); //remove from associated store
+        store.sync(); //sync payments with localStorage
 
-        //remove debt from store, and sync with localStorage
+        //remove debt from debt store, and sync with localStorage
         dataview.getStore().remove(this.getRecord());
         dataview.getStore().sync();
     },

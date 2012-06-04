@@ -54,16 +54,19 @@ Ext.define('Payback.controller.Payment', {
 
         var form = this.getPaymentDetail();
 
-        form.reset();
-        form.setRecord(null);
+        form.reset(); //clears form
+        form.setRecord(null); //clears record from form
 
         form.setValues({debt_id:this.getDebtDetail().getRecord().get('id')});
 
+        //set active item
         Ext.Viewport.setActiveItem(form);
     },
 
     onCancelButtonTap: function(button, e, options) {
-        this.getPaymentDetail().reset();
+        this.getPaymentDetail().reset(); //clears form
+
+        //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
     },
 
@@ -73,35 +76,25 @@ Ext.define('Payback.controller.Payment', {
             values = form.getValues(),
             debt = this.getDebtDetail().getRecord();
 
-        //console.log(values);
-
-        if(record) {
+        if(record) { //if editing record
             record.set(values);
             record.save();
-        } else {    
+        } else { //if new record
             var payment = debt.payments().add(values)[0];
             debt.payments().sync();
-            payment.getDebt();
+            payment.getDebt(); //bug in framework, associates
+
         }
 
+        //BUG HERE! For some reason new payments don't get added to new debts
+        //debt.getAssociatedData();
+        //debt.set('id',debt.get('id'));
+        //Ext.getStore('Debts').getAt()
 
-
-        //debt.calcBalance(); 
-        //debt.getData(true);
-
-        //debt.set('balance',0); //recalc balance
-
+        //loads data from localStorage
         Ext.getStore('Payments').load();
 
-        //Ext.getStore('Debts').load();
-
-        //Ext.getStore('Payments').filter({property: "debt_id", value: values.debt_id});
-
-        //Ext.getStore('People').load(function(){ 
-        //    this.getApplication().getController('Summary').updateSummary();
-        //},
-        //this);
-
+        //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
 
     },
@@ -110,20 +103,24 @@ Ext.define('Payback.controller.Payment', {
 
         var form = this.getPaymentDetail();
 
-        form.setRecord(record);
+        form.setRecord(record); //set form record
 
+        //set active item
         Ext.Viewport.setActiveItem(form);
     },
 
     onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
         var deleteButtons = dataview.query('button');
 
+        //hide other buttons0
         for (var i=0; i < deleteButtons.length; i++) {
             deleteButtons[i].hide();
         }
 
+        //show current button
         target.query('button')[0].show();
 
+        //hide button after being tapped
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
         }, single:true});

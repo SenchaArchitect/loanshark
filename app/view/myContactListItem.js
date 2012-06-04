@@ -53,11 +53,32 @@ Ext.define('Payback.view.myContactListItem', {
     },
 
     onContactDeleteButtonTap: function(button, e, options) {
-        var dataview = this.up('dataview');
 
-        //removes contact from store and sync with localStorage
-        dataview.getStore().remove(this.getRecord());
-        dataview.getStore().sync();
+        //bug in framework, stops propagation of event, without this sometimes both the itemtap 
+        //and deletebuttontap would get fired after a previous record is deleted
+        e.stopEvent(); 
+
+        var debts = this.getRecord().debts();
+        var debtStore = Ext.getStore('Debts');
+        var paymentStore = Ext.getStore('Payments');
+
+        //remove payments from each debt
+        debts.each(function(item,index,length){
+            var payments = item.payments();
+            paymentStore.remove(payments.getData().items); //remove from store
+            payments.removeAll(); //remove from associated store
+            paymentStore.sync(); //sync payments with localStorage
+        });
+
+        //remove debts from person
+        debtStore.remove(debts.getData().items); //remove from store
+        debts.removeAll(); //remove from associated store
+        debtStore.sync(); //sync debts with localStorage
+
+        //removes person from store 
+        var dataview = this.up('dataview');
+        dataview.getStore().remove(this.getRecord()); //remove person
+        dataview.getStore().sync(); //sync with localStorage
     },
 
     updateRecord: function(newRecord, oldeRecord) {

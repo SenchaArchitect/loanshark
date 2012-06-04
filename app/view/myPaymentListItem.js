@@ -59,9 +59,6 @@ Ext.define('Payback.view.myPaymentListItem', {
 
     onPaymentDeleteButtonTap: function(button, e, options) {
 
-        //stops propagation of the event
-        e.stopEvent(); 
-
         //retrieve dataview and payment
         var dataview = this.up('dataview');
         var payment = this.getRecord();

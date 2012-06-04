@@ -52,19 +52,25 @@ Ext.define('Payback.controller.Contact', {
     onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
         var deleteButtons = dataview.query('button');
 
+        //hide other delete buttons
         for (var i=0; i < deleteButtons.length; i++) {
             deleteButtons[i].hide();
         }
 
+        //show item delete button
         target.query('button')[0].show();
 
+        //hide delete button after tap
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
         }, single:true});
     },
 
     onCancelContactTap: function(button, e, options) {
+        //delete form
         this.getContactDetail().reset();
+
+        //set active item
         Ext.Viewport.setActiveItem(0);
     },
 
@@ -73,34 +79,41 @@ Ext.define('Payback.controller.Contact', {
             record = form.getRecord(),
             values = form.getValues();
 
-        if(record) {
+
+        if(record) { //if editing record
             record.set(values);
             record.save();
-        } else {    
+        } else { //if new record
             Ext.StoreManager.lookup('People').add(values);
         }
 
-
+        //update summary
         this.getApplication().getController('Summary').updateSummary();
 
+        //clear form
         this.getContactDetail().reset();
+
+        //set active item
         Ext.Viewport.setActiveItem(0);
     },
 
     onDataviewtemTap: function(dataview, index, target, record, e, options) {
         var form = this.getContactDetail();
 
+        //set the record for the form
         form.setRecord(record);
 
+        //set active item
         Ext.Viewport.setActiveItem(form);
     },
 
     onAddContactTap: function(button, e, options) {
 
         var form = this.getContactDetail();
-        form.reset();
-        form.setRecord(null);
+        form.reset(); //clear form
+        form.setRecord(null); //clear record from form
 
+        //set active item
         Ext.Viewport.setActiveItem(this.getContactDetail());
     }
 

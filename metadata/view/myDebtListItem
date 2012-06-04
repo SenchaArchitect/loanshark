@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "9290d4e2-55ef-4f81-b844-ff9efd351b2b",
     "$viewOrder": 5,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen20879",
@@ -34,7 +34,7 @@
                 "designer|userClassName": "MyContainer5"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen7405",
@@ -66,16 +66,21 @@
                             "userConfig": {
                                 "fn": "onDebtDeleteButtonTap",
                                 "implHandler": [
+                                    "",
+                                    "//bug in framework, stops propagation of event, without this sometimes both the itemtap ",
+                                    "//and deletebuttontap would get fired after a previous record is deleted",
+                                    "e.stopEvent(); ",
+                                    "",
                                     "var dataview = this.up('dataview');",
                                     "",
                                     "//remove payments from debt",
                                     "var payments = this.getRecord().payments();",
                                     "var store = Ext.getStore('Payments');",
-                                    "store.remove(payments.getData().all);",
-                                    "payments.removeAll();",
-                                    "store.sync();",
+                                    "store.remove(payments.getData().items); //remove from store",
+                                    "payments.removeAll(); //remove from associated store",
+                                    "store.sync(); //sync payments with localStorage",
                                     "",
-                                    "//remove debt from store, and sync with localStorage",
+                                    "//remove debt from debt store, and sync with localStorage",
                                     "dataview.getStore().remove(this.getRecord());",
                                     "dataview.getStore().sync();"
                                 ],

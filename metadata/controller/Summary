@@ -105,6 +105,7 @@
                     "summaryRecord"
                 ],
                 "implHandler": [
+                    "//if summary doesn't exist",
                     "if (!summaryRecord){",
                     "    summaryRecord = Ext.create('Payback.model.Summary');",
                     "}",
