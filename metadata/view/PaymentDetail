@@ -26,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "title": "Details",
+                "title": "Payment",
                 "designer|userClassName": "MyTitleBar2"
             },
             "customConfigs": [],
@@ -111,7 +111,7 @@
                 "designer|userClassName": "MyFieldSet"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen26006",
@@ -123,7 +123,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "label": "Amount",
-                        "name": "name",
+                        "name": "amount",
                         "designer|userClassName": "MyTextField"
                     },
                     "customConfigs": [],
@@ -139,6 +139,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "label": "Date",
+                        "name": "date",
                         "placeHolder": "mm/dd/yyyy",
                         "designer|userClassName": "MyDateField"
                     },
@@ -220,12 +221,28 @@
                     "codeClass": null,
                     "userConfig": {
                         "label": null,
+                        "name": "memo",
                         "designer|userClassName": "MyTextArea"
                     },
                     "customConfigs": [],
                     "expanded": true
                 }
             ]
+        },
+        {
+            "id": "ExtBox1-ext-gen5589",
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "debt_id",
+                "designer|userClassName": "MyHiddenField"
+            },
+            "customConfigs": [],
+            "expanded": true
         }
     ]
 }

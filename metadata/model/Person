@@ -43,16 +43,10 @@
                 "autoLoad": true,
                 "foreignKey": "person_id",
                 "name": "debts",
-                "designer|userClassName": "MyHasManyAssociation",
-                "store": "{\"remoteFilter\":false, modelDefaults: null}"
+                "store": "{\"remoteFilter\":false, modelDefaults: null}",
+                "designer|userClassName": "MyHasManyAssociation"
             },
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "store",
-                    "type": "object"
-                }
-            ],
+            "customConfigs": [],
             "expanded": true
         },
         {
@@ -143,7 +137,9 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "calcBalance",
-                "implHandler": "return this.set('balance', this.debts().sum('balance'));",
+                "implHandler": [
+                    "return this.set('balance', this.debts().sum('balance'));"
+                ],
                 "designer|userClassName": "calcBalance"
             },
             "customConfigs": [],

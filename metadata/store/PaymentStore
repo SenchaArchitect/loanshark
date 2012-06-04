@@ -1,0 +1,19 @@
+{
+    "id": "ExtBox1-ext-gen3716",
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Payment",
+        "storeId": "Payments",
+        "designer|userClassName": "PaymentStore"
+    },
+    "customConfigs": [],
+    "designerId": "517bbd27-6be2-4dd8-b7d7-5d2ebb2e78f6",
+    "$viewOrder": 2,
+    "expanded": true
+}

@@ -16,6 +16,10 @@
 Ext.define('Payback.model.Debt', {
     extend: 'Ext.data.Model',
     alias: 'model.Debt',
+    uses: [
+        'Payback.model.Payment',
+        'Payback.model.Person'
+    ],
     config: {
         fields: [
             {
@@ -44,6 +48,7 @@ Ext.define('Payback.model.Debt', {
         hasMany: {
             model: 'Payback.model.Payment',
             autoLoad: true,
+            foreignKey: 'debt_id',
             name: 'payments',
             store: {
                 modelDefaults: null,

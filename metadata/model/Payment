@@ -123,6 +123,22 @@
             },
             "customConfigs": [],
             "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen23513",
+            "type": "belongstoassociation",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "Debt",
+                "foreignKey": "debt_id",
+                "designer|userClassName": "MyBelongsToAssociation1"
+            },
+            "customConfigs": [],
+            "expanded": true
         }
     ]
 }

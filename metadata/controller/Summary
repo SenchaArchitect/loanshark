@@ -57,7 +57,11 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "updateSummary",
-                "implHandler": "this.getSummaryRecord().set({\n    totalOwed: Ext.getStore('People').sum('balance')\n});",
+                "implHandler": [
+                    "this.getSummaryRecord().set({",
+                    "    totalOwed: Ext.getStore('People').sum('balance')",
+                    "});"
+                ],
                 "designer|userClassName": "updateSummary"
             },
             "customConfigs": [],
@@ -73,7 +77,14 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "launch",
-                "implHandler": "this.getSummaryContents().setRecord(this.getSummaryRecord());\n\nExt.getStore('People').load(function(){\n    this.updateSummary();\n\n}, this);",
+                "implHandler": [
+                    "this.getSummaryContents().setRecord(this.getSummaryRecord());",
+                    "",
+                    "Ext.getStore('People').load(function(){",
+                    "    this.updateSummary();",
+                    "",
+                    "}, this);"
+                ],
                 "designer|userClassName": "launch"
             },
             "customConfigs": [],
@@ -93,7 +104,12 @@
                 "designer|params": [
                     "summaryRecord"
                 ],
-                "implHandler": "if (!summaryRecord){\n    summaryRecord = Ext.create('Payback.model.Summary');\n}\nreturn summaryRecord;",
+                "implHandler": [
+                    "if (!summaryRecord){",
+                    "    summaryRecord = Ext.create('Payback.model.Summary');",
+                    "}",
+                    "return summaryRecord;"
+                ],
                 "designer|userClassName": "applySummaryRecord"
             },
             "customConfigs": [],

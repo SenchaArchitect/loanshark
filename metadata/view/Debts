@@ -14,7 +14,7 @@
     },
     "customConfigs": [],
     "designerId": "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba",
-    "$viewOrder": 7,
+    "$viewOrder": 8,
     "expanded": false,
     "cn": [
         {
@@ -53,7 +53,7 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen27809",
+            "id": "ExtBox1-ext-gen16724",
             "type": "dataview",
             "reference": {
                 "name": "items",
@@ -71,6 +71,7 @@
                 "itemTpl": null,
                 "store": "Debts",
                 "useComponents": true,
+                "disableSelection": true,
                 "designer|userClassName": "MyDataView"
             },
             "customConfigs": [],

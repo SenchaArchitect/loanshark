@@ -55,6 +55,7 @@ Ext.define('Payback.view.myContactListItem', {
     onContactDeleteButtonTap: function(button, e, options) {
         var dataview = this.up('dataview');
 
+        //removes contact from store and sync with localStorage
         dataview.getStore().remove(this.getRecord());
         dataview.getStore().sync();
     },

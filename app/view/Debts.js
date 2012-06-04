@@ -43,7 +43,8 @@ Ext.define('Payback.view.Debts', {
                 id: 'myDebtDataView',
                 defaultType: 'myDebtListItem',
                 store: 'Debts',
-                useComponents: true
+                useComponents: true,
+                disableSelection: true
             }
         ]
     }

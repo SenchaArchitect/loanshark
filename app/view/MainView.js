@@ -32,7 +32,7 @@ Ext.define('Payback.view.MainView', {
             {
                 xtype: 'Debts',
                 title: 'Debts',
-                iconCls: 'info'
+                iconCls: 'arrow_down'
             },
             {
                 xtype: 'Prey',

@@ -28,7 +28,11 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onPeopleStoreLoad",
-                "implHandler": "this.each(function(record){\n    record.calcBalance();\n});",
+                "implHandler": [
+                    "this.each(function(record){",
+                    "    record.calcBalance();",
+                    "});"
+                ],
                 "name": "load",
                 "designer|userClassName": "onPeopleStoreLoad"
             },

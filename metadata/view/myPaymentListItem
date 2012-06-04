@@ -1,6 +1,6 @@
 {
-    "id": "ExtBox1-ext-gen6975",
-    "type": "container",
+    "id": "ExtBox1-ext-gen25178",
+    "type": "dataitem",
     "reference": {
         "name": "items",
         "type": "array"
@@ -11,16 +11,16 @@
         "cls": [
             "x-list-item"
         ],
-        "designer|userClassName": "myDebtListItem",
-        "designer|userAlias": "myDebtListItem"
+        "designer|userClassName": "myPaymentListItem",
+        "designer|userAlias": "myPaymentListItem"
     },
     "customConfigs": [],
-    "designerId": "9290d4e2-55ef-4f81-b844-ff9efd351b2b",
-    "$viewOrder": 5,
+    "designerId": "8ee13c44-dec0-4ae8-b3a8-ed30c67f9f80",
+    "$viewOrder": 6,
     "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen20879",
+            "id": "ExtBox1-ext-gen25182",
             "type": "container",
             "reference": {
                 "name": "items",
@@ -29,15 +29,15 @@
             "codeClass": null,
             "userConfig": {
                 "baseCls": "x-list-item-label",
-                "itemId": "debtListItemDetail",
-                "tpl": "<div>\n<tpl for=\"Person\">\n{name}\n</tpl>\n - {reason} - ${balance}</div>",
+                "itemId": "paymentListItemDetail",
+                "tpl": "<div>\n${amount} -  {memo} \n</div>",
                 "designer|userClassName": "MyContainer5"
             },
             "customConfigs": [],
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen7405",
+                    "id": "ExtBox1-ext-gen25186",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -47,7 +47,7 @@
                     "userConfig": {
                         "docked": "right",
                         "hidden": true,
-                        "itemId": "mybutton12",
+                        "itemId": "paymentDelete",
                         "ui": "decline-round",
                         "text": "delete",
                         "designer|userClassName": "MyButton12"
@@ -56,7 +56,7 @@
                     "expanded": true,
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen33855",
+                            "id": "ExtBox1-ext-gen25190",
                             "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
@@ -64,23 +64,23 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "onDebtDeleteButtonTap",
+                                "fn": "onPaymentDeleteButtonTap",
                                 "implHandler": [
+                                    "",
+                                    "//stops propagation of the event",
+                                    "e.stopEvent(); ",
+                                    "",
+                                    "//retrieve dataview and payment",
                                     "var dataview = this.up('dataview');",
+                                    "var payment = this.getRecord();",
                                     "",
-                                    "//remove payments from debt",
-                                    "var payments = this.getRecord().payments();",
-                                    "var store = Ext.getStore('Payments');",
-                                    "store.remove(payments.getData().all);",
-                                    "payments.removeAll();",
-                                    "store.sync();",
-                                    "",
-                                    "//remove debt from store, and sync with localStorage",
-                                    "dataview.getStore().remove(this.getRecord());",
-                                    "dataview.getStore().sync();"
+                                    "//removes payment from debt, then from the store",
+                                    "payment.getDebt().payments().remove(payment);",
+                                    "dataview.getStore().remove(payment);",
+                                    "payment.erase(); //sync with local storage"
                                 ],
                                 "name": "tap",
-                                "designer|userClassName": "onDebtDeleteButtonTap"
+                                "designer|userClassName": "onPaymentDeleteButtonTap"
                             },
                             "customConfigs": [],
                             "expanded": true
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen3339",
+            "id": "ExtBox1-ext-gen25195",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -100,7 +100,8 @@
             "userConfig": {
                 "fn": "updateRecord",
                 "designer|params": [
-                    "newRecord, oldRecord"
+                    "newRecord",
+                    "oldeRecord"
                 ],
                 "implHandler": [
                     "newRecord.getData(true);",

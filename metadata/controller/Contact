@@ -18,7 +18,7 @@
     "customConfigs": [],
     "designerId": "4924b61f-714b-45ce-aa6a-944c48e631e4",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen31779",
@@ -30,7 +30,19 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onDataviewItemSwipe",
-                "implHandler": "var deleteButtons = dataview.query('button');\n\nfor (var i=0; i < deleteButtons.length; i++) {\n    deleteButtons[i].hide();\n}\n\ntarget.query('button')[0].show();\n\nExt.Viewport.element.on({tap:function(){\n    target.query('button')[0].hide();\n}, single:true});",
+                "implHandler": [
+                    "var deleteButtons = dataview.query('button');",
+                    "",
+                    "for (var i=0; i < deleteButtons.length; i++) {",
+                    "    deleteButtons[i].hide();",
+                    "}",
+                    "",
+                    "target.query('button')[0].show();",
+                    "",
+                    "Ext.Viewport.element.on({tap:function(){",
+                    "    target.query('button')[0].hide();",
+                    "}, single:true});"
+                ],
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myContactDataView",
@@ -49,7 +61,10 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onCancelContactTap",
-                "implHandler": "this.getContactDetail().reset();\nExt.Viewport.setActiveItem(0);",
+                "implHandler": [
+                    "this.getContactDetail().reset();",
+                    "Ext.Viewport.setActiveItem(0);"
+                ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#cancelContact",
@@ -86,7 +101,24 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onSaveContactTap",
-                "implHandler": "var form = this.getContactDetail();\n\nExt.StoreManager.lookup('People').add(form.getValues());\n\nthis.getApplication().getController('Summary').updateSummary();\n\nthis.getContactDetail().reset();\nExt.Viewport.setActiveItem(0);",
+                "implHandler": [
+                    "var form = this.getContactDetail(),",
+                    "    record = form.getRecord(),",
+                    "    values = form.getValues();",
+                    "",
+                    "if(record) {",
+                    "    record.set(values);",
+                    "    record.save();",
+                    "} else {    ",
+                    "    Ext.StoreManager.lookup('People').add(values);",
+                    "}",
+                    "",
+                    "",
+                    "this.getApplication().getController('Summary').updateSummary();",
+                    "",
+                    "this.getContactDetail().reset();",
+                    "Ext.Viewport.setActiveItem(0);"
+                ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveContact",
@@ -104,12 +136,18 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onContactListItemTap",
-                "implHandler": "Ext.Viewport.setActiveItem(this.getContactDetail());",
+                "fn": "onDataviewtemTap",
+                "implHandler": [
+                    "var form = this.getContactDetail();",
+                    "",
+                    "form.setRecord(record);",
+                    "",
+                    "Ext.Viewport.setActiveItem(form);"
+                ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
-                "designer|controlQuery": "#ContactList",
-                "designer|userClassName": "onContactListItemTap"
+                "designer|controlQuery": "#myContactDataView",
+                "designer|userClassName": "onDataviewtemTap"
             },
             "customConfigs": [],
             "expanded": true
@@ -124,7 +162,14 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onAddContactTap",
-                "implHandler": "Ext.Viewport.setActiveItem(this.getContactDetail());",
+                "implHandler": [
+                    "",
+                    "var form = this.getContactDetail();",
+                    "form.reset();",
+                    "form.setRecord(null);",
+                    "",
+                    "Ext.Viewport.setActiveItem(this.getContactDetail());"
+                ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#addContact",

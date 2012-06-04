@@ -89,7 +89,10 @@
                             "v",
                             "rec"
                         ],
-                        "implHandler": "return rec.get('amount') - rec.payments().sum('amount');\n",
+                        "implHandler": [
+                            "return rec.get('amount') - rec.payments().sum('amount');",
+                            ""
+                        ],
                         "designer|userClassName": "convert"
                     },
                     "customConfigs": [],
@@ -139,18 +142,12 @@
             "userConfig": {
                 "model": "Payment",
                 "autoLoad": true,
+                "foreignKey": "debt_id",
                 "name": "payments",
-                "storeConfig": null,
-                "designer|userClassName": "MyHasManyAssociation1",
-                "store": "{\"modelDefaults\":null,\"remoteFilter\":false}"
+                "store": "{\"modelDefaults\":null,\"remoteFilter\":false}",
+                "designer|userClassName": "MyHasManyAssociation1"
             },
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "store",
-                    "type": "object"
-                }
-            ],
+            "customConfigs": [],
             "expanded": true
         },
         {

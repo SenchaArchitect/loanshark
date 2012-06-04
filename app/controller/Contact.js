@@ -34,16 +34,14 @@ Ext.define('Payback.controller.Contact', {
 
         control: {
             "#myContactDataView": {
-                itemswipe: 'onDataviewItemSwipe'
+                itemswipe: 'onDataviewItemSwipe',
+                itemtap: 'onDataviewtemTap'
             },
             "#cancelContact": {
                 tap: 'onCancelContactTap'
             },
             "#saveContact": {
                 tap: 'onSaveContactTap'
-            },
-            "#ContactList": {
-                itemtap: 'onContactListItemTap'
             },
             "#addContact": {
                 tap: 'onAddContactTap'
@@ -71,9 +69,17 @@ Ext.define('Payback.controller.Contact', {
     },
 
     onSaveContactTap: function(button, e, options) {
-        var form = this.getContactDetail();
+        var form = this.getContactDetail(),
+            record = form.getRecord(),
+            values = form.getValues();
 
-        Ext.StoreManager.lookup('People').add(form.getValues());
+        if(record) {
+            record.set(values);
+            record.save();
+        } else {    
+            Ext.StoreManager.lookup('People').add(values);
+        }
+
 
         this.getApplication().getController('Summary').updateSummary();
 
@@ -81,11 +87,20 @@ Ext.define('Payback.controller.Contact', {
         Ext.Viewport.setActiveItem(0);
     },
 
-    onContactListItemTap: function(dataview, index, target, record, e, options) {
-        Ext.Viewport.setActiveItem(this.getContactDetail());
+    onDataviewtemTap: function(dataview, index, target, record, e, options) {
+        var form = this.getContactDetail();
+
+        form.setRecord(record);
+
+        Ext.Viewport.setActiveItem(form);
     },
 
     onAddContactTap: function(button, e, options) {
+
+        var form = this.getContactDetail();
+        form.reset();
+        form.setRecord(null);
+
         Ext.Viewport.setActiveItem(this.getContactDetail());
     }
 

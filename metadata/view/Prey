@@ -13,7 +13,7 @@
     },
     "customConfigs": [],
     "designerId": "dde4c54b-3964-4d6d-927f-dbd7c91717bc",
-    "$viewOrder": 8,
+    "$viewOrder": 9,
     "expanded": false,
     "cn": [
         {
@@ -70,6 +70,7 @@
                 "itemTpl": null,
                 "store": "People",
                 "useComponents": true,
+                "disableSelection": true,
                 "designer|userClassName": "MyDataView1"
             },
             "customConfigs": [],

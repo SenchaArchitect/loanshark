@@ -12,7 +12,7 @@
     "customConfigs": [],
     "designerId": "9492a36c-015b-4b23-8dad-68f6f48b9841",
     "$viewOrder": 2,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen43445",
@@ -24,7 +24,18 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onAddDebtTap",
-                "implHandler": "Ext.Viewport.setActiveItem(this.getDebtDetail());",
+                "implHandler": [
+                    "var form = this.getDebtDetail();",
+                    "form.reset();",
+                    "form.setRecord(null);",
+                    "",
+                    "Ext.getStore('Payments').clearFilter();",
+                    "",
+                    "this.getPaymentButton().hide();",
+                    "this.getMyPaymentDataView().hide();",
+                    "    ",
+                    "Ext.Viewport.setActiveItem(form);"
+                ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#addDebt",
@@ -61,7 +72,47 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onSaveDebtTap",
-                "implHandler": "var form = this.getDebtDetail(),\n    values = form.getValues(),\n    person = this.getDebtDetail().down('selectfield').record;\n\n\nvar debt = person.debts().add(values)[0];\nperson.debts().sync();\nperson.calcBalance();                           \n\ndebt.getPerson();\n//debt.getData(true);\nExt.getStore('Debts').load();\n\nExt.getStore('People').load(function(){\nthis.getApplication().getController('Summary').updateSummary();},\nthis);\n\nExt.Viewport.setActiveItem(0);\n\n",
+                "implHandler": [
+                    "var form = this.getDebtDetail(),",
+                    "    record = form.getRecord(),",
+                    "    values = form.getValues(),",
+                    "    person = this.getDebtDetail().down('selectfield').record;",
+                    "",
+                    "",
+                    "",
+                    "if(record) { //edit old record",
+                    "    record.set(values);",
+                    "    if (record.isModified('person_id')) {",
+                    "        record.getPerson().debts().remove(record);",
+                    "        record.setPerson(values.person_id);",
+                    "",
+                    "        // The following two lines work around a bug that causes the Person instance not to be updated correctly",
+                    "        delete record.PersonBelongsToInstance;",
+                    "        record.getPerson(); // Sets up the Person instance reference again",
+                    "    }",
+                    "    record.set('balance',0);",
+                    "    record.save();",
+                    "} else {  //new record ",
+                    "    var debt = person.debts().add(values)[0];",
+                    "    person.debts().sync();",
+                    "    debt.getPerson(); //",
+                    "}",
+                    "",
+                    "",
+                    "person.calcBalance(); ",
+                    "",
+                    "",
+                    "Ext.getStore('Debts').load();",
+                    "",
+                    "Ext.getStore('People').load(function(){",
+                    "    this.getApplication().getController('Summary').updateSummary();",
+                    "},",
+                    "this);",
+                    "",
+                    "Ext.Viewport.setActiveItem(0);",
+                    "",
+                    "//this.getMyDebtDataView().refresh();"
+                ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveDebt",
@@ -80,7 +131,15 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onCanelButtonTap",
-                "implHandler": "this.getDebtDetail().reset();\nExt.Viewport.setActiveItem(0);",
+                "implHandler": [
+                    "this.getDebtDetail().reset();",
+                    "",
+                    "var record = this.getDebtDetail().getRecord();",
+                    "if(record)",
+                    "    record.set('balance',0); //calc balance",
+                    "",
+                    "Ext.Viewport.setActiveItem(0);"
+                ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#cancelDebt",
@@ -99,7 +158,19 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onDataviewItemSwipe",
-                "implHandler": "var deleteButtons = dataview.query('button');\n\nfor (var i=0; i < deleteButtons.length; i++) {\n    deleteButtons[i].hide();\n}\n\ntarget.query('button')[0].show();\n\nExt.Viewport.element.on({tap:function(){\n    target.query('button')[0].hide();\n}, single:true});\n\n\n\n",
+                "implHandler": [
+                    "var deleteButtons = dataview.query('button');",
+                    "",
+                    "for (var i=0; i < deleteButtons.length; i++) {",
+                    "    deleteButtons[i].hide();",
+                    "}",
+                    "",
+                    "target.query('button')[0].show();",
+                    "",
+                    "Ext.Viewport.element.on({tap:function(){",
+                    "    target.query('button')[0].hide();",
+                    "}, single:true});"
+                ],
                 "element": null,
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
@@ -121,6 +192,71 @@
                 "ref": "myDebtDataView",
                 "selector": "#myDebtDataView",
                 "designer|userClassName": "myDebtDataView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen12376",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDataviewItemTap",
+                "implHandler": [
+                    "",
+                    "var form = this.getDebtDetail();",
+                    "form.setRecord(record);",
+                    "",
+                    "//debugger;",
+                    "",
+                    "Ext.getStore('Payments').clearFilter();",
+                    "Ext.getStore('Payments').filter({property: \"debt_id\", value: record.get('id')});",
+                    "",
+                    "this.getPaymentButton().show();",
+                    "this.getMyPaymentDataView().show();",
+                    "",
+                    "Ext.Viewport.setActiveItem(form);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "#myDebtDataView",
+                "designer|userClassName": "onDataviewItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen16447",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "myPaymentDataView",
+                "selector": "#myPaymentDataView",
+                "designer|userClassName": "myPaymentDataView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen16755",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "paymentButton",
+                "selector": "#addPayment",
+                "designer|userClassName": "paymentButton"
             },
             "customConfigs": [],
             "expanded": true

@@ -23,7 +23,7 @@ Ext.define('Payback.view.PaymentDetail', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Details'
+                title: 'Payment'
             },
             {
                 xtype: 'toolbar',
@@ -53,11 +53,12 @@ Ext.define('Payback.view.PaymentDetail', {
                     {
                         xtype: 'textfield',
                         label: 'Amount',
-                        name: 'name'
+                        name: 'amount'
                     },
                     {
                         xtype: 'datepickerfield',
                         label: 'Date',
+                        name: 'date',
                         placeHolder: 'mm/dd/yyyy'
                     }
                 ]
@@ -67,9 +68,14 @@ Ext.define('Payback.view.PaymentDetail', {
                 title: 'Memo',
                 items: [
                     {
-                        xtype: 'textareafield'
+                        xtype: 'textareafield',
+                        name: 'memo'
                     }
                 ]
+            },
+            {
+                xtype: 'hiddenfield',
+                name: 'debt_id'
             }
         ]
     }

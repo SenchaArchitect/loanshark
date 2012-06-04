@@ -15,6 +15,9 @@
 
 Ext.define('Payback.model.Person', {
     extend: 'Ext.data.Model',
+    uses: [
+        'Payback.model.Debt'
+    ],
     config: {
         proxy: {
             type: 'localstorage',

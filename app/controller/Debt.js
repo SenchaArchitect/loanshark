@@ -22,7 +22,9 @@ Ext.define('Payback.controller.Debt', {
                 xtype: 'DebtDetail',
                 autoCreate: true
             },
-            myDebtDataView: '#myDebtDataView'
+            myDebtDataView: '#myDebtDataView',
+            myPaymentDataView: '#myPaymentDataView',
+            paymentButton: '#addPayment'
         },
 
         control: {
@@ -36,40 +38,74 @@ Ext.define('Payback.controller.Debt', {
                 tap: 'onCanelButtonTap'
             },
             "#myDebtDataView": {
-                itemswipe: 'onDataviewItemSwipe'
+                itemswipe: 'onDataviewItemSwipe',
+                itemtap: 'onDataviewItemTap'
             }
         }
     },
 
     onAddDebtTap: function(button, e, options) {
-        Ext.Viewport.setActiveItem(this.getDebtDetail());
+        var form = this.getDebtDetail();
+        form.reset();
+        form.setRecord(null);
+
+        Ext.getStore('Payments').clearFilter();
+
+        this.getPaymentButton().hide();
+        this.getMyPaymentDataView().hide();
+
+        Ext.Viewport.setActiveItem(form);
     },
 
     onSaveDebtTap: function(button, e, options) {
         var form = this.getDebtDetail(),
+            record = form.getRecord(),
             values = form.getValues(),
             person = this.getDebtDetail().down('selectfield').record;
 
 
-        var debt = person.debts().add(values)[0];
-        person.debts().sync();
-        person.calcBalance();                           
 
-        debt.getPerson();
-        //debt.getData(true);
+        if(record) { //edit old record
+            record.set(values);
+            if (record.isModified('person_id')) {
+                record.getPerson().debts().remove(record);
+                record.setPerson(values.person_id);
+
+                // The following two lines work around a bug that causes the Person instance not to be updated correctly
+                delete record.PersonBelongsToInstance;
+                record.getPerson(); // Sets up the Person instance reference again
+            }
+            record.set('balance',0);
+            record.save();
+        } else {  //new record 
+            var debt = person.debts().add(values)[0];
+            person.debts().sync();
+            debt.getPerson(); //
+        }
+
+
+        person.calcBalance(); 
+
+
         Ext.getStore('Debts').load();
 
         Ext.getStore('People').load(function(){
-        this.getApplication().getController('Summary').updateSummary();},
+            this.getApplication().getController('Summary').updateSummary();
+        },
         this);
 
         Ext.Viewport.setActiveItem(0);
 
-
+        //this.getMyDebtDataView().refresh();
     },
 
     onCanelButtonTap: function(button, e, options) {
         this.getDebtDetail().reset();
+
+        var record = this.getDebtDetail().getRecord();
+        if(record)
+        record.set('balance',0); //calc balance
+
         Ext.Viewport.setActiveItem(0);
     },
 
@@ -85,10 +121,22 @@ Ext.define('Payback.controller.Debt', {
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
         }, single:true});
+    },
 
+    onDataviewItemTap: function(dataview, index, target, record, e, options) {
 
+        var form = this.getDebtDetail();
+        form.setRecord(record);
 
+        //debugger;
 
+        Ext.getStore('Payments').clearFilter();
+        Ext.getStore('Payments').filter({property: "debt_id", value: record.get('id')});
+
+        this.getPaymentButton().show();
+        this.getMyPaymentDataView().show();
+
+        Ext.Viewport.setActiveItem(form);
     }
 
 });

@@ -44,7 +44,8 @@ Ext.define('Payback.view.Prey', {
                 itemId: 'myContactDataView',
                 defaultType: 'myContactListItem',
                 store: 'People',
-                useComponents: true
+                useComponents: true,
+                disableSelection: true
             }
         ]
     }

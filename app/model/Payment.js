@@ -15,6 +15,9 @@
 
 Ext.define('Payback.model.Payment', {
     extend: 'Ext.data.Model',
+    uses: [
+        'Payback.model.Debt'
+    ],
     config: {
         fields: [
             {
@@ -44,6 +47,10 @@ Ext.define('Payback.model.Payment', {
         proxy: {
             type: 'localstorage',
             id: 'Payments'
+        },
+        belongsTo: {
+            model: 'Payback.model.Debt',
+            foreignKey: 'debt_id'
         }
     }
 });

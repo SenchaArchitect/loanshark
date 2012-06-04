@@ -26,24 +26,27 @@ Ext.application({
     ],
     stores: [
         'PeopleStore',
-        'DebtsStore'
+        'DebtsStore',
+        'PaymentStore'
     ],
     views: [
         'DebtDetail',
-        'PaymentDetail',
         'Summary',
         'MainView',
         'myDebtListItem',
         'ContactDetail',
         'myContactListItem',
         'Debts',
-        'Prey'
+        'Prey',
+        'PaymentDetail',
+        'myPaymentListItem'
     ],
     name: 'Payback',
     controllers: [
         'Contact',
         'Summary',
-        'Debt'
+        'Debt',
+        'Payment'
     ],
 
     launch: function() {

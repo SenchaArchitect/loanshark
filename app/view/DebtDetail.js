@@ -18,13 +18,13 @@ Ext.define('Payback.view.DebtDetail', {
     alias: 'widget.DebtDetail',
 
     config: {
+        padding: '',
         autoDestroy: false,
+        layout: {
+            type: 'vbox'
+        },
+        scrollable: false,
         items: [
-            {
-                xtype: 'titlebar',
-                docked: 'top',
-                title: 'Details'
-            },
             {
                 xtype: 'toolbar',
                 docked: 'bottom',
@@ -47,31 +47,72 @@ Ext.define('Payback.view.DebtDetail', {
                 ]
             },
             {
-                xtype: 'fieldset',
-                title: 'Debt Information',
+                xtype: 'titlebar',
+                docked: 'top',
+                title: 'Details'
+            },
+            {
+                xtype: 'container',
+                height: 250,
                 items: [
                     {
-                        xtype: 'selectfield',
-                        label: 'Name',
-                        name: 'person_id',
-                        displayField: 'name',
-                        store: 'People',
-                        valueField: 'id'
+                        xtype: 'fieldset',
+                        title: 'Debt Information',
+                        items: [
+                            {
+                                xtype: 'selectfield',
+                                label: 'Name',
+                                name: 'person_id',
+                                displayField: 'name',
+                                store: 'People',
+                                valueField: 'id'
+                            },
+                            {
+                                xtype: 'textfield',
+                                label: 'Reason',
+                                name: 'reason'
+                            },
+                            {
+                                xtype: 'textfield',
+                                label: 'Amount',
+                                name: 'amount'
+                            },
+                            {
+                                xtype: 'datepickerfield',
+                                label: 'Date',
+                                name: 'date'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                layout: {
+                    type: 'vbox'
+                },
+                flex: 1,
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'addPayment',
+                        ui: 'action',
+                        text: 'add payment'
                     },
                     {
-                        xtype: 'textfield',
-                        label: 'Reason',
-                        name: 'reason'
-                    },
-                    {
-                        xtype: 'textfield',
-                        label: 'Amount',
-                        name: 'amount'
-                    },
-                    {
-                        xtype: 'datepickerfield',
-                        label: 'Date',
-                        name: 'date'
+                        xtype: 'dataview',
+                        baseCls: 'x-list',
+                        cls: [
+                            'x-list-normal'
+                        ],
+                        id: 'myPaymentDataView',
+                        itemId: 'myPaymentDataView',
+                        minHeight: '',
+                        defaultType: 'myPaymentListItem',
+                        store: 'Payments',
+                        useComponents: true,
+                        disableSelection: true,
+                        flex: 1
                     }
                 ]
             }
