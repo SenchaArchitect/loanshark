@@ -41,7 +41,7 @@ Ext.define('Payback.view.myPaymentListItem', {
                         xtype: 'button',
                         docked: 'right',
                         hidden: true,
-                        itemId: 'paymentDelete',
+                        itemId: 'deletePayment',
                         ui: 'decline-round',
                         text: 'delete'
                     }
@@ -52,7 +52,7 @@ Ext.define('Payback.view.myPaymentListItem', {
             {
                 fn: 'onPaymentDeleteButtonTap',
                 event: 'tap',
-                delegate: '#paymentDelete'
+                delegate: '#deletePayment'
             }
         ]
     },
@@ -66,7 +66,7 @@ Ext.define('Payback.view.myPaymentListItem', {
         //removes payment from debt, then from the store
         payment.getDebt().payments().remove(payment);
         dataview.getStore().remove(payment);
-        payment.erase(); //sync with local storage
+        dataview.getStore().sync(); //sync with local storage
     }
 
 });

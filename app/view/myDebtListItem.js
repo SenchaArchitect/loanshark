@@ -39,7 +39,7 @@ Ext.define('Payback.view.myDebtListItem', {
                         xtype: 'button',
                         docked: 'right',
                         hidden: true,
-                        itemId: 'mybutton12',
+                        itemId: 'deleteDebt',
                         ui: 'decline-round',
                         text: 'delete'
                     }
@@ -50,7 +50,7 @@ Ext.define('Payback.view.myDebtListItem', {
             {
                 fn: 'onDebtDeleteButtonTap',
                 event: 'tap',
-                delegate: '#mybutton12'
+                delegate: '#deleteDebt'
             }
         ]
     },
@@ -62,17 +62,38 @@ Ext.define('Payback.view.myDebtListItem', {
         e.stopEvent(); 
 
         var dataview = this.up('dataview');
+        var debt = this.getRecord();
 
         //remove payments from debt
-        var payments = this.getRecord().payments();
-        var store = Ext.getStore('Payments');
-        store.remove(payments.getData().items); //remove from store
+        var payments = debt.payments();
+        var paymentStore = Ext.getStore('Payments');
+        paymentStore.remove(payments.getData().items); //remove from store
         payments.removeAll(); //remove from associated store
-        store.sync(); //sync payments with localStorage
+        paymentStore.sync(); //sync payments with localStorage
 
         //remove debt from debt store, and sync with localStorage
-        dataview.getStore().remove(this.getRecord());
+        debt.getPerson().debts().remove(debt);
+        dataview.getStore().remove(debt);
         dataview.getStore().sync();
+
+        debt.getPerson().calcBalance(); //calc balance
+
+        /*var debtStore = Ext.getStore('Debts');
+        var debt = this.getRecord();
+        debugger;
+        //remove debts from person
+        debtStore.remove(debts.getData().items); //remove from store
+        debts.removeAll(); //remove from associated store
+        debtStore.sync(); //sync debts with localStorage
+        debugger;
+
+        //bug in framework, removing debt from the store does not remove it from person
+
+
+
+        payment.getDebt().payments().remove(payment);
+        dataview.getStore().remove(debt);
+        dataview.getStore().sync();*/
     },
 
     updateRecord: function(newRecord, oldRecord) {

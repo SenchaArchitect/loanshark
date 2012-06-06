@@ -36,7 +36,7 @@ Ext.define('Payback.view.myContactListItem', {
                         xtype: 'button',
                         docked: 'right',
                         hidden: true,
-                        itemId: 'mybutton12',
+                        itemId: 'deleteContact',
                         ui: 'decline-round',
                         text: 'delete'
                     }
@@ -47,7 +47,7 @@ Ext.define('Payback.view.myContactListItem', {
             {
                 fn: 'onContactDeleteButtonTap',
                 event: 'tap',
-                delegate: '#mybutton12'
+                delegate: '#deleteContact'
             }
         ]
     },

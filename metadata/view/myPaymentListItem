@@ -47,7 +47,7 @@
                     "userConfig": {
                         "docked": "right",
                         "hidden": true,
-                        "itemId": "paymentDelete",
+                        "itemId": "deletePayment",
                         "ui": "decline-round",
                         "text": "delete",
                         "designer|userClassName": "MyButton12"
@@ -74,7 +74,7 @@
                                     "//removes payment from debt, then from the store",
                                     "payment.getDebt().payments().remove(payment);",
                                     "dataview.getStore().remove(payment);",
-                                    "payment.erase(); //sync with local storage"
+                                    "dataview.getStore().sync(); //sync with local storage"
                                 ],
                                 "name": "tap",
                                 "designer|userClassName": "onPaymentDeleteButtonTap"

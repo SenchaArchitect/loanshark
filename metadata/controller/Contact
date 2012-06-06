@@ -18,7 +18,7 @@
     "customConfigs": [],
     "designerId": "4924b61f-714b-45ce-aa6a-944c48e631e4",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen31779",
@@ -117,7 +117,7 @@
                     "    record.set(values);",
                     "    record.save();",
                     "} else { //if new record",
-                    "    Ext.StoreManager.lookup('People').add(values);",
+                    "    Ext.getStore('People').add(values);",
                     "}",
                     "",
                     "//update summary",

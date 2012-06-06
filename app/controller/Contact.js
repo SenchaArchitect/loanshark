@@ -84,7 +84,7 @@ Ext.define('Payback.controller.Contact', {
             record.set(values);
             record.save();
         } else { //if new record
-            Ext.StoreManager.lookup('People').add(values);
+            Ext.getStore('People').add(values);
         }
 
         //update summary

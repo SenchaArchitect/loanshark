@@ -24,7 +24,7 @@ Ext.define('Payback.controller.Debt', {
             },
             myDebtDataView: '#myDebtDataView',
             myPaymentDataView: '#myPaymentDataView',
-            paymentButton: '#addPayment'
+            addPaymentButton: '#addPayment'
         },
 
         control: {
@@ -53,7 +53,7 @@ Ext.define('Payback.controller.Debt', {
         Ext.getStore('Payments').clearFilter();
 
         //hides button and payment data view on new debts
-        this.getPaymentButton().hide();
+        this.getAddPaymentButton().hide();
         this.getMyPaymentDataView().hide();
 
         //set active item
@@ -112,9 +112,10 @@ Ext.define('Payback.controller.Debt', {
 
         //if record exists update the debt balance on new payments
         var record = this.getDebtDetail().getRecord();
-        if(record)
-        record.set('balance',0); //bug in framework, calls convert field again on debt
-
+        if(record) {
+            record.set('balance',0); //bug in framework, calls convert field again on debt
+            record.getPerson().calcBalance(); //calc balance of updated payments and debt in person
+        }
         //set active item
         Ext.Viewport.setActiveItem(0);
     },
@@ -145,7 +146,7 @@ Ext.define('Payback.controller.Debt', {
         Ext.getStore('Payments').clearFilter();
         Ext.getStore('Payments').filter({property: "debt_id", value: record.get('id')});
 
-        this.getPaymentButton().show();
+        this.getAddPaymentButton().show();
         this.getMyPaymentDataView().show();
 
         Ext.Viewport.setActiveItem(form);

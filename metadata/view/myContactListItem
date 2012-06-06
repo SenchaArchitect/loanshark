@@ -47,7 +47,7 @@
                     "userConfig": {
                         "docked": "right",
                         "hidden": true,
-                        "itemId": "mybutton12",
+                        "itemId": "deleteContact",
                         "ui": "decline-round",
                         "text": "delete",
                         "designer|userClassName": "MyButton12"
