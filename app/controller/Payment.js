@@ -82,8 +82,12 @@ Ext.define('Payback.controller.Payment', {
         } else { //if new record
             var payment = debt.payments().add(values)[0];
             debt.payments().sync();
-            payment.getDebt(); //bug in framework, associates
+            payment.getDebt(); //bug in framework, associates payment with debt
 
+            delete debt.paymentsStore; //bug in framework, debt_id is not correctly set in filter, work around is to delete the store
+            debt.payments();
+
+            debt.set('balance',0);
         }
 
         //BUG HERE! For some reason new payments don't get added to new debts
