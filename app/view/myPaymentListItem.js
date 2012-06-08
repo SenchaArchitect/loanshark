@@ -67,6 +67,11 @@ Ext.define('Payback.view.myPaymentListItem', {
         payment.getDebt().payments().remove(payment);
         dataview.getStore().remove(payment);
         dataview.getStore().sync(); //sync with local storage
+    },
+
+    updateRecord: function(newRecord, oldeRecord) {
+        newRecord.getData(true);
+        this.child('component').setData(newRecord.data);
     }
 
 });

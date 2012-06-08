@@ -5,18 +5,16 @@
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
         "exportPath": "",
-        "extPath": "http://extjs.cachefly.net/touch/sencha-touch-2.0.0/",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
         "lineEnding": "",
         "instantiateStore": true,
         "genTimestamps": false,
         "saveOnDeploy": false,
-        "appName": "MyApp",
-        "mapsAPI": "http://maps.google.com/maps/api/js?sensor=true"
+        "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": "442",
+    "xdsBuild": 210000000436,
     "framework": "touch20",
     "topInstanceFileMap": {
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
@@ -186,6 +184,12 @@
                 "app/view/myPaymentListItem.js"
             ],
             "className": "myPaymentListItem"
+        },
+        "ce8f1709-75f8-4f81-b948-890b2047ecd8": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
         }
     },
     "expandedState": {
@@ -193,6 +197,6 @@
         "model": true,
         "component": true,
         "controller": true,
-        "resource": false
+        "resource": true
     }
 }
