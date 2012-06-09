@@ -14,11 +14,19 @@
  */
 
 Ext.define('Payback.view.myDebtListItem', {
-    extend: 'Ext.Container',
+    extend: 'Ext.dataview.component.DataItem',
     alias: 'widget.myDebtListItem',
 
     config: {
         baseCls: 'x-data-item',
+        updateRecord: function(newRecord, oldRecord) {
+
+            //bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store
+            this.callParent(arguments);
+
+            newRecord.getData(true);
+            this.child('component').setData(newRecord.data);
+        },
         cls: [
             'x-list-item'
         ],
@@ -58,7 +66,7 @@ Ext.define('Payback.view.myDebtListItem', {
     onDebtDeleteButtonTap: function(button, e, options) {
 
         //bug in framework, stops propagation of event, without this sometimes both the itemtap 
-        //and deletebuttontap would get fired after a previous record is deleted
+        //and deletebuttontap would get fired after a previous record is deleted. this.callParent in updateRecords fixes this also.
         e.stopEvent(); 
 
         var dataview = this.up('dataview');
@@ -77,26 +85,13 @@ Ext.define('Payback.view.myDebtListItem', {
         dataview.getStore().sync();
 
         debt.getPerson().calcBalance(); //calc balance
-
-        /*var debtStore = Ext.getStore('Debts');
-        var debt = this.getRecord();
-        debugger;
-        //remove debts from person
-        debtStore.remove(debts.getData().items); //remove from store
-        debts.removeAll(); //remove from associated store
-        debtStore.sync(); //sync debts with localStorage
-        debugger;
-
-        //bug in framework, removing debt from the store does not remove it from person
-
-
-
-        payment.getDebt().payments().remove(payment);
-        dataview.getStore().remove(debt);
-        dataview.getStore().sync();*/
     },
 
     updateRecord: function(newRecord, oldRecord) {
+
+        //bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store
+        this.callParent(arguments);
+
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
     }

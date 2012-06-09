@@ -1,6 +1,6 @@
 {
     "id": "ExtBox1-ext-gen6975",
-    "type": "container",
+    "type": "dataitem",
     "reference": {
         "name": "items",
         "type": "array"
@@ -30,7 +30,6 @@
             "userConfig": {
                 "baseCls": "x-list-item-label",
                 "itemId": "debtListItemDetail",
-                "tpl": "<div>\n<tpl for=\"Person\">\n{name}\n</tpl>\n - {reason} - ${balance}</div>",
                 "designer|userClassName": "MyContainer5"
             },
             "customConfigs": [],
@@ -68,7 +67,7 @@
                                 "implHandler": [
                                     "",
                                     "//bug in framework, stops propagation of event, without this sometimes both the itemtap ",
-                                    "//and deletebuttontap would get fired after a previous record is deleted",
+                                    "//and deletebuttontap would get fired after a previous record is deleted. this.callParent in updateRecords fixes this also.",
                                     "e.stopEvent(); ",
                                     "",
                                     "var dataview = this.up('dataview');",
@@ -86,24 +85,7 @@
                                     "dataview.getStore().remove(debt);",
                                     "dataview.getStore().sync();",
                                     "",
-                                    "debt.getPerson().calcBalance(); //calc balance",
-                                    "",
-                                    "/*var debtStore = Ext.getStore('Debts');",
-                                    "var debt = this.getRecord();",
-                                    "debugger;",
-                                    "//remove debts from person",
-                                    "debtStore.remove(debts.getData().items); //remove from store",
-                                    "debts.removeAll(); //remove from associated store",
-                                    "debtStore.sync(); //sync debts with localStorage",
-                                    "debugger;",
-                                    "",
-                                    "//bug in framework, removing debt from the store does not remove it from person",
-                                    "",
-                                    "",
-                                    "",
-                                    "payment.getDebt().payments().remove(payment);",
-                                    "dataview.getStore().remove(debt);",
-                                    "dataview.getStore().sync();*/"
+                                    "debt.getPerson().calcBalance(); //calc balance"
                                 ],
                                 "name": "tap",
                                 "designer|userClassName": "onDebtDeleteButtonTap"
@@ -112,6 +94,28 @@
                             "expanded": true
                         }
                     ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen8051",
+                    "type": "template",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "tpl <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;debtListItemDetail&nbsp;</i>",
+                        "implHandler": [
+                            "<div>",
+                            "<tpl for=\"Person\">",
+                            "{name}",
+                            "</tpl>",
+                            " - {reason} - ${balance}</div>"
+                        ],
+                        "designer|userClassName": "tpl"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
                 }
             ]
         },
@@ -129,6 +133,10 @@
                     "newRecord, oldRecord"
                 ],
                 "implHandler": [
+                    "",
+                    "//bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store",
+                    "this.callParent(arguments);",
+                    "",
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
                 ],

@@ -67,7 +67,6 @@
                 "id": "myContactDataView",
                 "itemId": "myContactDataView",
                 "defaultType": "myContactListItem",
-                "itemTpl": null,
                 "store": "People",
                 "useComponents": true,
                 "disableSelection": true,

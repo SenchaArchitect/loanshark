@@ -14,11 +14,18 @@
  */
 
 Ext.define('Payback.view.myContactListItem', {
-    extend: 'Ext.Container',
+    extend: 'Ext.dataview.component.DataItem',
     alias: 'widget.myContactListItem',
 
     config: {
         baseCls: 'x-data-item',
+        updateRecord: function(newRecord, oldeRecord) {
+            //bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store
+            this.callParent(arguments);
+
+            newRecord.getData(true);
+            this.child('component').setData(newRecord.data);
+        },
         cls: [
             'x-list-item'
         ],
@@ -28,8 +35,10 @@ Ext.define('Payback.view.myContactListItem', {
                 baseCls: 'x-list-item-label',
                 itemId: 'contactListItemDetail',
                 tpl: [
-                    '<div>{name}  ${balance}<br>',
-                    '{phone} {email} </div>'
+                    '<div>',
+                    '    {name}  ${balance}<br>',
+                    '    {phone} {email} ',
+                    '</div>'
                 ],
                 items: [
                     {
@@ -79,9 +88,15 @@ Ext.define('Payback.view.myContactListItem', {
         var dataview = this.up('dataview');
         dataview.getStore().remove(this.getRecord()); //remove person
         dataview.getStore().sync(); //sync with localStorage
+
+        //update the summary
+        Payback.app.application.getController('Payback.controller.Summary').updateSummary();
     },
 
     updateRecord: function(newRecord, oldeRecord) {
+        //bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store
+        this.callParent(arguments);
+
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
     }

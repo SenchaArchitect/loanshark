@@ -10,7 +10,6 @@
         "id": "SummaryView",
         "padding": null,
         "style": "background:white;",
-        "tpl": "",
         "layout": "fit",
         "scrollable": false,
         "designer|userClassName": "Summary",
@@ -19,7 +18,7 @@
     "customConfigs": [],
     "designerId": "d3b832b6-4996-4c75-bb54-57aee2c88185",
     "$viewOrder": 4,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen4005",
@@ -75,11 +74,30 @@
                 "docked": "bottom",
                 "height": "2em",
                 "id": "SummaryContents",
-                "tpl": "<center>You're Owed: {totalOwed}</center>",
                 "designer|userClassName": "MyComponent"
             },
             "customConfigs": [],
-            "expanded": true
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen11555",
+                    "type": "template",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "tpl <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;SummaryContents&nbsp;</i>",
+                        "implHandler": [
+                            "<center>You're Owed: {totalOwed}</center>"
+                        ],
+                        "designer|userClassName": "tpl"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         }
     ]
 }

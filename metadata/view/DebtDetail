@@ -305,7 +305,6 @@
                         "maxHeight": null,
                         "minHeight": "",
                         "defaultType": "myPaymentListItem",
-                        "itemTpl": null,
                         "store": "Payments",
                         "useComponents": true,
                         "disableSelection": true,

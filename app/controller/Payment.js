@@ -90,11 +90,6 @@ Ext.define('Payback.controller.Payment', {
             debt.set('balance',0);
         }
 
-        //BUG HERE! For some reason new payments don't get added to new debts
-        //debt.getAssociatedData();
-        //debt.set('id',debt.get('id'));
-        //Ext.getStore('Debts').getAt()
-
         //loads data from localStorage
         Ext.getStore('Payments').load();
 

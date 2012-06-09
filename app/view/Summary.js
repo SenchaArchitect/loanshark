@@ -24,9 +24,6 @@ Ext.define('Payback.view.Summary', {
             type: 'fit'
         },
         scrollable: false,
-        tpl: [
-            ''
-        ],
         items: [
             {
                 xtype: 'titlebar',

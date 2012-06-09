@@ -68,7 +68,6 @@
                 "id": "myDebtDataView",
                 "itemId": null,
                 "defaultType": "myDebtListItem",
-                "itemTpl": null,
                 "store": "Debts",
                 "useComponents": true,
                 "disableSelection": true,

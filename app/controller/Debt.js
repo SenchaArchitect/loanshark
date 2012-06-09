@@ -61,6 +61,8 @@ Ext.define('Payback.controller.Debt', {
     },
 
     onSaveDebtTap: function(button, e, options) {
+
+
         var form = this.getDebtDetail(),
             record = form.getRecord(),
             values = form.getValues(),
@@ -88,6 +90,14 @@ Ext.define('Payback.controller.Debt', {
             var debt = person.debts().add(values)[0]; //add values
             person.debts().sync();
             debt.getPerson(); //bug in the framework, this associates the debt with the person in the store
+
+            //bug in the framework, this allows the dataview to update the list when a record is added the first time and no other are in the store
+            debt.save({
+                callback:function(){
+                    this.getMyDebtDataView().refresh();
+                }
+            },this);
+
         }
 
 

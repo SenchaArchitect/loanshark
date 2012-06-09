@@ -30,7 +30,6 @@
             "userConfig": {
                 "baseCls": "x-list-item-label",
                 "itemId": "paymentListItemDetail",
-                "tpl": "<div>\n${amount} -  {memo} \n</div>",
                 "designer|userClassName": "MyContainer5"
             },
             "customConfigs": [],
@@ -83,6 +82,26 @@
                             "expanded": true
                         }
                     ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen9545",
+                    "type": "template",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "tpl <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;paymentListItemDetail&nbsp;</i>",
+                        "implHandler": [
+                            "<div>",
+                            "${amount} -  {memo}",
+                            "</div>"
+                        ],
+                        "designer|userClassName": "tpl"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
                 }
             ]
         },
@@ -101,6 +120,9 @@
                     "oldeRecord"
                 ],
                 "implHandler": [
+                    "//bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store",
+                    "this.callParent(arguments);",
+                    "",
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
                 ],

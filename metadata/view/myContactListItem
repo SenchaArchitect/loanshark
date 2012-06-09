@@ -1,6 +1,6 @@
 {
     "id": "ExtBox1-ext-gen28985",
-    "type": "container",
+    "type": "dataitem",
     "reference": {
         "name": "items",
         "type": "array"
@@ -30,7 +30,6 @@
             "userConfig": {
                 "baseCls": "x-list-item-label",
                 "itemId": "contactListItemDetail",
-                "tpl": "<div>{name}  ${balance}<br>\n{phone} {email} </div>",
                 "designer|userClassName": "MyContainer5"
             },
             "customConfigs": [],
@@ -91,7 +90,10 @@
                                     "//removes person from store ",
                                     "var dataview = this.up('dataview');",
                                     "dataview.getStore().remove(this.getRecord()); //remove person",
-                                    "dataview.getStore().sync(); //sync with localStorage"
+                                    "dataview.getStore().sync(); //sync with localStorage",
+                                    "",
+                                    "//update the summary",
+                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
                                 ],
                                 "name": "tap",
                                 "designer|userClassName": "onContactDeleteButtonTap"
@@ -100,6 +102,27 @@
                             "expanded": true
                         }
                     ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen10082",
+                    "type": "template",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "tpl <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;contactListItemDetail&nbsp;</i>",
+                        "implHandler": [
+                            "<div>",
+                            "    {name}  ${balance}<br>",
+                            "    {phone} {email} ",
+                            "</div>"
+                        ],
+                        "designer|userClassName": "tpl"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
                 }
             ]
         },
@@ -118,6 +141,9 @@
                     "oldeRecord"
                 ],
                 "implHandler": [
+                    "//bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store",
+                    "this.callParent(arguments);",
+                    "",
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
                 ],
