@@ -85,7 +85,10 @@
                                     "dataview.getStore().remove(debt);",
                                     "dataview.getStore().sync();",
                                     "",
-                                    "debt.getPerson().calcBalance(); //calc balance"
+                                    "debt.getPerson().calcBalance(); //calc balance",
+                                    "",
+                                    "//update the summary",
+                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
                                 ],
                                 "name": "tap",
                                 "designer|userClassName": "onDebtDeleteButtonTap"
@@ -104,13 +107,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "tpl <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;debtListItemDetail&nbsp;</i>",
+                        "fn": "tpl2 <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;debtListItemDetail&nbsp;</i>",
                         "implHandler": [
                             "<div>",
                             "<tpl for=\"Person\">",
                             "{name}",
                             "</tpl>",
-                            " - {reason} - ${balance}</div>"
+                            "- {reason} - ${balance}</div>"
                         ],
                         "designer|userClassName": "tpl"
                     },

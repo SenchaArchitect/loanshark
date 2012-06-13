@@ -49,7 +49,16 @@ Ext.define('Payback.view.DebtDetail', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Details'
+                title: 'Details',
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'emailDebt',
+                        ui: 'action',
+                        text: 'send email',
+                        align: 'right'
+                    }
+                ]
             },
             {
                 xtype: 'container',

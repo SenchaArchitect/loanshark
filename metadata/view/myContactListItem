@@ -112,11 +112,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "tpl <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;contactListItemDetail&nbsp;</i>",
+                        "fn": "tpl1 <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;contactListItemDetail&nbsp;</i>",
                         "implHandler": [
                             "<div>",
-                            "    {name}  ${balance}<br>",
-                            "    {phone} {email} ",
+                            "{name}  ${balance}<br>",
+                            "{phone} {email} ",
                             "</div>"
                         ],
                         "designer|userClassName": "tpl"

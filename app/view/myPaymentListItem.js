@@ -70,6 +70,10 @@ Ext.define('Payback.view.myPaymentListItem', {
         payment.getDebt().payments().remove(payment);
         dataview.getStore().remove(payment);
         dataview.getStore().sync(); //sync with local storage
+
+
+        //update the summary, this doesnt work here for some reason!
+        //Payback.app.application.getController('Payback.controller.Summary').updateSummary();
     },
 
     updateRecord: function(newRecord, oldeRecord) {

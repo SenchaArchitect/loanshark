@@ -30,7 +30,8 @@ Ext.define('Payback.controller.Payment', {
                 selector: 'DebtDetail',
                 xtype: 'DebtDetail',
                 autoCreate: true
-            }
+            },
+            myPaymentDataView: '#myPaymentDataView'
         },
 
         control: {
@@ -82,13 +83,27 @@ Ext.define('Payback.controller.Payment', {
         } else { //if new record
             var payment = debt.payments().add(values)[0];
             debt.payments().sync();
-            payment.getDebt(); //bug in framework, associates payment with debt
+            payment.getDebt(); //bug in framework, associates payment with debt 
 
-            delete debt.paymentsStore; //bug in framework, debt_id is not correctly set in filter, work around is to delete the store
+            //bug in the framework, this allows the dataview to update the list when a record is added the first time and no other are in the store
+            payment.save({
+                callback:function(){
+                    this.getMyPaymentDataView().refresh();
+                }
+            },this);
+
+            //bug in framework, debt_id is not correctly set in filter, work around is to delete the store and reassociate
+            delete debt.paymentsStore; 
             debt.payments();
 
+            //recalc balance
             debt.set('balance',0);
         }
+
+        //update the debt balance on new payments
+        var debtRecord = this.getDebtDetail().getRecord();
+        debtRecord.set('balance',0); //bug in framework, calls convert field again on debt
+        debtRecord.getPerson().calcBalance(); //calc balance of updated payments and debt in person
 
         //loads data from localStorage
         Ext.getStore('Payments').load();

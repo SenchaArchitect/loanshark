@@ -100,7 +100,29 @@
                 "designer|userClassName": "MyTitleBar2"
             },
             "customConfigs": [],
-            "expanded": true
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen2443",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "emailDebt",
+                        "ui": "action",
+                        "icon": null,
+                        "iconAlign": null,
+                        "text": "send email",
+                        "designer|userClassName": "MyButton16",
+                        "align": "right"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen3551",

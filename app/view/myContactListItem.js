@@ -36,8 +36,8 @@ Ext.define('Payback.view.myContactListItem', {
                 itemId: 'contactListItemDetail',
                 tpl: [
                     '<div>',
-                    '    {name}  ${balance}<br>',
-                    '    {phone} {email} ',
+                    '{name}  ${balance}<br>',
+                    '{phone} {email} ',
                     '</div>'
                 ],
                 items: [

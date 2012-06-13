@@ -40,7 +40,7 @@ Ext.define('Payback.view.myDebtListItem', {
                     '<tpl for="Person">',
                     '{name}',
                     '</tpl>',
-                    ' - {reason} - ${balance}</div>'
+                    '- {reason} - ${balance}</div>'
                 ],
                 items: [
                     {
@@ -85,6 +85,9 @@ Ext.define('Payback.view.myDebtListItem', {
         dataview.getStore().sync();
 
         debt.getPerson().calcBalance(); //calc balance
+
+        //update the summary
+        Payback.app.application.getController('Payback.controller.Summary').updateSummary();
     },
 
     updateRecord: function(newRecord, oldRecord) {

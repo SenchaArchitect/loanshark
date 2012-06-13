@@ -24,7 +24,8 @@ Ext.define('Payback.controller.Debt', {
             },
             myDebtDataView: '#myDebtDataView',
             myPaymentDataView: '#myPaymentDataView',
-            addPaymentButton: '#addPayment'
+            addPaymentButton: '#addPayment',
+            emailDebtButton: '#emailDebt'
         },
 
         control: {
@@ -40,6 +41,9 @@ Ext.define('Payback.controller.Debt', {
             "#myDebtDataView": {
                 itemswipe: 'onDataviewItemSwipe',
                 itemtap: 'onDataviewItemTap'
+            },
+            "#emailDebt": {
+                tap: 'onEmailDebtTap'
             }
         }
     },
@@ -52,9 +56,10 @@ Ext.define('Payback.controller.Debt', {
         //clears filter placed on Payment store
         Ext.getStore('Payments').clearFilter();
 
-        //hides button and payment data view on new debts
+        //hides buttons and payment data view on new debts
         this.getAddPaymentButton().hide();
         this.getMyPaymentDataView().hide();
+        this.getEmailDebtButton().hide();
 
         //set active item
         Ext.Viewport.setActiveItem(form);
@@ -120,12 +125,19 @@ Ext.define('Payback.controller.Debt', {
     onCanelButtonTap: function(button, e, options) {
         this.getDebtDetail().reset(); //reset form
 
-        //if record exists update the debt balance on new payments
+        /*//if record exists update the debt balance on new payments
         var record = this.getDebtDetail().getRecord();
         if(record) {
             record.set('balance',0); //bug in framework, calls convert field again on debt
             record.getPerson().calcBalance(); //calc balance of updated payments and debt in person
         }
+
+        //update people store for anything changed
+        /*Ext.getStore('People').load(function(){
+        this.getApplication().getController('Summary').updateSummary();
+        },
+        this);*/
+
         //set active item
         Ext.Viewport.setActiveItem(0);
     },
@@ -156,10 +168,26 @@ Ext.define('Payback.controller.Debt', {
         Ext.getStore('Payments').clearFilter();
         Ext.getStore('Payments').filter({property: "debt_id", value: record.get('id')});
 
+        //show hidden components
         this.getAddPaymentButton().show();
         this.getMyPaymentDataView().show();
+        this.getEmailDebtButton().show();
 
         Ext.Viewport.setActiveItem(form);
+    },
+
+    onEmailDebtTap: function(button, e, options) {
+
+        var record = this.getDebtDetail().getRecord();
+        record.set('balance',0); //bug in framework, calls convert field again on debt, this updates the debt with any new payments added to debt
+
+        var person = this.getDebtDetail().down('selectfield').record, //gets person from selectfield
+        email = person.get('email'),
+        name = person.get('name'),
+        subject = encodeURIComponent("Where's my money?!"),
+        body = encodeURIComponent("Dear "+name+",\n\nYou owe me $"+record.get('balance')+". Pay soon or my friend Li'l Abe will come pay ya a visit.\n\nSincerely,\n\nYour friendly neighborhood loan shark");
+
+        window.location.href = "mailto:"+email+"?subject=" + subject+"&body="+body; 
     }
 
 });

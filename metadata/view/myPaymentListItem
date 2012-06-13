@@ -73,7 +73,11 @@
                                     "//removes payment from debt, then from the store",
                                     "payment.getDebt().payments().remove(payment);",
                                     "dataview.getStore().remove(payment);",
-                                    "dataview.getStore().sync(); //sync with local storage"
+                                    "dataview.getStore().sync(); //sync with local storage",
+                                    "",
+                                    "",
+                                    "//update the summary, this doesnt work here for some reason!",
+                                    "//Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
                                 ],
                                 "name": "tap",
                                 "designer|userClassName": "onPaymentDeleteButtonTap"
@@ -92,7 +96,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "tpl <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;paymentListItemDetail&nbsp;</i>",
+                        "fn": "tpl3 <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;paymentListItemDetail&nbsp;</i>",
                         "implHandler": [
                             "<div>",
                             "${amount} -  {memo}",
