@@ -15,7 +15,7 @@
     "customConfigs": [],
     "designerId": "9c7e563e-7ff0-4ba7-9556-9c0d6c286927",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15360",
@@ -26,13 +26,37 @@
             },
             "codeClass": null,
             "userConfig": {
+                "itemId": "Summary",
                 "title": "Summary",
                 "iconCls": "info"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
             "expanded": true,
-            "masterInstanceId": "ExtBox1-ext-gen2239"
+            "masterInstanceId": "ExtBox1-ext-gen2239",
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen33690",
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onSummaryViewShow",
+                        "implHandler": [
+                            "",
+                            "//if(location.hash!='')",
+                            " //   location.hash = '';"
+                        ],
+                        "name": "show",
+                        "designer|userClassName": "onSummaryViewShow"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen50261",
@@ -43,13 +67,36 @@
             },
             "codeClass": null,
             "userConfig": {
+                "itemId": "Debt",
                 "title": "Debts",
                 "iconCls": "arrow_down"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
             "expanded": true,
-            "masterInstanceId": "ExtBox1-ext-gen25568"
+            "masterInstanceId": "ExtBox1-ext-gen25568",
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen34352",
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPanelShow",
+                        "implHandler": [
+                            "location.hash = 'Debt';",
+                            ""
+                        ],
+                        "name": "show",
+                        "designer|userClassName": "onPanelShow"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen51418",
@@ -60,13 +107,36 @@
             },
             "codeClass": null,
             "userConfig": {
+                "itemId": "Prey",
                 "title": "Prey",
                 "iconCls": "team"
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
             "expanded": true,
-            "masterInstanceId": "ExtBox1-ext-gen2255"
+            "masterInstanceId": "ExtBox1-ext-gen2255",
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen52857",
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPanelShow1",
+                        "implHandler": [
+                            "location.hash = 'Prey';",
+                            ""
+                        ],
+                        "name": "show",
+                        "designer|userClassName": "onPanelShow1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen2986",

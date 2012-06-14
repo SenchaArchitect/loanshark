@@ -15,6 +15,7 @@
 
 Ext.define('Payback.model.Summary', {
     extend: 'Ext.data.Model',
+
     config: {
         fields: [
             {

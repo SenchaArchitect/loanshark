@@ -115,7 +115,7 @@
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen26006",
-                    "type": "textfield",
+                    "type": "numberfield",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -124,7 +124,7 @@
                     "userConfig": {
                         "label": "Amount",
                         "name": "amount",
-                        "designer|userClassName": "MyTextField"
+                        "designer|userClassName": "MyNumberField1"
                     },
                     "customConfigs": [],
                     "expanded": true

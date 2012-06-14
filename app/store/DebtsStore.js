@@ -15,6 +15,7 @@
 
 Ext.define('Payback.store.DebtsStore', {
     extend: 'Ext.data.Store',
+
     requires: [
         'Payback.model.Debt'
     ],

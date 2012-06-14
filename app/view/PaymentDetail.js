@@ -51,7 +51,7 @@ Ext.define('Payback.view.PaymentDetail', {
                 title: 'Payment Information',
                 items: [
                     {
-                        xtype: 'textfield',
+                        xtype: 'numberfield',
                         label: 'Amount',
                         name: 'amount'
                     },

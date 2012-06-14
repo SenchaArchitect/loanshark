@@ -15,9 +15,11 @@
 
 Ext.define('Payback.model.Person', {
     extend: 'Ext.data.Model',
+
     uses: [
         'Payback.model.Debt'
     ],
+
     config: {
         proxy: {
             type: 'localstorage',
@@ -52,6 +54,12 @@ Ext.define('Payback.model.Person', {
                 defaultValue: 0,
                 name: 'balance',
                 type: 'float'
+            }
+        ],
+        validations: [
+            {
+                type: 'email',
+                field: 'email'
             }
         ]
     },

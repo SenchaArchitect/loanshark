@@ -64,9 +64,10 @@ Ext.define('Payback.view.ContactDetail', {
                                 name: 'name'
                             },
                             {
-                                xtype: 'textfield',
+                                xtype: 'emailfield',
                                 label: 'Email',
-                                name: 'email'
+                                name: 'email',
+                                placeHolder: 'email@example.com'
                             },
                             {
                                 xtype: 'textfield',
@@ -88,7 +89,7 @@ Ext.define('Payback.view.ContactDetail', {
                         xtype: 'button',
                         id: 'addDebt',
                         ui: 'action',
-                        text: 'Add'
+                        text: 'add debt'
                     },
                     {
                         xtype: 'dataview',
@@ -97,6 +98,7 @@ Ext.define('Payback.view.ContactDetail', {
                             'x-list-normal'
                         ],
                         id: 'myDebtDataView',
+                        itemId: 'mydataview',
                         defaultType: 'myDebtListItem',
                         store: 'Debts',
                         useComponents: true,
@@ -105,7 +107,19 @@ Ext.define('Payback.view.ContactDetail', {
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onFormpanelShow',
+                event: 'show'
+            }
         ]
+    },
+
+    onFormpanelShow: function(component, options) {
+
+        //refresh Debt dataview
+        this.down('dataview').refresh();
     }
 
 });

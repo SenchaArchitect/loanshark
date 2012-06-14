@@ -7,7 +7,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "basePath": "http://extjs.cachefly.net/touch/sencha-touch-2.0.0/"
+        "basePath": "http://extjs.cachefly.net/touch/sencha-touch-2.0.0/",
+        "debug": true
     },
     "customConfigs": [],
     "designerId": "ce8f1709-75f8-4f81-b948-890b2047ecd8",

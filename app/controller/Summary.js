@@ -15,6 +15,7 @@
 
 Ext.define('Payback.controller.Summary', {
     extend: 'Ext.app.Controller',
+
     config: {
         models: [
             'Summary'

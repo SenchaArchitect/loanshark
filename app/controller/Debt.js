@@ -15,7 +15,13 @@
 
 Ext.define('Payback.controller.Debt', {
     extend: 'Ext.app.Controller',
+
     config: {
+        routes: {
+            'Debt': 'showDebtPanel',
+            'Debt/:id': 'showDebtDetail'
+        },
+
         refs: {
             DebtDetail: {
                 selector: 'DebtDetail',
@@ -53,6 +59,9 @@ Ext.define('Payback.controller.Debt', {
         form.reset();
         form.setRecord(null); //remove record from form
 
+        //sets date field to today
+        form.down('datepickerfield').setValue(new Date());
+
         //clears filter placed on Payment store
         Ext.getStore('Payments').clearFilter();
 
@@ -61,12 +70,14 @@ Ext.define('Payback.controller.Debt', {
         this.getMyPaymentDataView().hide();
         this.getEmailDebtButton().hide();
 
+        //remember previous panel to return to
+        this.prevPanel = Ext.Viewport.getActiveItem();
+
         //set active item
         Ext.Viewport.setActiveItem(form);
     },
 
     onSaveDebtTap: function(button, e, options) {
-
 
         var form = this.getDebtDetail(),
             record = form.getRecord(),
@@ -105,7 +116,6 @@ Ext.define('Payback.controller.Debt', {
 
         }
 
-
         //calc balance for the person
         person.calcBalance();
 
@@ -118,15 +128,24 @@ Ext.define('Payback.controller.Debt', {
         },
         this);
 
+        //refresh Debt DataView
+        //this.prevPanel.down('dataview').refresh();
+
+        //location.hash = 'Debt';
+
         //set active item
-        Ext.Viewport.setActiveItem(0);
+        Ext.Viewport.setActiveItem(this.prevPanel);
     },
 
     onCanelButtonTap: function(button, e, options) {
         this.getDebtDetail().reset(); //reset form
 
+        //debugger;
+
         //set active item
-        Ext.Viewport.setActiveItem(0);
+        Ext.Viewport.setActiveItem(this.prevPanel);
+
+        location.hash = 'af';
     },
 
     onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
@@ -140,7 +159,7 @@ Ext.define('Payback.controller.Debt', {
         //shows current delete button
         target.query('button')[0].show();
 
-        //hides delete button after tapped
+        //hides delete button if anywhere else is tapped
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
         }, single:true});
@@ -160,7 +179,12 @@ Ext.define('Payback.controller.Debt', {
         this.getMyPaymentDataView().show();
         this.getEmailDebtButton().show();
 
+        //remember previous panel to return to
+        this.prevPanel = Ext.Viewport.getActiveItem();
+
         Ext.Viewport.setActiveItem(form);
+
+        location.hash = 'Debt/'+index;
     },
 
     onEmailDebtTap: function(button, e, options) {
@@ -175,6 +199,23 @@ Ext.define('Payback.controller.Debt', {
         body = encodeURIComponent("Dear "+name+",\n\nYou owe me $"+record.get('balance')+". Pay soon or my friend Li'l Abe will come pay ya a visit.\n\nSincerely,\n\nYour friendly neighborhood loan shark");
 
         window.location.href = "mailto:"+email+"?subject=" + subject+"&body="+body; 
+    },
+
+    showDebtPanel: function() {
+
+        //switch to debt panel
+        Ext.Viewport.getActiveItem().setActiveItem(1);
+    },
+
+    showDebtDetail: function(id) {
+        this.showDebtPanel();
+
+        var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];
+
+        if(dataItem) {
+            this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
+            location.hash = 'Debt/'+id;
+        }
     }
 
 });

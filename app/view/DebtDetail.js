@@ -82,7 +82,7 @@ Ext.define('Payback.view.DebtDetail', {
                                 name: 'reason'
                             },
                             {
-                                xtype: 'textfield',
+                                xtype: 'numberfield',
                                 label: 'Amount',
                                 name: 'amount'
                             },
@@ -125,20 +125,7 @@ Ext.define('Payback.view.DebtDetail', {
                     }
                 ]
             }
-        ],
-        listeners: [
-            {
-                fn: 'onFormpanelShow',
-                event: 'show'
-            }
         ]
-    },
-
-    onFormpanelShow: function(component, options) {
-
-        //sets the datepickerfield to today if a new debt
-        if(this.down('dataview').isHidden())
-        this.down('datepickerfield').setValue(new Date());
     }
 
 });

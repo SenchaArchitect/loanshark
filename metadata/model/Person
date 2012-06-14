@@ -12,7 +12,7 @@
     "customConfigs": [],
     "designerId": "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen37320",
@@ -123,6 +123,21 @@
                 "name": "balance",
                 "type": "float",
                 "designer|userClassName": "MyField"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen30708",
+            "type": "emailvalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "email",
+                "designer|userClassName": "MyEmailValidation"
             },
             "customConfigs": [],
             "expanded": true

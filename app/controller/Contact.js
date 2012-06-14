@@ -15,6 +15,7 @@
 
 Ext.define('Payback.controller.Contact', {
     extend: 'Ext.app.Controller',
+
     config: {
         stores: [
             'PeopleStore'
@@ -22,6 +23,11 @@ Ext.define('Payback.controller.Contact', {
         views: [
             'ContactDetail'
         ],
+
+        routes: {
+            'Prey': 'showContactPanel',
+            'Prey/:id': 'showContactDetail'
+        },
 
         refs: {
             ContactDetail: {
@@ -45,7 +51,7 @@ Ext.define('Payback.controller.Contact', {
             },
             "#myContactDataView": {
                 itemswipe: 'onDataviewItemSwipe',
-                itemtap: 'onDataviewtemTap'
+                itemtap: 'onDataviewItemTap'
             }
         }
     },
@@ -60,11 +66,11 @@ Ext.define('Payback.controller.Contact', {
         Ext.getStore('Debts').clearFilter();
 
         //refresh DataView
-        this.getMyDebtDataView().refresh();
+        //this.getMyDebtDataView().refresh(); //??????????
 
         //hides buttons and debt data view on new contacts
-        //this.getAddPaymentButton().hide();
-        this.getMyDebtDataView().hide();
+        form.down('#addDebt').hide();
+        form.down('dataview').hide();
 
         //set active item
         Ext.Viewport.setActiveItem(this.getContactDetail());
@@ -75,9 +81,26 @@ Ext.define('Payback.controller.Contact', {
             record = form.getRecord(),
             values = form.getValues();
 
+        //validate
+        var isValid = function(record) {
+            var errors = record.validate();
+
+            if(errors.isValid())// || record.get('email') === "")
+            return true;
+            else {
+                Ext.Msg.alert('Error', 'Invalid Email address', Ext.emptyFn);
+                return false;
+            }
+
+        };
 
         if(record) { //if editing record
             record.set(values);
+
+            //validate
+            if(!isValid(record))
+            return;
+
             record.save();
 
             if (record.isModified('name')) {
@@ -86,9 +109,17 @@ Ext.define('Payback.controller.Contact', {
             }
 
         } else { //if new record
-            var record = Ext.getStore('People').add(values)[0];
-            record.commit();
-            //Ext.getStore('People').sync();
+
+            record = Ext.create('Payback.model.Person',values);
+
+            //validate
+            if(!isValid(record)) {
+                return;
+            }
+            Ext.getStore('People').add(record);
+            //record.commit();
+            //record.save();
+            Ext.getStore('People').sync();
         }
 
         //update summary
@@ -120,13 +151,13 @@ Ext.define('Payback.controller.Contact', {
         //show item delete button
         target.query('button')[0].show();
 
-        //hide delete button after tap
+        //hides delete button if anywhere else is tapped
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
         }, single:true});
     },
 
-    onDataviewtemTap: function(dataview, index, target, record, e, options) {
+    onDataviewItemTap: function(dataview, index, target, record, e, options) {
         var form = this.getContactDetail(),
             debtDataView = this.getMyDebtDataView();
 
@@ -142,9 +173,27 @@ Ext.define('Payback.controller.Contact', {
 
         //show items if hidden
         debtDataView.show();
+        form.down('#addDebt').show();
+
 
         //set active item
         Ext.Viewport.setActiveItem(form);
+    },
+
+    showContactPanel: function() {
+
+        //switch to contact panel
+        Ext.Viewport.getActiveItem().setActiveItem(2);
+    },
+
+    showContactDetail: function(id) {
+        this.showContactPanel();
+        var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];
+
+        if(dataItem) {
+            this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
+            location.hash = 'Prey/'+id;
+        }
     }
 
 });

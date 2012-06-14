@@ -36,7 +36,7 @@ Ext.define('Payback.view.myDebtListItem', {
                 itemId: 'debtListItemDetail',
                 tpl: [
                     '<div>',
-                    '    {[Ext.Date.format(values.date,\'M d\')]} -',
+                    '{[Ext.Date.format(values.date,\'M d\')]} -',
                     '<tpl for="Person">{name}</tpl>',
                     '- {reason} - ${balance}</div>'
                 ],
@@ -87,10 +87,10 @@ Ext.define('Payback.view.myDebtListItem', {
         //update the summary
         Payback.app.application.getController('Payback.controller.Summary').updateSummary();
 
-        //debugger;
+        button.hide(); //bug, button will appear on other debts when deleting a debt from the contact detail
 
         //refresh DataView
-        this.up('dataview').refresh()
+        dataview.refresh();
     },
 
     updateRecord: function(newRecord, oldRecord) {

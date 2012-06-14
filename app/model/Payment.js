@@ -15,9 +15,11 @@
 
 Ext.define('Payback.model.Payment', {
     extend: 'Ext.data.Model',
+
     uses: [
         'Payback.model.Debt'
     ],
+
     config: {
         fields: [
             {

@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "8ee13c44-dec0-4ae8-b3a8-ed30c67f9f80",
     "$viewOrder": 6,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen25182",
@@ -81,7 +81,10 @@
                                     "debtRecord.getPerson().calcBalance(); //calc balance of updated payments and debt in person",
                                     "",
                                     "//update the summary",
-                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
+                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();",
+                                    "",
+                                    "//refresh DataView",
+                                    "//dataview.refresh();"
                                 ],
                                 "name": "tap",
                                 "designer|userClassName": "onPaymentDeleteButtonTap"
@@ -103,6 +106,7 @@
                         "fn": "tpl3 <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;paymentListItemDetail&nbsp;</i>",
                         "implHandler": [
                             "<div>",
+                            "{[Ext.Date.format(values.date,'M d')]} -",
                             "${amount} -  {memo}",
                             "</div>"
                         ],

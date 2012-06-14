@@ -36,6 +36,7 @@ Ext.define('Payback.view.myPaymentListItem', {
                 itemId: 'paymentListItemDetail',
                 tpl: [
                     '<div>',
+                    '{[Ext.Date.format(values.date,\'M d\')]} -',
                     '${amount} -  {memo}',
                     '</div>'
                 ],
@@ -78,6 +79,9 @@ Ext.define('Payback.view.myPaymentListItem', {
 
         //update the summary
         Payback.app.application.getController('Payback.controller.Summary').updateSummary();
+
+        //refresh DataView
+        //dataview.refresh();
     },
 
     updateRecord: function(newRecord, oldeRecord) {

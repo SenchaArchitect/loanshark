@@ -15,6 +15,7 @@
 
 Ext.define('Payback.controller.Payment', {
     extend: 'Ext.app.Controller',
+
     config: {
         stores: [
             'PaymentStore'
@@ -57,6 +58,9 @@ Ext.define('Payback.controller.Payment', {
 
         form.reset(); //clears form
         form.setRecord(null); //clears record from form
+
+        //sets date field to today
+        form.down('datepickerfield').setValue(new Date());
 
         form.setValues({debt_id:this.getDebtDetail().getRecord().get('id')});
 
@@ -107,6 +111,9 @@ Ext.define('Payback.controller.Payment', {
         },
         this);
 
+        //refresh Contact DataView
+        //this.getContactDetail().down('dataview').refresh();
+
         //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
 
@@ -130,7 +137,7 @@ Ext.define('Payback.controller.Payment', {
         //show current button
         target.query('button')[0].show();
 
-        //hide button after being tapped
+        //hides delete button if anywhere else is tapped
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
         }, single:true});

@@ -18,7 +18,7 @@
     "customConfigs": [],
     "designerId": "1b7b0c08-5968-4072-ba7f-815dd2cfe595",
     "$viewOrder": 1,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen25582",
@@ -193,7 +193,7 @@
                         },
                         {
                             "id": "ExtBox1-ext-gen25612",
-                            "type": "textfield",
+                            "type": "numberfield",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -202,7 +202,7 @@
                             "userConfig": {
                                 "label": "Amount",
                                 "name": "amount",
-                                "designer|userClassName": "MyTextField1"
+                                "designer|userClassName": "MyNumberField"
                             },
                             "customConfigs": [],
                             "expanded": true
@@ -338,28 +338,6 @@
                     "expanded": true
                 }
             ]
-        },
-        {
-            "id": "ExtBox1-ext-gen31029",
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onFormpanelShow",
-                "implHandler": [
-                    "",
-                    "//sets the datepickerfield to today if a new debt",
-                    "if(this.down('dataview').isHidden())",
-                    "    this.down('datepickerfield').setValue(new Date());"
-                ],
-                "name": "show",
-                "designer|userClassName": "onFormpanelShow"
-            },
-            "customConfigs": [],
-            "expanded": true
         }
     ]
 }

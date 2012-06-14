@@ -15,6 +15,7 @@
 
 Ext.define('Payback.store.PeopleStore', {
     extend: 'Ext.data.Store',
+
     requires: [
         'Payback.model.Person'
     ],

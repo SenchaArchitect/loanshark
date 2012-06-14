@@ -17,7 +17,7 @@
     "customConfigs": [],
     "designerId": "9290d4e2-55ef-4f81-b844-ff9efd351b2b",
     "$viewOrder": 5,
-    "expanded": true,
+    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen20879",
@@ -90,10 +90,10 @@
                                     "//update the summary",
                                     "Payback.app.application.getController('Payback.controller.Summary').updateSummary();",
                                     "",
-                                    "//debugger;",
+                                    "button.hide(); //bug, button will appear on other debts when deleting a debt from the contact detail",
                                     "",
                                     "//refresh DataView",
-                                    "this.up('dataview').refresh()"
+                                    "dataview.refresh();"
                                 ],
                                 "name": "tap",
                                 "designer|userClassName": "onDebtDeleteButtonTap"
@@ -115,7 +115,7 @@
                         "fn": "tpl2 <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;debtListItemDetail&nbsp;</i>",
                         "implHandler": [
                             "<div>",
-                            "    {[Ext.Date.format(values.date,'M d')]} -",
+                            "{[Ext.Date.format(values.date,'M d')]} -",
                             "<tpl for=\"Person\">{name}</tpl>",
                             "- {reason} - ${balance}</div>"
                         ],

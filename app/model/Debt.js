@@ -16,10 +16,12 @@
 Ext.define('Payback.model.Debt', {
     extend: 'Ext.data.Model',
     alias: 'model.Debt',
+
     uses: [
         'Payback.model.Payment',
         'Payback.model.Person'
     ],
+
     config: {
         fields: [
             {

@@ -16,6 +16,7 @@
 Ext.define('Payback.view.MainView', {
     extend: 'Ext.tab.Panel',
     alias: 'widget.MainView',
+
     requires: [
         'Payback.view.Summary',
         'Payback.view.Debts',
@@ -26,23 +27,59 @@ Ext.define('Payback.view.MainView', {
         items: [
             {
                 xtype: 'Summary',
+                itemId: 'Summary',
                 title: 'Summary',
                 iconCls: 'info'
             },
             {
                 xtype: 'Debts',
+                itemId: 'Debt',
                 title: 'Debts',
                 iconCls: 'arrow_down'
             },
             {
                 xtype: 'Prey',
+                itemId: 'Prey',
                 title: 'Prey',
                 iconCls: 'team'
             }
         ],
         tabBar: {
             docked: 'bottom'
-        }
+        },
+        listeners: [
+            {
+                fn: 'onSummaryViewShow',
+                event: 'show',
+                delegate: '#Summary'
+            },
+            {
+                fn: 'onPanelShow',
+                event: 'show',
+                delegate: '#Debt'
+            },
+            {
+                fn: 'onPanelShow1',
+                event: 'show',
+                delegate: '#Prey'
+            }
+        ]
+    },
+
+    onSummaryViewShow: function(component, options) {
+
+        //if(location.hash!='')
+        //   location.hash = '';
+    },
+
+    onPanelShow: function(component, options) {
+        location.hash = 'Debt';
+
+    },
+
+    onPanelShow1: function(component, options) {
+        location.hash = 'Prey';
+
     }
 
 });
