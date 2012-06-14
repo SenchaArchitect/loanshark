@@ -29,49 +29,45 @@ Ext.define('Payback.controller.Contact', {
                 xtype: 'ContactDetail',
                 autoCreate: true
             },
-            myContactDataView: '#myContactDataView'
+            myContactDataView: '#myContactDataView',
+            myDebtDataView: '#myDebtDataView'
         },
 
         control: {
-            "#myContactDataView": {
-                itemswipe: 'onDataviewItemSwipe',
-                itemtap: 'onDataviewtemTap'
-            },
-            "#cancelContact": {
-                tap: 'onCancelContactTap'
+            "#addContact": {
+                tap: 'onAddContactTap'
             },
             "#saveContact": {
                 tap: 'onSaveContactTap'
             },
-            "#addContact": {
-                tap: 'onAddContactTap'
+            "#cancelContact": {
+                tap: 'onCancelContactTap'
+            },
+            "#myContactDataView": {
+                itemswipe: 'onDataviewItemSwipe',
+                itemtap: 'onDataviewtemTap'
             }
         }
     },
 
-    onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
-        var deleteButtons = dataview.query('button');
+    onAddContactTap: function(button, e, options) {
 
-        //hide other delete buttons
-        for (var i=0; i < deleteButtons.length; i++) {
-            deleteButtons[i].hide();
-        }
+        var form = this.getContactDetail();
+        form.reset(); //clear form
+        form.setRecord(null); //clear record from form
 
-        //show item delete button
-        target.query('button')[0].show();
+        //clears filter placed on Debt store
+        Ext.getStore('Debts').clearFilter();
 
-        //hide delete button after tap
-        Ext.Viewport.element.on({tap:function(){
-            target.query('button')[0].hide();
-        }, single:true});
-    },
+        //refresh DataView
+        this.getMyDebtDataView().refresh();
 
-    onCancelContactTap: function(button, e, options) {
-        //delete form
-        this.getContactDetail().reset();
+        //hides buttons and debt data view on new contacts
+        //this.getAddPaymentButton().hide();
+        this.getMyDebtDataView().hide();
 
         //set active item
-        Ext.Viewport.setActiveItem(0);
+        Ext.Viewport.setActiveItem(this.getContactDetail());
     },
 
     onSaveContactTap: function(button, e, options) {
@@ -105,24 +101,50 @@ Ext.define('Payback.controller.Contact', {
         Ext.Viewport.setActiveItem(0);
     },
 
+    onCancelContactTap: function(button, e, options) {
+        //delete form
+        this.getContactDetail().reset();
+
+        //set active item
+        Ext.Viewport.setActiveItem(0);
+    },
+
+    onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
+        var deleteButtons = dataview.query('button');
+
+        //hide other delete buttons
+        for (var i=0; i < deleteButtons.length; i++) {
+            deleteButtons[i].hide();
+        }
+
+        //show item delete button
+        target.query('button')[0].show();
+
+        //hide delete button after tap
+        Ext.Viewport.element.on({tap:function(){
+            target.query('button')[0].hide();
+        }, single:true});
+    },
+
     onDataviewtemTap: function(dataview, index, target, record, e, options) {
-        var form = this.getContactDetail();
+        var form = this.getContactDetail(),
+            debtDataView = this.getMyDebtDataView();
 
         //set the record for the form
         form.setRecord(record);
 
+        //clears filter on store and sets a new one, this shows only the payments associated with the debt tapped
+        Ext.getStore('Debts').clearFilter();
+        Ext.getStore('Debts').filter({property: "person_id", value: record.get('id')});
+
+        //refresh DataView
+        debtDataView.refresh();
+
+        //show items if hidden
+        debtDataView.show();
+
         //set active item
         Ext.Viewport.setActiveItem(form);
-    },
-
-    onAddContactTap: function(button, e, options) {
-
-        var form = this.getContactDetail();
-        form.reset(); //clear form
-        form.setRecord(null); //clear record from form
-
-        //set active item
-        Ext.Viewport.setActiveItem(this.getContactDetail());
     }
 
 });

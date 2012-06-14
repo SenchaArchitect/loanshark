@@ -18,7 +18,6 @@ Ext.define('Payback.view.DebtDetail', {
     alias: 'widget.DebtDetail',
 
     config: {
-        padding: '',
         autoDestroy: false,
         layout: {
             type: 'vbox'
@@ -49,7 +48,7 @@ Ext.define('Payback.view.DebtDetail', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Details',
+                title: 'Debt Details',
                 items: [
                     {
                         xtype: 'button',
@@ -66,6 +65,7 @@ Ext.define('Payback.view.DebtDetail', {
                 items: [
                     {
                         xtype: 'fieldset',
+                        itemId: 'myfieldset1',
                         title: 'Debt Information',
                         items: [
                             {
@@ -125,7 +125,20 @@ Ext.define('Payback.view.DebtDetail', {
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onFormpanelShow',
+                event: 'show'
+            }
         ]
+    },
+
+    onFormpanelShow: function(component, options) {
+
+        //sets the datepickerfield to today if a new debt
+        if(this.down('dataview').isHidden())
+        this.down('datepickerfield').setValue(new Date());
     }
 
 });

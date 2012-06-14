@@ -20,7 +20,6 @@ Ext.define('Payback.view.myDebtListItem', {
     config: {
         baseCls: 'x-data-item',
         updateRecord: function(newRecord, oldRecord) {
-
             //bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store
             this.callParent(arguments);
 
@@ -37,9 +36,8 @@ Ext.define('Payback.view.myDebtListItem', {
                 itemId: 'debtListItemDetail',
                 tpl: [
                     '<div>',
-                    '<tpl for="Person">',
-                    '{name}',
-                    '</tpl>',
+                    '    {[Ext.Date.format(values.date,\'M d\')]} -',
+                    '<tpl for="Person">{name}</tpl>',
                     '- {reason} - ${balance}</div>'
                 ],
                 items: [
@@ -66,7 +64,7 @@ Ext.define('Payback.view.myDebtListItem', {
     onDebtDeleteButtonTap: function(button, e, options) {
 
         //bug in framework, stops propagation of event, without this sometimes both the itemtap 
-        //and deletebuttontap would get fired after a previous record is deleted. this.callParent in updateRecords fixes this also.
+        //and deletebuttontap would get fired after a previous record is deleted. this.callParent in updateRecords fixes this also so this might not be needed
         e.stopEvent(); 
 
         var dataview = this.up('dataview');
@@ -88,10 +86,14 @@ Ext.define('Payback.view.myDebtListItem', {
 
         //update the summary
         Payback.app.application.getController('Payback.controller.Summary').updateSummary();
+
+        //debugger;
+
+        //refresh DataView
+        this.up('dataview').refresh()
     },
 
     updateRecord: function(newRecord, oldRecord) {
-
         //bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store
         this.callParent(arguments);
 

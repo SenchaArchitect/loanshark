@@ -39,7 +39,8 @@ Ext.define('Payback.model.Debt', {
                 name: 'balance'
             },
             {
-                name: 'date'
+                name: 'date',
+                type: 'date'
             },
             {
                 name: 'person_id'

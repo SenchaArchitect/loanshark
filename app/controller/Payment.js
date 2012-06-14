@@ -38,15 +38,15 @@ Ext.define('Payback.controller.Payment', {
             "#addPayment": {
                 tap: 'onAddPaymentTap'
             },
-            "#cancelPayment": {
-                tap: 'onCancelButtonTap'
-            },
             "#savePayment": {
                 tap: 'onSavePaymentTap'
             },
+            "#cancelPayment": {
+                tap: 'onCancelButtonTap'
+            },
             "#myPaymentDataView": {
-                itemtap: 'onDataviewItemTap',
-                itemswipe: 'onDataviewItemSwipe'
+                itemswipe: 'onDataviewItemSwipe',
+                itemtap: 'onDataviewItemTap'
             }
         }
     },
@@ -62,13 +62,6 @@ Ext.define('Payback.controller.Payment', {
 
         //set active item
         Ext.Viewport.setActiveItem(form);
-    },
-
-    onCancelButtonTap: function(button, e, options) {
-        this.getPaymentDetail().reset(); //clears form
-
-        //set active item
-        Ext.Viewport.setActiveItem(this.getDebtDetail());
     },
 
     onSavePaymentTap: function(button, e, options) {
@@ -108,19 +101,22 @@ Ext.define('Payback.controller.Payment', {
         //loads data from localStorage
         Ext.getStore('Payments').load();
 
+        //update people store and summary
+        Ext.getStore('People').load(function(){
+            this.getApplication().getController('Summary').updateSummary();
+        },
+        this);
+
         //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
 
     },
 
-    onDataviewItemTap: function(dataview, index, target, record, e, options) {
-
-        var form = this.getPaymentDetail();
-
-        form.setRecord(record); //set form record
+    onCancelButtonTap: function(button, e, options) {
+        this.getPaymentDetail().reset(); //clears form
 
         //set active item
-        Ext.Viewport.setActiveItem(form);
+        Ext.Viewport.setActiveItem(this.getDebtDetail());
     },
 
     onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
@@ -138,6 +134,16 @@ Ext.define('Payback.controller.Payment', {
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
         }, single:true});
+    },
+
+    onDataviewItemTap: function(dataview, index, target, record, e, options) {
+
+        var form = this.getPaymentDetail();
+
+        form.setRecord(record); //set form record
+
+        //set active item
+        Ext.Viewport.setActiveItem(form);
     }
 
 });

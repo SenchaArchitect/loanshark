@@ -125,19 +125,6 @@ Ext.define('Payback.controller.Debt', {
     onCanelButtonTap: function(button, e, options) {
         this.getDebtDetail().reset(); //reset form
 
-        /*//if record exists update the debt balance on new payments
-        var record = this.getDebtDetail().getRecord();
-        if(record) {
-            record.set('balance',0); //bug in framework, calls convert field again on debt
-            record.getPerson().calcBalance(); //calc balance of updated payments and debt in person
-        }
-
-        //update people store for anything changed
-        /*Ext.getStore('People').load(function(){
-        this.getApplication().getController('Summary').updateSummary();
-        },
-        this);*/
-
         //set active item
         Ext.Viewport.setActiveItem(0);
     },

@@ -8,6 +8,8 @@
     "codeClass": null,
     "userConfig": {
         "autoDestroy": false,
+        "layout": "vbox",
+        "scrollable": "false\n",
         "designer|userClassName": "ContactDetail",
         "designer|userAlias": "ContactDetail"
     },
@@ -26,7 +28,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "title": "Details",
+                "title": "Prey Details",
                 "designer|userClassName": "MyTitleBar2"
             },
             "customConfigs": [],
@@ -99,64 +101,142 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen17096",
-            "type": "fieldset",
+            "id": "ExtBox1-ext-gen5377",
+            "type": "container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Prey Information",
-                "designer|userClassName": "MyFieldSet"
+                "height": 200,
+                "designer|userClassName": "MyContainer7"
             },
             "customConfigs": [],
             "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen17100",
-                    "type": "textfield",
+                    "id": "ExtBox1-ext-gen17096",
+                    "type": "fieldset",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": "Name",
-                        "name": "name",
-                        "designer|userClassName": "MyTextField2"
+                        "title": "Prey Information",
+                        "designer|userClassName": "MyFieldSet"
+                    },
+                    "customConfigs": [],
+                    "expanded": false,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen17100",
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Name",
+                                "name": "name",
+                                "designer|userClassName": "MyTextField2"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen17105",
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Email",
+                                "name": "email",
+                                "designer|userClassName": "MyTextField"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen17110",
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Phone",
+                                "name": "phone",
+                                "designer|userClassName": "MyTextField1"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen5504",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "designer|userClassName": "MyContainer8",
+                "layout|flex": 1
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen23029",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "addDebt",
+                        "itemId": null,
+                        "ui": "action",
+                        "text": "Add",
+                        "designer|userClassName": "MyButton"
                     },
                     "customConfigs": [],
                     "expanded": true
                 },
                 {
-                    "id": "ExtBox1-ext-gen17105",
-                    "type": "textfield",
+                    "id": "ExtBox1-ext-gen6060",
+                    "type": "dataview",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": "Email",
-                        "name": "email",
-                        "designer|userClassName": "MyTextField"
-                    },
-                    "customConfigs": [],
-                    "expanded": true
-                },
-                {
-                    "id": "ExtBox1-ext-gen17110",
-                    "type": "textfield",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Phone",
-                        "name": "phone",
-                        "designer|userClassName": "MyTextField1"
+                        "baseCls": "x-list",
+                        "cls": [
+                            "x-list-normal"
+                        ],
+                        "id": "myDebtDataView",
+                        "itemId": null,
+                        "defaultType": "myDebtListItem",
+                        "store": "Debts",
+                        "useComponents": true,
+                        "disableSelection": true,
+                        "designer|userClassName": "MyDataView",
+                        "layout|flex": 1
                     },
                     "customConfigs": [],
                     "expanded": true

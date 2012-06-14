@@ -64,7 +64,7 @@ Ext.define('Payback.view.myContactListItem', {
     onContactDeleteButtonTap: function(button, e, options) {
 
         //bug in framework, stops propagation of event, without this sometimes both the itemtap 
-        //and deletebuttontap would get fired after a previous record is deleted
+        //and deletebuttontap would get fired after a previous record is deleted, this.callParent in updateRecords fixes this also so this might not be needed
         e.stopEvent(); 
 
         var debts = this.getRecord().debts();

@@ -7,7 +7,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "padding": "",
+        "padding": null,
         "style": null,
         "autoDestroy": false,
         "layout": "vbox",
@@ -96,7 +96,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "title": "Details",
+                "title": "Debt Details",
                 "designer|userClassName": "MyTitleBar2"
             },
             "customConfigs": [],
@@ -149,11 +149,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "itemId": "myfieldset1",
                         "title": "Debt Information",
                         "designer|userClassName": "MyFieldSet"
                     },
                     "customConfigs": [],
-                    "expanded": false,
+                    "expanded": true,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen42211",
@@ -337,6 +338,28 @@
                     "expanded": true
                 }
             ]
+        },
+        {
+            "id": "ExtBox1-ext-gen31029",
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFormpanelShow",
+                "implHandler": [
+                    "",
+                    "//sets the datepickerfield to today if a new debt",
+                    "if(this.down('dataview').isHidden())",
+                    "    this.down('datepickerfield').setValue(new Date());"
+                ],
+                "name": "show",
+                "designer|userClassName": "onFormpanelShow"
+            },
+            "customConfigs": [],
+            "expanded": true
         }
     ]
 }

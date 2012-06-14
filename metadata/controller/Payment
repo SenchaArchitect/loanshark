@@ -66,6 +66,71 @@
             "expanded": true
         },
         {
+            "id": "ExtBox1-ext-gen5895",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSavePaymentTap",
+                "implHandler": [
+                    "var form = this.getPaymentDetail(),",
+                    "    record = form.getRecord(),",
+                    "    values = form.getValues(),",
+                    "    debt = this.getDebtDetail().getRecord();",
+                    "",
+                    "if(record) { //if editing record",
+                    "    record.set(values);",
+                    "    record.save();",
+                    "} else { //if new record",
+                    "    var payment = debt.payments().add(values)[0];",
+                    "    debt.payments().sync();",
+                    "    payment.getDebt(); //bug in framework, associates payment with debt ",
+                    "",
+                    "    //bug in the framework, this allows the dataview to update the list when a record is added the first time and no other are in the store",
+                    "    payment.save({",
+                    "        callback:function(){",
+                    "            this.getMyPaymentDataView().refresh();",
+                    "        }",
+                    "    },this);",
+                    "",
+                    "    //bug in framework, debt_id is not correctly set in filter, work around is to delete the store and reassociate",
+                    "    delete debt.paymentsStore; ",
+                    "    debt.payments();",
+                    "",
+                    "    //recalc balance",
+                    "    debt.set('balance',0);",
+                    "}",
+                    "",
+                    "//update the debt balance on new payments",
+                    "var debtRecord = this.getDebtDetail().getRecord();",
+                    "debtRecord.set('balance',0); //bug in framework, calls convert field again on debt",
+                    "debtRecord.getPerson().calcBalance(); //calc balance of updated payments and debt in person",
+                    "",
+                    "//loads data from localStorage",
+                    "Ext.getStore('Payments').load();",
+                    "",
+                    "//update people store and summary",
+                    "Ext.getStore('People').load(function(){",
+                    "    this.getApplication().getController('Summary').updateSummary();",
+                    "},",
+                    "this);",
+                    "",
+                    "//set active item",
+                    "Ext.Viewport.setActiveItem(this.getDebtDetail());",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#savePayment",
+                "designer|userClassName": "onSavePaymentTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
             "id": "ExtBox1-ext-gen4905",
             "type": "controlleraction",
             "reference": {
@@ -90,65 +155,6 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen5895",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onSavePaymentTap",
-                "implHandler": [
-                    "var form = this.getPaymentDetail(),",
-                    "    record = form.getRecord(),",
-                    "    values = form.getValues(),",
-                    "    debt = this.getDebtDetail().getRecord();",
-                    "",
-                    "if(record) { //if editing record",
-                    "    record.set(values);",
-                    "    record.save();",
-                    "} else { //if new record",
-                    "    var payment = debt.payments().add(values)[0];",
-                    "    debt.payments().sync();",
-                    "    payment.getDebt(); //bug in framework, associates payment with debt ",
-                    "    ",
-                    "    //bug in the framework, this allows the dataview to update the list when a record is added the first time and no other are in the store",
-                    "    payment.save({",
-                    "        callback:function(){",
-                    "            this.getMyPaymentDataView().refresh();",
-                    "        }",
-                    "    },this);",
-                    "    ",
-                    "    //bug in framework, debt_id is not correctly set in filter, work around is to delete the store and reassociate",
-                    "    delete debt.paymentsStore; ",
-                    "    debt.payments();",
-                    "",
-                    "    //recalc balance",
-                    "    debt.set('balance',0);",
-                    "}",
-                    "",
-                    "//update the debt balance on new payments",
-                    "var debtRecord = this.getDebtDetail().getRecord();",
-                    "debtRecord.set('balance',0); //bug in framework, calls convert field again on debt",
-                    "debtRecord.getPerson().calcBalance(); //calc balance of updated payments and debt in person",
-                    "",
-                    "//loads data from localStorage",
-                    "Ext.getStore('Payments').load();",
-                    "",
-                    "//set active item",
-                    "Ext.Viewport.setActiveItem(this.getDebtDetail());",
-                    ""
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#savePayment",
-                "designer|userClassName": "onSavePaymentTap"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen11556",
             "type": "controllerref",
             "reference": {
@@ -162,33 +168,6 @@
                 "xtype": "DebtDetail",
                 "autoCreate": true,
                 "designer|userClassName": "DebtDetail"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen14983",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onDataviewItemTap",
-                "implHandler": [
-                    "",
-                    "var form = this.getPaymentDetail();",
-                    "",
-                    "form.setRecord(record); //set form record",
-                    "",
-                    "//set active item",
-                    "Ext.Viewport.setActiveItem(form);"
-                ],
-                "name": "itemtap",
-                "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "#myPaymentDataView",
-                "designer|userClassName": "onDataviewItemTap"
             },
             "customConfigs": [],
             "expanded": true
@@ -223,6 +202,33 @@
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myPaymentDataView",
                 "designer|userClassName": "onDataviewItemSwipe"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen14983",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDataviewItemTap",
+                "implHandler": [
+                    "",
+                    "var form = this.getPaymentDetail();",
+                    "",
+                    "form.setRecord(record); //set form record",
+                    "",
+                    "//set active item",
+                    "Ext.Viewport.setActiveItem(form);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "#myPaymentDataView",
+                "designer|userClassName": "onDataviewItemTap"
             },
             "customConfigs": [],
             "expanded": true

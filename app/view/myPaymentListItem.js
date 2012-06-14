@@ -71,9 +71,13 @@ Ext.define('Payback.view.myPaymentListItem', {
         dataview.getStore().remove(payment);
         dataview.getStore().sync(); //sync with local storage
 
+        //update the debt balance on deleted payment
+        var debtRecord = dataview.up('DebtDetail').getRecord();
+        debtRecord.set('balance',0); //bug in framework, calls convert field again on debt
+        debtRecord.getPerson().calcBalance(); //calc balance of updated payments and debt in person
 
-        //update the summary, this doesnt work here for some reason!
-        //Payback.app.application.getController('Payback.controller.Summary').updateSummary();
+        //update the summary
+        Payback.app.application.getController('Payback.controller.Summary').updateSummary();
     },
 
     updateRecord: function(newRecord, oldeRecord) {

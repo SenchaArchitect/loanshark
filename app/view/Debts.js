@@ -46,7 +46,18 @@ Ext.define('Payback.view.Debts', {
                 useComponents: true,
                 disableSelection: true
             }
+        ],
+        listeners: [
+            {
+                fn: 'onPanelShow',
+                event: 'show'
+            }
         ]
+    },
+
+    onPanelShow: function(component, options) {
+        //clears filter if one is on the store, filters are set when contact item is tapped
+        Ext.getStore('Debts').clearFilter();
     }
 
 });

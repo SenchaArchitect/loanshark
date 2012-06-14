@@ -112,6 +112,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "date",
+                "type": "date",
                 "designer|userClassName": "MyField13"
             },
             "customConfigs": [],

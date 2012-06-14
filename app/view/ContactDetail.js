@@ -19,11 +19,15 @@ Ext.define('Payback.view.ContactDetail', {
 
     config: {
         autoDestroy: false,
+        layout: {
+            type: 'vbox'
+        },
+        scrollable: false,
         items: [
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Details'
+                title: 'Prey Details'
             },
             {
                 xtype: 'toolbar',
@@ -47,23 +51,57 @@ Ext.define('Payback.view.ContactDetail', {
                 ]
             },
             {
-                xtype: 'fieldset',
-                title: 'Prey Information',
+                xtype: 'container',
+                height: 200,
                 items: [
                     {
-                        xtype: 'textfield',
-                        label: 'Name',
-                        name: 'name'
+                        xtype: 'fieldset',
+                        title: 'Prey Information',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                label: 'Name',
+                                name: 'name'
+                            },
+                            {
+                                xtype: 'textfield',
+                                label: 'Email',
+                                name: 'email'
+                            },
+                            {
+                                xtype: 'textfield',
+                                label: 'Phone',
+                                name: 'phone'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                layout: {
+                    type: 'vbox'
+                },
+                flex: 1,
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'addDebt',
+                        ui: 'action',
+                        text: 'Add'
                     },
                     {
-                        xtype: 'textfield',
-                        label: 'Email',
-                        name: 'email'
-                    },
-                    {
-                        xtype: 'textfield',
-                        label: 'Phone',
-                        name: 'phone'
+                        xtype: 'dataview',
+                        baseCls: 'x-list',
+                        cls: [
+                            'x-list-normal'
+                        ],
+                        id: 'myDebtDataView',
+                        defaultType: 'myDebtListItem',
+                        store: 'Debts',
+                        useComponents: true,
+                        disableSelection: true,
+                        flex: 1
                     }
                 ]
             }

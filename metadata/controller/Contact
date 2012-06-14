@@ -21,7 +21,7 @@
     "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen31779",
+            "id": "ExtBox1-ext-gen51194",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -29,70 +29,30 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onDataviewItemSwipe",
+                "fn": "onAddContactTap",
                 "implHandler": [
-                    "var deleteButtons = dataview.query('button');",
                     "",
-                    "//hide other delete buttons",
-                    "for (var i=0; i < deleteButtons.length; i++) {",
-                    "    deleteButtons[i].hide();",
-                    "}",
+                    "var form = this.getContactDetail();",
+                    "form.reset(); //clear form",
+                    "form.setRecord(null); //clear record from form",
                     "",
-                    "//show item delete button",
-                    "target.query('button')[0].show();",
+                    "//clears filter placed on Debt store",
+                    "Ext.getStore('Debts').clearFilter();",
                     "",
-                    "//hide delete button after tap",
-                    "Ext.Viewport.element.on({tap:function(){",
-                    "    target.query('button')[0].hide();",
-                    "}, single:true});"
-                ],
-                "name": "itemswipe",
-                "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "#myContactDataView",
-                "designer|userClassName": "onDataviewItemSwipe"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen13510",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onCancelContactTap",
-                "implHandler": [
-                    "//delete form",
-                    "this.getContactDetail().reset();",
+                    "//refresh DataView",
+                    "this.getMyDebtDataView().refresh();",
+                    "",
+                    "//hides buttons and debt data view on new contacts",
+                    "//this.getAddPaymentButton().hide();",
+                    "this.getMyDebtDataView().hide();",
                     "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(0);"
+                    "Ext.Viewport.setActiveItem(this.getContactDetail());"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#cancelContact",
-                "designer|userClassName": "onCancelContactTap"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen4127",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "ContactDetail",
-                "selector": "ContactDetail",
-                "xtype": "ContactDetail",
-                "autoCreate": true,
-                "designer|userClassName": "ContactDetail"
+                "designer|controlQuery": "#addContact",
+                "designer|userClassName": "onAddContactTap"
             },
             "customConfigs": [],
             "expanded": true
@@ -146,6 +106,83 @@
             "expanded": true
         },
         {
+            "id": "ExtBox1-ext-gen13510",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCancelContactTap",
+                "implHandler": [
+                    "//delete form",
+                    "this.getContactDetail().reset();",
+                    "",
+                    "//set active item",
+                    "Ext.Viewport.setActiveItem(0);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#cancelContact",
+                "designer|userClassName": "onCancelContactTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen31779",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDataviewItemSwipe",
+                "implHandler": [
+                    "var deleteButtons = dataview.query('button');",
+                    "",
+                    "//hide other delete buttons",
+                    "for (var i=0; i < deleteButtons.length; i++) {",
+                    "    deleteButtons[i].hide();",
+                    "}",
+                    "",
+                    "//show item delete button",
+                    "target.query('button')[0].show();",
+                    "",
+                    "//hide delete button after tap",
+                    "Ext.Viewport.element.on({tap:function(){",
+                    "    target.query('button')[0].hide();",
+                    "}, single:true});"
+                ],
+                "name": "itemswipe",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "#myContactDataView",
+                "designer|userClassName": "onDataviewItemSwipe"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen4127",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ContactDetail",
+                "selector": "ContactDetail",
+                "xtype": "ContactDetail",
+                "autoCreate": true,
+                "designer|userClassName": "ContactDetail"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
             "id": "ExtBox1-ext-gen14311",
             "type": "controlleraction",
             "reference": {
@@ -156,10 +193,21 @@
             "userConfig": {
                 "fn": "onDataviewtemTap",
                 "implHandler": [
-                    "var form = this.getContactDetail();",
+                    "var form = this.getContactDetail(),",
+                    "    debtDataView = this.getMyDebtDataView();",
                     "",
                     "//set the record for the form",
                     "form.setRecord(record);",
+                    "",
+                    "//clears filter on store and sets a new one, this shows only the payments associated with the debt tapped",
+                    "Ext.getStore('Debts').clearFilter();",
+                    "Ext.getStore('Debts').filter({property: \"person_id\", value: record.get('id')});",
+                    "",
+                    "//refresh DataView",
+                    "debtDataView.refresh();",
+                    "",
+                    "//show items if hidden",
+                    "debtDataView.show();",
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(form);"
@@ -168,33 +216,6 @@
                 "designer|targetType": "Ext.dataview.List",
                 "designer|controlQuery": "#myContactDataView",
                 "designer|userClassName": "onDataviewtemTap"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen51194",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onAddContactTap",
-                "implHandler": [
-                    "",
-                    "var form = this.getContactDetail();",
-                    "form.reset(); //clear form",
-                    "form.setRecord(null); //clear record from form",
-                    "",
-                    "//set active item",
-                    "Ext.Viewport.setActiveItem(this.getContactDetail());"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#addContact",
-                "designer|userClassName": "onAddContactTap"
             },
             "customConfigs": [],
             "expanded": true
@@ -211,6 +232,22 @@
                 "ref": "myContactDataView",
                 "selector": "#myContactDataView",
                 "designer|userClassName": "myContactDataView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen19190",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "myDebtDataView",
+                "selector": "#myDebtDataView",
+                "designer|userClassName": "myDebtDataView"
             },
             "customConfigs": [],
             "expanded": true
