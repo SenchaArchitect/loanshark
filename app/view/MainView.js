@@ -45,39 +45,54 @@ Ext.define('Payback.view.MainView', {
             }
         ],
         tabBar: {
-            docked: 'bottom'
+            docked: 'bottom',
+            itemId: 'mytabbar'
         },
         listeners: [
             {
-                fn: 'onSummaryViewShow',
-                event: 'show',
+                fn: 'onSummaryViewActivate',
+                event: 'activate',
                 delegate: '#Summary'
             },
             {
-                fn: 'onPanelShow',
-                event: 'show',
+                fn: 'onPanelActivate',
+                event: 'activate',
                 delegate: '#Debt'
             },
             {
-                fn: 'onPanelShow1',
-                event: 'show',
+                fn: 'onPanelActivate1',
+                event: 'activate',
                 delegate: '#Prey'
+            },
+            {
+                fn: 'onMytabbarActivetabChange',
+                event: 'activetabchange',
+                order: 'before',
+                delegate: '#mytabbar'
             }
         ]
     },
 
-    onSummaryViewShow: function(component, options) {
+    onSummaryViewActivate: function(container, newActiveItem, oldActiveItem, options) {
 
         //if(location.hash!="")
-        // location.hash ="";
+        //location.hash ="summary";
+        //Payback.app.application.getController('Payback.controller.Summary').redirectTo('Summary');
     },
 
-    onPanelShow: function(component, options) {
-        //location.hash = 'Debt';
+    onPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
+        //location.hash = 'debt';
+        //Payback.app.application.getController('Payback.controller.Debt').redirectTo('Debt');
     },
 
-    onPanelShow1: function(component, options) {
-        //location.hash = 'Prey';
+    onPanelActivate1: function(container, newActiveItem, oldActiveItem, options) {
+        //location.hash = 'prey';
+
+        //Payback.app.application.getController('Payback.controller.Contact').redirectTo('Prey');
+    },
+
+    onMytabbarActivetabChange: function(tabbar, value, oldValue, options) {
+        return false;
     }
 
 });

@@ -12,7 +12,6 @@
     "customConfigs": [],
     "designerId": "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51",
     "$viewOrder": 0,
-    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen37320",
@@ -26,8 +25,7 @@
                 "id": "Person",
                 "designer|userClassName": "MyLocalStorageProxy"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen33350",
@@ -46,8 +44,7 @@
                 "store": "{\"remoteFilter\":false, modelDefaults: null}",
                 "designer|userClassName": "MyHasManyAssociation"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen21927",
@@ -62,8 +59,7 @@
                 "type": "auto",
                 "designer|userClassName": "MyField7"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen30739",
@@ -77,8 +73,7 @@
                 "name": "name",
                 "designer|userClassName": "MyField"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen33039",
@@ -92,8 +87,7 @@
                 "name": "phone",
                 "designer|userClassName": "MyField"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen32724",
@@ -107,8 +101,7 @@
                 "name": "email",
                 "designer|userClassName": "MyField"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen24451",
@@ -124,8 +117,7 @@
                 "type": "float",
                 "designer|userClassName": "MyField"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen38941",
@@ -142,8 +134,7 @@
                 ],
                 "designer|userClassName": "calcBalance"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

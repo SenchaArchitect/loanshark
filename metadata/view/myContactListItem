@@ -17,7 +17,6 @@
     "customConfigs": [],
     "designerId": "ed8e32a8-2bee-4972-82cc-60fdcab2e506",
     "$viewOrder": 7,
-    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen28989",
@@ -33,7 +32,6 @@
                 "designer|userClassName": "MyContainer5"
             },
             "customConfigs": [],
-            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen28993",
@@ -52,7 +50,6 @@
                         "designer|userClassName": "MyButton12"
                     },
                     "customConfigs": [],
-                    "expanded": true,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen28997",
@@ -98,8 +95,7 @@
                                 "name": "tap",
                                 "designer|userClassName": "onContactDeleteButtonTap"
                             },
-                            "customConfigs": [],
-                            "expanded": true
+                            "customConfigs": []
                         }
                     ]
                 },
@@ -121,8 +117,7 @@
                         ],
                         "designer|userClassName": "tpl"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 }
             ]
         },
@@ -149,8 +144,7 @@
                 ],
                 "designer|userClassName": "updateRecord"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

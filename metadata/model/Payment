@@ -12,7 +12,6 @@
     "customConfigs": [],
     "designerId": "5f8fbc87-7f38-40ea-af4e-4e27c41555b7",
     "$viewOrder": 1,
-    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen21394",
@@ -27,8 +26,7 @@
                 "type": "auto",
                 "designer|userClassName": "MyField6"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen22738",
@@ -42,8 +40,7 @@
                 "name": "debt_id",
                 "designer|userClassName": "MyField8"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen20118",
@@ -58,8 +55,7 @@
                 "type": "float",
                 "designer|userClassName": "MyField3"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen20523",
@@ -74,8 +70,7 @@
                 "type": "date",
                 "designer|userClassName": "MyField4"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen20733",
@@ -90,8 +85,7 @@
                 "type": "int",
                 "designer|userClassName": "MyField5"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen37448",
@@ -106,8 +100,7 @@
                 "type": "string",
                 "designer|userClassName": "MyField5"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen15151",
@@ -121,8 +114,7 @@
                 "id": "Payments",
                 "designer|userClassName": "MyLocalStorageProxy1"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen23513",
@@ -137,8 +129,7 @@
                 "foreignKey": "debt_id",
                 "designer|userClassName": "MyBelongsToAssociation1"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

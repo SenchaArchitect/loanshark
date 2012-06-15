@@ -16,7 +16,6 @@
     "customConfigs": [],
     "designerId": "5c1a3711-4411-4d34-a283-c9149d1e681e",
     "$viewOrder": 0,
-    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen40178",
@@ -36,8 +35,7 @@
                 "name": "load",
                 "designer|userClassName": "onPeopleStoreLoad"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

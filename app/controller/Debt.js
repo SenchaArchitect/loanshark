@@ -18,8 +18,8 @@ Ext.define('Payback.controller.Debt', {
 
     config: {
         routes: {
-            'Debt': 'showDebtPanel',
-            'Debt/:id': 'showDebtDetail'
+            'debt': 'showDebtPanel',
+            'debt/:id': 'showDebtDetail'
         },
 
         refs: {

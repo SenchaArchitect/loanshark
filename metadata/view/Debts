@@ -15,7 +15,6 @@
     "customConfigs": [],
     "designerId": "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba",
     "$viewOrder": 8,
-    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen41266",
@@ -31,7 +30,6 @@
                 "designer|userClassName": "MyTitleBar"
             },
             "customConfigs": [],
-            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen41270",
@@ -47,8 +45,7 @@
                         "text": "Add",
                         "designer|userClassName": "MyButton"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 }
             ]
         },
@@ -73,8 +70,7 @@
                 "disableSelection": true,
                 "designer|userClassName": "MyDataView"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen30172",
@@ -93,8 +89,7 @@
                 "name": "show",
                 "designer|userClassName": "onPanelShow"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

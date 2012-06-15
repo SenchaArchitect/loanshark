@@ -16,7 +16,6 @@
     "customConfigs": [],
     "designerId": "d2bdb0dd-5320-4693-8b47-e897fdfdca71",
     "$viewOrder": 2,
-    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen17069",
@@ -31,8 +30,7 @@
                 "title": "Prey Details",
                 "designer|userClassName": "MyTitleBar2"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen17075",
@@ -47,7 +45,6 @@
                 "designer|userClassName": "MyToolbar"
             },
             "customConfigs": [],
-            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen17079",
@@ -63,8 +60,7 @@
                         "text": "Cancel",
                         "designer|userClassName": "MyButton1"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 },
                 {
                     "id": "ExtBox1-ext-gen17084",
@@ -77,8 +73,7 @@
                     "userConfig": {
                         "designer|userClassName": "MySpacer"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 },
                 {
                     "id": "ExtBox1-ext-gen17089",
@@ -95,8 +90,7 @@
                         "text": "Save",
                         "designer|userClassName": "MyButton2"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 }
             ]
         },
@@ -113,7 +107,6 @@
                 "designer|userClassName": "MyContainer7"
             },
             "customConfigs": [],
-            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen17096",
@@ -128,7 +121,6 @@
                         "designer|userClassName": "MyFieldSet"
                     },
                     "customConfigs": [],
-                    "expanded": true,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen17100",
@@ -143,8 +135,7 @@
                                 "name": "name",
                                 "designer|userClassName": "MyTextField2"
                             },
-                            "customConfigs": [],
-                            "expanded": true
+                            "customConfigs": []
                         },
                         {
                             "id": "ExtBox1-ext-gen17105",
@@ -160,8 +151,7 @@
                                 "placeHolder": "email@example.com",
                                 "designer|userClassName": "MyEmailField"
                             },
-                            "customConfigs": [],
-                            "expanded": true
+                            "customConfigs": []
                         },
                         {
                             "id": "ExtBox1-ext-gen17110",
@@ -176,8 +166,7 @@
                                 "name": "phone",
                                 "designer|userClassName": "MyTextField1"
                             },
-                            "customConfigs": [],
-                            "expanded": true
+                            "customConfigs": []
                         }
                     ]
                 }
@@ -197,7 +186,6 @@
                 "layout|flex": 1
             },
             "customConfigs": [],
-            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen23029",
@@ -214,8 +202,7 @@
                         "text": "add debt",
                         "designer|userClassName": "MyButton"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 },
                 {
                     "id": "ExtBox1-ext-gen6060",
@@ -239,8 +226,7 @@
                         "designer|userClassName": "MyDataView",
                         "layout|flex": 1
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 }
             ]
         },
@@ -262,8 +248,7 @@
                 "name": "show",
                 "designer|userClassName": "onFormpanelShow"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

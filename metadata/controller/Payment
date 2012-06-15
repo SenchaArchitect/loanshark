@@ -15,7 +15,6 @@
     "customConfigs": [],
     "designerId": "ebea6ac0-ebc3-4e23-a80f-c90cae112f2a",
     "$viewOrder": 3,
-    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen29060",
@@ -32,8 +31,7 @@
                 "autoCreate": true,
                 "designer|userClassName": "PaymentDetail"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen3457",
@@ -65,8 +63,7 @@
                 "designer|controlQuery": "#addPayment",
                 "designer|userClassName": "onAddPaymentTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen5895",
@@ -130,8 +127,7 @@
                 "designer|controlQuery": "#savePayment",
                 "designer|userClassName": "onSavePaymentTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen4905",
@@ -154,8 +150,7 @@
                 "designer|controlQuery": "#cancelPayment",
                 "designer|userClassName": "onCancelButtonTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen11556",
@@ -172,8 +167,7 @@
                 "autoCreate": true,
                 "designer|userClassName": "DebtDetail"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen17508",
@@ -206,8 +200,7 @@
                 "designer|controlQuery": "#myPaymentDataView",
                 "designer|userClassName": "onDataviewItemSwipe"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen14983",
@@ -233,8 +226,7 @@
                 "designer|controlQuery": "#myPaymentDataView",
                 "designer|userClassName": "onDataviewItemTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen21992",
@@ -249,8 +241,7 @@
                 "selector": "#myPaymentDataView",
                 "designer|userClassName": "myPaymentDataView"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

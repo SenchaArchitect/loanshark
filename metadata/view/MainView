@@ -15,7 +15,6 @@
     "customConfigs": [],
     "designerId": "9c7e563e-7ff0-4ba7-9556-9c0d6c286927",
     "$viewOrder": 0,
-    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen15360",
@@ -32,7 +31,6 @@
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
-            "expanded": true,
             "masterInstanceId": "ExtBox1-ext-gen2239",
             "cn": [
                 {
@@ -44,17 +42,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onSummaryViewShow",
+                        "fn": "onSummaryViewActivate",
                         "implHandler": [
                             "",
                             "//if(location.hash!=\"\")",
-                            "  // location.hash =\"\";"
+                            "//location.hash =\"summary\";",
+                            "//Payback.app.application.getController('Payback.controller.Summary').redirectTo('Summary');"
                         ],
-                        "name": "show",
-                        "designer|userClassName": "onSummaryViewShow"
+                        "name": "activate",
+                        "designer|userClassName": "onSummaryViewActivate"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 }
             ]
         },
@@ -73,7 +71,6 @@
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
-            "expanded": true,
             "masterInstanceId": "ExtBox1-ext-gen25568",
             "cn": [
                 {
@@ -85,15 +82,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onPanelShow",
+                        "fn": "onPanelActivate",
                         "implHandler": [
-                            "//location.hash = 'Debt';"
+                            "//location.hash = 'debt';",
+                            "//Payback.app.application.getController('Payback.controller.Debt').redirectTo('Debt');"
                         ],
-                        "name": "show",
-                        "designer|userClassName": "onPanelShow"
+                        "name": "activate",
+                        "designer|userClassName": "onPanelActivate"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 }
             ]
         },
@@ -112,7 +109,6 @@
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
-            "expanded": true,
             "masterInstanceId": "ExtBox1-ext-gen2255",
             "cn": [
                 {
@@ -124,15 +120,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onPanelShow1",
+                        "fn": "onPanelActivate1",
                         "implHandler": [
-                            "//location.hash = 'Prey';"
+                            "//location.hash = 'prey';",
+                            "",
+                            "//Payback.app.application.getController('Payback.controller.Contact').redirectTo('Prey');"
                         ],
-                        "name": "show",
-                        "designer|userClassName": "onPanelShow1"
+                        "name": "activate",
+                        "designer|userClassName": "onPanelActivate1"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "customConfigs": []
                 }
             ]
         },
@@ -146,13 +143,40 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "bottom",
+                "itemId": "mytabbar",
                 "ui": null,
                 "designer|userClassName": "MyTabBar",
                 "container|align": null
             },
             "customConfigs": [],
             "iconCls": "icon-tab-bar",
-            "expanded": true
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen9778",
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMytabbarActivetabChange",
+                        "implHandler": [
+                            "return false;"
+                        ],
+                        "name": "activetabchange",
+                        "designer|userClassName": "onMytabbarActivetabChange",
+                        "order": "before"
+                    },
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "order",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

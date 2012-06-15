@@ -22,9 +22,42 @@ Ext.define('Payback.controller.Summary', {
         ],
         summaryRecord: 0,
 
+        routes: {
+            'summary': 'showSummaryPanel'
+        },
+
         refs: {
-            SummaryContents: '#SummaryContents'
+            SummaryContents: '#SummaryContents',
+            MainView: 'MainView'
+        },
+
+        control: {
+            "MainView": {
+                activeitemchange: 'onTabpanelActiveItemChange'
+            }
         }
+    },
+
+    onTabpanelActiveItemChange: function(container, value, oldValue, options) {
+
+        /*var views = this.getMainView().getInnerItems();
+
+        switch(value) {
+        case views[0]:
+        console.log(0);
+        this.redirectTo('summary');
+        break;
+        case views[1]:
+        console.log(1);
+        this.redirectTo('debts');
+        break;
+        case views[2]:
+        console.log(2);
+        this.redirectTo('prey');
+        break;
+        }
+
+        //return false;*/
     },
 
     updateSummary: function() {
@@ -48,6 +81,12 @@ Ext.define('Payback.controller.Summary', {
             summaryRecord = Ext.create('Payback.model.Summary');
         }
         return summaryRecord;
+    },
+
+    showSummaryPanel: function() {
+
+        //switch to summary panel
+        Ext.Viewport.getActiveItem().setActiveItem(0);
     }
 
 });

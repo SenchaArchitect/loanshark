@@ -12,7 +12,6 @@
     "customConfigs": [],
     "designerId": "9492a36c-015b-4b23-8dad-68f6f48b9841",
     "$viewOrder": 2,
-    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen43445",
@@ -51,8 +50,7 @@
                 "designer|controlQuery": "#addDebt",
                 "designer|userClassName": "onAddDebtTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen43569",
@@ -69,8 +67,7 @@
                 "autoCreate": true,
                 "designer|userClassName": "DebtDetail"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen46395",
@@ -141,8 +138,7 @@
                 "designer|controlQuery": "#saveDebt",
                 "designer|userClassName": "onSaveDebtTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen19956",
@@ -165,8 +161,7 @@
                 "designer|controlQuery": "#cancelDebt",
                 "designer|userClassName": "onCanelButtonTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen16408",
@@ -200,8 +195,7 @@
                 "designer|controlQuery": "#myDebtDataView",
                 "designer|userClassName": "onDataviewItemSwipe"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen29385",
@@ -216,8 +210,7 @@
                 "selector": "#myDebtDataView",
                 "designer|userClassName": "myDebtDataView"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen12376",
@@ -253,8 +246,7 @@
                 "designer|controlQuery": "#myDebtDataView",
                 "designer|userClassName": "onDataviewItemTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen16447",
@@ -269,8 +261,7 @@
                 "selector": "#myPaymentDataView",
                 "designer|userClassName": "myPaymentDataView"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen16755",
@@ -285,8 +276,7 @@
                 "selector": "#addPayment",
                 "designer|userClassName": "addPaymentButton"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen9237",
@@ -316,8 +306,7 @@
                 "designer|controlQuery": "#emailDebt",
                 "designer|userClassName": "onEmailDebtTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen10264",
@@ -332,8 +321,7 @@
                 "selector": "#emailDebt",
                 "designer|userClassName": "emailDebtButton"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen21914",
@@ -350,11 +338,10 @@
                     "//switch to debt panel",
                     "//Ext.Viewport.getActiveItem().setActiveItem(1);"
                 ],
-                "url": "Debt",
+                "url": "debt",
                 "designer|userClassName": "showDebtPanel"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen22603",
@@ -375,15 +362,14 @@
                     "var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];",
                     "",
                     "if(dataItem) {",
-                    "    //this.onDataviewItemTap(null,null,null, dataItem.getRecord());  ",
-                    "   // location.hash = 'Debt/'+id;",
+                    "//this.onDataviewItemTap(null,null,null, dataItem.getRecord());  ",
+                    "// location.hash = 'Debt/'+id;",
                     "}*/"
                 ],
-                "url": "Debt/:id",
+                "url": "debt/:id",
                 "designer|userClassName": "showDebtDetail"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

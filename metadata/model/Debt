@@ -13,7 +13,6 @@
     "customConfigs": [],
     "designerId": "0da47a2f-b44a-4fc0-87f8-d59223d82d8d",
     "$viewOrder": 2,
-    "expanded": false,
     "cn": [
         {
             "id": "ExtBox1-ext-gen40722",
@@ -28,8 +27,7 @@
                 "type": null,
                 "designer|userClassName": "MyField10"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen40824",
@@ -43,8 +41,7 @@
                 "name": "reason",
                 "designer|userClassName": "MyField11"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen40932",
@@ -58,8 +55,7 @@
                 "name": "amount",
                 "designer|userClassName": "MyField12"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen25205",
@@ -74,7 +70,6 @@
                 "designer|userClassName": "MyField12"
             },
             "customConfigs": [],
-            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen26154",
@@ -97,8 +92,7 @@
                         "designer|userClassName": "convert"
                     },
                     "customConfigs": [],
-                    "iconCls": "icon-basic-function",
-                    "expanded": true
+                    "iconCls": "icon-basic-function"
                 }
             ]
         },
@@ -115,8 +109,7 @@
                 "type": "date",
                 "designer|userClassName": "MyField13"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen42330",
@@ -130,8 +123,7 @@
                 "name": "person_id",
                 "designer|userClassName": "MyField14"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen41780",
@@ -149,8 +141,7 @@
                 "store": "{\"modelDefaults\":null,\"remoteFilter\":false}",
                 "designer|userClassName": "MyHasManyAssociation1"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen15286",
@@ -164,8 +155,7 @@
                 "id": "Debts",
                 "designer|userClassName": "MyLocalStorageProxy2"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen7917",
@@ -180,8 +170,7 @@
                 "foreignKey": "person_id",
                 "designer|userClassName": "MyBelongsToAssociation"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

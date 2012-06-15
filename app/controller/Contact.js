@@ -25,8 +25,8 @@ Ext.define('Payback.controller.Contact', {
         ],
 
         routes: {
-            'Prey': 'showContactPanel',
-            'Prey/:id': 'showContactDetail'
+            'prey': 'showContactPanel',
+            'prey/:id': 'showContactDetail'
         },
 
         refs: {
@@ -171,7 +171,6 @@ Ext.define('Payback.controller.Contact', {
         debtDataView.show();
         form.down('#addDebt').show();
 
-
         //set active item
         Ext.Viewport.setActiveItem(form);
     },
@@ -179,7 +178,7 @@ Ext.define('Payback.controller.Contact', {
     showContactPanel: function() {
 
         //switch to contact panel
-        //Ext.Viewport.getActiveItem().setActiveItem(2);
+        Ext.Viewport.getActiveItem().setActiveItem(2);
     },
 
     showContactDetail: function(id) {

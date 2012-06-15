@@ -52,6 +52,7 @@ Ext.define('Payback.view.PaymentDetail', {
                 items: [
                     {
                         xtype: 'numberfield',
+                        itemId: 'mynumberfield1',
                         label: 'Amount',
                         name: 'amount'
                     },
@@ -77,7 +78,34 @@ Ext.define('Payback.view.PaymentDetail', {
                 xtype: 'hiddenfield',
                 name: 'debt_id'
             }
+        ],
+        listeners: [
+            {
+                fn: 'onMynumberfield1Focus',
+                event: 'focus',
+                delegate: '#mynumberfield1'
+            }
         ]
+    },
+
+    onMynumberfield1Focus: function(textfield, e, options) {
+
+        //android work around to hide keyboard.
+        if (Ext.os.is.Android)
+        Ext.Viewport.element.on({tap:function(){
+            var field = document.createElement('input');
+            field.setAttribute('type', 'text');
+            document.body.appendChild(field);
+
+            setTimeout(function() {
+                field.focus();  
+
+                setTimeout(function() {
+                    field.setAttribute('style', 'display:none;');
+                    field.parentNode.removeChild(field);
+                }, 100);
+            }, 50);
+        }, single:true});
     }
 
 });

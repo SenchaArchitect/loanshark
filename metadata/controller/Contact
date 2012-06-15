@@ -18,7 +18,6 @@
     "customConfigs": [],
     "designerId": "4924b61f-714b-45ce-aa6a-944c48e631e4",
     "$viewOrder": 0,
-    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen51194",
@@ -51,8 +50,7 @@
                 "designer|controlQuery": "#addContact",
                 "designer|userClassName": "onAddContactTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen18558",
@@ -86,7 +84,7 @@
                     "    record.set(values);",
                     "",
                     "    //validate",
-                    "   // if(!isValid(record))",
+                    "    // if(!isValid(record))",
                     "    //    return;",
                     "",
                     "    record.save();",
@@ -104,7 +102,7 @@
                     "    //if(!isValid(record)) {",
                     "    //    return;",
                     "    //}",
-                    "    ",
+                    "",
                     "    Ext.getStore('People').add(record);",
                     "    Ext.getStore('People').sync();",
                     "}",
@@ -123,8 +121,7 @@
                 "designer|controlQuery": "#saveContact",
                 "designer|userClassName": "onSaveContactTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen13510",
@@ -148,8 +145,7 @@
                 "designer|controlQuery": "#cancelContact",
                 "designer|userClassName": "onCancelContactTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen31779",
@@ -182,8 +178,7 @@
                 "designer|controlQuery": "#myContactDataView",
                 "designer|userClassName": "onDataviewItemSwipe"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen4127",
@@ -200,8 +195,7 @@
                 "autoCreate": true,
                 "designer|userClassName": "ContactDetail"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen14311",
@@ -231,7 +225,6 @@
                     "debtDataView.show();",
                     "form.down('#addDebt').show();",
                     "",
-                    "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(form);"
                 ],
@@ -240,8 +233,7 @@
                 "designer|controlQuery": "#myContactDataView",
                 "designer|userClassName": "onDataviewItemTap"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen44167",
@@ -256,8 +248,7 @@
                 "selector": "#myContactDataView",
                 "designer|userClassName": "myContactDataView"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen19190",
@@ -272,8 +263,7 @@
                 "selector": "#myDebtDataView",
                 "designer|userClassName": "myDebtDataView"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen4353",
@@ -288,13 +278,12 @@
                 "implHandler": [
                     "",
                     "//switch to contact panel",
-                    "//Ext.Viewport.getActiveItem().setActiveItem(2);"
+                    "Ext.Viewport.getActiveItem().setActiveItem(2);"
                 ],
-                "url": "Prey",
+                "url": "prey",
                 "designer|userClassName": "showContactPanel"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen5163",
@@ -314,15 +303,14 @@
                     "var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];",
                     "",
                     "if(dataItem) {",
-                    "    //this.onDataviewItemTap(null,null,null, dataItem.getRecord());  ",
-                    "    //location.hash = 'Prey/'+id;",
+                    "//this.onDataviewItemTap(null,null,null, dataItem.getRecord());  ",
+                    "//location.hash = 'Prey/'+id;",
                     "}*/"
                 ],
-                "url": "Prey/:id",
+                "url": "prey/:id",
                 "designer|userClassName": "showContactDetail"
             },
-            "customConfigs": [],
-            "expanded": true
+            "customConfigs": []
         }
     ]
 }

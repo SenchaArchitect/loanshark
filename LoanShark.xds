@@ -10,11 +10,12 @@
         "lineEnding": "",
         "instantiateStore": true,
         "genTimestamps": false,
+        "cacheBust": false,
         "saveOnDeploy": false,
         "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": 210000000495,
+    "xdsBuild": 210000000496,
     "framework": "touch20",
     "topInstanceFileMap": {
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
@@ -191,12 +192,5 @@
             ],
             "className": "Library"
         }
-    },
-    "expandedState": {
-        "data": true,
-        "model": true,
-        "component": true,
-        "controller": true,
-        "resource": true
     }
 }
