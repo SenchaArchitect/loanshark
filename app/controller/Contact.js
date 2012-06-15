@@ -65,9 +65,6 @@ Ext.define('Payback.controller.Contact', {
         //clears filter placed on Debt store
         Ext.getStore('Debts').clearFilter();
 
-        //refresh DataView
-        //this.getMyDebtDataView().refresh(); //??????????
-
         //hides buttons and debt data view on new contacts
         form.down('#addDebt').hide();
         form.down('dataview').hide();
@@ -98,8 +95,8 @@ Ext.define('Payback.controller.Contact', {
             record.set(values);
 
             //validate
-            if(!isValid(record))
-            return;
+            // if(!isValid(record))
+            //    return;
 
             record.save();
 
@@ -113,12 +110,11 @@ Ext.define('Payback.controller.Contact', {
             record = Ext.create('Payback.model.Person',values);
 
             //validate
-            if(!isValid(record)) {
-                return;
-            }
+            //if(!isValid(record)) {
+            //    return;
+            //}
+
             Ext.getStore('People').add(record);
-            //record.commit();
-            //record.save();
             Ext.getStore('People').sync();
         }
 
@@ -183,17 +179,17 @@ Ext.define('Payback.controller.Contact', {
     showContactPanel: function() {
 
         //switch to contact panel
-        Ext.Viewport.getActiveItem().setActiveItem(2);
+        //Ext.Viewport.getActiveItem().setActiveItem(2);
     },
 
     showContactDetail: function(id) {
-        this.showContactPanel();
+        /*this.showContactPanel();
         var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];
 
         if(dataItem) {
-            this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
-            location.hash = 'Prey/'+id;
-        }
+        //this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
+        //location.hash = 'Prey/'+id;
+    }*/
     }
 
 });

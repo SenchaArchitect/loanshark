@@ -39,9 +39,6 @@
                     "//clears filter placed on Debt store",
                     "Ext.getStore('Debts').clearFilter();",
                     "",
-                    "//refresh DataView",
-                    "//this.getMyDebtDataView().refresh(); //??????????",
-                    "",
                     "//hides buttons and debt data view on new contacts",
                     "form.down('#addDebt').hide();",
                     "form.down('dataview').hide();",
@@ -89,8 +86,8 @@
                     "    record.set(values);",
                     "",
                     "    //validate",
-                    "    if(!isValid(record))",
-                    "    return;",
+                    "   // if(!isValid(record))",
+                    "    //    return;",
                     "",
                     "    record.save();",
                     "",
@@ -104,12 +101,11 @@
                     "    record = Ext.create('Payback.model.Person',values);",
                     "",
                     "    //validate",
-                    "    if(!isValid(record)) {",
-                    "        return;",
-                    "    }",
+                    "    //if(!isValid(record)) {",
+                    "    //    return;",
+                    "    //}",
+                    "    ",
                     "    Ext.getStore('People').add(record);",
-                    "    //record.commit();",
-                    "    //record.save();",
                     "    Ext.getStore('People').sync();",
                     "}",
                     "",
@@ -292,7 +288,7 @@
                 "implHandler": [
                     "",
                     "//switch to contact panel",
-                    "Ext.Viewport.getActiveItem().setActiveItem(2);"
+                    "//Ext.Viewport.getActiveItem().setActiveItem(2);"
                 ],
                 "url": "Prey",
                 "designer|userClassName": "showContactPanel"
@@ -314,13 +310,13 @@
                     "id"
                 ],
                 "implHandler": [
-                    "this.showContactPanel();",
+                    "/*this.showContactPanel();",
                     "var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];",
                     "",
                     "if(dataItem) {",
-                    "    this.onDataviewItemTap(null,null,null, dataItem.getRecord());  ",
-                    "    location.hash = 'Prey/'+id;",
-                    "}"
+                    "    //this.onDataviewItemTap(null,null,null, dataItem.getRecord());  ",
+                    "    //location.hash = 'Prey/'+id;",
+                    "}*/"
                 ],
                 "url": "Prey/:id",
                 "designer|userClassName": "showContactDetail"

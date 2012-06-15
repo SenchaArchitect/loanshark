@@ -128,21 +128,6 @@
             "expanded": true
         },
         {
-            "id": "ExtBox1-ext-gen30708",
-            "type": "emailvalidation",
-            "reference": {
-                "name": "validations",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "field": "email",
-                "designer|userClassName": "MyEmailValidation"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
             "id": "ExtBox1-ext-gen38941",
             "type": "basicfunction",
             "reference": {

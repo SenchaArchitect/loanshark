@@ -68,18 +68,16 @@ Ext.define('Payback.view.MainView', {
 
     onSummaryViewShow: function(component, options) {
 
-        //if(location.hash!='')
-        //   location.hash = '';
+        //if(location.hash!="")
+        // location.hash ="";
     },
 
     onPanelShow: function(component, options) {
-        location.hash = 'Debt';
-
+        //location.hash = 'Debt';
     },
 
     onPanelShow1: function(component, options) {
-        location.hash = 'Prey';
-
+        //location.hash = 'Prey';
     }
 
 });

@@ -47,8 +47,8 @@
                         "fn": "onSummaryViewShow",
                         "implHandler": [
                             "",
-                            "//if(location.hash!='')",
-                            " //   location.hash = '';"
+                            "//if(location.hash!=\"\")",
+                            "  // location.hash =\"\";"
                         ],
                         "name": "show",
                         "designer|userClassName": "onSummaryViewShow"
@@ -87,8 +87,7 @@
                     "userConfig": {
                         "fn": "onPanelShow",
                         "implHandler": [
-                            "location.hash = 'Debt';",
-                            ""
+                            "//location.hash = 'Debt';"
                         ],
                         "name": "show",
                         "designer|userClassName": "onPanelShow"
@@ -127,8 +126,7 @@
                     "userConfig": {
                         "fn": "onPanelShow1",
                         "implHandler": [
-                            "location.hash = 'Prey';",
-                            ""
+                            "//location.hash = 'Prey';"
                         ],
                         "name": "show",
                         "designer|userClassName": "onPanelShow1"

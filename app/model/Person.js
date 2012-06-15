@@ -55,12 +55,6 @@ Ext.define('Payback.model.Person', {
                 name: 'balance',
                 type: 'float'
             }
-        ],
-        validations: [
-            {
-                type: 'email',
-                field: 'email'
-            }
         ]
     },
 

@@ -111,9 +111,6 @@ Ext.define('Payback.controller.Payment', {
         },
         this);
 
-        //refresh Contact DataView
-        //this.getContactDetail().down('dataview').refresh();
-
         //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
 

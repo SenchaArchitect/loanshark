@@ -128,11 +128,6 @@ Ext.define('Payback.controller.Debt', {
         },
         this);
 
-        //refresh Debt DataView
-        //this.prevPanel.down('dataview').refresh();
-
-        //location.hash = 'Debt';
-
         //set active item
         Ext.Viewport.setActiveItem(this.prevPanel);
     },
@@ -140,12 +135,8 @@ Ext.define('Payback.controller.Debt', {
     onCanelButtonTap: function(button, e, options) {
         this.getDebtDetail().reset(); //reset form
 
-        //debugger;
-
         //set active item
         Ext.Viewport.setActiveItem(this.prevPanel);
-
-        location.hash = 'af';
     },
 
     onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
@@ -183,8 +174,6 @@ Ext.define('Payback.controller.Debt', {
         this.prevPanel = Ext.Viewport.getActiveItem();
 
         Ext.Viewport.setActiveItem(form);
-
-        location.hash = 'Debt/'+index;
     },
 
     onEmailDebtTap: function(button, e, options) {
@@ -204,18 +193,18 @@ Ext.define('Payback.controller.Debt', {
     showDebtPanel: function() {
 
         //switch to debt panel
-        Ext.Viewport.getActiveItem().setActiveItem(1);
+        //Ext.Viewport.getActiveItem().setActiveItem(1);
     },
 
     showDebtDetail: function(id) {
-        this.showDebtPanel();
+        /*this.showDebtPanel();
 
         var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];
 
         if(dataItem) {
-            this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
-            location.hash = 'Debt/'+id;
-        }
+        //this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
+        // location.hash = 'Debt/'+id;
+    }*/
     }
 
 });
