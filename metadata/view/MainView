@@ -31,30 +31,7 @@
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
-            "masterInstanceId": "ExtBox1-ext-gen2239",
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen33690",
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onSummaryViewActivate",
-                        "implHandler": [
-                            "",
-                            "//if(location.hash!=\"\")",
-                            "//location.hash =\"summary\";",
-                            "//Payback.app.application.getController('Payback.controller.Summary').redirectTo('Summary');"
-                        ],
-                        "name": "activate",
-                        "designer|userClassName": "onSummaryViewActivate"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "masterInstanceId": "ExtBox1-ext-gen2239"
         },
         {
             "id": "ExtBox1-ext-gen50261",
@@ -71,28 +48,7 @@
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
-            "masterInstanceId": "ExtBox1-ext-gen25568",
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen34352",
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onPanelActivate",
-                        "implHandler": [
-                            "//location.hash = 'debt';",
-                            "//Payback.app.application.getController('Payback.controller.Debt').redirectTo('Debt');"
-                        ],
-                        "name": "activate",
-                        "designer|userClassName": "onPanelActivate"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "masterInstanceId": "ExtBox1-ext-gen25568"
         },
         {
             "id": "ExtBox1-ext-gen51418",
@@ -109,29 +65,7 @@
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
-            "masterInstanceId": "ExtBox1-ext-gen2255",
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen52857",
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onPanelActivate1",
-                        "implHandler": [
-                            "//location.hash = 'prey';",
-                            "",
-                            "//Payback.app.application.getController('Payback.controller.Contact').redirectTo('Prey');"
-                        ],
-                        "name": "activate",
-                        "designer|userClassName": "onPanelActivate1"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "masterInstanceId": "ExtBox1-ext-gen2255"
         },
         {
             "id": "ExtBox1-ext-gen2986",
@@ -149,34 +83,38 @@
                 "container|align": null
             },
             "customConfigs": [],
-            "iconCls": "icon-tab-bar",
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen9778",
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onMytabbarActivetabChange",
-                        "implHandler": [
-                            "return false;"
-                        ],
-                        "name": "activetabchange",
-                        "designer|userClassName": "onMytabbarActivetabChange",
-                        "order": "before"
-                    },
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "order",
-                            "type": "string"
-                        }
-                    ]
-                }
-            ]
+            "iconCls": "icon-tab-bar"
+        },
+        {
+            "id": "ExtBox1-ext-gen23419",
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTabpanelActiveItemChange",
+                "implHandler": [
+                    "",
+                    "/*var views = this.getInnerItems();",
+                    "",
+                    "switch(value) {",
+                    "    case views[0]:",
+                    "        location.hash =\"summary\";",
+                    "        break;",
+                    "    case views[1]:",
+                    "        location.hash =\"debt\";",
+                    "        break;",
+                    "    case views[2]:",
+                    "        location.hash =\"prey\";",
+                    "        break;",
+                    "}*/"
+                ],
+                "name": "activeitemchange",
+                "designer|userClassName": "onTabpanelActiveItemChange"
+            },
+            "customConfigs": []
         }
     ]
 }

@@ -202,9 +202,9 @@ Ext.define('Payback.controller.Debt', {
         var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];
 
         if(dataItem) {
-        //this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
-        // location.hash = 'Debt/'+id;
-    }*/
+        this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
+        location.hash = 'Debt/'+id;
+        }*/
     }
 
 });

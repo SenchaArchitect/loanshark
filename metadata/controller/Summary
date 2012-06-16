@@ -124,63 +124,10 @@
                 "implHandler": [
                     "",
                     "//switch to summary panel",
-                    "Ext.Viewport.getActiveItem().setActiveItem(0);"
+                    "//Ext.Viewport.getActiveItem().setActiveItem(0);"
                 ],
                 "url": "summary",
                 "designer|userClassName": "showSummaryPanel"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen4890",
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onTabpanelActiveItemChange",
-                "implHandler": [
-                    "",
-                    "/*var views = this.getMainView().getInnerItems();",
-                    "",
-                    "switch(value) {",
-                    "    case views[0]:",
-                    "        console.log(0);",
-                    "        this.redirectTo('summary');",
-                    "        break;",
-                    "    case views[1]:",
-                    "        console.log(1);",
-                    "        this.redirectTo('debts');",
-                    "        break;",
-                    "    case views[2]:",
-                    "        console.log(2);",
-                    "        this.redirectTo('prey');",
-                    "        break;",
-                    "}",
-                    "",
-                    "//return false;*/"
-                ],
-                "name": "activeitemchange",
-                "designer|targetType": "Ext.tab.Panel",
-                "designer|controlQuery": "MainView",
-                "designer|userClassName": "onTabpanelActiveItemChange"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen8062",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "MainView",
-                "selector": "MainView",
-                "designer|userClassName": "MainView"
             },
             "customConfigs": []
         }

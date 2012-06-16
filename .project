@@ -12,46 +12,27 @@
                 {
                     "id": "ExtBox1-ext-gen15360",
                     "expanded": true,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen33690",
-                            "expanded": true,
-                            "cn": []
-                        }
-                    ]
+                    "cn": []
                 },
                 {
                     "id": "ExtBox1-ext-gen50261",
                     "expanded": true,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen34352",
-                            "expanded": true,
-                            "cn": []
-                        }
-                    ]
+                    "cn": []
                 },
                 {
                     "id": "ExtBox1-ext-gen51418",
                     "expanded": true,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen52857",
-                            "expanded": true,
-                            "cn": []
-                        }
-                    ]
+                    "cn": []
                 },
                 {
                     "id": "ExtBox1-ext-gen2986",
                     "expanded": true,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen9778",
-                            "expanded": true,
-                            "cn": []
-                        }
-                    ]
+                    "cn": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen23419",
+                    "expanded": true,
+                    "cn": []
                 }
             ]
         },
@@ -769,16 +750,6 @@
                 },
                 {
                     "id": "ExtBox1-ext-gen8373",
-                    "expanded": true,
-                    "cn": []
-                },
-                {
-                    "id": "ExtBox1-ext-gen4890",
-                    "expanded": true,
-                    "cn": []
-                },
-                {
-                    "id": "ExtBox1-ext-gen8062",
                     "expanded": true,
                     "cn": []
                 }

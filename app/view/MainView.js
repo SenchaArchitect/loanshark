@@ -50,49 +50,27 @@ Ext.define('Payback.view.MainView', {
         },
         listeners: [
             {
-                fn: 'onSummaryViewActivate',
-                event: 'activate',
-                delegate: '#Summary'
-            },
-            {
-                fn: 'onPanelActivate',
-                event: 'activate',
-                delegate: '#Debt'
-            },
-            {
-                fn: 'onPanelActivate1',
-                event: 'activate',
-                delegate: '#Prey'
-            },
-            {
-                fn: 'onMytabbarActivetabChange',
-                event: 'activetabchange',
-                order: 'before',
-                delegate: '#mytabbar'
+                fn: 'onTabpanelActiveItemChange',
+                event: 'activeitemchange'
             }
         ]
     },
 
-    onSummaryViewActivate: function(container, newActiveItem, oldActiveItem, options) {
+    onTabpanelActiveItemChange: function(container, value, oldValue, options) {
 
-        //if(location.hash!="")
-        //location.hash ="summary";
-        //Payback.app.application.getController('Payback.controller.Summary').redirectTo('Summary');
-    },
+        /*var views = this.getInnerItems();
 
-    onPanelActivate: function(container, newActiveItem, oldActiveItem, options) {
-        //location.hash = 'debt';
-        //Payback.app.application.getController('Payback.controller.Debt').redirectTo('Debt');
-    },
-
-    onPanelActivate1: function(container, newActiveItem, oldActiveItem, options) {
-        //location.hash = 'prey';
-
-        //Payback.app.application.getController('Payback.controller.Contact').redirectTo('Prey');
-    },
-
-    onMytabbarActivetabChange: function(tabbar, value, oldValue, options) {
-        return false;
+        switch(value) {
+        case views[0]:
+        location.hash ="summary";
+        break;
+        case views[1]:
+        location.hash ="debt";
+        break;
+        case views[2]:
+        location.hash ="prey";
+        break;
+        }*/
     }
 
 });
