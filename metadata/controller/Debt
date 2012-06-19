@@ -131,10 +131,10 @@
                     "this);",
                     "",
                     "",
-                    "location.hash = 'debt';",
+                    "//location.hash = 'debt';",
                     "",
                     "//set active item",
-                    "//Ext.Viewport.setActiveItem(this.prevPanel);"
+                    "Ext.Viewport.setActiveItem(this.prevPanel);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -154,7 +154,12 @@
             "userConfig": {
                 "fn": "onCanelButtonTap",
                 "implHandler": [
-                    "    location.hash = 'debt';"
+                    "//location.hash = 'debt';",
+                    "",
+                    "this.getDebtDetail().reset(); //reset form",
+                    "",
+                    "//set active item",
+                    "Ext.Viewport.setActiveItem(this.prevPanel);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -229,7 +234,8 @@
                     "",
                     "//clears filter on store and sets a new one, this shows only the payments associated with the debt tapped",
                     "Ext.getStore('Payments').clearFilter();",
-                    "Ext.getStore('Payments').filter({property: \"debt_id\", value: record.get('id')});",
+                    "",
+                    "Ext.getStore('Payments').filter(\"debt_id\", record.get('id'));",
                     "",
                     "//show hidden components",
                     "this.getAddPaymentButton().show();",
@@ -241,7 +247,7 @@
                     "",
                     "location.hash = 'debt/'+(index+1);",
                     "",
-                    "console.log('item tap');",
+                    "//console.log('item tap');",
                     "",
                     "Ext.Viewport.setActiveItem(form);"
                 ],
@@ -339,18 +345,20 @@
                 "fn": "showDebtPanel",
                 "implHandler": [
                     "",
-                    "if(Ext.Viewport.getActiveItem() == this.getDebtDetail()) {",
-                    "    ",
+                    "/*if(Ext.Viewport.getActiveItem() == this.getDebtDetail()) {",
+                    "",
                     "    this.getDebtDetail().reset(); //reset form",
                     "",
                     "    //set active item",
                     "    Ext.Viewport.setActiveItem(this.prevPanel);",
                     "} else {",
                     "    //set MainView active item",
-                    "    Ext.Viewport.getActiveItem().setActiveItem(1);",
+                    "    ",
                     "}",
                     "",
-                    ""
+                    "*/",
+                    "",
+                    "Ext.Viewport.getActiveItem().setActiveItem(1);"
                 ],
                 "url": "debt",
                 "designer|userClassName": "showDebtPanel"
@@ -371,16 +379,16 @@
                     "id"
                 ],
                 "implHandler": [
-                    "this.showDebtPanel();",
+                    "/*this.showDebtPanel();",
                     "",
                     "id--;",
                     "",
                     "var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];",
-                    "console.log('show debt');",
+                    "//console.log('show debt');",
                     "",
                     "if(dataItem) {",
                     "    this.onDataviewItemTap(null,id,null, dataItem.getRecord());  ",
-                    "}"
+                    "}*/"
                 ],
                 "url": "debt/:id",
                 "designer|userClassName": "showDebtDetail"

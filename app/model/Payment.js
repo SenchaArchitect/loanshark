@@ -21,6 +21,9 @@ Ext.define('Payback.model.Payment', {
     ],
 
     config: {
+        identifier: {
+            type: 'uuid'
+        },
         fields: [
             {
                 name: 'id',

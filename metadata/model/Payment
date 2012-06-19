@@ -130,6 +130,23 @@
                 "designer|userClassName": "MyBelongsToAssociation1"
             },
             "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen3571",
+            "type": "object",
+            "reference": {
+                "name": "identifier",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{type:'uuid'}"
+                ],
+                "designer|displayName": "identifier",
+                "designer|userClassName": "identifier"
+            },
+            "customConfigs": []
         }
     ]
 }

@@ -9,7 +9,13 @@
     "userConfig": {
         "designer|userClassName": "Person"
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "store",
+            "type": "object"
+        }
+    ],
     "designerId": "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51",
     "$viewOrder": 0,
     "cn": [
@@ -41,10 +47,28 @@
                 "autoLoad": true,
                 "foreignKey": "person_id",
                 "name": "debts",
-                "store": "{\"remoteFilter\":false, modelDefaults: null}",
                 "designer|userClassName": "MyHasManyAssociation"
             },
-            "customConfigs": []
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen9768",
+                    "type": "object",
+                    "reference": {
+                        "name": "store",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "{remoteFilter: false, modelDefaults: null}"
+                        ],
+                        "designer|displayName": "store",
+                        "designer|userClassName": "store"
+                    },
+                    "customConfigs": []
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen21927",
@@ -112,12 +136,30 @@
             },
             "codeClass": null,
             "userConfig": {
-                "defaultValue": "0",
                 "name": "balance",
                 "type": "float",
                 "designer|userClassName": "MyField"
             },
-            "customConfigs": []
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen6342",
+                    "type": "object",
+                    "reference": {
+                        "name": "defaultValue",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "0"
+                        ],
+                        "designer|displayName": "defaultValue",
+                        "designer|userClassName": "defaultValue"
+                    },
+                    "customConfigs": []
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen38941",
@@ -133,6 +175,23 @@
                     "return this.set('balance', this.debts().sum('balance'));"
                 ],
                 "designer|userClassName": "calcBalance"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen8847",
+            "type": "object",
+            "reference": {
+                "name": "identifier",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{type:'uuid'}"
+                ],
+                "designer|displayName": "identifier",
+                "designer|userClassName": "identifier"
             },
             "customConfigs": []
         }

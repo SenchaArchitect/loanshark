@@ -84,7 +84,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "tpl <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;SummaryContents&nbsp;</i>",
                         "implHandler": [
                             "<center>You're Owed: {totalOwed}</center>"
                         ],

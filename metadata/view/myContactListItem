@@ -108,7 +108,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "tpl1 <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;contactListItemDetail&nbsp;</i>",
                         "implHandler": [
                             "<div>",
                             "{name}  ${balance}<br>",

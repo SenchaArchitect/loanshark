@@ -21,6 +21,9 @@ Ext.define('Payback.model.Person', {
     ],
 
     config: {
+        identifier: {
+            type: 'uuid'
+        },
         proxy: {
             type: 'localstorage',
             id: 'Person'

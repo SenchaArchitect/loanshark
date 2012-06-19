@@ -15,7 +15,7 @@
         "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": 210000000498,
+    "xdsBuild": 210000000501,
     "framework": "touch20",
     "topInstanceFileMap": {
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {

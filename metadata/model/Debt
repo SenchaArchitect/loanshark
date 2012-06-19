@@ -10,7 +10,13 @@
         "designer|userClassName": "Debt",
         "designer|userAlias": "Debt"
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "store",
+            "type": "object"
+        }
+    ],
     "designerId": "0da47a2f-b44a-4fc0-87f8-d59223d82d8d",
     "$viewOrder": 2,
     "cn": [
@@ -138,10 +144,28 @@
                 "autoLoad": true,
                 "foreignKey": "debt_id",
                 "name": "payments",
-                "store": "{\"modelDefaults\":null,\"remoteFilter\":false}",
                 "designer|userClassName": "MyHasManyAssociation1"
             },
-            "customConfigs": []
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen8982",
+                    "type": "object",
+                    "reference": {
+                        "name": "store",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "{modelDefaults: null, remoteFilter: false}"
+                        ],
+                        "designer|displayName": "store",
+                        "designer|userClassName": "store"
+                    },
+                    "customConfigs": []
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen15286",
@@ -169,6 +193,23 @@
                 "model": "Person",
                 "foreignKey": "person_id",
                 "designer|userClassName": "MyBelongsToAssociation"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen2737",
+            "type": "object",
+            "reference": {
+                "name": "identifier",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{type:'uuid'}"
+                ],
+                "designer|displayName": "identifier",
+                "designer|userClassName": "identifier"
             },
             "customConfigs": []
         }

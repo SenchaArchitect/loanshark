@@ -9,7 +9,6 @@
     "userConfig": {
         "autoDestroy": false,
         "layout": "vbox",
-        "scrollable": "false\n",
         "designer|userClassName": "ContactDetail",
         "designer|userAlias": "ContactDetail"
     },
@@ -248,6 +247,23 @@
                 ],
                 "name": "show",
                 "designer|userClassName": "onFormpanelShow"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen2381",
+            "type": "object",
+            "reference": {
+                "name": "scrollable",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "false"
+                ],
+                "designer|displayName": "scrollable",
+                "designer|userClassName": "scrollable"
             },
             "customConfigs": []
         }

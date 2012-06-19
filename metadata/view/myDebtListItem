@@ -108,7 +108,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "tpl2 <i class=\"xds-suffix xds-suffix-loaded\">&nbsp;debtListItemDetail&nbsp;</i>",
                         "implHandler": [
                             "<div>",
                             "{[Ext.Date.format(values.date,'M d')]} -",
