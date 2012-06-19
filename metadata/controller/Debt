@@ -130,8 +130,11 @@
                     "},",
                     "this);",
                     "",
+                    "",
+                    "location.hash = 'debt';",
+                    "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(this.prevPanel);"
+                    "//Ext.Viewport.setActiveItem(this.prevPanel);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -151,10 +154,7 @@
             "userConfig": {
                 "fn": "onCanelButtonTap",
                 "implHandler": [
-                    "this.getDebtDetail().reset(); //reset form",
-                    "",
-                    "//set active item",
-                    "Ext.Viewport.setActiveItem(this.prevPanel);"
+                    "    location.hash = 'debt';"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -238,6 +238,10 @@
                     "",
                     "//remember previous panel to return to",
                     "this.prevPanel = Ext.Viewport.getActiveItem();",
+                    "",
+                    "location.hash = 'debt/'+(index+1);",
+                    "",
+                    "console.log('item tap');",
                     "",
                     "Ext.Viewport.setActiveItem(form);"
                 ],
@@ -335,8 +339,18 @@
                 "fn": "showDebtPanel",
                 "implHandler": [
                     "",
-                    "//switch to debt panel",
-                    "//Ext.Viewport.getActiveItem().setActiveItem(1);"
+                    "if(Ext.Viewport.getActiveItem() == this.getDebtDetail()) {",
+                    "    ",
+                    "    this.getDebtDetail().reset(); //reset form",
+                    "",
+                    "    //set active item",
+                    "    Ext.Viewport.setActiveItem(this.prevPanel);",
+                    "} else {",
+                    "    //set MainView active item",
+                    "    Ext.Viewport.getActiveItem().setActiveItem(1);",
+                    "}",
+                    "",
+                    ""
                 ],
                 "url": "debt",
                 "designer|userClassName": "showDebtPanel"
@@ -357,17 +371,34 @@
                     "id"
                 ],
                 "implHandler": [
-                    "/*this.showDebtPanel();",
+                    "this.showDebtPanel();",
+                    "",
+                    "id--;",
                     "",
                     "var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];",
+                    "console.log('show debt');",
                     "",
                     "if(dataItem) {",
-                    "    this.onDataviewItemTap(null,null,null, dataItem.getRecord());  ",
-                    "    location.hash = 'Debt/'+id;",
-                    "}*/"
+                    "    this.onDataviewItemTap(null,id,null, dataItem.getRecord());  ",
+                    "}"
                 ],
                 "url": "debt/:id",
                 "designer|userClassName": "showDebtDetail"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen24341",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "MainView",
+                "selector": "MainView",
+                "designer|userClassName": "MainView"
             },
             "customConfigs": []
         }

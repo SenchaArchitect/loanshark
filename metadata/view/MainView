@@ -86,33 +86,42 @@
             "iconCls": "icon-tab-bar"
         },
         {
-            "id": "ExtBox1-ext-gen23419",
-            "type": "basiceventbinding",
+            "id": "ExtBox1-ext-gen15581",
+            "type": "basicfunction",
             "reference": {
-                "name": "listeners",
+                "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onTabpanelActiveItemChange",
+                "fn": "doTabChange",
+                "designer|params": [
+                    "tabBar",
+                    "newTab"
+                ],
                 "implHandler": [
                     "",
-                    "/*var views = this.getInnerItems();",
+                    "//this function overrides the default doTabChange to use routing logic instead.",
                     "",
-                    "switch(value) {",
-                    "    case views[0]:",
+                    "var oldActiveItem = this.getActiveItem(),",
+                    "    newActiveItem;",
+                    "",
+                    "switch(tabBar.indexOf(newTab)) {",
+                    "    case 0:",
                     "        location.hash =\"summary\";",
                     "        break;",
-                    "    case views[1]:",
+                    "    case 1:",
                     "        location.hash =\"debt\";",
                     "        break;",
-                    "    case views[2]:",
+                    "    case 2:",
                     "        location.hash =\"prey\";",
                     "        break;",
-                    "}*/"
+                    "}",
+                    "",
+                    "newActiveItem = this.getActiveItem();",
+                    "return this.forcedChange || oldActiveItem !== newActiveItem;"
                 ],
-                "name": "activeitemchange",
-                "designer|userClassName": "onTabpanelActiveItemChange"
+                "designer|userClassName": "doTabChange"
             },
             "customConfigs": []
         }

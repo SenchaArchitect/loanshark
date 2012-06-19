@@ -98,7 +98,6 @@ Ext.define('Payback.view.ContactDetail', {
                             'x-list-normal'
                         ],
                         id: 'myDebtDataView',
-                        itemId: 'mydataview',
                         defaultType: 'myDebtListItem',
                         store: 'Debts',
                         useComponents: true,

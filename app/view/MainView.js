@@ -47,30 +47,30 @@ Ext.define('Payback.view.MainView', {
         tabBar: {
             docked: 'bottom',
             itemId: 'mytabbar'
-        },
-        listeners: [
-            {
-                fn: 'onTabpanelActiveItemChange',
-                event: 'activeitemchange'
-            }
-        ]
+        }
     },
 
-    onTabpanelActiveItemChange: function(container, value, oldValue, options) {
+    doTabChange: function(tabBar, newTab) {
 
-        /*var views = this.getInnerItems();
+        //this function overrides the default doTabChange to use routing logic instead.
 
-        switch(value) {
-        case views[0]:
-        location.hash ="summary";
-        break;
-        case views[1]:
-        location.hash ="debt";
-        break;
-        case views[2]:
-        location.hash ="prey";
-        break;
-        }*/
+        var oldActiveItem = this.getActiveItem(),
+            newActiveItem;
+
+        switch(tabBar.indexOf(newTab)) {
+            case 0:
+            location.hash ="summary";
+            break;
+            case 1:
+            location.hash ="debt";
+            break;
+            case 2:
+            location.hash ="prey";
+            break;
+        }
+
+        newActiveItem = this.getActiveItem();
+        return this.forcedChange || oldActiveItem !== newActiveItem;
     }
 
 });

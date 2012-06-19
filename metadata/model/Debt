@@ -24,7 +24,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "id",
-                "type": null,
+                "type": "auto",
                 "designer|userClassName": "MyField10"
             },
             "customConfigs": []

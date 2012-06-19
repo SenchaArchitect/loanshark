@@ -1,7 +1,7 @@
 {
     "name": "LoanShark",
     "settings": {
-        "urlPrefix": "Http://localhost:8888/",
+        "urlPrefix": "http://localhost:8888/",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
         "exportPath": "",
@@ -15,7 +15,7 @@
         "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": 210000000496,
+    "xdsBuild": 210000000498,
     "framework": "touch20",
     "topInstanceFileMap": {
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {

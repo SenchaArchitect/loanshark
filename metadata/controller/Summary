@@ -124,7 +124,7 @@
                 "implHandler": [
                     "",
                     "//switch to summary panel",
-                    "//Ext.Viewport.getActiveItem().setActiveItem(0);"
+                    "Ext.Viewport.getActiveItem().setActiveItem(0);"
                 ],
                 "url": "summary",
                 "designer|userClassName": "showSummaryPanel"

@@ -25,7 +25,8 @@ Ext.define('Payback.model.Debt', {
     config: {
         fields: [
             {
-                name: 'id'
+                name: 'id',
+                type: 'auto'
             },
             {
                 name: 'reason'

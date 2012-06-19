@@ -205,7 +205,7 @@
                     "customConfigs": []
                 },
                 {
-                    "id": "ExtBox1-ext-gen6060",
+                    "id": "ExtBox1-ext-gen20017",
                     "type": "dataview",
                     "reference": {
                         "name": "items",
@@ -218,12 +218,13 @@
                             "x-list-normal"
                         ],
                         "id": "myDebtDataView",
-                        "itemId": "mydataview",
+                        "itemId": null,
                         "defaultType": "myDebtListItem",
                         "store": "Debts",
                         "useComponents": true,
                         "disableSelection": true,
                         "designer|userClassName": "MyDataView",
+                        "designer|userAlias": "mydataview",
                         "layout|flex": 1
                     },
                     "customConfigs": []

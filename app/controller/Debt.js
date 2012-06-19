@@ -31,7 +31,8 @@ Ext.define('Payback.controller.Debt', {
             myDebtDataView: '#myDebtDataView',
             myPaymentDataView: '#myPaymentDataView',
             addPaymentButton: '#addPayment',
-            emailDebtButton: '#emailDebt'
+            emailDebtButton: '#emailDebt',
+            MainView: 'MainView'
         },
 
         control: {
@@ -128,15 +129,15 @@ Ext.define('Payback.controller.Debt', {
         },
         this);
 
+
+        location.hash = 'debt';
+
         //set active item
-        Ext.Viewport.setActiveItem(this.prevPanel);
+        //Ext.Viewport.setActiveItem(this.prevPanel);
     },
 
     onCanelButtonTap: function(button, e, options) {
-        this.getDebtDetail().reset(); //reset form
-
-        //set active item
-        Ext.Viewport.setActiveItem(this.prevPanel);
+        location.hash = 'debt';
     },
 
     onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
@@ -173,6 +174,10 @@ Ext.define('Payback.controller.Debt', {
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();
 
+        location.hash = 'debt/'+(index+1);
+
+        console.log('item tap');
+
         Ext.Viewport.setActiveItem(form);
     },
 
@@ -192,19 +197,31 @@ Ext.define('Payback.controller.Debt', {
 
     showDebtPanel: function() {
 
-        //switch to debt panel
-        //Ext.Viewport.getActiveItem().setActiveItem(1);
+        if(Ext.Viewport.getActiveItem() == this.getDebtDetail()) {
+
+            this.getDebtDetail().reset(); //reset form
+
+            //set active item
+            Ext.Viewport.setActiveItem(this.prevPanel);
+        } else {
+            //set MainView active item
+            Ext.Viewport.getActiveItem().setActiveItem(1);
+        }
+
+
     },
 
     showDebtDetail: function(id) {
-        /*this.showDebtPanel();
+        this.showDebtPanel();
+
+        id--;
 
         var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];
+        console.log('show debt');
 
         if(dataItem) {
-        this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
-        location.hash = 'Debt/'+id;
-        }*/
+            this.onDataviewItemTap(null,id,null, dataItem.getRecord());  
+        }
     }
 
 });

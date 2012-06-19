@@ -50,6 +50,25 @@
             ]
         },
         {
+            "id": "ExtBox1-ext-gen30172",
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "//clears filter if one is on the store, filters are set when contact item is tapped",
+                    "Ext.getStore('Debts').clearFilter();"
+                ],
+                "name": "show",
+                "designer|userClassName": "onPanelShow"
+            },
+            "customConfigs": []
+        },
+        {
             "id": "ExtBox1-ext-gen16724",
             "type": "dataview",
             "reference": {
@@ -68,26 +87,8 @@
                 "store": "Debts",
                 "useComponents": true,
                 "disableSelection": true,
-                "designer|userClassName": "MyDataView"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen30172",
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onPanelShow",
-                "implHandler": [
-                    "//clears filter if one is on the store, filters are set when contact item is tapped",
-                    "Ext.getStore('Debts').clearFilter();"
-                ],
-                "name": "show",
-                "designer|userClassName": "onPanelShow"
+                "designer|userClassName": "MyDataView",
+                "designer|userAlias": "mydataview"
             },
             "customConfigs": []
         }

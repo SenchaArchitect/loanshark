@@ -278,7 +278,7 @@
                 "implHandler": [
                     "",
                     "//switch to contact panel",
-                    "//Ext.Viewport.getActiveItem().setActiveItem(2);"
+                    "Ext.Viewport.getActiveItem().setActiveItem(2);"
                 ],
                 "url": "prey",
                 "designer|userClassName": "showContactPanel"

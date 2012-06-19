@@ -178,7 +178,7 @@ Ext.define('Payback.controller.Contact', {
     showContactPanel: function() {
 
         //switch to contact panel
-        //Ext.Viewport.getActiveItem().setActiveItem(2);
+        Ext.Viewport.getActiveItem().setActiveItem(2);
     },
 
     showContactDetail: function(id) {
