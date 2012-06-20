@@ -12,7 +12,13 @@
         "designer|userClassName": "MainView",
         "designer|userAlias": "MainView"
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "tab",
+            "type": "object"
+        }
+    ],
     "designerId": "9c7e563e-7ff0-4ba7-9556-9c0d6c286927",
     "$viewOrder": 0,
     "cn": [
@@ -26,8 +32,8 @@
             "codeClass": null,
             "userConfig": {
                 "itemId": "Summary",
-                "title": "Summary",
-                "iconCls": "info"
+                "top": null,
+                "title": " "
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
@@ -43,8 +49,7 @@
             "codeClass": null,
             "userConfig": {
                 "itemId": "Debt",
-                "title": "Debts",
-                "iconCls": "arrow_down"
+                "title": " "
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
@@ -60,8 +65,7 @@
             "codeClass": null,
             "userConfig": {
                 "itemId": "Prey",
-                "title": "Prey",
-                "iconCls": "team"
+                "title": " "
             },
             "customConfigs": [],
             "iconCls": "icon-linkedinstance",
@@ -76,11 +80,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "bottom",
+                "docked": "top",
                 "itemId": "mytabbar",
-                "ui": null,
+                "ui": "light",
                 "designer|userClassName": "MyTabBar",
-                "container|align": null
+                "container|align": "stretchmax",
+                "container|pack": null
             },
             "customConfigs": [],
             "iconCls": "icon-tab-bar"
@@ -102,24 +107,27 @@
                 "implHandler": [
                     "",
                     "//this function overrides the default doTabChange to use routing logic instead.",
+                    "this.callParent(arguments);",
                     "",
+                    "/*",
                     "var oldActiveItem = this.getActiveItem(),",
                     "    newActiveItem;",
                     "",
                     "switch(tabBar.indexOf(newTab)) {",
                     "    case 0:",
-                    "        location.hash =\"summary\";",
-                    "        break;",
+                    "    location.hash =\"summary\";",
+                    "    break;",
                     "    case 1:",
-                    "        location.hash =\"debt\";",
-                    "        break;",
+                    "    location.hash =\"debt\";",
+                    "    break;",
                     "    case 2:",
-                    "        location.hash =\"prey\";",
-                    "        break;",
+                    "    location.hash =\"prey\";",
+                    "    break;",
                     "}",
                     "",
                     "newActiveItem = this.getActiveItem();",
-                    "return this.forcedChange || oldActiveItem !== newActiveItem;"
+                    "return this.forcedChange || oldActiveItem !== newActiveItem;",
+                    "*/"
                 ],
                 "designer|userClassName": "doTabChange"
             },

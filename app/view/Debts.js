@@ -21,15 +21,22 @@ Ext.define('Payback.view.Debts', {
         layout: {
             type: 'fit'
         },
+        tab: {
+            iconCls: 'info',
+            iconMask: true,
+            baseCls: 'x-button',
+            flex: 1,
+            iconAlign: 'center'
+        },
         items: [
             {
                 xtype: 'titlebar',
-                docked: 'top',
-                title: 'My Debts',
+                docked: 'bottom',
                 items: [
                     {
                         xtype: 'button',
                         id: 'addDebt',
+                        ui: 'confirm',
                         text: 'Add'
                     }
                 ]

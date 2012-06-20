@@ -24,15 +24,17 @@ Ext.define('Payback.view.Summary', {
             type: 'fit'
         },
         scrollable: false,
+        tab: {
+            iconCls: 'home',
+            iconMask: true,
+            baseCls: 'x-button',
+            flex: 1,
+            iconAlign: 'center'
+        },
         items: [
             {
-                xtype: 'titlebar',
-                docked: 'top',
-                title: 'Loanshark'
-            },
-            {
                 xtype: 'image',
-                style: 'background-size: auto 100%;background-position: center center;',
+                style: 'background-repeat: no-repeat; background-size: auto 100%;background-position: center center;',
                 src: 'resources/images/shark.gif',
                 mode: 'background'
             },

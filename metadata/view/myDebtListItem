@@ -16,7 +16,7 @@
     },
     "customConfigs": [],
     "designerId": "9290d4e2-55ef-4f81-b844-ff9efd351b2b",
-    "$viewOrder": 5,
+    "$viewOrder": 4,
     "cn": [
         {
             "id": "ExtBox1-ext-gen20879",
@@ -110,7 +110,7 @@
                     "userConfig": {
                         "implHandler": [
                             "<div>",
-                            "{[Ext.Date.format(values.date,'M d')]} -",
+                            "    {[Ext.Date.format(values.date,'m/d')]} -",
                             "<tpl for=\"Person\">{name}</tpl>",
                             "- {reason} - ${balance}</div>"
                         ],

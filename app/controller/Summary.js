@@ -57,7 +57,7 @@ Ext.define('Payback.controller.Summary', {
     showSummaryPanel: function() {
 
         //switch to summary panel
-        Ext.Viewport.getActiveItem().setActiveItem(0);
+        //Ext.Viewport.getActiveItem().setActiveItem(0);
     }
 
 });

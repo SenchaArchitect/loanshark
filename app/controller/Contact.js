@@ -162,7 +162,7 @@ Ext.define('Payback.controller.Contact', {
 
         //clears filter on store and sets a new one, this shows only the payments associated with the debt tapped
         Ext.getStore('Debts').clearFilter();
-        Ext.getStore('Debts').filter({property: "person_id", value: record.get('id')});
+        Ext.getStore('Debts').filter("person_id", record.get('id'));
 
         //refresh DataView
         debtDataView.refresh();
@@ -178,7 +178,7 @@ Ext.define('Payback.controller.Contact', {
     showContactPanel: function() {
 
         //switch to contact panel
-        Ext.Viewport.getActiveItem().setActiveItem(2);
+        //Ext.Viewport.getActiveItem().setActiveItem(2);
     },
 
     showContactDetail: function(id) {

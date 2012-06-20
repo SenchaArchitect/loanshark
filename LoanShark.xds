@@ -191,6 +191,12 @@
                 "metadata/resource/Library"
             ],
             "className": "Library"
+        },
+        "e0fc0f11-5bd9-4b48-890e-e5d786ed821d": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
         }
     }
 }

@@ -1,0 +1,51 @@
+$base-color: #303030;
+$list-bg-color: #000;
+$list-color: white;
+
+@import 'sencha-touch/default/all';
+
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-list-paging;
+@include sencha-list-pullrefresh;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+@include sencha-draw;
+@include sencha-charts;
+
+.x-tabbar-inner .x-button {
+    border: none !important;
+	background-image: none !important;
+	background: transparent !important;  
+	border-bottom: 2px solid transparent !important;  
+}
+
+.x-tabbar-inner .x-button .x-button-icon.x-icon-mask {
+    width: 100%;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	background-color: white;
+	background-image: none;
+	
+}
+
+.x-tabbar-inner .x-tab-active {
+	border-bottom: 2px solid red !important;
+	border-radius: 0;
+}
+
+.x-tabbar-inner {
+
+position: relative;top: 1px;
+
+}

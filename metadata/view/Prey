@@ -11,7 +11,13 @@
         "designer|userClassName": "Prey",
         "designer|userAlias": "Prey"
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "tab",
+            "type": "object"
+        }
+    ],
     "designerId": "dde4c54b-3964-4d6d-927f-dbd7c91717bc",
     "$viewOrder": 9,
     "cn": [
@@ -24,8 +30,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
-                "title": "Prey",
+                "docked": "bottom",
+                "title": null,
                 "designer|userClassName": "MyTitleBar"
             },
             "customConfigs": [],
@@ -41,6 +47,7 @@
                     "userConfig": {
                         "id": "addContact",
                         "itemId": null,
+                        "ui": "confirm",
                         "text": "Add",
                         "designer|userClassName": "MyButton"
                     },
@@ -68,6 +75,23 @@
                 "useComponents": true,
                 "disableSelection": true,
                 "designer|userClassName": "MyDataView1"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen6891",
+            "type": "object",
+            "reference": {
+                "name": "tab",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{ iconCls : 'action',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
+                ],
+                "designer|displayName": "tab",
+                "designer|userClassName": "tab"
             },
             "customConfigs": []
         }

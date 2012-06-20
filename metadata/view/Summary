@@ -15,25 +15,16 @@
         "designer|userClassName": "Summary",
         "designer|userAlias": "Summary"
     },
-    "customConfigs": [],
-    "designerId": "d3b832b6-4996-4c75-bb54-57aee2c88185",
-    "$viewOrder": 4,
-    "cn": [
+    "customConfigs": [
         {
-            "id": "ExtBox1-ext-gen4005",
-            "type": "titlebar",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "docked": "top",
-                "title": "Loanshark",
-                "designer|userClassName": "MyTitleBar"
-            },
-            "customConfigs": []
-        },
+            "group": "(Custom Properties)",
+            "name": "tab",
+            "type": "object"
+        }
+    ],
+    "designerId": "d3b832b6-4996-4c75-bb54-57aee2c88185",
+    "$viewOrder": 7,
+    "cn": [
         {
             "id": "ExtBox1-ext-gen11916",
             "type": "image",
@@ -45,7 +36,7 @@
             "userConfig": {
                 "centered": null,
                 "height": null,
-                "style": "background-size: auto 100%;background-position: center center;",
+                "style": "background-repeat: no-repeat; background-size: auto 100%;background-position: center center;",
                 "width": null,
                 "src": "resources/images/shark.gif",
                 "designer|userClassName": "MyImage",
@@ -92,6 +83,23 @@
                     "customConfigs": []
                 }
             ]
+        },
+        {
+            "id": "ExtBox1-ext-gen4501",
+            "type": "object",
+            "reference": {
+                "name": "tab",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{ iconCls : 'home',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
+                ],
+                "designer|displayName": "tab",
+                "designer|userClassName": "tab"
+            },
+            "customConfigs": []
         }
     ]
 }

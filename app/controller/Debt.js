@@ -180,9 +180,7 @@ Ext.define('Payback.controller.Debt', {
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();
 
-        location.hash = 'debt/'+(index+1);
-
-        //console.log('item tap');
+        //location.hash = 'debt/'+(index+1);
 
         Ext.Viewport.setActiveItem(form);
     },
@@ -216,7 +214,7 @@ Ext.define('Payback.controller.Debt', {
 
     */
 
-    Ext.Viewport.getActiveItem().setActiveItem(1);
+    //Ext.Viewport.getActiveItem().setActiveItem(1);
     },
 
     showDebtDetail: function(id) {

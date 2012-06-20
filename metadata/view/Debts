@@ -12,7 +12,13 @@
         "designer|userClassName": "Debts",
         "designer|userAlias": "Debts"
     },
-    "customConfigs": [],
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "tab",
+            "type": "object"
+        }
+    ],
     "designerId": "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba",
     "$viewOrder": 8,
     "cn": [
@@ -25,8 +31,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
-                "title": "My Debts",
+                "docked": "bottom",
+                "title": null,
                 "designer|userClassName": "MyTitleBar"
             },
             "customConfigs": [],
@@ -42,6 +48,7 @@
                     "userConfig": {
                         "id": "addDebt",
                         "itemId": null,
+                        "ui": "confirm",
                         "text": "Add",
                         "designer|userClassName": "MyButton"
                     },
@@ -89,6 +96,23 @@
                 "disableSelection": true,
                 "designer|userClassName": "MyDataView",
                 "designer|userAlias": "mydataview"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen6546",
+            "type": "object",
+            "reference": {
+                "name": "tab",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{ iconCls : 'info',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
+                ],
+                "designer|displayName": "tab",
+                "designer|userClassName": "tab"
             },
             "customConfigs": []
         }

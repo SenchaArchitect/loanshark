@@ -36,7 +36,7 @@ Ext.define('Payback.view.myDebtListItem', {
                 itemId: 'debtListItemDetail',
                 tpl: [
                     '<div>',
-                    '{[Ext.Date.format(values.date,\'M d\')]} -',
+                    '    {[Ext.Date.format(values.date,\'m/d\')]} -',
                     '<tpl for="Person">{name}</tpl>',
                     '- {reason} - ${balance}</div>'
                 ],

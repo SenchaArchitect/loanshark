@@ -21,15 +21,22 @@ Ext.define('Payback.view.Prey', {
         layout: {
             type: 'fit'
         },
+        tab: {
+            iconCls: 'action',
+            iconMask: true,
+            baseCls: 'x-button',
+            flex: 1,
+            iconAlign: 'center'
+        },
         items: [
             {
                 xtype: 'titlebar',
-                docked: 'top',
-                title: 'Prey',
+                docked: 'bottom',
                 items: [
                     {
                         xtype: 'button',
                         id: 'addContact',
+                        ui: 'confirm',
                         text: 'Add'
                     }
                 ]
