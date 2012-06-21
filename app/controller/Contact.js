@@ -112,7 +112,7 @@ Ext.define('Payback.controller.Contact', {
             //validate
             //if(!isValid(record)) {
             //    return;
-            //}
+            //}//
 
             Ext.getStore('People').add(record);
             Ext.getStore('People').sync();

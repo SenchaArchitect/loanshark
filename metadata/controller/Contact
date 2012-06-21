@@ -101,7 +101,7 @@
                     "    //validate",
                     "    //if(!isValid(record)) {",
                     "    //    return;",
-                    "    //}",
+                    "    //}//",
                     "",
                     "    Ext.getStore('People').add(record);",
                     "    Ext.getStore('People').sync();",
