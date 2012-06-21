@@ -25,6 +25,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
+                "ui": "light",
                 "title": "Payment Details",
                 "designer|userClassName": "MyTitleBar2"
             },
@@ -40,6 +41,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "bottom",
+                "ui": null,
                 "designer|userClassName": "MyToolbar"
             },
             "customConfigs": [],

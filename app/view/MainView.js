@@ -50,32 +50,6 @@ Ext.define('Payback.view.MainView', {
                 type: 'hbox'
             }
         }
-    },
-
-    doTabChange: function(tabBar, newTab) {
-
-        //this function overrides the default doTabChange to use routing logic instead.
-        this.callParent(arguments);
-
-        /*
-        var oldActiveItem = this.getActiveItem(),
-        newActiveItem;
-
-        switch(tabBar.indexOf(newTab)) {
-        case 0:
-        location.hash ="summary";
-        break;
-        case 1:
-        location.hash ="debt";
-        break;
-        case 2:
-        location.hash ="prey";
-        break;
-        }
-
-        newActiveItem = this.getActiveItem();
-        return this.forcedChange || oldActiveItem !== newActiveItem;
-        */
     }
 
 });

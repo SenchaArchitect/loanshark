@@ -23,6 +23,7 @@ Ext.define('Payback.view.PaymentDetail', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
+                ui: 'light',
                 title: 'Payment Details'
             },
             {

@@ -18,6 +18,7 @@ Ext.define('Payback.view.DebtDetail', {
     alias: 'widget.DebtDetail',
 
     config: {
+        style: 'background:  black; ',
         autoDestroy: false,
         layout: {
             type: 'vbox'
@@ -48,7 +49,8 @@ Ext.define('Payback.view.DebtDetail', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Debt Details',
+                ui: 'light',
+                title: 'Loan Details',
                 items: [
                     {
                         xtype: 'button',
@@ -61,7 +63,7 @@ Ext.define('Payback.view.DebtDetail', {
             },
             {
                 xtype: 'container',
-                height: 250,
+                margin: '0 0 10px 0',
                 items: [
                     {
                         xtype: 'fieldset',
@@ -69,17 +71,17 @@ Ext.define('Payback.view.DebtDetail', {
                         title: 'Debt Information',
                         items: [
                             {
+                                xtype: 'textfield',
+                                label: 'Reason',
+                                name: 'reason'
+                            },
+                            {
                                 xtype: 'selectfield',
                                 label: 'Name',
                                 name: 'person_id',
                                 displayField: 'name',
                                 store: 'People',
                                 valueField: 'id'
-                            },
-                            {
-                                xtype: 'textfield',
-                                label: 'Reason',
-                                name: 'reason'
                             },
                             {
                                 xtype: 'numberfield',

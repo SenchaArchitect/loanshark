@@ -26,6 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
+                "ui": "light",
                 "title": "Prey Details",
                 "designer|userClassName": "MyTitleBar2"
             },
@@ -102,7 +103,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": 200,
+                "height": null,
+                "margin": "0 0 10px 0",
                 "designer|userClassName": "MyContainer7"
             },
             "customConfigs": [],

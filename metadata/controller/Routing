@@ -1,0 +1,89 @@
+{
+    "id": "ExtBox1-ext-gen1987",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Routing"
+    },
+    "customConfigs": [],
+    "designerId": "3482a60a-7318-4e06-8b50-c3cfccd4d927",
+    "$viewOrder": 4,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen2368",
+            "type": "controllerroute",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "gotoTab",
+                "designer|params": [
+                    "tabId"
+                ],
+                "implHandler": [
+                    "",
+                    "Ext.Viewport.setActiveItem(0);",
+                    "",
+                    "var tabPanel = this.getMainView(), //uses our Controller Reference",
+                    "tabCmp = tabPanel.child('#' + tabId);",
+                    "tabPanel.setActiveItem(tabCmp || 0);",
+                    ""
+                ],
+                "url": "/:tabId",
+                "designer|userClassName": "gotoTab"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen2103",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "MainView",
+                "selector": ">tabpanel",
+                "designer|userClassName": "MainView"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen2944",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTabpanelActiveItemChange",
+                "implHandler": [
+                    "",
+                    "",
+                    "//setTimeout removes the flickering that happens when switching tabs",
+                    "//var me = this;",
+                    "//setTimeout(function(){",
+                    "    ",
+                    "    this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "        url: '/' + value.getItemId()",
+                    "    }), true);",
+                    "    ",
+                    "//},1);"
+                ],
+                "name": "activeitemchange",
+                "designer|targetType": "Ext.tab.Panel",
+                "designer|controlQuery": "tabpanel",
+                "designer|userClassName": "onTabpanelActiveItemChange"
+            },
+            "customConfigs": []
+        }
+    ]
+}

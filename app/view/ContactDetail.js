@@ -27,6 +27,7 @@ Ext.define('Payback.view.ContactDetail', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
+                ui: 'light',
                 title: 'Prey Details'
             },
             {
@@ -52,7 +53,7 @@ Ext.define('Payback.view.ContactDetail', {
             },
             {
                 xtype: 'container',
-                height: 200,
+                margin: '0 0 10px 0',
                 items: [
                     {
                         xtype: 'fieldset',

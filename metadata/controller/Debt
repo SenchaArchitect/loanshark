@@ -42,6 +42,11 @@
                     "//remember previous panel to return to",
                     "this.prevPanel = Ext.Viewport.getActiveItem();",
                     "",
+                    "//update url",
+                    "this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "    url: '/Debt/add'",
+                    "}), true);",
+                    "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(form);"
                 ],
@@ -130,8 +135,10 @@
                     "},",
                     "this);",
                     "",
-                    "",
-                    "//location.hash = 'debt';",
+                    "//update url",
+                    "this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "    url: '/Debt'",
+                    "}), true);",
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(this.prevPanel);"
@@ -154,9 +161,12 @@
             "userConfig": {
                 "fn": "onCanelButtonTap",
                 "implHandler": [
-                    "//location.hash = 'debt';",
-                    "",
                     "this.getDebtDetail().reset(); //reset form",
+                    "",
+                    "//update url",
+                    "this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "    url: '/Debt'",
+                    "}), true);",
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(this.prevPanel);"
@@ -245,7 +255,10 @@
                     "//remember previous panel to return to",
                     "this.prevPanel = Ext.Viewport.getActiveItem();",
                     "",
-                    "//location.hash = 'debt/'+(index+1);",
+                    "//update url",
+                    "this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "    url: '/Debt/' + (index+1)",
+                    "}), true);",
                     "",
                     "Ext.Viewport.setActiveItem(form);"
                 ],
@@ -332,34 +345,32 @@
             "customConfigs": []
         },
         {
-            "id": "ExtBox1-ext-gen21914",
-            "type": "controllerroute",
+            "id": "ExtBox1-ext-gen24341",
+            "type": "controllerref",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "showDebtPanel",
-                "implHandler": [
-                    "",
-                    "/*if(Ext.Viewport.getActiveItem() == this.getDebtDetail()) {",
-                    "",
-                    "this.getDebtDetail().reset(); //reset form",
-                    "",
-                    "//set active item",
-                    "Ext.Viewport.setActiveItem(this.prevPanel);",
-                    "} else {",
-                    "//set MainView active item",
-                    "",
-                    "}",
-                    "",
-                    "*/",
-                    "",
-                    "//Ext.Viewport.getActiveItem().setActiveItem(1);"
-                ],
-                "url": "debt",
-                "designer|userClassName": "showDebtPanel"
+                "ref": "MainView",
+                "selector": "MainView",
+                "designer|userClassName": "MainView"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen12285",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addDebtButton",
+                "selector": "#addDebt",
+                "designer|userClassName": "addDebtButton"
             },
             "customConfigs": []
         },
@@ -372,39 +383,29 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "showDebtDetail",
+                "fn": "gotoDebtDetail",
                 "designer|params": [
                     "id"
                 ],
                 "implHandler": [
-                    "/*this.showDebtPanel();",
                     "",
-                    "id--;",
+                    "this.getMainView().setActiveItem(1);",
                     "",
-                    "var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];",
-                    "//console.log('show debt');",
+                    "if(id==\"add\") {",
+                    "    this.getAddDebtButton().onTap();",
+                    "} else {",
                     "",
-                    "if(dataItem) {",
-                    "    this.onDataviewItemTap(null,id,null, dataItem.getRecord());  ",
-                    "}*/"
+                    "    id--;",
+                    "",
+                    "    var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];",
+                    "",
+                    "    if(dataItem) {",
+                    "        this.onDataviewItemTap(null,id,null, dataItem.getRecord());  ",
+                    "    }",
+                    "}"
                 ],
-                "url": "debt/:id",
-                "designer|userClassName": "showDebtDetail"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen24341",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "MainView",
-                "selector": "MainView",
-                "designer|userClassName": "MainView"
+                "url": "/Debt/:id",
+                "designer|userClassName": "gotoDebtDetail"
             },
             "customConfigs": []
         }

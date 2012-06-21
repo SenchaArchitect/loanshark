@@ -35,7 +35,8 @@
             "Contact",
             "Summary",
             "Debt",
-            "Payment"
+            "Payment",
+            "Routing"
         ]
     },
     "customConfigs": [],

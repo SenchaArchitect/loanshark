@@ -64,6 +64,11 @@ Ext.define('Payback.controller.Payment', {
 
         form.setValues({debt_id:this.getDebtDetail().getRecord().get('id')});
 
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: location.hash+'/payment'
+        }), true);
+
         //set active item
         Ext.Viewport.setActiveItem(form);
     },

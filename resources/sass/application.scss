@@ -2,6 +2,10 @@ $base-color: #303030;
 $list-bg-color: #000;
 $list-color: white;
 
+$form-bg-color: #000;
+$form-label-background-color: black;
+$form-input-color: white;
+
 @import 'sencha-touch/default/all';
 
 @include sencha-panel;
@@ -45,7 +49,22 @@ $list-color: white;
 }
 
 .x-tabbar-inner {
+	position: relative;top: 1px;
+}
 
-position: relative;top: 1px;
+.x-list-item {
+	border-bottom: 1px solid #333;
 
+}
+
+.x-tabpanel {
+	background-color:black;
+
+}
+.x-form {
+	background:  black; 
+}
+.x-input-el {
+	background: black;
+	color: white;
 }

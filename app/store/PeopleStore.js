@@ -23,6 +23,7 @@ Ext.define('Payback.store.PeopleStore', {
     config: {
         autoLoad: true,
         autoSync: true,
+        groupField: 'name',
         model: 'Payback.model.Person',
         storeId: 'People',
         listeners: [

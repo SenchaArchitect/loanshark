@@ -46,7 +46,8 @@ Ext.application({
         'Contact',
         'Summary',
         'Debt',
-        'Payment'
+        'Payment',
+        'Routing'
     ],
 
     launch: function() {

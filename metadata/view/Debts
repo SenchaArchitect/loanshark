@@ -8,6 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "id": null,
+        "ui": "light",
         "layout": "fit",
         "designer|userClassName": "Debts",
         "designer|userAlias": "Debts"

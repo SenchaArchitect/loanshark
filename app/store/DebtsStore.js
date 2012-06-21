@@ -22,7 +22,17 @@ Ext.define('Payback.store.DebtsStore', {
 
     config: {
         autoLoad: true,
+        groupDir: 'DESC',
+        groupField: 'date',
         model: 'Payback.model.Debt',
-        storeId: 'Debts'
+        storeId: 'Debts',
+        grouper: {
+            groupFn: function(record) {
+                // console.log(record);
+                //   debugger;
+                return record.get('date');
+            },
+            direction: 'DESC'
+        }
     }
 });

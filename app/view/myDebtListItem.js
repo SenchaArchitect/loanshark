@@ -36,9 +36,12 @@ Ext.define('Payback.view.myDebtListItem', {
                 itemId: 'debtListItemDetail',
                 tpl: [
                     '<div>',
-                    '    {[Ext.Date.format(values.date,\'m/d\')]} -',
-                    '<tpl for="Person">{name}</tpl>',
-                    '- {reason} - ${balance}</div>'
+                    '    <span style=\'color:#777\'>{[Ext.Date.format(values.date,\'m/d\')]}</span>&nbsp;&nbsp;&nbsp;',
+                    '   <tpl for="Person">{name}</tpl>',
+                    '    <b style=\'float: right;color:red;\'>',
+                    '        {[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance)]}',
+                    '    </b>',
+                    '</div>'
                 ],
                 items: [
                     {

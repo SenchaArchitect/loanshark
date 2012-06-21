@@ -7,8 +7,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "margin": null,
         "padding": null,
-        "style": null,
+        "style": "background:  black; ",
         "autoDestroy": false,
         "layout": "vbox",
         "designer|userClassName": "DebtDetail",
@@ -28,6 +29,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "bottom",
+                "ui": null,
                 "designer|userClassName": "MyToolbar"
             },
             "customConfigs": [],
@@ -90,7 +92,8 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "title": "Debt Details",
+                "ui": "light",
+                "title": "Loan Details",
                 "designer|userClassName": "MyTitleBar2"
             },
             "customConfigs": [],
@@ -125,7 +128,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": 250,
+                "height": null,
+                "margin": "0 0 10px 0",
                 "designer|userClassName": "MyContainer7",
                 "layout|flex": null
             },
@@ -147,6 +151,21 @@
                     "customConfigs": [],
                     "cn": [
                         {
+                            "id": "ExtBox1-ext-gen25607",
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Reason",
+                                "name": "reason",
+                                "designer|userClassName": "MyTextField"
+                            },
+                            "customConfigs": []
+                        },
+                        {
                             "id": "ExtBox1-ext-gen42211",
                             "type": "selectfield",
                             "reference": {
@@ -161,21 +180,6 @@
                                 "store": "People",
                                 "valueField": "id",
                                 "designer|userClassName": "MySelectField"
-                            },
-                            "customConfigs": []
-                        },
-                        {
-                            "id": "ExtBox1-ext-gen25607",
-                            "type": "textfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "label": "Reason",
-                                "name": "reason",
-                                "designer|userClassName": "MyTextField"
                             },
                             "customConfigs": []
                         },
@@ -304,6 +308,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "style": null,
                 "layout": "vbox",
                 "designer|userClassName": "MyContainer8",
                 "layout|flex": 1
@@ -345,6 +350,7 @@
                         "itemId": "myPaymentDataView",
                         "maxHeight": null,
                         "minHeight": "",
+                        "style": null,
                         "defaultType": "myPaymentListItem",
                         "store": "Payments",
                         "useComponents": true,

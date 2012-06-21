@@ -18,8 +18,7 @@ Ext.define('Payback.controller.Debt', {
 
     config: {
         routes: {
-            'debt': 'showDebtPanel',
-            'debt/:id': 'showDebtDetail'
+            '/Debt/:id': 'gotoDebtDetail'
         },
 
         refs: {
@@ -32,7 +31,8 @@ Ext.define('Payback.controller.Debt', {
             myPaymentDataView: '#myPaymentDataView',
             addPaymentButton: '#addPayment',
             emailDebtButton: '#emailDebt',
-            MainView: 'MainView'
+            MainView: 'MainView',
+            addDebtButton: '#addDebt'
         },
 
         control: {
@@ -73,6 +73,11 @@ Ext.define('Payback.controller.Debt', {
 
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();
+
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: '/Debt/add'
+        }), true);
 
         //set active item
         Ext.Viewport.setActiveItem(form);
@@ -129,17 +134,22 @@ Ext.define('Payback.controller.Debt', {
         },
         this);
 
-
-        //location.hash = 'debt';
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: '/Debt'
+        }), true);
 
         //set active item
         Ext.Viewport.setActiveItem(this.prevPanel);
     },
 
     onCanelButtonTap: function(button, e, options) {
-        //location.hash = 'debt';
-
         this.getDebtDetail().reset(); //reset form
+
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: '/Debt'
+        }), true);
 
         //set active item
         Ext.Viewport.setActiveItem(this.prevPanel);
@@ -180,7 +190,10 @@ Ext.define('Payback.controller.Debt', {
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();
 
-        //location.hash = 'debt/'+(index+1);
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: '/Debt/' + (index+1)
+        }), true);
 
         Ext.Viewport.setActiveItem(form);
     },
@@ -199,35 +212,22 @@ Ext.define('Payback.controller.Debt', {
         window.location.href = "mailto:"+email+"?subject=" + subject+"&body="+body; 
     },
 
-    showDebtPanel: function() {
+    gotoDebtDetail: function(id) {
 
-        /*if(Ext.Viewport.getActiveItem() == this.getDebtDetail()) {
+        this.getMainView().setActiveItem(1);
 
-        this.getDebtDetail().reset(); //reset form
+        if(id=="add") {
+            this.getAddDebtButton().onTap();
+        } else {
 
-        //set active item
-        Ext.Viewport.setActiveItem(this.prevPanel);
-    } else {
-        //set MainView active item
+            id--;
 
-    }
+            var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];
 
-    */
-
-    //Ext.Viewport.getActiveItem().setActiveItem(1);
-    },
-
-    showDebtDetail: function(id) {
-        /*this.showDebtPanel();
-
-        id--;
-
-        var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];
-        //console.log('show debt');
-
-        if(dataItem) {
-            this.onDataviewItemTap(null,id,null, dataItem.getRecord());  
-        }*/
+            if(dataItem) {
+                this.onDataviewItemTap(null,id,null, dataItem.getRecord());  
+            }
+        }
     }
 
 });

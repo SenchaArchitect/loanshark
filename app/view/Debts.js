@@ -18,6 +18,7 @@ Ext.define('Payback.view.Debts', {
     alias: 'widget.Debts',
 
     config: {
+        ui: 'light',
         layout: {
             type: 'fit'
         },

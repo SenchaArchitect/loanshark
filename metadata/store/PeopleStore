@@ -9,6 +9,7 @@
     "userConfig": {
         "autoLoad": true,
         "autoSync": true,
+        "groupField": "name",
         "model": "Person",
         "storeId": "People",
         "designer|userClassName": "PeopleStore"
