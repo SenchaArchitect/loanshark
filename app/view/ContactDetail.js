@@ -56,23 +56,39 @@ Ext.define('Payback.view.ContactDetail', {
                 margin: '0 0 10px 0',
                 items: [
                     {
+                        xtype: 'label',
+                        height: 80,
+                        id: 'contactHeaderLabel',
+                        padding: '8px 0 0 0',
+                        style: 'font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;'
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'addDebt',
+                        margin: '5px 10px 5px 10px',
+                        style: 'border-radius: 0; color: black;',
+                        ui: 'gray-light-button',
+                        text: 'New Loan'
+                    },
+                    {
                         xtype: 'fieldset',
-                        title: 'Prey Information',
                         items: [
                             {
                                 xtype: 'textfield',
                                 label: 'Name',
+                                labelAlign: 'top',
                                 name: 'name'
                             },
                             {
                                 xtype: 'emailfield',
                                 label: 'Email',
-                                name: 'email',
-                                placeHolder: 'email@example.com'
+                                labelAlign: 'top',
+                                name: 'email'
                             },
                             {
                                 xtype: 'textfield',
                                 label: 'Phone',
+                                labelAlign: 'top',
                                 name: 'phone'
                             }
                         ]
@@ -87,10 +103,11 @@ Ext.define('Payback.view.ContactDetail', {
                 flex: 1,
                 items: [
                     {
-                        xtype: 'button',
-                        id: 'addDebt',
-                        ui: 'action',
-                        text: 'add debt'
+                        xtype: 'label',
+                        html: 'Loan History',
+                        margin: '0 12px',
+                        padding: '0 0 8px 8px',
+                        style: 'font-size: .8em; font-weight: bold;color: gray; 	border-bottom: 2px solid #333;'
                     },
                     {
                         xtype: 'dataview',

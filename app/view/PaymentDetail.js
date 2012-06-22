@@ -49,17 +49,18 @@ Ext.define('Payback.view.PaymentDetail', {
             },
             {
                 xtype: 'fieldset',
-                title: 'Payment Information',
                 items: [
                     {
                         xtype: 'numberfield',
                         itemId: 'mynumberfield1',
                         label: 'Amount',
+                        labelAlign: 'top',
                         name: 'amount'
                     },
                     {
                         xtype: 'datepickerfield',
                         label: 'Date',
+                        labelAlign: 'top',
                         name: 'date',
                         placeHolder: 'mm/dd/yyyy'
                     }

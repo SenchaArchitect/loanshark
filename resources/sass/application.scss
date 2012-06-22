@@ -27,6 +27,9 @@ $form-input-color: white;
 @include sencha-draw;
 @include sencha-charts;
 
+@include sencha-button-ui('gray-button', gray, 'matte');
+@include sencha-button-ui('gray-light-button', #484848, 'flat');
+
 .x-tabbar-inner .x-button {
     border: none !important;
 	background-image: none !important;
@@ -51,20 +54,46 @@ $form-input-color: white;
 .x-tabbar-inner {
 	position: relative;top: 1px;
 }
-
 .x-list-item {
 	border-bottom: 1px solid #333;
-
 }
-
 .x-tabpanel {
 	background-color:black;
 
 }
 .x-form {
-	background:  black; 
+	background-color:  black; 
+}
+.x-form-label {
+	background-color: transparent;
+	color: gray;
+	border-bottom: 2px solid #333;	
+	padding-bottom: 2px;
+}
+.x-form-fieldset .x-form-fieldset-inner, .x-form-fieldset .x-field {
+	border: none;
+	margin: 0 6px 0 6px;
+}
+.x-form-fieldset .x-form-label {
+	border-top: none;
 }
 .x-input-el {
 	background: black;
 	color: white;
+	min-height: 0;
+}
+.x-field-select .x-component-outer::before {
+	background: none;
+}
+.x-form-fieldset .x-form-fieldset-inner {
+	background: none;
+
+}
+.x-spinner .x-input-el, .x-field-select .x-input-el {
+	-webkit-text-fill-color: white;
+
+}
+#addPayment .x-button-label {
+	font-weight: normal;
+
 }

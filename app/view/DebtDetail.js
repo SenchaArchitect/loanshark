@@ -55,7 +55,7 @@ Ext.define('Payback.view.DebtDetail', {
                     {
                         xtype: 'button',
                         id: 'emailDebt',
-                        ui: 'action',
+                        ui: 'gray-button',
                         text: 'send email',
                         align: 'right'
                     }
@@ -66,18 +66,29 @@ Ext.define('Payback.view.DebtDetail', {
                 margin: '0 0 10px 0',
                 items: [
                     {
+                        xtype: 'label',
+                        height: 80,
+                        id: 'debtHeaderLabel',
+                        padding: '8px 0 0 0',
+                        style: 'font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;'
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'addPayment',
+                        margin: '5px 10px 5px 10px',
+                        padding: '5px',
+                        style: 'border-radius: 0; color: black;',
+                        ui: 'gray-light-button',
+                        text: 'Add Payment'
+                    },
+                    {
                         xtype: 'fieldset',
                         itemId: 'myfieldset1',
-                        title: 'Debt Information',
                         items: [
                             {
-                                xtype: 'textfield',
-                                label: 'Reason',
-                                name: 'reason'
-                            },
-                            {
                                 xtype: 'selectfield',
-                                label: 'Name',
+                                label: 'Prey',
+                                labelAlign: 'top',
                                 name: 'person_id',
                                 displayField: 'name',
                                 store: 'People',
@@ -86,13 +97,30 @@ Ext.define('Payback.view.DebtDetail', {
                             {
                                 xtype: 'numberfield',
                                 itemId: 'mynumberfield',
-                                label: 'Amount',
+                                label: 'Original Loan',
+                                labelAlign: 'top',
                                 name: 'amount'
                             },
                             {
                                 xtype: 'datepickerfield',
                                 label: 'Date',
-                                name: 'date'
+                                labelAlign: 'top',
+                                name: 'date',
+                                picker: {
+                                    ui: 'dark',
+                                    doneButton: {
+                                        ui: 'gray-button'
+                                    },
+                                    cancelButton: {
+                                        ui: 'gray-light-button'
+                                    }
+                                }
+                            },
+                            {
+                                xtype: 'textfield',
+                                label: 'Notes',
+                                labelAlign: 'top',
+                                name: 'reason'
                             }
                         ]
                     }
@@ -106,10 +134,11 @@ Ext.define('Payback.view.DebtDetail', {
                 flex: 1,
                 items: [
                     {
-                        xtype: 'button',
-                        id: 'addPayment',
-                        ui: 'action',
-                        text: 'add payment'
+                        xtype: 'label',
+                        html: 'Payment History',
+                        margin: '0 12px',
+                        padding: '0 0 8px 8px',
+                        style: 'font-size: .8em; font-weight: bold;color: gray; 	border-bottom: 2px solid #333;'
                     },
                     {
                         xtype: 'dataview',
@@ -120,6 +149,7 @@ Ext.define('Payback.view.DebtDetail', {
                         id: 'myPaymentDataView',
                         itemId: 'myPaymentDataView',
                         minHeight: '',
+                        style: 'color: white;',
                         defaultType: 'myPaymentListItem',
                         store: 'Payments',
                         useComponents: true,

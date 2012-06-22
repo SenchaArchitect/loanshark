@@ -103,7 +103,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Payment Information",
+                "title": null,
                 "designer|userClassName": "MyFieldSet"
             },
             "customConfigs": [],
@@ -119,6 +119,7 @@
                     "userConfig": {
                         "itemId": "mynumberfield1",
                         "label": "Amount",
+                        "labelAlign": "top",
                         "name": "amount",
                         "designer|userClassName": "MyNumberField1"
                     },
@@ -170,6 +171,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "label": "Date",
+                        "labelAlign": "top",
                         "name": "date",
                         "placeHolder": "mm/dd/yyyy",
                         "designer|userClassName": "MyDateField"

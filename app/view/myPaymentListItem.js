@@ -36,8 +36,10 @@ Ext.define('Payback.view.myPaymentListItem', {
                 itemId: 'paymentListItemDetail',
                 tpl: [
                     '<div>',
-                    '{[Ext.Date.format(values.date,\'M d\')]} -',
-                    '${amount} -  {memo}',
+                    '',
+                    '{[(values.amount<0)?\'-\':\'\']}${[Math.abs(values.amount)]}',
+                    '<span style=\'float:right;color:#555;font-size:15px;\'>{[Ext.Date.format(values.date,\'m/d\')]}</span>',
+                    '    ',
                     '</div>'
                 ],
                 items: [

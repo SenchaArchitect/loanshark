@@ -110,6 +110,44 @@
             "customConfigs": [],
             "cn": [
                 {
+                    "id": "ExtBox1-ext-gen27681",
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": null,
+                        "height": 80,
+                        "html": null,
+                        "id": "contactHeaderLabel",
+                        "padding": "8px 0 0 0",
+                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;",
+                        "designer|userClassName": "MyLabel2"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen23029",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "addDebt",
+                        "itemId": null,
+                        "margin": "5px 10px 5px 10px",
+                        "style": "border-radius: 0; color: black;",
+                        "ui": "gray-light-button",
+                        "text": "New Loan",
+                        "designer|userClassName": "MyButton"
+                    },
+                    "customConfigs": []
+                },
+                {
                     "id": "ExtBox1-ext-gen17096",
                     "type": "fieldset",
                     "reference": {
@@ -118,7 +156,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Prey Information",
+                        "title": null,
                         "designer|userClassName": "MyFieldSet"
                     },
                     "customConfigs": [],
@@ -133,6 +171,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "label": "Name",
+                                "labelAlign": "top",
                                 "name": "name",
                                 "designer|userClassName": "MyTextField2"
                             },
@@ -148,8 +187,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "label": "Email",
+                                "labelAlign": "top",
                                 "name": "email",
-                                "placeHolder": "email@example.com",
+                                "placeHolder": null,
                                 "designer|userClassName": "MyEmailField"
                             },
                             "customConfigs": []
@@ -164,6 +204,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "label": "Phone",
+                                "labelAlign": "top",
                                 "name": "phone",
                                 "designer|userClassName": "MyTextField1"
                             },
@@ -189,19 +230,23 @@
             "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen23029",
-                    "type": "button",
+                    "id": "ExtBox1-ext-gen17845",
+                    "type": "label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "addDebt",
-                        "itemId": null,
-                        "ui": "action",
-                        "text": "add debt",
-                        "designer|userClassName": "MyButton"
+                        "designer|displayName": "Loan History",
+                        "baseCls": null,
+                        "html": "Loan History",
+                        "margin": "0 12px",
+                        "padding": "0 0 8px 8px",
+                        "style": "font-size: .8em; font-weight: bold;color: gray; \tborder-bottom: 2px solid #333;",
+                        "styleHtmlCls": null,
+                        "designer|userClassName": "MyLabel",
+                        "layout|flex": null
                     },
                     "customConfigs": []
                 },

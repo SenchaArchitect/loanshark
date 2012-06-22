@@ -36,7 +36,8 @@ Ext.define('Payback.controller.Contact', {
                 autoCreate: true
             },
             myContactDataView: '#myContactDataView',
-            myDebtDataView: '#myDebtDataView'
+            myDebtDataView: '#myDebtDataView',
+            contactHeaderLabel: '#contactHeaderLabel'
         },
 
         control: {
@@ -68,6 +69,7 @@ Ext.define('Payback.controller.Contact', {
         //hides buttons and debt data view on new contacts
         form.down('#addDebt').hide();
         form.down('dataview').hide();
+        this.getContactHeaderLabel().hide();
 
         //set active item
         Ext.Viewport.setActiveItem(this.getContactDetail());
@@ -167,9 +169,13 @@ Ext.define('Payback.controller.Contact', {
         //refresh DataView
         debtDataView.refresh();
 
+        //update header
+        this.getContactHeaderLabel().setHtml(record.get('name'));
+
         //show items if hidden
         debtDataView.show();
         form.down('#addDebt').show();
+        this.getContactHeaderLabel().show();
 
         //set active item
         Ext.Viewport.setActiveItem(form);

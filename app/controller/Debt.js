@@ -32,7 +32,8 @@ Ext.define('Payback.controller.Debt', {
             addPaymentButton: '#addPayment',
             emailDebtButton: '#emailDebt',
             MainView: 'MainView',
-            addDebtButton: '#addDebt'
+            addDebtButton: '#addDebt',
+            debtHeaderLabel: '#debtHeaderLabel'
         },
 
         control: {
@@ -70,6 +71,7 @@ Ext.define('Payback.controller.Debt', {
         this.getAddPaymentButton().hide();
         this.getMyPaymentDataView().hide();
         this.getEmailDebtButton().hide();
+        this.getDebtHeaderLabel().hide();
 
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();
@@ -182,10 +184,16 @@ Ext.define('Payback.controller.Debt', {
 
         Ext.getStore('Payments').filter("debt_id", record.get('id'));
 
+        //update debt balance label
+        var balance = record.get('balance');
+        var str = ((balance<0)?'-':'')+'$'+Math.abs(balance);
+        this.getDebtHeaderLabel().setHtml(str);
+
         //show hidden components
         this.getAddPaymentButton().show();
         this.getMyPaymentDataView().show();
         this.getEmailDebtButton().show();
+        this.getDebtHeaderLabel().show();
 
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();

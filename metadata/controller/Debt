@@ -38,6 +38,7 @@
                     "this.getAddPaymentButton().hide();",
                     "this.getMyPaymentDataView().hide();",
                     "this.getEmailDebtButton().hide();",
+                    "this.getDebtHeaderLabel().hide();",
                     "",
                     "//remember previous panel to return to",
                     "this.prevPanel = Ext.Viewport.getActiveItem();",
@@ -247,10 +248,16 @@
                     "",
                     "Ext.getStore('Payments').filter(\"debt_id\", record.get('id'));",
                     "",
+                    "//update debt balance label",
+                    "var balance = record.get('balance');",
+                    "var str = ((balance<0)?'-':'')+'$'+Math.abs(balance);",
+                    "this.getDebtHeaderLabel().setHtml(str);",
+                    "",
                     "//show hidden components",
                     "this.getAddPaymentButton().show();",
                     "this.getMyPaymentDataView().show();",
                     "this.getEmailDebtButton().show();",
+                    "this.getDebtHeaderLabel().show();",
                     "",
                     "//remember previous panel to return to",
                     "this.prevPanel = Ext.Viewport.getActiveItem();",
@@ -371,6 +378,21 @@
                 "ref": "addDebtButton",
                 "selector": "#addDebt",
                 "designer|userClassName": "addDebtButton"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen21758",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "debtHeaderLabel",
+                "selector": "#debtHeaderLabel",
+                "designer|userClassName": "debtHeaderLabel"
             },
             "customConfigs": []
         },

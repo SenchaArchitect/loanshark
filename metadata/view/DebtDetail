@@ -108,7 +108,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "emailDebt",
-                        "ui": "action",
+                        "ui": "gray-button",
                         "icon": null,
                         "iconAlign": null,
                         "text": "send email",
@@ -136,6 +136,45 @@
             "customConfigs": [],
             "cn": [
                 {
+                    "id": "ExtBox1-ext-gen18917",
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": null,
+                        "height": 80,
+                        "html": null,
+                        "id": "debtHeaderLabel",
+                        "padding": "8px 0 0 0",
+                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;",
+                        "designer|userClassName": "MyLabel2"
+                    },
+                    "customConfigs": []
+                },
+                {
+                    "id": "ExtBox1-ext-gen14447",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "addPayment",
+                        "margin": "5px 10px 5px 10px",
+                        "padding": "5px",
+                        "style": "border-radius: 0; color: black;",
+                        "ui": "gray-light-button",
+                        "iconCls": null,
+                        "text": "Add Payment",
+                        "designer|userClassName": "MyButton15"
+                    },
+                    "customConfigs": []
+                },
+                {
                     "id": "ExtBox1-ext-gen25603",
                     "type": "fieldset",
                     "reference": {
@@ -145,26 +184,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "myfieldset1",
-                        "title": "Debt Information",
+                        "title": null,
                         "designer|userClassName": "MyFieldSet"
                     },
                     "customConfigs": [],
                     "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen25607",
-                            "type": "textfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "label": "Reason",
-                                "name": "reason",
-                                "designer|userClassName": "MyTextField"
-                            },
-                            "customConfigs": []
-                        },
                         {
                             "id": "ExtBox1-ext-gen42211",
                             "type": "selectfield",
@@ -174,10 +198,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "label": "Name",
+                                "label": "Prey",
+                                "labelAlign": "top",
                                 "name": "person_id",
                                 "displayField": "name",
                                 "store": "People",
+                                "ui": null,
                                 "valueField": "id",
                                 "designer|userClassName": "MySelectField"
                             },
@@ -193,7 +219,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "mynumberfield",
-                                "label": "Amount",
+                                "label": "Original Loan",
+                                "labelAlign": "top",
                                 "name": "amount",
                                 "designer|userClassName": "MyNumberField"
                             },
@@ -245,6 +272,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "label": "Date",
+                                "labelAlign": "top",
                                 "name": "date",
                                 "designer|userClassName": "MyDateField1"
                             },
@@ -259,6 +287,8 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "style": null,
+                                        "ui": "dark",
                                         "designer|userClassName": "MyDatePicker1"
                                     },
                                     "customConfigs": [],
@@ -272,6 +302,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "ui": "gray-button",
                                                 "text": "Done",
                                                 "designer|userClassName": "MyButton9"
                                             },
@@ -286,6 +317,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "ui": "gray-light-button",
                                                 "text": "Cancel",
                                                 "designer|userClassName": "MyButton10"
                                             },
@@ -294,6 +326,22 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen25607",
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Notes",
+                                "labelAlign": "top",
+                                "name": "reason",
+                                "designer|userClassName": "MyTextField"
+                            },
+                            "customConfigs": []
                         }
                     ]
                 }
@@ -316,19 +364,24 @@
             "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen14447",
-                    "type": "button",
+                    "id": "ExtBox1-ext-gen7260",
+                    "type": "label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "addPayment",
-                        "ui": "action",
-                        "iconCls": null,
-                        "text": "add payment",
-                        "designer|userClassName": "MyButton15"
+                        "designer|displayName": "Payment History",
+                        "baseCls": null,
+                        "cls": null,
+                        "html": "Payment History",
+                        "margin": "0 12px",
+                        "padding": "0 0 8px 8px",
+                        "style": "font-size: .8em; font-weight: bold;color: gray; \tborder-bottom: 2px solid #333;",
+                        "styleHtmlCls": null,
+                        "designer|userClassName": "MyLabel",
+                        "layout|flex": null
                     },
                     "customConfigs": []
                 },
@@ -350,7 +403,7 @@
                         "itemId": "myPaymentDataView",
                         "maxHeight": null,
                         "minHeight": "",
-                        "style": null,
+                        "style": "color: white;",
                         "defaultType": "myPaymentListItem",
                         "store": "Payments",
                         "useComponents": true,
