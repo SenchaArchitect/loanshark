@@ -36,11 +36,11 @@ Ext.define('Payback.view.myContactListItem', {
                 itemId: 'contactListItemDetail',
                 tpl: [
                     '<div>',
-                    '    {name}  ',
-                    '    <b style=\'float: right;color:red;\'>',
-                    '        {[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance)]}',
-                    '    </b>',
-                    '    <br>',
+                    '{name}  ',
+                    '<b style=\'float: right;color:red;\'>',
+                    '{[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}',
+                    '</b>',
+                    '<br>',
                     '</div>'
                 ],
                 items: [

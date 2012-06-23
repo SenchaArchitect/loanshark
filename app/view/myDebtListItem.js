@@ -40,8 +40,6 @@ Ext.define('Payback.view.myDebtListItem', {
                     '<tpl for="Person">{name}</tpl>',
                     '<b style=\'float: right;color:red;\'>',
                     '{[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}',
-                    '    ',
-                    '    ',
                     '</b>',
                     '</div>'
                 ],
