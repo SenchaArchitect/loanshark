@@ -79,7 +79,7 @@ Ext.define('Payback.controller.Payment', {
             values = form.getValues(),
             debt = this.getDebtDetail().getRecord();
 
-        values.amount = values.amount || 0;
+        values.amount = values.amount.toFixed(2) || 0;
 
         if(record) { //if editing record
             record.set(values);
