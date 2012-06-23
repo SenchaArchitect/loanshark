@@ -11,6 +11,7 @@
         "cls": [
             "x-list-item"
         ],
+        "minHeight": null,
         "designer|userClassName": "myContactListItem",
         "designer|userAlias": "myContactListItem"
     },
@@ -45,7 +46,8 @@
                         "docked": "right",
                         "hidden": true,
                         "itemId": "deleteContact",
-                        "ui": "decline-round",
+                        "margin": "0 0 0 10px",
+                        "ui": "gray-button",
                         "text": "delete",
                         "designer|userClassName": "MyButton12"
                     },

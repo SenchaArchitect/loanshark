@@ -8,7 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "margin": null,
-        "padding": null,
+        "padding": "0 0 12px 0",
         "style": "background:  black; ",
         "autoDestroy": false,
         "layout": "vbox",
@@ -44,7 +44,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "cancelDebt",
-                        "ui": "decline",
+                        "ui": "gray-light-button",
                         "text": "Cancel",
                         "designer|userClassName": "MyButton1"
                     },
@@ -74,7 +74,7 @@
                     "userConfig": {
                         "id": "saveDebt",
                         "itemId": null,
-                        "ui": "confirm",
+                        "ui": "gray-button",
                         "text": "Save",
                         "designer|userClassName": "MyButton2"
                     },
@@ -145,7 +145,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|displayName": null,
-                        "height": 80,
+                        "height": 100,
                         "html": null,
                         "id": "debtHeaderLabel",
                         "padding": "8px 0 0 0",
@@ -164,7 +164,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "addPayment",
-                        "margin": "5px 10px 5px 10px",
+                        "margin": "10px 10px 5px 10px",
                         "padding": "5px",
                         "style": "border-radius: 0; color: black;",
                         "ui": "gray-light-button",
@@ -357,9 +357,8 @@
             "codeClass": null,
             "userConfig": {
                 "style": null,
-                "layout": "vbox",
                 "designer|userClassName": "MyContainer8",
-                "layout|flex": 1
+                "layout|flex": null
             },
             "customConfigs": [],
             "cn": [
@@ -374,14 +373,13 @@
                     "userConfig": {
                         "designer|displayName": "Payment History",
                         "baseCls": null,
-                        "cls": null,
                         "html": "Payment History",
+                        "id": "paymentHistoryLabel",
                         "margin": "0 12px",
                         "padding": "0 0 8px 8px",
-                        "style": "font-size: .8em; font-weight: bold;color: gray; \tborder-bottom: 2px solid #333;",
+                        "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
                         "styleHtmlCls": null,
-                        "designer|userClassName": "MyLabel",
-                        "layout|flex": null
+                        "designer|userClassName": "MyLabel"
                     },
                     "customConfigs": []
                 },
@@ -403,34 +401,36 @@
                         "itemId": "myPaymentDataView",
                         "maxHeight": null,
                         "minHeight": "",
+                        "padding": "0 22px",
                         "style": "color: white;",
                         "defaultType": "myPaymentListItem",
                         "store": "Payments",
                         "useComponents": true,
                         "disableSelection": true,
-                        "designer|userClassName": "MyDataView",
-                        "layout|flex": 1
+                        "designer|userClassName": "MyDataView"
                     },
-                    "customConfigs": []
+                    "customConfigs": [],
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen11103",
+                            "type": "object",
+                            "reference": {
+                                "name": "scrollable",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "false"
+                                ],
+                                "designer|displayName": "scrollable",
+                                "designer|userClassName": "scrollable"
+                            },
+                            "customConfigs": []
+                        }
+                    ]
                 }
             ]
-        },
-        {
-            "id": "ExtBox1-ext-gen3223",
-            "type": "object",
-            "reference": {
-                "name": "scrollable",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "implHandler": [
-                    "false"
-                ],
-                "designer|displayName": "scrollable",
-                "designer|userClassName": "scrollable"
-            },
-            "customConfigs": []
         }
     ]
 }

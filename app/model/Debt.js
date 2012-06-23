@@ -39,10 +39,13 @@ Ext.define('Payback.model.Debt', {
             },
             {
                 convert: function(v, rec) {
-                    return rec.get('amount') - rec.payments().sum('amount');
+                    var sum = rec.get('amount') - rec.payments().sum('amount');
+                    sum = Math.round(sum*100)/100;
 
+                    return sum;
                 },
-                name: 'balance'
+                name: 'balance',
+                type: 'float'
             },
             {
                 name: 'date',

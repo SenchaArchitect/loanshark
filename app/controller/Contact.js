@@ -25,8 +25,7 @@ Ext.define('Payback.controller.Contact', {
         ],
 
         routes: {
-            'prey': 'showContactPanel',
-            'prey/:id': 'showContactDetail'
+            '/Prey/:id': 'showContactDetail'
         },
 
         refs: {
@@ -37,7 +36,10 @@ Ext.define('Payback.controller.Contact', {
             },
             myContactDataView: '#myContactDataView',
             myDebtDataView: '#myDebtDataView',
-            contactHeaderLabel: '#contactHeaderLabel'
+            contactHeaderLabel: '#contactHeaderLabel',
+            loanHistoryLabel: '#loanHistoryLabel',
+            addContactButton: '#addContact',
+            MainView: 'MainView'
         },
 
         control: {
@@ -70,6 +72,12 @@ Ext.define('Payback.controller.Contact', {
         form.down('#addDebt').hide();
         form.down('dataview').hide();
         this.getContactHeaderLabel().hide();
+        this.getLoanHistoryLabel().hide();
+
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: '/Prey/add'
+        }), true);
 
         //set active item
         Ext.Viewport.setActiveItem(this.getContactDetail());
@@ -112,9 +120,9 @@ Ext.define('Payback.controller.Contact', {
             record = Ext.create('Payback.model.Person',values);
 
             //validate
-            //if(!isValid(record)) {
+            // if(!isValid(record)) 
             //    return;
-            //}////
+
 
             Ext.getStore('People').add(record);
             Ext.getStore('People').sync();
@@ -133,6 +141,11 @@ Ext.define('Payback.controller.Contact', {
     onCancelContactTap: function(button, e, options) {
         //delete form
         this.getContactDetail().reset();
+
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: '/Prey'
+        }), true);
 
         //set active item
         Ext.Viewport.setActiveItem(0);
@@ -176,25 +189,36 @@ Ext.define('Payback.controller.Contact', {
         debtDataView.show();
         form.down('#addDebt').show();
         this.getContactHeaderLabel().show();
+        this.getLoanHistoryLabel().show();
+
+        //scroll to top
+        this.getContactDetail().getScrollable().getScroller().scrollToTop();
+
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: '/Prey/'+(index+1)
+        }), true);
 
         //set active item
         Ext.Viewport.setActiveItem(form);
     },
 
-    showContactPanel: function() {
-
-        //switch to contact panel
-        //Ext.Viewport.getActiveItem().setActiveItem(2);
-    },
-
     showContactDetail: function(id) {
-        /*this.showContactPanel();
-        var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];
 
-        if(dataItem) {
-        //this.onDataviewItemTap(null,null,null, dataItem.getRecord());  
-        //location.hash = 'Prey/'+id;
-    }*/
+        this.getMainView().setActiveItem(2);
+
+        if(id=="add") {
+            this.getAddContactButton().onTap();
+        } else {
+
+            id--;
+
+            var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];
+
+            if(dataItem) {
+                this.onDataviewItemTap(null,id,null, dataItem.getRecord());  
+            }
+        }
     }
 
 });

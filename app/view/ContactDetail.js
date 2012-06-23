@@ -18,11 +18,11 @@ Ext.define('Payback.view.ContactDetail', {
     alias: 'widget.ContactDetail',
 
     config: {
+        padding: '0 0 12px 0',
         autoDestroy: false,
         layout: {
             type: 'vbox'
         },
-        scrollable: false,
         items: [
             {
                 xtype: 'titlebar',
@@ -37,7 +37,7 @@ Ext.define('Payback.view.ContactDetail', {
                     {
                         xtype: 'button',
                         id: 'cancelContact',
-                        ui: 'decline',
+                        ui: 'gray-light-button',
                         text: 'Cancel'
                     },
                     {
@@ -46,7 +46,7 @@ Ext.define('Payback.view.ContactDetail', {
                     {
                         xtype: 'button',
                         id: 'saveContact',
-                        ui: 'confirm',
+                        ui: 'gray-button',
                         text: 'Save'
                     }
                 ]
@@ -57,7 +57,7 @@ Ext.define('Payback.view.ContactDetail', {
                 items: [
                     {
                         xtype: 'label',
-                        height: 80,
+                        height: 100,
                         id: 'contactHeaderLabel',
                         padding: '8px 0 0 0',
                         style: 'font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;'
@@ -65,7 +65,7 @@ Ext.define('Payback.view.ContactDetail', {
                     {
                         xtype: 'button',
                         id: 'addDebt',
-                        margin: '5px 10px 5px 10px',
+                        margin: '10px 10px 5px 10px',
                         style: 'border-radius: 0; color: black;',
                         ui: 'gray-light-button',
                         text: 'New Loan'
@@ -97,14 +97,11 @@ Ext.define('Payback.view.ContactDetail', {
             },
             {
                 xtype: 'container',
-                layout: {
-                    type: 'vbox'
-                },
-                flex: 1,
                 items: [
                     {
                         xtype: 'label',
                         html: 'Loan History',
+                        id: 'loanHistoryLabel',
                         margin: '0 12px',
                         padding: '0 0 8px 8px',
                         style: 'font-size: .8em; font-weight: bold;color: gray; 	border-bottom: 2px solid #333;'
@@ -116,11 +113,12 @@ Ext.define('Payback.view.ContactDetail', {
                             'x-list-normal'
                         ],
                         id: 'myDebtDataView',
+                        padding: '0 22px',
                         defaultType: 'myDebtListItem',
+                        scrollable: false,
                         store: 'Debts',
                         useComponents: true,
-                        disableSelection: true,
-                        flex: 1
+                        disableSelection: true
                     }
                 ]
             }

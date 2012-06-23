@@ -47,10 +47,14 @@ $form-input-color: white;
 }
 
 .x-tabbar-inner .x-tab-active {
-	border-bottom: 2px solid red !important;
+	border-bottom: 7px solid red !important;
 	border-radius: 0;
+	margin-top: 4px;
 }
+.x-tabbar {
+	padding: 0 !important;
 
+}
 .x-tabbar-inner {
 	position: relative;top: 1px;
 }
@@ -81,6 +85,7 @@ $form-input-color: white;
 	background: black;
 	color: white;
 	min-height: 0;
+	-webkit-text-fill-color: white !important;
 }
 .x-field-select .x-component-outer::before {
 	background: none;
@@ -96,4 +101,10 @@ $form-input-color: white;
 #addPayment .x-button-label {
 	font-weight: normal;
 
+}
+.x-android .x-container.x-data-item.x-list-item {
+	min-height: 61px;
+}
+.x-desktop .x-container.x-data-item.x-list-item {
+	min-height: 38px;
 }

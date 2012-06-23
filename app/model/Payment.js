@@ -41,10 +41,6 @@ Ext.define('Payback.model.Payment', {
                 type: 'date'
             },
             {
-                name: 'type',
-                type: 'int'
-            },
-            {
                 name: 'memo',
                 type: 'string'
             }

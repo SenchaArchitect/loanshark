@@ -49,7 +49,7 @@
                     "userConfig": {
                         "id": "addDebt",
                         "itemId": null,
-                        "ui": "confirm",
+                        "ui": "gray-button",
                         "text": "Add",
                         "designer|userClassName": "MyButton"
                     },

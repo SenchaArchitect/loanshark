@@ -42,6 +42,12 @@
                     "form.down('#addDebt').hide();",
                     "form.down('dataview').hide();",
                     "this.getContactHeaderLabel().hide();",
+                    "this.getLoanHistoryLabel().hide();",
+                    "",
+                    "//update url",
+                    "this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "    url: '/Prey/add'",
+                    "}), true);",
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(this.getContactDetail());"
@@ -100,9 +106,9 @@
                     "    record = Ext.create('Payback.model.Person',values);",
                     "",
                     "    //validate",
-                    "    //if(!isValid(record)) {",
+                    "   // if(!isValid(record)) ",
                     "    //    return;",
-                    "    //}////",
+                    "    ",
                     "",
                     "    Ext.getStore('People').add(record);",
                     "    Ext.getStore('People').sync();",
@@ -137,6 +143,11 @@
                 "implHandler": [
                     "//delete form",
                     "this.getContactDetail().reset();",
+                    "",
+                    "//update url",
+                    "this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "    url: '/Prey'",
+                    "}), true);",
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(0);"
@@ -229,6 +240,15 @@
                     "debtDataView.show();",
                     "form.down('#addDebt').show();",
                     "this.getContactHeaderLabel().show();",
+                    "this.getLoanHistoryLabel().show();",
+                    "",
+                    "//scroll to top",
+                    "this.getContactDetail().getScrollable().getScroller().scrollToTop();",
+                    "",
+                    "//update url",
+                    "this.getApplication().getHistory().add(new Ext.app.Action({",
+                    "    url: '/Prey/'+(index+1)",
+                    "}), true);",
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(form);"
@@ -271,22 +291,62 @@
             "customConfigs": []
         },
         {
-            "id": "ExtBox1-ext-gen4353",
-            "type": "controllerroute",
+            "id": "ExtBox1-ext-gen28858",
+            "type": "controllerref",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "showContactPanel",
-                "implHandler": [
-                    "",
-                    "//switch to contact panel",
-                    "//Ext.Viewport.getActiveItem().setActiveItem(2);"
-                ],
-                "url": "prey",
-                "designer|userClassName": "showContactPanel"
+                "ref": "contactHeaderLabel",
+                "selector": "#contactHeaderLabel",
+                "designer|userClassName": "contactHeaderLabel"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen8408",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loanHistoryLabel",
+                "selector": "#loanHistoryLabel",
+                "designer|userClassName": "loanHistoryLabel"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen27991",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addContactButton",
+                "selector": "#addContact",
+                "designer|userClassName": "addContactButton"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen28735",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "MainView",
+                "selector": "MainView",
+                "designer|userClassName": "MainView"
             },
             "customConfigs": []
         },
@@ -304,31 +364,24 @@
                     "id"
                 ],
                 "implHandler": [
-                    "/*this.showContactPanel();",
-                    "var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];",
                     "",
-                    "if(dataItem) {",
-                    "//this.onDataviewItemTap(null,null,null, dataItem.getRecord());  ",
-                    "//location.hash = 'Prey/'+id;",
-                    "}*/"
+                    "this.getMainView().setActiveItem(2);",
+                    "",
+                    "if(id==\"add\") {",
+                    "    this.getAddContactButton().onTap();",
+                    "} else {",
+                    "",
+                    "    id--;",
+                    "",
+                    "    var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];",
+                    "",
+                    "    if(dataItem) {",
+                    "        this.onDataviewItemTap(null,id,null, dataItem.getRecord());  ",
+                    "    }",
+                    "}"
                 ],
-                "url": "prey/:id",
+                "url": "/Prey/:id",
                 "designer|userClassName": "showContactDetail"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen28858",
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "contactHeaderLabel",
-                "selector": "#contactHeaderLabel",
-                "designer|userClassName": "contactHeaderLabel"
             },
             "customConfigs": []
         }

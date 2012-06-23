@@ -73,21 +73,6 @@
             "customConfigs": []
         },
         {
-            "id": "ExtBox1-ext-gen20733",
-            "type": "datafield",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "type",
-                "type": "int",
-                "designer|userClassName": "MyField5"
-            },
-            "customConfigs": []
-        },
-        {
             "id": "ExtBox1-ext-gen37448",
             "type": "datafield",
             "reference": {

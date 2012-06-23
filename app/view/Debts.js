@@ -37,7 +37,7 @@ Ext.define('Payback.view.Debts', {
                     {
                         xtype: 'button',
                         id: 'addDebt',
-                        ui: 'confirm',
+                        ui: 'gray-button',
                         text: 'Add'
                     }
                 ]

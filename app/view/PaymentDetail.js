@@ -33,7 +33,7 @@ Ext.define('Payback.view.PaymentDetail', {
                     {
                         xtype: 'button',
                         id: 'cancelPayment',
-                        ui: 'decline',
+                        ui: 'gray-light-button',
                         text: 'Cancel'
                     },
                     {
@@ -42,7 +42,7 @@ Ext.define('Payback.view.PaymentDetail', {
                     {
                         xtype: 'button',
                         id: 'savePayment',
-                        ui: 'confirm',
+                        ui: 'gray-button',
                         text: 'Save'
                     }
                 ]
@@ -63,15 +63,11 @@ Ext.define('Payback.view.PaymentDetail', {
                         labelAlign: 'top',
                         name: 'date',
                         placeHolder: 'mm/dd/yyyy'
-                    }
-                ]
-            },
-            {
-                xtype: 'fieldset',
-                title: 'Memo',
-                items: [
+                    },
                     {
-                        xtype: 'textareafield',
+                        xtype: 'textfield',
+                        label: 'Notes',
+                        labelAlign: 'top',
                         name: 'memo'
                     }
                 ]

@@ -18,12 +18,12 @@ Ext.define('Payback.view.DebtDetail', {
     alias: 'widget.DebtDetail',
 
     config: {
+        padding: '0 0 12px 0',
         style: 'background:  black; ',
         autoDestroy: false,
         layout: {
             type: 'vbox'
         },
-        scrollable: false,
         items: [
             {
                 xtype: 'toolbar',
@@ -32,7 +32,7 @@ Ext.define('Payback.view.DebtDetail', {
                     {
                         xtype: 'button',
                         id: 'cancelDebt',
-                        ui: 'decline',
+                        ui: 'gray-light-button',
                         text: 'Cancel'
                     },
                     {
@@ -41,7 +41,7 @@ Ext.define('Payback.view.DebtDetail', {
                     {
                         xtype: 'button',
                         id: 'saveDebt',
-                        ui: 'confirm',
+                        ui: 'gray-button',
                         text: 'Save'
                     }
                 ]
@@ -67,7 +67,7 @@ Ext.define('Payback.view.DebtDetail', {
                 items: [
                     {
                         xtype: 'label',
-                        height: 80,
+                        height: 100,
                         id: 'debtHeaderLabel',
                         padding: '8px 0 0 0',
                         style: 'font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;'
@@ -75,7 +75,7 @@ Ext.define('Payback.view.DebtDetail', {
                     {
                         xtype: 'button',
                         id: 'addPayment',
-                        margin: '5px 10px 5px 10px',
+                        margin: '10px 10px 5px 10px',
                         padding: '5px',
                         style: 'border-radius: 0; color: black;',
                         ui: 'gray-light-button',
@@ -128,17 +128,14 @@ Ext.define('Payback.view.DebtDetail', {
             },
             {
                 xtype: 'container',
-                layout: {
-                    type: 'vbox'
-                },
-                flex: 1,
                 items: [
                     {
                         xtype: 'label',
                         html: 'Payment History',
+                        id: 'paymentHistoryLabel',
                         margin: '0 12px',
                         padding: '0 0 8px 8px',
-                        style: 'font-size: .8em; font-weight: bold;color: gray; 	border-bottom: 2px solid #333;'
+                        style: 'font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;'
                     },
                     {
                         xtype: 'dataview',
@@ -149,12 +146,13 @@ Ext.define('Payback.view.DebtDetail', {
                         id: 'myPaymentDataView',
                         itemId: 'myPaymentDataView',
                         minHeight: '',
+                        padding: '0 22px',
                         style: 'color: white;',
                         defaultType: 'myPaymentListItem',
+                        scrollable: false,
                         store: 'Payments',
                         useComponents: true,
-                        disableSelection: true,
-                        flex: 1
+                        disableSelection: true
                     }
                 ]
             }

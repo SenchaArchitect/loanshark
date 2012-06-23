@@ -73,6 +73,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "balance",
+                "type": "float",
                 "designer|userClassName": "MyField12"
             },
             "customConfigs": [],
@@ -92,8 +93,10 @@
                             "rec"
                         ],
                         "implHandler": [
-                            "return rec.get('amount') - rec.payments().sum('amount');",
-                            ""
+                            "var sum = rec.get('amount') - rec.payments().sum('amount');",
+                            "sum = Math.round(sum*100)/100;",
+                            "",
+                            "return sum;"
                         ],
                         "designer|userClassName": "convert"
                     },

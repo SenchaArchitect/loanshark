@@ -33,7 +33,8 @@ Ext.define('Payback.controller.Debt', {
             emailDebtButton: '#emailDebt',
             MainView: 'MainView',
             addDebtButton: '#addDebt',
-            debtHeaderLabel: '#debtHeaderLabel'
+            debtHeaderLabel: '#debtHeaderLabel',
+            paymentHistoryLabel: '#paymentHistoryLabel'
         },
 
         control: {
@@ -72,6 +73,7 @@ Ext.define('Payback.controller.Debt', {
         this.getMyPaymentDataView().hide();
         this.getEmailDebtButton().hide();
         this.getDebtHeaderLabel().hide();
+        this.getPaymentHistoryLabel().hide();
 
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();
@@ -181,7 +183,6 @@ Ext.define('Payback.controller.Debt', {
 
         //clears filter on store and sets a new one, this shows only the payments associated with the debt tapped
         Ext.getStore('Payments').clearFilter();
-
         Ext.getStore('Payments').filter("debt_id", record.get('id'));
 
         //update debt balance label
@@ -189,14 +190,18 @@ Ext.define('Payback.controller.Debt', {
         var str = ((balance<0)?'-':'')+'$'+Math.abs(balance);
         this.getDebtHeaderLabel().setHtml(str);
 
-        //show hidden components
+        //show hidden components if any
         this.getAddPaymentButton().show();
         this.getMyPaymentDataView().show();
         this.getEmailDebtButton().show();
         this.getDebtHeaderLabel().show();
+        this.getPaymentHistoryLabel().show();
 
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();
+
+        //scroll to top
+        this.getDebtDetail().getScrollable().getScroller().scrollToTop();
 
         //update url
         this.getApplication().getHistory().add(new Ext.app.Action({

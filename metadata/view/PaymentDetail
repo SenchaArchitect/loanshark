@@ -7,6 +7,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "minHeight": null,
         "autoDestroy": false,
         "designer|userClassName": "PaymentDetail",
         "designer|userAlias": "PaymentDetail"
@@ -56,7 +57,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "cancelPayment",
-                        "ui": "decline",
+                        "ui": "gray-light-button",
                         "text": "Cancel",
                         "designer|userClassName": "MyButton1"
                     },
@@ -86,7 +87,7 @@
                     "userConfig": {
                         "id": "savePayment",
                         "itemId": null,
-                        "ui": "confirm",
+                        "ui": "gray-button",
                         "text": "Save",
                         "designer|userClassName": "MyButton2"
                     },
@@ -222,35 +223,20 @@
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "id": "ExtBox1-ext-gen37855",
-            "type": "fieldset",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "title": "Memo",
-                "designer|userClassName": "MyFieldSet3"
-            },
-            "customConfigs": [],
-            "cn": [
+                },
                 {
-                    "id": "ExtBox1-ext-gen37864",
-                    "type": "textareafield",
+                    "id": "ExtBox1-ext-gen9852",
+                    "type": "textfield",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "label": null,
+                        "label": "Notes",
+                        "labelAlign": "top",
                         "name": "memo",
-                        "designer|userClassName": "MyTextArea"
+                        "designer|userClassName": "MyTextField"
                     },
                     "customConfigs": []
                 }
