@@ -86,7 +86,7 @@
                     "    values = form.getValues(),",
                     "    debt = this.getDebtDetail().getRecord();",
                     "",
-                    "values.amount = values.amount.toFixed(2) || 0;",
+                    "values.amount = (values.amount)?values.amount.toFixed(2):0;",
                     "",
                     "if(record) { //if editing record",
                     "    record.set(values);",
@@ -124,6 +124,11 @@
                     "    this.getApplication().getController('Summary').updateSummary();",
                     "},",
                     "this);",
+                    "",
+                    "//update debt balance label",
+                    "var balance = debt.get('balance');",
+                    "var str = ((balance<0)?'-':'')+'$' + Math.abs(balance);",
+                    "this.getDebtHeaderLabel().setHtml(str);",
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(this.getDebtDetail());",
@@ -197,6 +202,7 @@
                     "//show current button",
                     "target.query('button')[0].show();",
                     "",
+                    "",
                     "//hides delete button if anywhere else is tapped",
                     "Ext.Viewport.element.on({tap:function(){",
                     "    target.query('button')[0].hide();",
@@ -247,6 +253,21 @@
                 "ref": "myPaymentDataView",
                 "selector": "#myPaymentDataView",
                 "designer|userClassName": "myPaymentDataView"
+            },
+            "customConfigs": []
+        },
+        {
+            "id": "ExtBox1-ext-gen2360",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "debtHeaderLabel",
+                "selector": "#debtHeaderLabel",
+                "designer|userClassName": "debtHeaderLabel"
             },
             "customConfigs": []
         }

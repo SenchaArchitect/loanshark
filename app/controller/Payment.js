@@ -32,7 +32,8 @@ Ext.define('Payback.controller.Payment', {
                 xtype: 'DebtDetail',
                 autoCreate: true
             },
-            myPaymentDataView: '#myPaymentDataView'
+            myPaymentDataView: '#myPaymentDataView',
+            debtHeaderLabel: '#debtHeaderLabel'
         },
 
         control: {
@@ -79,7 +80,7 @@ Ext.define('Payback.controller.Payment', {
             values = form.getValues(),
             debt = this.getDebtDetail().getRecord();
 
-        values.amount = values.amount.toFixed(2) || 0;
+        values.amount = (values.amount)?values.amount.toFixed(2):0;
 
         if(record) { //if editing record
             record.set(values);
@@ -118,6 +119,11 @@ Ext.define('Payback.controller.Payment', {
         },
         this);
 
+        //update debt balance label
+        var balance = debt.get('balance');
+        var str = ((balance<0)?'-':'')+'$' + Math.abs(balance);
+        this.getDebtHeaderLabel().setHtml(str);
+
         //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
 
@@ -140,6 +146,7 @@ Ext.define('Payback.controller.Payment', {
 
         //show current button
         target.query('button')[0].show();
+
 
         //hides delete button if anywhere else is tapped
         Ext.Viewport.element.on({tap:function(){

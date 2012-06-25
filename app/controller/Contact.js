@@ -183,7 +183,8 @@ Ext.define('Payback.controller.Contact', {
         debtDataView.refresh();
 
         //update header
-        this.getContactHeaderLabel().setHtml(record.get('name'));
+        var header = this.getContactHeaderLabel();
+        header.setHtml(record.get('name'));
 
         //show items if hidden
         debtDataView.show();
@@ -201,6 +202,20 @@ Ext.define('Payback.controller.Contact', {
 
         //set active item
         Ext.Viewport.setActiveItem(form);
+
+        //set headerLabel font size, this needs to be set after the active item is set
+        var fontSize = 75;
+        var maxHeight = header.getHeight();
+        var maxWidth = Ext.Viewport.getWindowWidth()-20;
+        var textHeight;
+        var textWidth;
+        do {
+            header.setStyle({'font-size': fontSize+'px'});
+            textHeight = header.innerHtmlElement.getHeight();
+            textWidth = header.innerHtmlElement.getWidth();
+            fontSize = fontSize - 1;
+        } while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
+
     },
 
     showContactDetail: function(id) {

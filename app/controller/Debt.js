@@ -78,6 +78,13 @@ Ext.define('Payback.controller.Debt', {
         //remember previous panel to return to
         this.prevPanel = Ext.Viewport.getActiveItem();
 
+        //set selectfield to record name if exists
+        var prevRecord = this.prevPanel.getRecord();
+        if(prevRecord) {
+            var name = prevRecord.get('name');
+            form.down('selectfield').setValue(name);
+        }
+
         //update url
         this.getApplication().getHistory().add(new Ext.app.Action({
             url: '/Debt/add'
@@ -94,10 +101,13 @@ Ext.define('Payback.controller.Debt', {
             values = form.getValues(),
             person = this.getDebtDetail().down('selectfield').record; //gets person from selectfield
 
-            if(record) { //edit old record
+            values.amount = (values.amount)?values.amount.toFixed(2):0;
 
-                //sets values from form into record
-                record.set(values);
+
+        if(record) { //edit old record
+
+            //sets values from form into record
+            record.set(values);
 
             //if the person is modified in the record
             if (record.isModified('person_id')) {
@@ -186,9 +196,10 @@ Ext.define('Payback.controller.Debt', {
         Ext.getStore('Payments').filter("debt_id", record.get('id'));
 
         //update debt balance label
+        var header = this.getDebtHeaderLabel();
         var balance = record.get('balance');
         var str = ((balance<0)?'-':'')+'$'+Math.abs(balance);
-        this.getDebtHeaderLabel().setHtml(str);
+        header.setHtml(str);
 
         //show hidden components if any
         this.getAddPaymentButton().show();
@@ -209,6 +220,20 @@ Ext.define('Payback.controller.Debt', {
         }), true);
 
         Ext.Viewport.setActiveItem(form);
+
+        //set headerLabel font size, this needs to be after the active item is set
+        var fontSize = 75;
+        var maxHeight = header.getHeight();
+        var maxWidth = Ext.Viewport.getWindowWidth()-20;
+        var textHeight;
+        var textWidth;
+        do {
+            header.setStyle({'font-size': fontSize+'px'});
+            textHeight = header.innerHtmlElement.getHeight();
+            textWidth = header.innerHtmlElement.getWidth();
+            fontSize = fontSize - 1;
+        } while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
+        ////////
     },
 
     onEmailDebtTap: function(button, e, options) {
