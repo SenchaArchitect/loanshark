@@ -38,7 +38,7 @@ Ext.define('Payback.view.Debts', {
                         xtype: 'button',
                         id: 'addDebt',
                         ui: 'gray-button',
-                        text: 'Add'
+                        text: 'Add Loan'
                     }
                 ]
             },

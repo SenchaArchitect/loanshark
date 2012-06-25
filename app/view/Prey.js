@@ -37,7 +37,7 @@ Ext.define('Payback.view.Prey', {
                         xtype: 'button',
                         id: 'addContact',
                         ui: 'gray-button',
-                        text: 'Add'
+                        text: 'Add Prey'
                     }
                 ]
             },

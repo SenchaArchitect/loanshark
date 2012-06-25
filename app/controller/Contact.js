@@ -215,7 +215,7 @@ Ext.define('Payback.controller.Contact', {
             textWidth = header.innerHtmlElement.getWidth();
             fontSize = fontSize - 1;
         } while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
-
+        header.setStyle({'padding-top': (100-textHeight)/2+'px'}); //center text
     },
 
     showContactDetail: function(id) {

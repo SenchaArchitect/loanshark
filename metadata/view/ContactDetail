@@ -88,7 +88,7 @@
                         "id": "saveContact",
                         "itemId": null,
                         "ui": "gray-button",
-                        "text": "Save",
+                        "text": "Save Prey",
                         "designer|userClassName": "MyButton2"
                     },
                     "customConfigs": []
@@ -123,7 +123,7 @@
                         "height": 100,
                         "html": null,
                         "id": "contactHeaderLabel",
-                        "padding": "8px 0 0 0",
+                        "padding": null,
                         "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;",
                         "designer|userClassName": "MyLabel2"
                     },

@@ -47,7 +47,7 @@ Ext.define('Payback.view.ContactDetail', {
                         xtype: 'button',
                         id: 'saveContact',
                         ui: 'gray-button',
-                        text: 'Save'
+                        text: 'Save Prey'
                     }
                 ]
             },
@@ -59,7 +59,6 @@ Ext.define('Payback.view.ContactDetail', {
                         xtype: 'label',
                         height: 100,
                         id: 'contactHeaderLabel',
-                        padding: '8px 0 0 0',
                         style: 'font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;'
                     },
                     {

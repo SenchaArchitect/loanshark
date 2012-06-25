@@ -1,10 +1,10 @@
 {
     "expandedState": {
-        "data": true,
+        "data": false,
         "model": true,
         "component": true,
         "controller": true,
-        "resource": false,
+        "resource": true,
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
             "id": "ExtBox1-ext-gen2225",
             "expanded": true,
@@ -167,7 +167,7 @@
                 },
                 {
                     "id": "ExtBox1-ext-gen17075",
-                    "expanded": false,
+                    "expanded": true,
                     "cn": [
                         {
                             "id": "ExtBox1-ext-gen17079",
@@ -254,7 +254,7 @@
         },
         "2b83fda6-da12-4c2f-a259-389ef8f3e683": {
             "id": "ExtBox1-ext-gen25971",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25975",
@@ -368,7 +368,7 @@
         },
         "8ee13c44-dec0-4ae8-b3a8-ed30c67f9f80": {
             "id": "ExtBox1-ext-gen25178",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25182",
@@ -401,7 +401,7 @@
         },
         "ed8e32a8-2bee-4972-82cc-60fdcab2e506": {
             "id": "ExtBox1-ext-gen28985",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen28989",
@@ -434,7 +434,7 @@
         },
         "d3b832b6-4996-4c75-bb54-57aee2c88185": {
             "id": "ExtBox1-ext-gen2239",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen11916",
@@ -812,7 +812,7 @@
         },
         "5ed004d8-012c-4630-9207-238a99ceafdf": {
             "id": "ExtBox1-ext-gen31514",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen34030",

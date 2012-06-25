@@ -9,7 +9,7 @@
     "userConfig": {
         "id": "SummaryView",
         "padding": null,
-        "style": "background:white;",
+        "style": "background:#0F170E;",
         "layout": "fit",
         "scrollable": false,
         "designer|userClassName": "Summary",
@@ -38,7 +38,7 @@
                 "height": null,
                 "style": "background-repeat: no-repeat; background-size: auto 100%;background-position: center center;",
                 "width": null,
-                "src": "resources/images/shark.gif",
+                "src": "resources/images/shark.jpeg",
                 "designer|userClassName": "MyImage",
                 "mode": "background"
             },
@@ -62,6 +62,7 @@
                 "docked": "bottom",
                 "height": "2em",
                 "id": "SummaryContents",
+                "style": null,
                 "designer|userClassName": "MyComponent"
             },
             "customConfigs": [],
@@ -76,7 +77,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "implHandler": [
-                            "<center>You're Owed: {totalOwed}</center>"
+                            "<center style='color:white;'>You're Owed: {totalOwed}</center>"
                         ],
                         "designer|userClassName": "tpl"
                     },

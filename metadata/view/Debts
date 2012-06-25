@@ -50,7 +50,7 @@
                         "id": "addDebt",
                         "itemId": null,
                         "ui": "gray-button",
-                        "text": "Add",
+                        "text": "Add Loan",
                         "designer|userClassName": "MyButton"
                     },
                     "customConfigs": []

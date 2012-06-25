@@ -32,8 +32,12 @@ Ext.define('Payback.controller.Summary', {
     },
 
     updateSummary: function() {
+
+        var balance = Ext.getStore('People').sum('balance');
+        balance = ((balance<0)?'-':'')+'$'+Math.abs(balance).toFixed(2);
+
         this.getSummaryRecord().set({
-            totalOwed: Ext.getStore('People').sum('balance')
+            totalOwed: balance
         });
     },
 

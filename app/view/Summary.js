@@ -19,7 +19,7 @@ Ext.define('Payback.view.Summary', {
 
     config: {
         id: 'SummaryView',
-        style: 'background:white;',
+        style: 'background:#0F170E;',
         layout: {
             type: 'fit'
         },
@@ -35,7 +35,7 @@ Ext.define('Payback.view.Summary', {
             {
                 xtype: 'image',
                 style: 'background-repeat: no-repeat; background-size: auto 100%;background-position: center center;',
-                src: 'resources/images/shark.gif',
+                src: 'resources/images/shark.jpeg',
                 mode: 'background'
             },
             {
@@ -44,7 +44,7 @@ Ext.define('Payback.view.Summary', {
                 height: '2em',
                 id: 'SummaryContents',
                 tpl: [
-                    '<center>You\'re Owed: {totalOwed}</center>'
+                    '<center style=\'color:white;\'>You\'re Owed: {totalOwed}</center>'
                 ]
             }
         ]

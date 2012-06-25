@@ -111,9 +111,13 @@ $form-input-color: white;
 	margin: 0 auto;
 }
 
-.x-container.x-data-item.x-list-item.x-item-pressed .x-list-item-label {
-	background-color: #333;
-	border-top-color: #333;
+.x-list-item.x-item-pressed .x-list-item-label {
+	background-color: #333 !important;
+	border-top-color: #333 !important;
+}
+.x-list-item.x-item-selected .x-list-item-label{
+	background: none !important;
+	background-color: #555 !important;
 }
 .x-android .x-container.x-data-item.x-list-item {
 	min-height: 61px;
@@ -128,9 +132,14 @@ $form-input-color: white;
 	padding-top: 4px;
 }
 .x-desktop .x-container.x-list-item-label {
-	min-height: 38px;
-	
+	min-height: 38px;	
 }
 .x-desktop .x-container.x-list-item-label .x-innerhtml {
 	padding-top: 4px;
+}
+.x-panel.x-floating .x-body.x-scroll-view{
+	background-color: black !important;
+}
+.x-panel.x-floating {
+	background-color: #222;
 }

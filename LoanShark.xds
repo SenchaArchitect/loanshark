@@ -1,7 +1,7 @@
 {
     "name": "LoanShark",
     "settings": {
-        "urlPrefix": "http://localhost:8888/",
+        "urlPrefix": "http://localhost:8888/loanshark",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
         "exportPath": "",

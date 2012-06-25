@@ -198,7 +198,7 @@ Ext.define('Payback.controller.Debt', {
         //update debt balance label
         var header = this.getDebtHeaderLabel();
         var balance = record.get('balance');
-        var str = ((balance<0)?'-':'')+'$'+Math.abs(balance);
+        var str = ((balance<0)?'-':'')+'$'+Math.abs(balance).toFixed(2);
         header.setHtml(str);
 
         //show hidden components if any
@@ -233,7 +233,7 @@ Ext.define('Payback.controller.Debt', {
             textWidth = header.innerHtmlElement.getWidth();
             fontSize = fontSize - 1;
         } while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
-        ////////
+        header.setStyle({'padding-top': (100-textHeight)/2+'px'}); //center text
     },
 
     onEmailDebtTap: function(button, e, options) {

@@ -43,7 +43,7 @@ Ext.define('Payback.view.PaymentDetail', {
                         xtype: 'button',
                         id: 'savePayment',
                         ui: 'gray-button',
-                        text: 'Save'
+                        text: 'Save Payment'
                     }
                 ]
             },

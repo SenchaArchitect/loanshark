@@ -48,7 +48,7 @@
                         "id": "addContact",
                         "itemId": null,
                         "ui": "gray-button",
-                        "text": "Add",
+                        "text": "Add Prey",
                         "designer|userClassName": "MyButton"
                     },
                     "customConfigs": []

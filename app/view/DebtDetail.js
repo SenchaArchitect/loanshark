@@ -42,7 +42,7 @@ Ext.define('Payback.view.DebtDetail', {
                         xtype: 'button',
                         id: 'saveDebt',
                         ui: 'gray-button',
-                        text: 'Save'
+                        text: 'Save Loan'
                     }
                 ]
             },
@@ -56,7 +56,7 @@ Ext.define('Payback.view.DebtDetail', {
                         xtype: 'button',
                         id: 'emailDebt',
                         ui: 'gray-button',
-                        text: 'send email',
+                        text: 'Send Email',
                         align: 'right'
                     }
                 ]
@@ -69,7 +69,6 @@ Ext.define('Payback.view.DebtDetail', {
                         xtype: 'label',
                         height: 100,
                         id: 'debtHeaderLabel',
-                        padding: '8px 0 0 0',
                         style: 'font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;'
                     },
                     {
