@@ -62,7 +62,8 @@
                 "docked": "bottom",
                 "height": "2em",
                 "id": "SummaryContents",
-                "style": null,
+                "minHeight": null,
+                "style": "font-weight: bold;font-size:1.5em;background-color:#FE8A28;",
                 "designer|userClassName": "MyComponent"
             },
             "customConfigs": [],

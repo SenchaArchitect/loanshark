@@ -36,6 +36,8 @@ Ext.define('Payback.view.myContactListItem', {
                 itemId: 'contactListItemDetail',
                 tpl: [
                     '<div>',
+                    '    <div style="margin-right:.5em;float:left;width:1.1em;height:1.1em;background-color:orange;-webkit-mask-image: url(\'resources/images/user_business.png\');-webkit-mask-size: 1.1em;"></div>',
+                    '    ',
                     '{name}  ',
                     '<b style=\'float: right;color:red;\'>',
                     '{[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}',

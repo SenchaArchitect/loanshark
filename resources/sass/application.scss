@@ -26,6 +26,10 @@ $form-input-color: white;
 @include sencha-loading-spinner;
 @include sencha-draw;
 @include sencha-charts;
+@include pictos-iconmask('link2');
+@include pictos-iconmask('locate3');
+@include pictos-iconmask('briefcase2');
+@include pictos-iconmask('address_book');
 
 @include sencha-button-ui('gray-button', gray, 'matte');
 @include sencha-button-ui('gray-light-button', #484848, 'flat');
@@ -142,4 +146,9 @@ $form-input-color: white;
 }
 .x-panel.x-floating {
 	background-color: #222;
+}
+.x-clear-icon {
+	background: url('../images/clear_icon.png') no-repeat !important;
+	margin: 0.1em !important;
+	margin-top: -.4em !important;
 }

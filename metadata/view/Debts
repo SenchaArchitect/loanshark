@@ -110,7 +110,7 @@
             "codeClass": null,
             "userConfig": {
                 "implHandler": [
-                    "{ iconCls : 'info',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
+                    "{ iconCls : 'locate3',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
                 ],
                 "designer|displayName": "tab",
                 "designer|userClassName": "tab"

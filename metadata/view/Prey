@@ -88,7 +88,7 @@
             "codeClass": null,
             "userConfig": {
                 "implHandler": [
-                    "{ iconCls : 'action',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
+                    "{ iconCls : 'address_book',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
                 ],
                 "designer|displayName": "tab",
                 "designer|userClassName": "tab"

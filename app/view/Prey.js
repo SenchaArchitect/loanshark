@@ -22,7 +22,7 @@ Ext.define('Payback.view.Prey', {
             type: 'fit'
         },
         tab: {
-            iconCls: 'action',
+            iconCls: 'address_book',
             iconMask: true,
             baseCls: 'x-button',
             flex: 1,

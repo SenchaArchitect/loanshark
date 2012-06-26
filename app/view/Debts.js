@@ -23,7 +23,7 @@ Ext.define('Payback.view.Debts', {
             type: 'fit'
         },
         tab: {
-            iconCls: 'info',
+            iconCls: 'locate3',
             iconMask: true,
             baseCls: 'x-button',
             flex: 1,
