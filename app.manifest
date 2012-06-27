@@ -2,11 +2,13 @@ CACHE MANIFEST
 
 index.html
 app.js
+override.js
 resources/css/application.css  
 resources/images/sharky.png
 resources/images/user_business.png
 resources/images/clear_icon.png
 http://extjs.cachefly.net/touch/sencha-touch-2.0.1.1/sencha-touch-all.js 
+
 
 app/model/Person.js  
 app/model/Payment.js  
