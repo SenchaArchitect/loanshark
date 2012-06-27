@@ -216,59 +216,6 @@
                             "customConfigs": []
                         },
                         {
-                            "id": "ExtBox1-ext-gen25612",
-                            "type": "numberfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "itemId": "mynumberfield",
-                                "label": "Original Loan",
-                                "labelAlign": "top",
-                                "name": "amount",
-                                "designer|userClassName": "MyNumberField"
-                            },
-                            "customConfigs": [],
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen4970",
-                                    "type": "basiceventbinding",
-                                    "reference": {
-                                        "name": "listeners",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fn": "onMynumberfieldFocus",
-                                        "implHandler": [
-                                            "",
-                                            "//android work around to hide keyboard.",
-                                            "/*if (Ext.os.is.Android)",
-                                            "Ext.Viewport.element.on({tap:function(){",
-                                            "    var field = document.createElement('input');",
-                                            "    field.setAttribute('type', 'text');",
-                                            "    document.body.appendChild(field);",
-                                            "",
-                                            "    setTimeout(function() {",
-                                            "        field.focus();  ",
-                                            "",
-                                            "        setTimeout(function() {",
-                                            "            field.setAttribute('style', 'display:none;');",
-                                            "            field.parentNode.removeChild(field);",
-                                            "        }, 100);",
-                                            "    }, 50);",
-                                            "}, single:true});*/"
-                                        ],
-                                        "name": "focus",
-                                        "designer|userClassName": "onMynumberfieldFocus"
-                                    },
-                                    "customConfigs": []
-                                }
-                            ]
-                        },
-                        {
                             "id": "ExtBox1-ext-gen43674",
                             "type": "datepickerfield",
                             "reference": {
@@ -334,6 +281,59 @@
                             ]
                         },
                         {
+                            "id": "ExtBox1-ext-gen25612",
+                            "type": "numberfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mynumberfield",
+                                "label": "Original Loan",
+                                "labelAlign": "top",
+                                "name": "amount",
+                                "designer|userClassName": "MyNumberField"
+                            },
+                            "customConfigs": [],
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen4970",
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMynumberfieldFocus",
+                                        "implHandler": [
+                                            "",
+                                            "//android work around to hide keyboard.",
+                                            "/*if (Ext.os.is.Android)",
+                                            "Ext.Viewport.element.on({tap:function(){",
+                                            "    var field = document.createElement('input');",
+                                            "    field.setAttribute('type', 'text');",
+                                            "    document.body.appendChild(field);",
+                                            "",
+                                            "    setTimeout(function() {",
+                                            "        field.focus();  ",
+                                            "",
+                                            "        setTimeout(function() {",
+                                            "            field.setAttribute('style', 'display:none;');",
+                                            "            field.parentNode.removeChild(field);",
+                                            "        }, 100);",
+                                            "    }, 50);",
+                                            "}, single:true});*/"
+                                        ],
+                                        "name": "focus",
+                                        "designer|userClassName": "onMynumberfieldFocus"
+                                    },
+                                    "customConfigs": []
+                                }
+                            ]
+                        },
+                        {
                             "id": "ExtBox1-ext-gen25607",
                             "type": "textfield",
                             "reference": {
@@ -346,21 +346,6 @@
                                 "labelAlign": "top",
                                 "name": "reason",
                                 "designer|userClassName": "MyTextField"
-                            },
-                            "customConfigs": []
-                        },
-                        {
-                            "id": "ExtBox1-ext-gen23800",
-                            "type": "textfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "label": "Field",
-                                "labelAlign": "top",
-                                "designer|userClassName": "MyTextField4"
                             },
                             "customConfigs": []
                         }

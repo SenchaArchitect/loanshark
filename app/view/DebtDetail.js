@@ -97,13 +97,6 @@ Ext.define('Payback.view.DebtDetail', {
                                 valueField: 'id'
                             },
                             {
-                                xtype: 'numberfield',
-                                itemId: 'mynumberfield',
-                                label: 'Original Loan',
-                                labelAlign: 'top',
-                                name: 'amount'
-                            },
-                            {
                                 xtype: 'datepickerfield',
                                 label: 'Date',
                                 labelAlign: 'top',
@@ -119,15 +112,17 @@ Ext.define('Payback.view.DebtDetail', {
                                 }
                             },
                             {
+                                xtype: 'numberfield',
+                                itemId: 'mynumberfield',
+                                label: 'Original Loan',
+                                labelAlign: 'top',
+                                name: 'amount'
+                            },
+                            {
                                 xtype: 'textfield',
                                 label: 'Notes',
                                 labelAlign: 'top',
                                 name: 'reason'
-                            },
-                            {
-                                xtype: 'textfield',
-                                label: 'Field',
-                                labelAlign: 'top'
                             }
                         ]
                     }
