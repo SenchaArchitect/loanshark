@@ -31,7 +31,27 @@
                 "title": "Prey Details",
                 "designer|userClassName": "MyTitleBar2"
             },
-            "customConfigs": []
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen17079",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "cancelContact",
+                        "ui": null,
+                        "iconCls": "icon-back",
+                        "iconMask": true,
+                        "text": "Cancel",
+                        "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": []
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen17075",
@@ -47,22 +67,6 @@
             },
             "customConfigs": [],
             "cn": [
-                {
-                    "id": "ExtBox1-ext-gen17079",
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": "cancelContact",
-                        "ui": "gray-light-button",
-                        "text": "Cancel",
-                        "designer|userClassName": "MyButton1"
-                    },
-                    "customConfigs": []
-                },
                 {
                     "id": "ExtBox1-ext-gen17084",
                     "type": "spacer",
@@ -87,8 +91,10 @@
                     "userConfig": {
                         "id": "saveContact",
                         "itemId": null,
-                        "ui": "gray-button",
-                        "text": "Save Prey",
+                        "ui": null,
+                        "iconCls": "icon-save",
+                        "iconMask": true,
+                        "text": "save",
                         "designer|userClassName": "MyButton2"
                     },
                     "customConfigs": []

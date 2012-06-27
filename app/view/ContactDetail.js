@@ -28,26 +28,30 @@ Ext.define('Payback.view.ContactDetail', {
                 xtype: 'titlebar',
                 docked: 'top',
                 ui: 'light',
-                title: 'Prey Details'
+                title: 'Prey Details',
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'cancelContact',
+                        iconCls: 'icon-back',
+                        iconMask: true,
+                        text: 'Cancel'
+                    }
+                ]
             },
             {
                 xtype: 'toolbar',
                 docked: 'bottom',
                 items: [
                     {
-                        xtype: 'button',
-                        id: 'cancelContact',
-                        ui: 'gray-light-button',
-                        text: 'Cancel'
-                    },
-                    {
                         xtype: 'spacer'
                     },
                     {
                         xtype: 'button',
                         id: 'saveContact',
-                        ui: 'gray-button',
-                        text: 'Save Prey'
+                        iconCls: 'icon-save',
+                        iconMask: true,
+                        text: 'save'
                     }
                 ]
             },

@@ -25,7 +25,7 @@ Ext.define('Payback.view.Summary', {
         },
         scrollable: false,
         tab: {
-            iconCls: 'home',
+            iconCls: 'icon-home',
             iconMask: true,
             baseCls: 'x-button',
             flex: 1,
@@ -35,7 +35,7 @@ Ext.define('Payback.view.Summary', {
             {
                 xtype: 'image',
                 style: 'background-repeat: no-repeat; background-size: auto 100%;background-position: center center;',
-                src: 'resources/images/shark.jpeg',
+                src: 'resources/images/sharky.png',
                 mode: 'background'
             },
             {

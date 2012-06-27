@@ -38,7 +38,7 @@
                 "height": null,
                 "style": "background-repeat: no-repeat; background-size: auto 100%;background-position: center center;",
                 "width": null,
-                "src": "resources/images/shark.jpeg",
+                "src": "resources/images/sharky.png",
                 "designer|userClassName": "MyImage",
                 "mode": "background"
             },
@@ -96,7 +96,7 @@
             "codeClass": null,
             "userConfig": {
                 "implHandler": [
-                    "{ iconCls : 'home',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
+                    "{ iconCls : 'icon-home',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
                 ],
                 "designer|displayName": "tab",
                 "designer|userClassName": "tab"

@@ -35,22 +35,6 @@
             "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen25586",
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": "cancelDebt",
-                        "ui": "gray-light-button",
-                        "text": "Cancel",
-                        "designer|userClassName": "MyButton1"
-                    },
-                    "customConfigs": []
-                },
-                {
                     "id": "ExtBox1-ext-gen25591",
                     "type": "spacer",
                     "reference": {
@@ -74,8 +58,10 @@
                     "userConfig": {
                         "id": "saveDebt",
                         "itemId": null,
-                        "ui": "gray-button",
-                        "text": "Save Loan",
+                        "ui": null,
+                        "iconCls": "icon-save",
+                        "iconMask": true,
+                        "text": "save",
                         "designer|userClassName": "MyButton2"
                     },
                     "customConfigs": []
@@ -99,6 +85,24 @@
             "customConfigs": [],
             "cn": [
                 {
+                    "id": "ExtBox1-ext-gen25586",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "cancelDebt",
+                        "ui": null,
+                        "iconCls": "icon-back",
+                        "iconMask": true,
+                        "text": "Cancel",
+                        "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": []
+                },
+                {
                     "id": "ExtBox1-ext-gen2443",
                     "type": "button",
                     "reference": {
@@ -108,9 +112,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "emailDebt",
-                        "ui": "gray-button",
+                        "ui": null,
                         "icon": null,
                         "iconAlign": null,
+                        "iconCls": "icon-email",
+                        "iconMask": true,
                         "text": "Send Email",
                         "designer|userClassName": "MyButton16",
                         "align": "right"

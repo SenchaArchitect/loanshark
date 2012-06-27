@@ -30,7 +30,27 @@
                 "title": "Payment Details",
                 "designer|userClassName": "MyTitleBar2"
             },
-            "customConfigs": []
+            "customConfigs": [],
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen25985",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "cancelPayment",
+                        "ui": null,
+                        "iconCls": "icon-back",
+                        "iconMask": true,
+                        "text": "Cancel",
+                        "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": []
+                }
+            ]
         },
         {
             "id": "ExtBox1-ext-gen25981",
@@ -47,22 +67,6 @@
             },
             "customConfigs": [],
             "cn": [
-                {
-                    "id": "ExtBox1-ext-gen25985",
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": "cancelPayment",
-                        "ui": "gray-light-button",
-                        "text": "Cancel",
-                        "designer|userClassName": "MyButton1"
-                    },
-                    "customConfigs": []
-                },
                 {
                     "id": "ExtBox1-ext-gen25990",
                     "type": "spacer",
@@ -87,8 +91,11 @@
                     "userConfig": {
                         "id": "savePayment",
                         "itemId": null,
-                        "ui": "gray-button",
-                        "text": "Save Payment",
+                        "ui": null,
+                        "iconAlign": null,
+                        "iconCls": "icon-save",
+                        "iconMask": true,
+                        "text": "save",
                         "designer|userClassName": "MyButton2"
                     },
                     "customConfigs": []

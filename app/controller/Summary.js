@@ -22,10 +22,6 @@ Ext.define('Payback.controller.Summary', {
         ],
         summaryRecord: 0,
 
-        routes: {
-            'summary': 'showSummaryPanel'
-        },
-
         refs: {
             SummaryContents: '#SummaryContents'
         }
@@ -56,12 +52,6 @@ Ext.define('Payback.controller.Summary', {
             summaryRecord = Ext.create('Payback.model.Summary');
         }
         return summaryRecord;
-    },
-
-    showSummaryPanel: function() {
-
-        //switch to summary panel
-        //Ext.Viewport.getActiveItem().setActiveItem(0);
     }
 
 });

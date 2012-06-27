@@ -30,19 +30,14 @@ Ext.define('Payback.view.DebtDetail', {
                 docked: 'bottom',
                 items: [
                     {
-                        xtype: 'button',
-                        id: 'cancelDebt',
-                        ui: 'gray-light-button',
-                        text: 'Cancel'
-                    },
-                    {
                         xtype: 'spacer'
                     },
                     {
                         xtype: 'button',
                         id: 'saveDebt',
-                        ui: 'gray-button',
-                        text: 'Save Loan'
+                        iconCls: 'icon-save',
+                        iconMask: true,
+                        text: 'save'
                     }
                 ]
             },
@@ -54,8 +49,16 @@ Ext.define('Payback.view.DebtDetail', {
                 items: [
                     {
                         xtype: 'button',
+                        id: 'cancelDebt',
+                        iconCls: 'icon-back',
+                        iconMask: true,
+                        text: 'Cancel'
+                    },
+                    {
+                        xtype: 'button',
                         id: 'emailDebt',
-                        ui: 'gray-button',
+                        iconCls: 'icon-email',
+                        iconMask: true,
                         text: 'Send Email',
                         align: 'right'
                     }

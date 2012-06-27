@@ -36,8 +36,8 @@ Ext.define('Payback.view.myContactListItem', {
                 itemId: 'contactListItemDetail',
                 tpl: [
                     '<div>',
-                    '    <div style="margin-right:.5em;float:left;width:1.1em;height:1.1em;background-color:orange;-webkit-mask-image: url(\'resources/images/user_business.png\');-webkit-mask-size: 1.1em;"></div>',
-                    '    ',
+                    '<div style="margin-right:.5em;float:left;width:1.1em;height:1.1em;background-color:orange;-webkit-mask-image: url(\'resources/images/user_business.png\');-webkit-mask-size: 1.1em;"></div>',
+                    '',
                     '{name}  ',
                     '<b style=\'float: right;color:red;\'>',
                     '{[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}',
@@ -49,11 +49,11 @@ Ext.define('Payback.view.myContactListItem', {
                     {
                         xtype: 'button',
                         docked: 'right',
-                        height: 24,
                         hidden: true,
                         itemId: 'deleteContact',
                         margin: '0 0 0 10px',
-                        ui: 'gray-button',
+                        iconCls: 'icon-delete',
+                        iconMask: true,
                         text: 'delete'
                     }
                 ]

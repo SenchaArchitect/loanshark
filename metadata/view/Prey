@@ -47,9 +47,13 @@
                     "userConfig": {
                         "id": "addContact",
                         "itemId": null,
-                        "ui": "gray-button",
+                        "ui": null,
+                        "iconAlign": null,
+                        "iconCls": "icon-add-contact",
+                        "iconMask": true,
                         "text": "Add Prey",
-                        "designer|userClassName": "MyButton"
+                        "designer|userClassName": "MyButton",
+                        "layout|flex": null
                     },
                     "customConfigs": []
                 }
@@ -88,7 +92,7 @@
             "codeClass": null,
             "userConfig": {
                 "implHandler": [
-                    "{ iconCls : 'address_book',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
+                    "{ iconCls : 'icon-contacts',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
                 ],
                 "designer|displayName": "tab",
                 "designer|userClassName": "tab"

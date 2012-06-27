@@ -8,6 +8,13 @@ $form-input-color: white;
 
 @import 'sencha-touch/default/all';
 
+@mixin custom-pictos-iconmask($name) {
+  .x-tab .x-button-icon.#{$name},
+  .x-button .x-button-icon.x-icon-mask.#{$name} {
+    -webkit-mask-image: inline-image($name + ".png");
+  }
+}
+
 @include sencha-panel;
 @include sencha-buttons;
 @include sencha-sheet;
@@ -26,34 +33,49 @@ $form-input-color: white;
 @include sencha-loading-spinner;
 @include sencha-draw;
 @include sencha-charts;
-@include pictos-iconmask('link2');
-@include pictos-iconmask('locate3');
-@include pictos-iconmask('briefcase2');
-@include pictos-iconmask('address_book');
+
+@include custom-pictos-iconmask('icon-contacts');
+@include custom-pictos-iconmask('icon-debt');
+@include custom-pictos-iconmask('icon-home');
+@include custom-pictos-iconmask('icon-add-debt');
+@include custom-pictos-iconmask('icon-add-contact');
+@include custom-pictos-iconmask('icon-save');
+@include custom-pictos-iconmask('icon-delete');
+@include custom-pictos-iconmask('icon-back');
+@include custom-pictos-iconmask('icon-email');
 
 @include sencha-button-ui('gray-button', gray, 'matte');
 @include sencha-button-ui('gray-light-button', #484848, 'flat');
 
-.x-tabbar-inner .x-button {
+
+.x-toolbar .x-button, .x-tabbar-inner .x-button, .x-list-inner .x-button{
     border: none !important;
 	background-image: none !important;
 	background: transparent !important;  
 	border-bottom: 2px solid transparent !important;  
 }
-
-.x-tabbar-inner .x-button .x-button-icon.x-icon-mask {
+.x-list-inner .x-button .x-button-icon.x-icon-mask{
+	-webkit-mask-size: 1.54em;
+	height: 1.1em;
+}
+.x-button .x-button-icon.x-icon-mask {
     width: 100%;
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-position: center;
-	background-color: white;
-	background-image: none;
-	
+	background-color: white !important;
+	background-image: none !important;
+	-webkit-mask-size: 1.6em;
+	opacity: .6;
+	height: 2.1em;
 }
+.x-tabbar-inner .x-button .x-button-icon.x-icon-mask {
+	height: 1.3em;
 
+}
 .x-tabbar-inner .x-tab-active {
 	border-bottom: 7px solid red !important;
 	border-radius: 0;
-	margin-top: 4px;
+	margin-top: .3em;
 }
 .x-tabbar {
 	padding: 0 !important;
@@ -86,7 +108,6 @@ $form-input-color: white;
 	border-top: none;
 }
 .x-input-el {
-	background: black;
 	color: white;
 	min-height: 0;
 	-webkit-text-fill-color: white !important;
@@ -96,7 +117,9 @@ $form-input-color: white;
 }
 .x-form-fieldset .x-form-fieldset-inner {
 	background: none;
-
+}
+.x-field .x-field-input {
+	background-color: #1A1A1A;
 }
 .x-spinner .x-input-el, .x-field-select .x-input-el {
 	-webkit-text-fill-color: white;
@@ -106,15 +129,13 @@ $form-input-color: white;
 	font-weight: normal;
 
 }
-#contactHeaderLabel .x-innerhtml, #debtHeaderLabel .x-innerhtml
-{
+#contactHeaderLabel .x-innerhtml, #debtHeaderLabel .x-innerhtml {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 	display: table;
 	margin: 0 auto;
 }
-
 .x-list-item.x-item-pressed .x-list-item-label {
 	background-color: #333 !important;
 	border-top-color: #333 !important;
@@ -123,22 +144,13 @@ $form-input-color: white;
 	background: none !important;
 	background-color: #555 !important;
 }
-.x-android .x-container.x-data-item.x-list-item {
+.x-android .x-container.x-data-item.x-list-item,.x-android .x-container.x-list-item-label {
 	min-height: 61px;
 }
-.x-desktop .x-container.x-data-item.x-list-item {
+.x-desktop .x-container.x-data-item.x-list-item, .x-desktop .x-container.x-list-item-label {
 	min-height: 38px;
 }
-.x-android .x-container.x-list-item-label {
-	min-height: 61px;
-}
-.x-android .x-container.x-list-item-label .x-innerhtml {
-	padding-top: 4px;
-}
-.x-desktop .x-container.x-list-item-label {
-	min-height: 38px;	
-}
-.x-desktop .x-container.x-list-item-label .x-innerhtml {
+.x-desktop .x-container.x-list-item-label .x-innerhtml, .x-android .x-container.x-list-item-label .x-innerhtml {
 	padding-top: 4px;
 }
 .x-panel.x-floating .x-body.x-scroll-view{
@@ -150,5 +162,5 @@ $form-input-color: white;
 .x-clear-icon {
 	background: url('../images/clear_icon.png') no-repeat !important;
 	margin: 0.1em !important;
-	margin-top: -.4em !important;
+	margin-top: -.7em !important;
 }

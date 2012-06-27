@@ -22,7 +22,7 @@ Ext.define('Payback.view.Prey', {
             type: 'fit'
         },
         tab: {
-            iconCls: 'address_book',
+            iconCls: 'icon-contacts',
             iconMask: true,
             baseCls: 'x-button',
             flex: 1,
@@ -36,7 +36,8 @@ Ext.define('Payback.view.Prey', {
                     {
                         xtype: 'button',
                         id: 'addContact',
-                        ui: 'gray-button',
+                        iconCls: 'icon-add-contact',
+                        iconMask: true,
                         text: 'Add Prey'
                     }
                 ]

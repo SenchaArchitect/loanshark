@@ -227,11 +227,11 @@ Ext.define('Payback.controller.Contact', {
         } else {
 
             id--;
-
-            var dataItem = this.getMyContactDataView().getItems().getAt(0).getInnerItems()[id];
+            var dataView = this.getMyContactDataView();
+            var dataItem = dataView.getItems().getAt(0).getInnerItems()[id];
 
             if(dataItem) {
-                this.onDataviewItemTap(null,id,null, dataItem.getRecord());  
+                this.onDataviewItemTap(dataView,id,null, dataItem.getRecord());  
             }
         }
     }

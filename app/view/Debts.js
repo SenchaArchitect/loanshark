@@ -23,7 +23,7 @@ Ext.define('Payback.view.Debts', {
             type: 'fit'
         },
         tab: {
-            iconCls: 'locate3',
+            iconCls: 'icon-debt',
             iconMask: true,
             baseCls: 'x-button',
             flex: 1,
@@ -37,7 +37,8 @@ Ext.define('Payback.view.Debts', {
                     {
                         xtype: 'button',
                         id: 'addDebt',
-                        ui: 'gray-button',
+                        iconCls: 'icon-add-debt',
+                        iconMask: true,
                         text: 'Add Loan'
                     }
                 ]

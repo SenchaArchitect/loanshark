@@ -5,6 +5,7 @@ dir = File.dirname(__FILE__)
 load File.join(dir, '..','..','..','SDK','touch','resources', 'themes')
 
 # Compass configurations
+images_path = File.join(dir, '..', 'images')
 sass_path    = dir
 css_path     = File.join(dir, "..", "css")
 environment  = :production

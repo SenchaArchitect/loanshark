@@ -49,7 +49,9 @@
                     "userConfig": {
                         "id": "addDebt",
                         "itemId": null,
-                        "ui": "gray-button",
+                        "ui": null,
+                        "iconCls": "icon-add-debt",
+                        "iconMask": true,
                         "text": "Add Loan",
                         "designer|userClassName": "MyButton"
                     },
@@ -110,7 +112,7 @@
             "codeClass": null,
             "userConfig": {
                 "implHandler": [
-                    "{ iconCls : 'locate3',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
+                    "{ iconCls : 'icon-debt',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
                 ],
                 "designer|displayName": "tab",
                 "designer|userClassName": "tab"

@@ -44,11 +44,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "docked": "right",
-                        "height": 24,
+                        "height": null,
                         "hidden": true,
                         "itemId": "deletePayment",
                         "margin": "0 0 0 10px",
-                        "ui": "gray-button",
+                        "ui": null,
+                        "iconCls": "icon-delete",
+                        "iconMask": true,
                         "text": "delete",
                         "designer|userClassName": "MyButton12"
                     },

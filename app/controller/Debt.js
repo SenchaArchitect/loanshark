@@ -161,9 +161,11 @@ Ext.define('Payback.controller.Debt', {
         this.getDebtDetail().reset(); //reset form
 
         //update url
-        this.getApplication().getHistory().add(new Ext.app.Action({
-            url: '/Debt'
-        }), true);
+        if(this.prevPanel instanceof Payback.view.MainView) {
+            this.getApplication().getHistory().add(new Ext.app.Action({
+                url: '/Debt'
+            }), true);
+        }
 
         //set active item
         Ext.Viewport.setActiveItem(this.prevPanel);
@@ -214,11 +216,12 @@ Ext.define('Payback.controller.Debt', {
         //scroll to top
         this.getDebtDetail().getScrollable().getScroller().scrollToTop();
 
-        //update url
-        this.getApplication().getHistory().add(new Ext.app.Action({
-            url: '/Debt/' + (index+1)
-        }), true);
-
+        //update url if not on contact detail
+        if(dataview.up('panel') instanceof Payback.view.Debts) {
+            this.getApplication().getHistory().add(new Ext.app.Action({
+                url: '/Debt/' + (index+1)
+            }), true);
+        }
         Ext.Viewport.setActiveItem(form);
 
         //set headerLabel font size, this needs to be after the active item is set
@@ -259,11 +262,11 @@ Ext.define('Payback.controller.Debt', {
         } else {
 
             id--;
-
-            var dataItem = this.getMyDebtDataView().getItems().getAt(0).getInnerItems()[id];
+            var dataView = this.getMyDebtDataView();
+            var dataItem = dataView.getItems().getAt(0).getInnerItems()[id];
 
             if(dataItem) {
-                this.onDataviewItemTap(null,id,null, dataItem.getRecord());  
+                this.onDataviewItemTap(dataView,id,null, dataItem.getRecord());  
             }
         }
     }

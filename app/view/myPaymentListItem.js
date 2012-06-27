@@ -46,11 +46,11 @@ Ext.define('Payback.view.myPaymentListItem', {
                     {
                         xtype: 'button',
                         docked: 'right',
-                        height: 24,
                         hidden: true,
                         itemId: 'deletePayment',
                         margin: '0 0 0 10px',
-                        ui: 'gray-button',
+                        iconCls: 'icon-delete',
+                        iconMask: true,
                         text: 'delete'
                     }
                 ]

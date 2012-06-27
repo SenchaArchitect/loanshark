@@ -24,26 +24,30 @@ Ext.define('Payback.view.PaymentDetail', {
                 xtype: 'titlebar',
                 docked: 'top',
                 ui: 'light',
-                title: 'Payment Details'
+                title: 'Payment Details',
+                items: [
+                    {
+                        xtype: 'button',
+                        id: 'cancelPayment',
+                        iconCls: 'icon-back',
+                        iconMask: true,
+                        text: 'Cancel'
+                    }
+                ]
             },
             {
                 xtype: 'toolbar',
                 docked: 'bottom',
                 items: [
                     {
-                        xtype: 'button',
-                        id: 'cancelPayment',
-                        ui: 'gray-light-button',
-                        text: 'Cancel'
-                    },
-                    {
                         xtype: 'spacer'
                     },
                     {
                         xtype: 'button',
                         id: 'savePayment',
-                        ui: 'gray-button',
-                        text: 'Save Payment'
+                        iconCls: 'icon-save',
+                        iconMask: true,
+                        text: 'save'
                     }
                 ]
             },
