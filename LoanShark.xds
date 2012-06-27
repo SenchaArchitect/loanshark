@@ -4,7 +4,7 @@
         "urlPrefix": "http://localhost:8888/loanshark",
         "spacesToIndent": 4,
         "codeGenFormat": "Class",
-        "exportPath": "",
+        "exportPath": "/Users/ericbowden/Documents/repos/loanshark2",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
         "lineEnding": "",

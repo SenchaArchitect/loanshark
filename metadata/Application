@@ -53,6 +53,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "disableCaching": false,
                 "enabled": true,
                 "designer|userClassName": "Loader"
             },
