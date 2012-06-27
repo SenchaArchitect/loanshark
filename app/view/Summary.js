@@ -19,7 +19,7 @@ Ext.define('Payback.view.Summary', {
 
     config: {
         id: 'SummaryView',
-        style: 'background:#0F170E;',
+        style: 'background:black;',
         layout: {
             type: 'fit'
         },

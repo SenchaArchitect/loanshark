@@ -9,7 +9,7 @@
     "userConfig": {
         "id": "SummaryView",
         "padding": null,
-        "style": "background:#0F170E;",
+        "style": "background:black;",
         "layout": "fit",
         "scrollable": false,
         "designer|userClassName": "Summary",

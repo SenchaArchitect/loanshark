@@ -145,7 +145,7 @@ $form-input-color: white;
 	background-color: #555 !important;
 }
 .x-android .x-container.x-data-item.x-list-item,.x-android .x-container.x-list-item-label {
-	min-height: 61px;
+	height: 61px;
 }
 .x-desktop .x-container.x-data-item.x-list-item, .x-desktop .x-container.x-list-item-label {
 	min-height: 38px;
@@ -163,4 +163,8 @@ $form-input-color: white;
 	background: url('../images/clear_icon.png') no-repeat !important;
 	margin: 0.1em !important;
 	margin-top: -.7em !important;
+}
+.x-picker-bar {
+	background-color: rgba(50, 50, 50, 0.3);
+	background-image: none;
 }

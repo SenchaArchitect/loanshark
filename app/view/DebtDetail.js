@@ -114,7 +114,7 @@ Ext.define('Payback.view.DebtDetail', {
                             {
                                 xtype: 'numberfield',
                                 itemId: 'mynumberfield',
-                                label: 'Original Loan',
+                                label: 'Original Loan Amount',
                                 labelAlign: 'top',
                                 name: 'amount'
                             },

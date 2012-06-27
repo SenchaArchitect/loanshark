@@ -226,6 +226,7 @@ Ext.define('Payback.controller.Debt', {
                 url: '/Debt/' + (index+1)
             }), true);
         }
+
         Ext.Viewport.setActiveItem(form);
 
         //set headerLabel font size, this needs to be after the active item is set

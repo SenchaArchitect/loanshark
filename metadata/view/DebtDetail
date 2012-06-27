@@ -290,7 +290,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "mynumberfield",
-                                "label": "Original Loan",
+                                "label": "Original Loan Amount",
                                 "labelAlign": "top",
                                 "name": "amount",
                                 "designer|userClassName": "MyNumberField"
