@@ -245,7 +245,7 @@
                                         "implHandler": [
                                             "",
                                             "//android work around to hide keyboard.",
-                                            "if (Ext.os.is.Android)",
+                                            "/*if (Ext.os.is.Android)",
                                             "Ext.Viewport.element.on({tap:function(){",
                                             "    var field = document.createElement('input');",
                                             "    field.setAttribute('type', 'text');",
@@ -259,7 +259,7 @@
                                             "            field.parentNode.removeChild(field);",
                                             "        }, 100);",
                                             "    }, 50);",
-                                            "}, single:true});"
+                                            "}, single:true});*/"
                                         ],
                                         "name": "focus",
                                         "designer|userClassName": "onMynumberfieldFocus"
@@ -346,6 +346,21 @@
                                 "labelAlign": "top",
                                 "name": "reason",
                                 "designer|userClassName": "MyTextField"
+                            },
+                            "customConfigs": []
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen23800",
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Field",
+                                "labelAlign": "top",
+                                "designer|userClassName": "MyTextField4"
                             },
                             "customConfigs": []
                         }

@@ -146,7 +146,7 @@
                                 "implHandler": [
                                     "",
                                     "//android work around to hide keyboard.",
-                                    "if (Ext.os.is.Android)",
+                                    "/*if (Ext.os.is.Android)",
                                     "Ext.Viewport.element.on({tap:function(){",
                                     "    var field = document.createElement('input');",
                                     "    field.setAttribute('type', 'text');",
@@ -160,7 +160,7 @@
                                     "            field.parentNode.removeChild(field);",
                                     "        }, 100);",
                                     "    }, 50);",
-                                    "}, single:true});"
+                                    "}, single:true});*/"
                                 ],
                                 "name": "focus",
                                 "designer|userClassName": "onMynumberfield1Focus"

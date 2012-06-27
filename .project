@@ -3,7 +3,7 @@
         "data": false,
         "model": false,
         "component": true,
-        "controller": false,
+        "controller": true,
         "resource": false,
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
             "id": "ExtBox1-ext-gen2225",
@@ -33,7 +33,7 @@
         },
         "1b7b0c08-5968-4072-ba7f-815dd2cfe595": {
             "id": "ExtBox1-ext-gen25572",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25582",
@@ -125,6 +125,11 @@
                                 },
                                 {
                                     "id": "ExtBox1-ext-gen25607",
+                                    "expanded": true,
+                                    "cn": []
+                                },
+                                {
+                                    "id": "ExtBox1-ext-gen23800",
                                     "expanded": true,
                                     "cn": []
                                 }
@@ -255,7 +260,7 @@
         },
         "2b83fda6-da12-4c2f-a259-389ef8f3e683": {
             "id": "ExtBox1-ext-gen25971",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25975",
@@ -337,7 +342,7 @@
         },
         "9290d4e2-55ef-4f81-b844-ff9efd351b2b": {
             "id": "ExtBox1-ext-gen6975",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen20879",

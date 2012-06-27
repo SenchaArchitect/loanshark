@@ -178,7 +178,7 @@ Ext.define('Payback.controller.Debt', {
         for (var i=0; i < deleteButtons.length; i++) {
             deleteButtons[i].hide();
         }
-
+        debugger;
         //shows current delete button
         target.query('button')[0].show();
 
