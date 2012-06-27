@@ -45,7 +45,7 @@ Ext.define('Payback.view.Summary', {
                 id: 'SummaryContents',
                 style: 'font-weight: bold;font-size:1.5em;background-color:#FE8A28;',
                 tpl: [
-                    '<center style=\'color:white;\'>You\'re Owed: {totalOwed}</center>'
+                    '<center style=\'color:white;padding-top: .43em;\'>You\'re Owed: {totalOwed}</center>'
                 ]
             }
         ]

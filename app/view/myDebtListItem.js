@@ -38,14 +38,10 @@ Ext.define('Payback.view.myDebtListItem', {
                     '<div>   ',
                     '<span style=\'color:#777\'>{[Ext.Date.format(values.date,\'m/d\')]}</span>&nbsp;&nbsp;&nbsp;',
                     '<span class=\'debt-person-label\'><tpl for="Person">{name}</tpl></span>',
-                    '<span class=\'debt-money-label\'>',
-                    '<b style=\'float: right;color:red;font-size: .9em;\'> Loan: {[(values.amount<0)?\'-\':\'\']}${[Math.abs(values.amount).toFixed(2)]}</b>',
-                    '</span>',
+                    '<b class=\'money-label\' style=\'float: right;color:red;font-size: .9em;\'> Loan: {[(values.amount<0)?\'-\':\'\']}${[Math.abs(values.amount).toFixed(2)]}</b>',
                     '</br>',
                     '<span style=\'color:#ddd\'>{reason}</span>',
-                    '<span class=\'debt-money-label\'>',
-                    '<b style=\'float: right;color:orange;clear:both;\'>Balance: {[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}</b>',
-                    '</span>',
+                    '<b class=\'money-label\' style=\'float: right;color:orange;clear:both;\'>Balance: {[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}</b>',
                     '</div>'
                 ],
                 items: [

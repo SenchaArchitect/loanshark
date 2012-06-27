@@ -37,8 +37,8 @@ Ext.define('Payback.view.myPaymentListItem', {
                 tpl: [
                     '<div>',
                     '',
-                    '{[(values.amount<0)?\'-\':\'\']}${[Math.abs(values.amount).toFixed(2)]}',
-                    '<span style=\'float:right;color:#555;font-size:15px;\'>{[Ext.Date.format(values.date,\'m/d\')]}</span>',
+                    '<span>{[(values.amount<0)?\'-\':\'\']}${[Math.abs(values.amount).toFixed(2)]}</span>',
+                    '<span class=\'money-label\' style=\'float:right;color:#555;font-size:15px;\'>{[Ext.Date.format(values.date,\'m/d\')]}</span>',
                     '',
                     '</div>'
                 ],

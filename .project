@@ -33,7 +33,7 @@
         },
         "1b7b0c08-5968-4072-ba7f-815dd2cfe595": {
             "id": "ExtBox1-ext-gen25572",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25582",
@@ -370,7 +370,7 @@
         },
         "8ee13c44-dec0-4ae8-b3a8-ed30c67f9f80": {
             "id": "ExtBox1-ext-gen25178",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25182",
@@ -403,7 +403,7 @@
         },
         "ed8e32a8-2bee-4972-82cc-60fdcab2e506": {
             "id": "ExtBox1-ext-gen28985",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen28989",
@@ -436,7 +436,7 @@
         },
         "d3b832b6-4996-4c75-bb54-57aee2c88185": {
             "id": "ExtBox1-ext-gen2239",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen11916",
@@ -743,7 +743,7 @@
         },
         "4924b61f-714b-45ce-aa6a-944c48e631e4": {
             "id": "ExtBox1-ext-gen51189",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen51194",
@@ -814,7 +814,7 @@
         },
         "5ed004d8-012c-4630-9207-238a99ceafdf": {
             "id": "ExtBox1-ext-gen31514",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen34030",
@@ -840,7 +840,7 @@
         },
         "9492a36c-015b-4b23-8dad-68f6f48b9841": {
             "id": "ExtBox1-ext-gen43233",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen43445",

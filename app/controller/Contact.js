@@ -159,12 +159,16 @@ Ext.define('Payback.controller.Contact', {
             deleteButtons[i].hide();
         }
 
+        var labels = Ext.select(target.getObservableId() +' .money-label');
+        labels.hide();
+
         //show item delete button
         target.query('button')[0].show();
 
         //hides delete button if anywhere else is tapped
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
+            labels.show();
         }, single:true});
     },
 

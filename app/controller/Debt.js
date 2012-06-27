@@ -178,13 +178,17 @@ Ext.define('Payback.controller.Debt', {
         for (var i=0; i < deleteButtons.length; i++) {
             deleteButtons[i].hide();
         }
-        debugger;
+
+        var labels = Ext.select(target.getObservableId() +' .money-label');
+        labels.hide();
+
         //shows current delete button
         target.query('button')[0].show();
 
         //hides delete button if anywhere else is tapped
         Ext.Viewport.element.on({tap:function(){
             target.query('button')[0].hide();
+            labels.show();
         }, single:true});
     },
 
