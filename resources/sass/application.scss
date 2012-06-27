@@ -144,13 +144,13 @@ $form-input-color: white;
 	background: none !important;
 	background-color: #555 !important;
 }
-.x-android .x-container.x-data-item.x-list-item,.x-android .x-container.x-list-item-label {
+/*.x-android .x-container.x-data-item.x-list-item,.x-android .x-container.x-list-item-label {
 	height: 61px;
 }
 .x-desktop .x-container.x-data-item.x-list-item, .x-desktop .x-container.x-list-item-label {
 	min-height: 38px;
-}
-.x-desktop .x-container.x-list-item-label .x-innerhtml, .x-android .x-container.x-list-item-label .x-innerhtml {
+}*/
+.x-container.x-list-item-label .x-innerhtml {
 	padding-top: 4px;
 }
 .x-panel.x-floating .x-body.x-scroll-view{

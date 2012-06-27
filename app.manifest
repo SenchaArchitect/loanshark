@@ -8,7 +8,7 @@ resources/images/sharky.png
 resources/images/user_business.png
 resources/images/clear_icon.png
 http://extjs.cachefly.net/touch/sencha-touch-2.0.1.1/sencha-touch-all.js 
-
+resources/images/app-icon-57.png
 
 app/model/Person.js  
 app/model/Payment.js  
@@ -32,3 +32,19 @@ app/controller/Routing.js
 app/store/PeopleStore.js  
 app/store/DebtsStore.js  
 app/store/PaymentStore.js  
+
+resources/images/splash/loading/Default-Landscape~ipad.png
+resources/images/splash/loading/Default-LandscapeLeft~ipad.png
+resources/images/splash/loading/Default-LandscapeRight~ipad.png
+resources/images/splash/loading/Default-Portrait~ipad.png
+resources/images/splash/loading/Default-PortraitUpsideDown~ipad.png
+resources/images/splash/loading/Default.png
+resources/images/splash/loading/Default@2x.png
+resources/images/splash/loading/Default~ipad.png
+
+resources/images/splash/icons/icon-spot~ipad.png
+resources/images/splash/icons/Icon.png
+resources/images/splash/icons/Icon@2x.png
+resources/images/splash/icons/Icon~ipad.png
+resources/images/splash/icons/Icon~ipad@2x.png
+resources/images/splash/icons/iTunesArtwork.png
