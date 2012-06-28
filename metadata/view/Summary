@@ -63,7 +63,7 @@
                 "height": "2em",
                 "id": "SummaryContents",
                 "minHeight": null,
-                "style": "font-weight: bold;font-size:1.5em;background-color:#FE8A28;",
+                "style": "font-weight: bold;font-size:1.5em;background-color:#910002;",
                 "designer|userClassName": "MyComponent"
             },
             "customConfigs": [],
