@@ -30,6 +30,7 @@
             "PaymentDetail",
             "myPaymentListItem"
         ],
+        "glossOnIcon": false,
         "name": "Payback",
         "phoneIcon": "",
         "phoneStartupScreen": "resources/images/spash/loading/Default.png",

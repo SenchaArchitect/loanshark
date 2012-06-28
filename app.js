@@ -42,6 +42,7 @@ Ext.application({
         'PaymentDetail',
         'myPaymentListItem'
     ],
+    glossOnIcon: false,
     icon: {
         57: 'resources/images/splash/icons/Icon.png',
         72: 'resources/images/splash/icons/Icon~ipad.png',

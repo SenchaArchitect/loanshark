@@ -45,8 +45,8 @@ Ext.define('Payback.view.myDebtListItem', {
                     '        <span style=\'color:#ddd\'>{reason}</span>',
                     '',
                     '        <b class=\'money-label\' style=\'float: right;color:orange;clear:both;\'>Balance: {[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}</b>',
-                    '            </div>',
-                    '            </div>'
+                    '    </div>',
+                    '</div>'
                 ],
                 items: [
                     {
