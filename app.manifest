@@ -1,10 +1,11 @@
 CACHE MANIFEST
 
-#version .4
+#version .5
 
 index.html
 app.js
 override.js
+bottomoverride.js
 resources/css/application.css  
 resources/images/sharky.png
 resources/images/user_business.png
