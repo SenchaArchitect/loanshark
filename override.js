@@ -50,11 +50,13 @@ if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
     }
 	});
 	
-	Payback.view.MainView.addConfig({
-		layout: {
-			type: 'card',
-			animation: false
+	Ext.define('MainViewOverride', {
+		override: 'Payback.view.MainView',
+		config: {
+			layout: {
+				type: 'card',
+				animation: false
+			}
 		}
 	});
 }
-
