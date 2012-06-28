@@ -15,4 +15,25 @@ if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
 	});
 	
 	Ext.os.is.Android2 = true;
+	
+	Ext.event.recognizer.Tap.override({
+	onTouchStart: function(e) {
+        if (Ext.event.recognizer.Tap.superclass.onTouchStart.apply(this, arguments) === false) {
+            return false;
+        }
+
+        this.startPoint = e.changedTouches[0].point;
+    },
+
+		onTouchMove: function(e) {
+	        var touch = e.changedTouches[0],
+	            point = touch.point;
+
+	        if (Math.abs(point.getDistanceTo(this.startPoint)) >= 15) {
+	            return this.fail(this.self.TOUCH_MOVED);
+	        }
+	    }
+	});
+	
 }
+
