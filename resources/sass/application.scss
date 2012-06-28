@@ -47,7 +47,10 @@ $form-input-color: white;
 @include sencha-button-ui('gray-button', gray, 'matte');
 @include sencha-button-ui('gray-light-button', #484848, 'flat');
 
+body {
+	background-color: black;
 
+}
 .x-toolbar .x-button, .x-tabbar-inner .x-button, .x-list-inner .x-button{
     border: none !important;
 	background-image: none !important;
