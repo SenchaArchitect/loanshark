@@ -12,5 +12,7 @@ if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
 		getWindowHeight: function() {
 			return window.outerHeight;
 		}
-	})
+	});
+	
+	Ext.os.is.Android2 = true;
 }
