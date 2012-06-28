@@ -7,13 +7,14 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "DebtDetail",
+        "designer|userAlias": "DebtDetail",
         "margin": null,
         "padding": "0 0 12px 0",
         "style": "background:  black; ",
         "autoDestroy": false,
         "layout": "vbox",
-        "designer|userClassName": "DebtDetail",
-        "designer|userAlias": "DebtDetail"
+        "scrollable": null
     },
     "customConfigs": [],
     "designerId": "1b7b0c08-5968-4072-ba7f-815dd2cfe595",
@@ -28,9 +29,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyToolbar",
                 "docked": "bottom",
-                "ui": null,
-                "designer|userClassName": "MyToolbar"
+                "ui": null
             },
             "customConfigs": [],
             "cn": [
@@ -56,14 +57,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton2",
                         "cls": "my-buttons",
                         "id": "saveDebt",
                         "itemId": null,
                         "ui": null,
                         "iconCls": "icon-save",
                         "iconMask": true,
-                        "text": "save",
-                        "designer|userClassName": "MyButton2"
+                        "text": "save"
                     },
                     "customConfigs": []
                 }
@@ -78,10 +79,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyTitleBar2",
                 "docked": "top",
                 "ui": "light",
-                "title": "Loan Details",
-                "designer|userClassName": "MyTitleBar2"
+                "title": "Loan Details"
             },
             "customConfigs": [],
             "cn": [
@@ -94,13 +95,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton1",
                         "cls": "my-buttons",
                         "id": "cancelDebt",
                         "ui": null,
                         "iconCls": "icon-back",
                         "iconMask": true,
-                        "text": "Cancel",
-                        "designer|userClassName": "MyButton1"
+                        "text": "Cancel"
                     },
                     "customConfigs": []
                 },
@@ -113,6 +114,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "align": "right",
+                        "designer|userClassName": "MyButton16",
                         "cls": "my-buttons",
                         "id": "emailDebt",
                         "ui": null,
@@ -120,9 +123,7 @@
                         "iconAlign": null,
                         "iconCls": "icon-email",
                         "iconMask": true,
-                        "text": "Send Email",
-                        "designer|userClassName": "MyButton16",
-                        "align": "right"
+                        "text": "Send Email"
                     },
                     "customConfigs": []
                 }
@@ -137,10 +138,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyContainer7",
                 "height": null,
                 "margin": "0 0 10px 0",
-                "designer|userClassName": "MyContainer7",
-                "layout|flex": null
+                "scrollable": null
             },
             "customConfigs": [],
             "cn": [
@@ -153,13 +155,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyLabel2",
                         "designer|displayName": null,
                         "height": 100,
                         "html": null,
                         "id": "debtHeaderLabel",
                         "padding": null,
-                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;",
-                        "designer|userClassName": "MyLabel2"
+                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
                     },
                     "customConfigs": []
                 },
@@ -172,6 +174,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton15",
                         "cls": "my-buttons",
                         "id": "addPayment",
                         "margin": "10px 10px 5px 10px",
@@ -179,8 +182,7 @@
                         "style": "border-radius: 0; color: black;",
                         "ui": "gray-light-button",
                         "iconCls": null,
-                        "text": "Add Payment",
-                        "designer|userClassName": "MyButton15"
+                        "text": "Add Payment"
                     },
                     "customConfigs": []
                 },
@@ -193,9 +195,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
                         "itemId": "myfieldset1",
-                        "title": null,
-                        "designer|userClassName": "MyFieldSet"
+                        "title": null
                     },
                     "customConfigs": [],
                     "cn": [
@@ -208,14 +210,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MySelectField",
                                 "label": "Prey",
                                 "labelAlign": "top",
                                 "name": "person_id",
                                 "displayField": "name",
                                 "store": "People",
                                 "ui": null,
-                                "valueField": "id",
-                                "designer|userClassName": "MySelectField"
+                                "valueField": "id"
                             },
                             "customConfigs": []
                         },
@@ -228,10 +230,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyDateField1",
                                 "label": "Date",
                                 "labelAlign": "top",
-                                "name": "date",
-                                "designer|userClassName": "MyDateField1"
+                                "name": "date"
                             },
                             "customConfigs": [],
                             "cn": [
@@ -244,9 +246,9 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "designer|userClassName": "MyDatePicker1",
                                         "style": null,
-                                        "ui": "dark",
-                                        "designer|userClassName": "MyDatePicker1"
+                                        "ui": "dark"
                                     },
                                     "customConfigs": [],
                                     "cn": [
@@ -259,10 +261,10 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "designer|userClassName": "MyButton9",
                                                 "cls": "my-buttons",
                                                 "ui": "gray-button",
-                                                "text": "Done",
-                                                "designer|userClassName": "MyButton9"
+                                                "text": "Done"
                                             },
                                             "customConfigs": []
                                         },
@@ -275,10 +277,10 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "designer|userClassName": "MyButton10",
                                                 "cls": "my-buttons",
                                                 "ui": "gray-light-button",
-                                                "text": "Cancel",
-                                                "designer|userClassName": "MyButton10"
+                                                "text": "Cancel"
                                             },
                                             "customConfigs": []
                                         }
@@ -295,11 +297,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyNumberField",
                                 "itemId": "mynumberfield",
                                 "label": "Original Loan Amount",
                                 "labelAlign": "top",
-                                "name": "amount",
-                                "designer|userClassName": "MyNumberField"
+                                "name": "amount"
                             },
                             "customConfigs": [],
                             "cn": [
@@ -312,6 +314,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "designer|userClassName": "onMynumberfieldFocus",
                                         "fn": "onMynumberfieldFocus",
                                         "implHandler": [
                                             "",
@@ -332,8 +335,7 @@
                                             "}, 50);",
                                             "}, single:true});*/"
                                         ],
-                                        "name": "focus",
-                                        "designer|userClassName": "onMynumberfieldFocus"
+                                        "name": "focus"
                                     },
                                     "customConfigs": []
                                 }
@@ -348,10 +350,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyTextField",
                                 "label": "Notes",
                                 "labelAlign": "top",
-                                "name": "reason",
-                                "designer|userClassName": "MyTextField"
+                                "name": "reason"
                             },
                             "customConfigs": []
                         }
@@ -368,9 +370,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "style": null,
+                "layout|flex": null,
                 "designer|userClassName": "MyContainer8",
-                "layout|flex": null
+                "style": null
             },
             "customConfigs": [],
             "cn": [
@@ -383,6 +385,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyLabel",
                         "designer|displayName": "Payment History",
                         "baseCls": null,
                         "html": "Payment History",
@@ -390,8 +393,7 @@
                         "margin": "0 12px",
                         "padding": "0 0 8px 8px",
                         "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
-                        "styleHtmlCls": null,
-                        "designer|userClassName": "MyLabel"
+                        "styleHtmlCls": null
                     },
                     "customConfigs": []
                 },
@@ -404,6 +406,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyDataView",
                         "baseCls": "x-list",
                         "cls": [
                             "x-list-normal"
@@ -416,31 +419,12 @@
                         "padding": "0 22px",
                         "style": "color: white;",
                         "defaultType": "myPaymentListItem",
+                        "scrollable": "false\n",
                         "store": "Payments",
                         "useComponents": true,
-                        "disableSelection": true,
-                        "designer|userClassName": "MyDataView"
+                        "disableSelection": true
                     },
-                    "customConfigs": [],
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen11103",
-                            "type": "object",
-                            "reference": {
-                                "name": "scrollable",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "implHandler": [
-                                    "false"
-                                ],
-                                "designer|displayName": "scrollable",
-                                "designer|userClassName": "scrollable"
-                            },
-                            "customConfigs": []
-                        }
-                    ]
+                    "customConfigs": []
                 }
             ]
         }

@@ -7,13 +7,13 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "Contact",
         "stores": [
             "PeopleStore"
         ],
         "views": [
             "ContactDetail"
-        ],
-        "designer|userClassName": "Contact"
+        ]
     },
     "customConfigs": [],
     "designerId": "4924b61f-714b-45ce-aa6a-944c48e631e4",
@@ -28,6 +28,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onAddContactTap",
                 "fn": "onAddContactTap",
                 "implHandler": [
                     "",
@@ -54,8 +55,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#addContact",
-                "designer|userClassName": "onAddContactTap"
+                "designer|controlQuery": "#addContact"
             },
             "customConfigs": []
         },
@@ -68,6 +68,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onSaveContactTap",
                 "fn": "onSaveContactTap",
                 "implHandler": [
                     "var form = this.getContactDetail(),",
@@ -133,8 +134,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#saveContact",
-                "designer|userClassName": "onSaveContactTap"
+                "designer|controlQuery": "#saveContact"
             },
             "customConfigs": []
         },
@@ -147,6 +147,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onCancelContactTap",
                 "fn": "onCancelContactTap",
                 "implHandler": [
                     "//delete form",
@@ -162,8 +163,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#cancelContact",
-                "designer|userClassName": "onCancelContactTap"
+                "designer|controlQuery": "#cancelContact"
             },
             "customConfigs": []
         },
@@ -176,6 +176,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onDataviewItemSwipe",
                 "fn": "onDataviewItemSwipe",
                 "implHandler": [
                     "var deleteButtons = dataview.query('button');",
@@ -199,8 +200,7 @@
                 ],
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "#myContactDataView",
-                "designer|userClassName": "onDataviewItemSwipe"
+                "designer|controlQuery": "#myContactDataView"
             },
             "customConfigs": []
         },
@@ -213,11 +213,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "ContactDetail",
                 "ref": "ContactDetail",
                 "selector": "ContactDetail",
                 "xtype": "ContactDetail",
-                "autoCreate": true,
-                "designer|userClassName": "ContactDetail"
+                "autoCreate": true
             },
             "customConfigs": []
         },
@@ -230,6 +230,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onDataviewItemTap",
                 "fn": "onDataviewItemTap",
                 "implHandler": [
                     "var form = this.getContactDetail(),",
@@ -282,8 +283,7 @@
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
-                "designer|controlQuery": "#myContactDataView",
-                "designer|userClassName": "onDataviewItemTap"
+                "designer|controlQuery": "#myContactDataView"
             },
             "customConfigs": []
         },
@@ -296,9 +296,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "myContactDataView",
                 "ref": "myContactDataView",
-                "selector": "#myContactDataView",
-                "designer|userClassName": "myContactDataView"
+                "selector": "#myContactDataView"
             },
             "customConfigs": []
         },
@@ -311,9 +311,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "myDebtDataView",
                 "ref": "myDebtDataView",
-                "selector": "#myDebtDataView",
-                "designer|userClassName": "myDebtDataView"
+                "selector": "#myDebtDataView"
             },
             "customConfigs": []
         },
@@ -326,9 +326,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "contactHeaderLabel",
                 "ref": "contactHeaderLabel",
-                "selector": "#contactHeaderLabel",
-                "designer|userClassName": "contactHeaderLabel"
+                "selector": "#contactHeaderLabel"
             },
             "customConfigs": []
         },
@@ -341,9 +341,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "loanHistoryLabel",
                 "ref": "loanHistoryLabel",
-                "selector": "#loanHistoryLabel",
-                "designer|userClassName": "loanHistoryLabel"
+                "selector": "#loanHistoryLabel"
             },
             "customConfigs": []
         },
@@ -356,9 +356,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addContactButton",
                 "ref": "addContactButton",
-                "selector": "#addContact",
-                "designer|userClassName": "addContactButton"
+                "selector": "#addContact"
             },
             "customConfigs": []
         },
@@ -371,9 +371,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MainView",
                 "ref": "MainView",
-                "selector": "MainView",
-                "designer|userClassName": "MainView"
+                "selector": "MainView"
             },
             "customConfigs": []
         },
@@ -386,6 +386,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "showContactDetail",
                 "fn": "showContactDetail",
                 "designer|params": [
                     "id"
@@ -407,8 +408,7 @@
                     "    }",
                     "}"
                 ],
-                "url": "/Prey/:id",
-                "designer|userClassName": "showContactDetail"
+                "url": "/Prey/:id"
             },
             "customConfigs": []
         }

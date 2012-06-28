@@ -7,7 +7,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Payment"
+        "designer|userClassName": "Payment",
+        "identifier": "{\n    type: 'uuid'\n}"
     },
     "customConfigs": [],
     "designerId": "5f8fbc87-7f38-40ea-af4e-4e27c41555b7",
@@ -22,9 +23,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField6",
                 "name": "id",
-                "type": "auto",
-                "designer|userClassName": "MyField6"
+                "type": "auto"
             },
             "customConfigs": []
         },
@@ -37,8 +38,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "debt_id",
-                "designer|userClassName": "MyField8"
+                "designer|userClassName": "MyField8",
+                "name": "debt_id"
             },
             "customConfigs": []
         },
@@ -51,9 +52,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField3",
                 "name": "amount",
-                "type": "float",
-                "designer|userClassName": "MyField3"
+                "type": "float"
             },
             "customConfigs": []
         },
@@ -66,9 +67,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField4",
                 "name": "date",
-                "type": "date",
-                "designer|userClassName": "MyField4"
+                "type": "date"
             },
             "customConfigs": []
         },
@@ -81,9 +82,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField5",
                 "name": "memo",
-                "type": "string",
-                "designer|userClassName": "MyField5"
+                "type": "string"
             },
             "customConfigs": []
         },
@@ -96,8 +97,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "Payments",
-                "designer|userClassName": "MyLocalStorageProxy1"
+                "designer|userClassName": "MyLocalStorageProxy1",
+                "id": "Payments"
             },
             "customConfigs": []
         },
@@ -110,26 +111,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyBelongsToAssociation1",
                 "model": "Debt",
-                "foreignKey": "debt_id",
-                "designer|userClassName": "MyBelongsToAssociation1"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen3571",
-            "type": "object",
-            "reference": {
-                "name": "identifier",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "implHandler": [
-                    "{type:'uuid'}"
-                ],
-                "designer|displayName": "identifier",
-                "designer|userClassName": "identifier"
+                "foreignKey": "debt_id"
             },
             "customConfigs": []
         }

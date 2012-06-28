@@ -17,10 +17,10 @@ Ext.define('Payback.controller.Summary', {
     extend: 'Ext.app.Controller',
 
     config: {
+        summaryRecord: 0,
         models: [
             'Summary'
         ],
-        summaryRecord: 0,
 
         refs: {
             SummaryContents: '#SummaryContents'

@@ -7,10 +7,10 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "Payment",
         "stores": [
             "PaymentStore"
-        ],
-        "designer|userClassName": "Payment"
+        ]
     },
     "customConfigs": [],
     "designerId": "ebea6ac0-ebc3-4e23-a80f-c90cae112f2a",
@@ -25,11 +25,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "PaymentDetail",
                 "ref": "PaymentDetail",
                 "selector": "PaymentDetail",
                 "xtype": "PaymentDetail",
-                "autoCreate": true,
-                "designer|userClassName": "PaymentDetail"
+                "autoCreate": true
             },
             "customConfigs": []
         },
@@ -42,6 +42,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onAddPaymentTap",
                 "fn": "onAddPaymentTap",
                 "implHandler": [
                     "",
@@ -65,8 +66,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#addPayment",
-                "designer|userClassName": "onAddPaymentTap"
+                "designer|controlQuery": "#addPayment"
             },
             "customConfigs": []
         },
@@ -79,6 +79,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onSavePaymentTap",
                 "fn": "onSavePaymentTap",
                 "implHandler": [
                     "var form = this.getPaymentDetail(),",
@@ -136,8 +137,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#savePayment",
-                "designer|userClassName": "onSavePaymentTap"
+                "designer|controlQuery": "#savePayment"
             },
             "customConfigs": []
         },
@@ -150,6 +150,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onCancelButtonTap",
                 "fn": "onCancelButtonTap",
                 "implHandler": [
                     "this.getPaymentDetail().reset(); //clears form",
@@ -159,8 +160,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#cancelPayment",
-                "designer|userClassName": "onCancelButtonTap"
+                "designer|controlQuery": "#cancelPayment"
             },
             "customConfigs": []
         },
@@ -173,11 +173,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "DebtDetail",
                 "ref": "DebtDetail",
                 "selector": "DebtDetail",
                 "xtype": "DebtDetail",
-                "autoCreate": true,
-                "designer|userClassName": "DebtDetail"
+                "autoCreate": true
             },
             "customConfigs": []
         },
@@ -190,6 +190,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onDataviewItemSwipe",
                 "fn": "onDataviewItemSwipe",
                 "implHandler": [
                     "var deleteButtons = dataview.query('button');",
@@ -214,8 +215,7 @@
                 ],
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "#myPaymentDataView",
-                "designer|userClassName": "onDataviewItemSwipe"
+                "designer|controlQuery": "#myPaymentDataView"
             },
             "customConfigs": []
         },
@@ -228,6 +228,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onDataviewItemTap",
                 "fn": "onDataviewItemTap",
                 "implHandler": [
                     "",
@@ -240,8 +241,7 @@
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "#myPaymentDataView",
-                "designer|userClassName": "onDataviewItemTap"
+                "designer|controlQuery": "#myPaymentDataView"
             },
             "customConfigs": []
         },
@@ -254,9 +254,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "myPaymentDataView",
                 "ref": "myPaymentDataView",
-                "selector": "#myPaymentDataView",
-                "designer|userClassName": "myPaymentDataView"
+                "selector": "#myPaymentDataView"
             },
             "customConfigs": []
         },
@@ -269,9 +269,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "debtHeaderLabel",
                 "ref": "debtHeaderLabel",
-                "selector": "#debtHeaderLabel",
-                "designer|userClassName": "debtHeaderLabel"
+                "selector": "#debtHeaderLabel"
             },
             "customConfigs": []
         }

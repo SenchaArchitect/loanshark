@@ -7,13 +7,14 @@
     },
     "codeClass": null,
     "userConfig": {
+        "tab": "{\n    iconCls: 'icon-home',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
+        "designer|userClassName": "Summary",
+        "designer|userAlias": "Summary",
         "id": "SummaryView",
         "padding": null,
         "style": "background:black;",
         "layout": "fit",
-        "scrollable": false,
-        "designer|userClassName": "Summary",
-        "designer|userAlias": "Summary"
+        "scrollable": false
     },
     "customConfigs": [
         {
@@ -34,13 +35,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "mode": "background",
+                "designer|userClassName": "MyImage",
                 "centered": null,
                 "height": null,
                 "style": "background-repeat: no-repeat; background-size: auto 100%;background-position: center center;",
                 "width": null,
-                "src": "resources/images/sharky.png",
-                "designer|userClassName": "MyImage",
-                "mode": "background"
+                "src": "resources/images/sharky.png"
             },
             "customConfigs": [
                 {
@@ -59,12 +60,12 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyComponent",
                 "docked": "bottom",
                 "height": "",
                 "id": "SummaryContents",
                 "minHeight": null,
-                "style": "font-weight: bold;font-size:1.5em;background-color:#910002;",
-                "designer|userClassName": "MyComponent"
+                "style": "font-weight: bold;font-size:1.5em;background-color:#910002;"
             },
             "customConfigs": [],
             "cn": [
@@ -77,31 +78,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "tpl",
                         "implHandler": [
                             "<center style='color:white;padding-top: .43em;padding-bottom: .43em;'>You're Owed: {totalOwed}</center>"
-                        ],
-                        "designer|userClassName": "tpl"
+                        ]
                     },
                     "customConfigs": []
                 }
             ]
-        },
-        {
-            "id": "ExtBox1-ext-gen4501",
-            "type": "object",
-            "reference": {
-                "name": "tab",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "implHandler": [
-                    "{ iconCls : 'icon-home',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
-                ],
-                "designer|displayName": "tab",
-                "designer|userClassName": "tab"
-            },
-            "customConfigs": []
         }
     ]
 }

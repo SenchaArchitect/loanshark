@@ -7,10 +7,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "minHeight": null,
-        "autoDestroy": false,
         "designer|userClassName": "PaymentDetail",
-        "designer|userAlias": "PaymentDetail"
+        "designer|userAlias": "PaymentDetail",
+        "minHeight": null,
+        "autoDestroy": false
     },
     "customConfigs": [],
     "designerId": "2b83fda6-da12-4c2f-a259-389ef8f3e683",
@@ -25,10 +25,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyTitleBar2",
                 "docked": "top",
                 "ui": "light",
-                "title": "Payment Details",
-                "designer|userClassName": "MyTitleBar2"
+                "title": "Payment Details"
             },
             "customConfigs": [],
             "cn": [
@@ -41,13 +41,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton1",
                         "cls": "my-buttons",
                         "id": "cancelPayment",
                         "ui": null,
                         "iconCls": "icon-back",
                         "iconMask": true,
-                        "text": "Cancel",
-                        "designer|userClassName": "MyButton1"
+                        "text": "Cancel"
                     },
                     "customConfigs": []
                 }
@@ -62,9 +62,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyToolbar",
                 "docked": "bottom",
-                "ui": null,
-                "designer|userClassName": "MyToolbar"
+                "ui": null
             },
             "customConfigs": [],
             "cn": [
@@ -90,6 +90,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton2",
                         "cls": "my-buttons",
                         "id": "savePayment",
                         "itemId": null,
@@ -97,8 +98,7 @@
                         "iconAlign": null,
                         "iconCls": "icon-save",
                         "iconMask": true,
-                        "text": "save",
-                        "designer|userClassName": "MyButton2"
+                        "text": "save"
                     },
                     "customConfigs": []
                 }
@@ -113,8 +113,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": null,
-                "designer|userClassName": "MyFieldSet"
+                "designer|userClassName": "MyFieldSet",
+                "title": null
             },
             "customConfigs": [],
             "cn": [
@@ -127,11 +127,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyNumberField1",
                         "itemId": "mynumberfield1",
                         "label": "Amount",
                         "labelAlign": "top",
-                        "name": "amount",
-                        "designer|userClassName": "MyNumberField1"
+                        "name": "amount"
                     },
                     "customConfigs": [],
                     "cn": [
@@ -144,6 +144,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "onMynumberfield1Focus",
                                 "fn": "onMynumberfield1Focus",
                                 "implHandler": [
                                     "",
@@ -164,8 +165,7 @@
                                     "    }, 50);",
                                     "}, single:true});*/"
                                 ],
-                                "name": "focus",
-                                "designer|userClassName": "onMynumberfield1Focus"
+                                "name": "focus"
                             },
                             "customConfigs": []
                         }
@@ -180,11 +180,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyDateField",
                         "label": "Date",
                         "labelAlign": "top",
                         "name": "date",
-                        "placeHolder": "mm/dd/yyyy",
-                        "designer|userClassName": "MyDateField"
+                        "placeHolder": "mm/dd/yyyy"
                     },
                     "customConfigs": [],
                     "cn": [
@@ -210,8 +210,8 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "text": "Done",
-                                        "designer|userClassName": "MyButton7"
+                                        "designer|userClassName": "MyButton7",
+                                        "text": "Done"
                                     },
                                     "customConfigs": []
                                 },
@@ -224,8 +224,8 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "text": "Cancel",
-                                        "designer|userClassName": "MyButton8"
+                                        "designer|userClassName": "MyButton8",
+                                        "text": "Cancel"
                                     },
                                     "customConfigs": []
                                 }
@@ -242,10 +242,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyTextField",
                         "label": "Notes",
                         "labelAlign": "top",
-                        "name": "memo",
-                        "designer|userClassName": "MyTextField"
+                        "name": "memo"
                     },
                     "customConfigs": []
                 }
@@ -260,8 +260,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "debt_id",
-                "designer|userClassName": "MyHiddenField"
+                "designer|userClassName": "MyHiddenField",
+                "name": "debt_id"
             },
             "customConfigs": []
         }

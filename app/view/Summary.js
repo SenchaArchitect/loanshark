@@ -34,9 +34,9 @@ Ext.define('Payback.view.Summary', {
         items: [
             {
                 xtype: 'image',
+                mode: 'background',
                 style: 'background-repeat: no-repeat; background-size: auto 100%;background-position: center center;',
-                src: 'resources/images/sharky.png',
-                mode: 'background'
+                src: 'resources/images/sharky.png'
             },
             {
                 xtype: 'component',

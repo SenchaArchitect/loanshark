@@ -7,13 +7,13 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "myContactListItem",
+        "designer|userAlias": "myContactListItem",
         "baseCls": "x-data-item",
         "cls": [
             "x-list-item"
         ],
-        "minHeight": null,
-        "designer|userClassName": "myContactListItem",
-        "designer|userAlias": "myContactListItem"
+        "minHeight": null
     },
     "customConfigs": [],
     "designerId": "ed8e32a8-2bee-4972-82cc-60fdcab2e506",
@@ -28,9 +28,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyContainer5",
                 "baseCls": "x-list-item-label",
-                "itemId": "contactListItemDetail",
-                "designer|userClassName": "MyContainer5"
+                "itemId": "contactListItemDetail"
             },
             "customConfigs": [],
             "cn": [
@@ -43,6 +43,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton12",
                         "cls": "my-buttons",
                         "docked": "right",
                         "height": null,
@@ -52,8 +53,7 @@
                         "ui": null,
                         "iconCls": "icon-delete",
                         "iconMask": true,
-                        "text": "delete",
-                        "designer|userClassName": "MyButton12"
+                        "text": "delete"
                     },
                     "customConfigs": [],
                     "cn": [
@@ -66,6 +66,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "onContactDeleteButtonTap",
                                 "fn": "onContactDeleteButtonTap",
                                 "implHandler": [
                                     "",
@@ -98,8 +99,7 @@
                                     "//update the summary",
                                     "Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
                                 ],
-                                "name": "tap",
-                                "designer|userClassName": "onContactDeleteButtonTap"
+                                "name": "tap"
                             },
                             "customConfigs": []
                         }
@@ -114,6 +114,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "tpl",
                         "implHandler": [
                             "<div>",
                             "<div style=\"margin-right:.5em;float:left;width:1.1em;height:1.1em;background-color:orange;-webkit-mask-image: url('resources/images/user_business.png');-webkit-mask-size: 1.1em;\"></div>",
@@ -124,8 +125,7 @@
                             "</b>",
                             "<br>",
                             "</div>"
-                        ],
-                        "designer|userClassName": "tpl"
+                        ]
                     },
                     "customConfigs": []
                 }
@@ -140,6 +140,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "updateRecord",
                 "fn": "updateRecord",
                 "designer|params": [
                     "newRecord",
@@ -151,8 +152,7 @@
                     "",
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
-                ],
-                "designer|userClassName": "updateRecord"
+                ]
             },
             "customConfigs": []
         }

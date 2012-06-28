@@ -7,12 +7,12 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "DebtsStore",
         "autoLoad": true,
         "groupDir": "DESC",
         "groupField": "date",
         "model": "Debt",
-        "storeId": "Debts",
-        "designer|userClassName": "DebtsStore"
+        "storeId": "Debts"
     },
     "customConfigs": [],
     "designerId": "ef0bd167-5093-4697-a61f-0595c4aafc73",
@@ -27,8 +27,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "direction": "DESC",
-                "designer|userClassName": "MyGrouper"
+                "designer|userClassName": "MyGrouper",
+                "direction": "DESC"
             },
             "customConfigs": [],
             "cn": [
@@ -41,6 +41,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "groupFn",
                         "fn": "groupFn",
                         "designer|params": [
                             "record"
@@ -49,8 +50,7 @@
                             "  // console.log(record);",
                             " //   debugger;",
                             "return record.get('date');"
-                        ],
-                        "designer|userClassName": "groupFn"
+                        ]
                     },
                     "customConfigs": [],
                     "iconCls": "icon-basic-function"

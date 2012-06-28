@@ -1,7 +1,7 @@
 {
     "expandedState": {
         "data": false,
-        "model": false,
+        "model": true,
         "component": true,
         "controller": true,
         "resource": true,
@@ -33,7 +33,7 @@
         },
         "1b7b0c08-5968-4072-ba7f-815dd2cfe595": {
             "id": "ExtBox1-ext-gen25572",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25582",
@@ -144,13 +144,7 @@
                         {
                             "id": "ExtBox1-ext-gen27809",
                             "expanded": true,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen11103",
-                                    "expanded": true,
-                                    "cn": []
-                                }
-                            ]
+                            "cn": []
                         }
                     ]
                 }
@@ -236,13 +230,7 @@
                         {
                             "id": "ExtBox1-ext-gen20017",
                             "expanded": true,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen23287",
-                                    "expanded": true,
-                                    "cn": []
-                                }
-                            ]
+                            "cn": []
                         }
                     ]
                 },
@@ -453,11 +441,6 @@
                             "cn": []
                         }
                     ]
-                },
-                {
-                    "id": "ExtBox1-ext-gen4501",
-                    "expanded": true,
-                    "cn": []
                 }
             ]
         },
@@ -485,11 +468,6 @@
                     "id": "ExtBox1-ext-gen16724",
                     "expanded": true,
                     "cn": []
-                },
-                {
-                    "id": "ExtBox1-ext-gen6546",
-                    "expanded": true,
-                    "cn": []
                 }
             ]
         },
@@ -510,11 +488,6 @@
                 },
                 {
                     "id": "ExtBox1-ext-gen19269",
-                    "expanded": true,
-                    "cn": []
-                },
-                {
-                    "id": "ExtBox1-ext-gen6891",
                     "expanded": true,
                     "cn": []
                 }
@@ -555,7 +528,7 @@
         },
         "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51": {
             "id": "ExtBox1-ext-gen21470",
-            "expanded": false,
+            "expanded": true,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen37320",
@@ -565,13 +538,7 @@
                 {
                     "id": "ExtBox1-ext-gen33350",
                     "expanded": true,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen9768",
-                            "expanded": true,
-                            "cn": []
-                        }
-                    ]
+                    "cn": []
                 },
                 {
                     "id": "ExtBox1-ext-gen21927",
@@ -596,21 +563,10 @@
                 {
                     "id": "ExtBox1-ext-gen24451",
                     "expanded": false,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen6342",
-                            "expanded": true,
-                            "cn": []
-                        }
-                    ]
-                },
-                {
-                    "id": "ExtBox1-ext-gen38941",
-                    "expanded": true,
                     "cn": []
                 },
                 {
-                    "id": "ExtBox1-ext-gen8847",
+                    "id": "ExtBox1-ext-gen38941",
                     "expanded": true,
                     "cn": []
                 }
@@ -652,11 +608,6 @@
                 },
                 {
                     "id": "ExtBox1-ext-gen23513",
-                    "expanded": true,
-                    "cn": []
-                },
-                {
-                    "id": "ExtBox1-ext-gen3571",
                     "expanded": true,
                     "cn": []
                 }
@@ -705,13 +656,7 @@
                 {
                     "id": "ExtBox1-ext-gen41780",
                     "expanded": true,
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen8982",
-                            "expanded": true,
-                            "cn": []
-                        }
-                    ]
+                    "cn": []
                 },
                 {
                     "id": "ExtBox1-ext-gen15286",
@@ -720,11 +665,6 @@
                 },
                 {
                     "id": "ExtBox1-ext-gen7917",
-                    "expanded": true,
-                    "cn": []
-                },
-                {
-                    "id": "ExtBox1-ext-gen2737",
                     "expanded": true,
                     "cn": []
                 }
@@ -743,7 +683,7 @@
         },
         "4924b61f-714b-45ce-aa6a-944c48e631e4": {
             "id": "ExtBox1-ext-gen51189",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen51194",
@@ -840,7 +780,7 @@
         },
         "9492a36c-015b-4b23-8dad-68f6f48b9841": {
             "id": "ExtBox1-ext-gen43233",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen43445",
@@ -926,7 +866,7 @@
         },
         "ebea6ac0-ebc3-4e23-a80f-c90cae112f2a": {
             "id": "ExtBox1-ext-gen12167",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen29060",

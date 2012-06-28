@@ -7,10 +7,10 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "PaymentStore",
         "autoLoad": true,
         "model": "Payment",
-        "storeId": "Payments",
-        "designer|userClassName": "PaymentStore"
+        "storeId": "Payments"
     },
     "customConfigs": [],
     "designerId": "517bbd27-6be2-4dd8-b7d7-5d2ebb2e78f6",

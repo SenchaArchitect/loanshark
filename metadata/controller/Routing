@@ -22,6 +22,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "gotoTab",
                 "fn": "gotoTab",
                 "designer|params": [
                     "tabId"
@@ -35,8 +36,7 @@
                     "tabPanel.setActiveItem(tabCmp || 0);",
                     ""
                 ],
-                "url": "/:tabId",
-                "designer|userClassName": "gotoTab"
+                "url": "/:tabId"
             },
             "customConfigs": []
         },
@@ -49,9 +49,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MainView",
                 "ref": "MainView",
-                "selector": ">tabpanel",
-                "designer|userClassName": "MainView"
+                "selector": ">tabpanel"
             },
             "customConfigs": []
         },
@@ -64,6 +64,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onTabpanelActiveItemChange",
                 "fn": "onTabpanelActiveItemChange",
                 "implHandler": [
                     "",
@@ -80,8 +81,7 @@
                 ],
                 "name": "activeitemchange",
                 "designer|targetType": "Ext.tab.Panel",
-                "designer|controlQuery": "tabpanel",
-                "designer|userClassName": "onTabpanelActiveItemChange"
+                "designer|controlQuery": "tabpanel"
             },
             "customConfigs": []
         }

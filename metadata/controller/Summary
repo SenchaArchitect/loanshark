@@ -7,11 +7,11 @@
     },
     "codeClass": null,
     "userConfig": {
+        "summaryRecord": 0,
+        "designer|userClassName": "Summary",
         "models": [
             "Summary"
-        ],
-        "designer|userClassName": "Summary",
-        "summaryRecord": 0
+        ]
     },
     "customConfigs": [
         {
@@ -32,10 +32,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "SummaryContents",
                 "ref": "SummaryContents",
                 "selector": "#SummaryContents",
-                "xtype": null,
-                "designer|userClassName": "SummaryContents"
+                "xtype": null
             },
             "customConfigs": [
                 {
@@ -54,6 +54,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "updateSummary",
                 "fn": "updateSummary",
                 "implHandler": [
                     "",
@@ -63,8 +64,7 @@
                     "this.getSummaryRecord().set({",
                     "    totalOwed: balance",
                     "});"
-                ],
-                "designer|userClassName": "updateSummary"
+                ]
             },
             "customConfigs": []
         },
@@ -77,6 +77,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "this.getSummaryContents().setRecord(this.getSummaryRecord());",
@@ -85,11 +86,10 @@
                     "    this.updateSummary();",
                     "",
                     "}, this);"
-                ],
-                "designer|userClassName": "launch"
+                ]
             },
             "customConfigs": [],
-            "iconCls": "icon-basic-function"
+            "iconCls": "icon-launch-function"
         },
         {
             "id": "ExtBox1-ext-gen28313",
@@ -100,6 +100,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "applySummaryRecord",
                 "fn": "applySummaryRecord",
                 "designer|params": [
                     "summaryRecord"
@@ -110,8 +111,7 @@
                     "    summaryRecord = Ext.create('Payback.model.Summary');",
                     "}",
                     "return summaryRecord;"
-                ],
-                "designer|userClassName": "applySummaryRecord"
+                ]
             },
             "customConfigs": []
         }

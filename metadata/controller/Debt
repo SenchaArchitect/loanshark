@@ -22,6 +22,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onAddDebtTap",
                 "fn": "onAddDebtTap",
                 "implHandler": [
                     "var form = this.getDebtDetail();",
@@ -61,8 +62,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#addDebt",
-                "designer|userClassName": "onAddDebtTap"
+                "designer|controlQuery": "#addDebt"
             },
             "customConfigs": []
         },
@@ -75,11 +75,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "DebtDetail",
                 "ref": "DebtDetail",
                 "selector": "DebtDetail",
                 "xtype": "DebtDetail",
-                "autoCreate": true,
-                "designer|userClassName": "DebtDetail"
+                "autoCreate": true
             },
             "customConfigs": []
         },
@@ -92,6 +92,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onSaveDebtTap",
                 "fn": "onSaveDebtTap",
                 "implHandler": [
                     "",
@@ -157,8 +158,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#saveDebt",
-                "designer|userClassName": "onSaveDebtTap"
+                "designer|controlQuery": "#saveDebt"
             },
             "customConfigs": []
         },
@@ -171,6 +171,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onCanelButtonTap",
                 "fn": "onCanelButtonTap",
                 "implHandler": [
                     "this.getDebtDetail().reset(); //reset form",
@@ -187,8 +188,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#cancelDebt",
-                "designer|userClassName": "onCanelButtonTap"
+                "designer|controlQuery": "#cancelDebt"
             },
             "customConfigs": []
         },
@@ -201,6 +201,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onDataviewItemSwipe",
                 "fn": "onDataviewItemSwipe",
                 "implHandler": [
                     "var deleteButtons = dataview.query('button');",
@@ -225,8 +226,7 @@
                 "element": null,
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "#myDebtDataView",
-                "designer|userClassName": "onDataviewItemSwipe"
+                "designer|controlQuery": "#myDebtDataView"
             },
             "customConfigs": []
         },
@@ -239,9 +239,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "myDebtDataView",
                 "ref": "myDebtDataView",
-                "selector": "#myDebtDataView",
-                "designer|userClassName": "myDebtDataView"
+                "selector": "#myDebtDataView"
             },
             "customConfigs": []
         },
@@ -254,6 +254,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onDataviewItemTap",
                 "fn": "onDataviewItemTap",
                 "implHandler": [
                     "",
@@ -308,8 +309,7 @@
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "#myDebtDataView",
-                "designer|userClassName": "onDataviewItemTap"
+                "designer|controlQuery": "#myDebtDataView"
             },
             "customConfigs": []
         },
@@ -322,9 +322,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "myPaymentDataView",
                 "ref": "myPaymentDataView",
-                "selector": "#myPaymentDataView",
-                "designer|userClassName": "myPaymentDataView"
+                "selector": "#myPaymentDataView"
             },
             "customConfigs": []
         },
@@ -337,9 +337,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addPaymentButton",
                 "ref": "addPaymentButton",
-                "selector": "#addPayment",
-                "designer|userClassName": "addPaymentButton"
+                "selector": "#addPayment"
             },
             "customConfigs": []
         },
@@ -352,6 +352,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onEmailDebtTap",
                 "fn": "onEmailDebtTap",
                 "implHandler": [
                     "",
@@ -368,8 +369,7 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#emailDebt",
-                "designer|userClassName": "onEmailDebtTap"
+                "designer|controlQuery": "#emailDebt"
             },
             "customConfigs": []
         },
@@ -382,9 +382,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "emailDebtButton",
                 "ref": "emailDebtButton",
-                "selector": "#emailDebt",
-                "designer|userClassName": "emailDebtButton"
+                "selector": "#emailDebt"
             },
             "customConfigs": []
         },
@@ -397,9 +397,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MainView",
                 "ref": "MainView",
-                "selector": "MainView",
-                "designer|userClassName": "MainView"
+                "selector": "MainView"
             },
             "customConfigs": []
         },
@@ -412,9 +412,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addDebtButton",
                 "ref": "addDebtButton",
-                "selector": "#addDebt",
-                "designer|userClassName": "addDebtButton"
+                "selector": "#addDebt"
             },
             "customConfigs": []
         },
@@ -427,9 +427,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "debtHeaderLabel",
                 "ref": "debtHeaderLabel",
-                "selector": "#debtHeaderLabel",
-                "designer|userClassName": "debtHeaderLabel"
+                "selector": "#debtHeaderLabel"
             },
             "customConfigs": []
         },
@@ -442,9 +442,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "paymentHistoryLabel",
                 "ref": "paymentHistoryLabel",
-                "selector": "#paymentHistoryLabel",
-                "designer|userClassName": "paymentHistoryLabel"
+                "selector": "#paymentHistoryLabel"
             },
             "customConfigs": []
         },
@@ -457,6 +457,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "gotoDebtDetail",
                 "fn": "gotoDebtDetail",
                 "designer|params": [
                     "id"
@@ -478,8 +479,7 @@
                     "    }",
                     "}"
                 ],
-                "url": "/Debt/:id",
-                "designer|userClassName": "gotoDebtDetail"
+                "url": "/Debt/:id"
             },
             "customConfigs": []
         }

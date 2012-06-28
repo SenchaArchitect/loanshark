@@ -58,12 +58,12 @@ Ext.define('Payback.view.DebtDetail', {
                     },
                     {
                         xtype: 'button',
+                        align: 'right',
                         cls: 'my-buttons',
                         id: 'emailDebt',
                         iconCls: 'icon-email',
                         iconMask: true,
-                        text: 'Send Email',
-                        align: 'right'
+                        text: 'Send Email'
                     }
                 ]
             },

@@ -7,11 +7,11 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "ContactDetail",
+        "designer|userAlias": "ContactDetail",
         "padding": "0 0 12px 0",
         "autoDestroy": false,
-        "layout": "vbox",
-        "designer|userClassName": "ContactDetail",
-        "designer|userAlias": "ContactDetail"
+        "layout": "vbox"
     },
     "customConfigs": [],
     "designerId": "d2bdb0dd-5320-4693-8b47-e897fdfdca71",
@@ -26,10 +26,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyTitleBar2",
                 "docked": "top",
                 "ui": "light",
-                "title": "Prey Details",
-                "designer|userClassName": "MyTitleBar2"
+                "title": "Prey Details"
             },
             "customConfigs": [],
             "cn": [
@@ -42,13 +42,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton1",
                         "cls": "my-buttons",
                         "id": "cancelContact",
                         "ui": null,
                         "iconCls": "icon-back",
                         "iconMask": true,
-                        "text": "Cancel",
-                        "designer|userClassName": "MyButton1"
+                        "text": "Cancel"
                     },
                     "customConfigs": []
                 }
@@ -63,8 +63,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "bottom",
-                "designer|userClassName": "MyToolbar"
+                "designer|userClassName": "MyToolbar",
+                "docked": "bottom"
             },
             "customConfigs": [],
             "cn": [
@@ -90,14 +90,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton2",
                         "cls": "my-buttons",
                         "id": "saveContact",
                         "itemId": null,
                         "ui": null,
                         "iconCls": "icon-save",
                         "iconMask": true,
-                        "text": "save",
-                        "designer|userClassName": "MyButton2"
+                        "text": "save"
                     },
                     "customConfigs": []
                 }
@@ -112,9 +112,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyContainer7",
                 "height": null,
-                "margin": "0 0 10px 0",
-                "designer|userClassName": "MyContainer7"
+                "margin": "0 0 10px 0"
             },
             "customConfigs": [],
             "cn": [
@@ -127,13 +127,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyLabel2",
                         "designer|displayName": null,
                         "height": 100,
                         "html": null,
                         "id": "contactHeaderLabel",
                         "padding": null,
-                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;",
-                        "designer|userClassName": "MyLabel2"
+                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
                     },
                     "customConfigs": []
                 },
@@ -146,14 +146,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton",
                         "cls": "my-buttons",
                         "id": "addDebt",
                         "itemId": null,
                         "margin": "10px 10px 5px 10px",
                         "style": "border-radius: 0; color: black;",
                         "ui": "gray-light-button",
-                        "text": "New Loan",
-                        "designer|userClassName": "MyButton"
+                        "text": "New Loan"
                     },
                     "customConfigs": []
                 },
@@ -166,8 +166,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": null,
-                        "designer|userClassName": "MyFieldSet"
+                        "designer|userClassName": "MyFieldSet",
+                        "title": null
                     },
                     "customConfigs": [],
                     "cn": [
@@ -180,10 +180,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyTextField2",
                                 "label": "Name",
                                 "labelAlign": "top",
-                                "name": "name",
-                                "designer|userClassName": "MyTextField2"
+                                "name": "name"
                             },
                             "customConfigs": []
                         },
@@ -196,11 +196,11 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyEmailField",
                                 "label": "Email",
                                 "labelAlign": "top",
                                 "name": "email",
-                                "placeHolder": null,
-                                "designer|userClassName": "MyEmailField"
+                                "placeHolder": null
                             },
                             "customConfigs": []
                         },
@@ -213,10 +213,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "MyTextField1",
                                 "label": "Phone",
                                 "labelAlign": "top",
-                                "name": "phone",
-                                "designer|userClassName": "MyTextField1"
+                                "name": "phone"
                             },
                             "customConfigs": []
                         }
@@ -233,8 +233,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer8",
-                "layout|flex": null
+                "layout|flex": null,
+                "designer|userClassName": "MyContainer8"
             },
             "customConfigs": [],
             "cn": [
@@ -247,15 +247,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyLabel",
                         "designer|displayName": "Loan History",
                         "baseCls": null,
                         "html": "Loan History",
                         "id": "loanHistoryLabel",
                         "margin": "0 12px",
                         "padding": "0 0 8px 8px",
-                        "style": "font-size: .8em; font-weight: bold;color: gray; \tborder-bottom: 2px solid #333;",
-                        "styleHtmlCls": null,
-                        "designer|userClassName": "MyLabel"
+                        "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
+                        "styleHtmlCls": null
                     },
                     "customConfigs": []
                 },
@@ -268,6 +268,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyDataView",
+                        "designer|userAlias": "mydataview",
                         "baseCls": "x-list",
                         "cls": [
                             "x-list-normal"
@@ -277,32 +279,12 @@
                         "itemId": null,
                         "padding": "0 22px",
                         "defaultType": "myDebtListItem",
+                        "scrollable": "false\n",
                         "store": "Debts",
                         "useComponents": true,
-                        "disableSelection": true,
-                        "designer|userClassName": "MyDataView",
-                        "designer|userAlias": "mydataview"
+                        "disableSelection": true
                     },
-                    "customConfigs": [],
-                    "cn": [
-                        {
-                            "id": "ExtBox1-ext-gen23287",
-                            "type": "object",
-                            "reference": {
-                                "name": "scrollable",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "implHandler": [
-                                    "false"
-                                ],
-                                "designer|displayName": "scrollable",
-                                "designer|userClassName": "scrollable"
-                            },
-                            "customConfigs": []
-                        }
-                    ]
+                    "customConfigs": []
                 }
             ]
         },
@@ -315,6 +297,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onFormpanelShow",
                 "fn": "onFormpanelShow",
                 "implHandler": [
                     "",
@@ -324,8 +307,7 @@
                     "//get rid of person in dataview when viewed from contact view",
                     "Ext.select('.x-form .debt-person-label').setStyle({display:'none'});"
                 ],
-                "name": "show",
-                "designer|userClassName": "onFormpanelShow"
+                "name": "show"
             },
             "customConfigs": []
         }

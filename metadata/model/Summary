@@ -22,8 +22,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "totalOwed",
-                "designer|userClassName": "MyField17"
+                "designer|userClassName": "MyField17",
+                "name": "totalOwed"
             },
             "customConfigs": []
         }

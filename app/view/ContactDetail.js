@@ -110,7 +110,7 @@ Ext.define('Payback.view.ContactDetail', {
                         id: 'loanHistoryLabel',
                         margin: '0 12px',
                         padding: '0 0 8px 8px',
-                        style: 'font-size: .8em; font-weight: bold;color: gray; 	border-bottom: 2px solid #333;'
+                        style: 'font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;'
                     },
                     {
                         xtype: 'dataview',

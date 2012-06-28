@@ -7,12 +7,12 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "PeopleStore",
         "autoLoad": true,
         "autoSync": true,
         "groupField": "name",
         "model": "Person",
-        "storeId": "People",
-        "designer|userClassName": "PeopleStore"
+        "storeId": "People"
     },
     "customConfigs": [],
     "designerId": "5c1a3711-4411-4d34-a283-c9149d1e681e",
@@ -27,14 +27,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onPeopleStoreLoad",
                 "fn": "onPeopleStoreLoad",
                 "implHandler": [
                     "this.each(function(record){",
                     "    record.calcBalance();",
                     "});"
                 ],
-                "name": "load",
-                "designer|userClassName": "onPeopleStoreLoad"
+                "name": "load"
             },
             "customConfigs": []
         }

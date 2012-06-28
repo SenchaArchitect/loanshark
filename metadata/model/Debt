@@ -8,7 +8,8 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Debt",
-        "designer|userAlias": "Debt"
+        "designer|userAlias": "Debt",
+        "identifier": "{\n    type:'uuid'\n}"
     },
     "customConfigs": [
         {
@@ -29,9 +30,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField10",
                 "name": "id",
-                "type": "auto",
-                "designer|userClassName": "MyField10"
+                "type": "auto"
             },
             "customConfigs": []
         },
@@ -44,8 +45,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "reason",
-                "designer|userClassName": "MyField11"
+                "designer|userClassName": "MyField11",
+                "name": "reason"
             },
             "customConfigs": []
         },
@@ -58,8 +59,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "amount",
-                "designer|userClassName": "MyField12"
+                "designer|userClassName": "MyField12",
+                "name": "amount"
             },
             "customConfigs": []
         },
@@ -72,9 +73,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField12",
                 "name": "balance",
-                "type": "float",
-                "designer|userClassName": "MyField12"
+                "type": "float"
             },
             "customConfigs": [],
             "cn": [
@@ -87,6 +88,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "convert",
                         "fn": "convert",
                         "designer|params": [
                             "v",
@@ -97,8 +99,7 @@
                             "sum = Math.round(sum*100)/100;",
                             "",
                             "return sum;"
-                        ],
-                        "designer|userClassName": "convert"
+                        ]
                     },
                     "customConfigs": [],
                     "iconCls": "icon-basic-function"
@@ -114,9 +115,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField13",
                 "name": "date",
-                "type": "date",
-                "designer|userClassName": "MyField13"
+                "type": "date"
             },
             "customConfigs": []
         },
@@ -129,8 +130,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "person_id",
-                "designer|userClassName": "MyField14"
+                "designer|userClassName": "MyField14",
+                "name": "person_id"
             },
             "customConfigs": []
         },
@@ -143,32 +144,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyHasManyAssociation1",
                 "model": "Payment",
                 "autoLoad": true,
                 "foreignKey": "debt_id",
                 "name": "payments",
-                "designer|userClassName": "MyHasManyAssociation1"
+                "store": "{\n    modelDefaults: null,\n    remoteFilter: false\n}"
             },
-            "customConfigs": [],
-            "cn": [
-                {
-                    "id": "ExtBox1-ext-gen8982",
-                    "type": "object",
-                    "reference": {
-                        "name": "store",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "implHandler": [
-                            "{modelDefaults: null, remoteFilter: false}"
-                        ],
-                        "designer|displayName": "store",
-                        "designer|userClassName": "store"
-                    },
-                    "customConfigs": []
-                }
-            ]
+            "customConfigs": []
         },
         {
             "id": "ExtBox1-ext-gen15286",
@@ -179,8 +162,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "Debts",
-                "designer|userClassName": "MyLocalStorageProxy2"
+                "designer|userClassName": "MyLocalStorageProxy2",
+                "id": "Debts"
             },
             "customConfigs": []
         },
@@ -193,26 +176,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyBelongsToAssociation",
                 "model": "Person",
-                "foreignKey": "person_id",
-                "designer|userClassName": "MyBelongsToAssociation"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen2737",
-            "type": "object",
-            "reference": {
-                "name": "identifier",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "implHandler": [
-                    "{type:'uuid'}"
-                ],
-                "designer|displayName": "identifier",
-                "designer|userClassName": "identifier"
+                "foreignKey": "person_id"
             },
             "customConfigs": []
         }

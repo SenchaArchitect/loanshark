@@ -7,11 +7,12 @@
     },
     "codeClass": null,
     "userConfig": {
+        "tab": "{\n    iconCls: 'icon-debt',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
+        "designer|userClassName": "Debts",
+        "designer|userAlias": "Debts",
         "id": null,
         "ui": "light",
-        "layout": "fit",
-        "designer|userClassName": "Debts",
-        "designer|userAlias": "Debts"
+        "layout": "fit"
     },
     "customConfigs": [
         {
@@ -32,9 +33,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyTitleBar",
                 "docked": "bottom",
-                "title": null,
-                "designer|userClassName": "MyTitleBar"
+                "title": null
             },
             "customConfigs": [],
             "cn": [
@@ -47,14 +48,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton",
                         "cls": "my-buttons",
                         "id": "addDebt",
                         "itemId": null,
                         "ui": null,
                         "iconCls": "icon-add-debt",
                         "iconMask": true,
-                        "text": "Add Loan",
-                        "designer|userClassName": "MyButton"
+                        "text": "Add Loan"
                     },
                     "customConfigs": []
                 }
@@ -69,13 +70,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onPanelShow",
                 "fn": "onPanelShow",
                 "implHandler": [
                     "//clears filter if one is on the store, filters are set when contact item is tapped",
                     "Ext.getStore('Debts').clearFilter();"
                 ],
-                "name": "show",
-                "designer|userClassName": "onPanelShow"
+                "name": "show"
             },
             "customConfigs": []
         },
@@ -88,6 +89,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyDataView",
+                "designer|userAlias": "mydataview",
                 "baseCls": "x-list",
                 "cls": [
                     "x-list-normal"
@@ -97,26 +100,7 @@
                 "defaultType": "myDebtListItem",
                 "store": "Debts",
                 "useComponents": true,
-                "disableSelection": true,
-                "designer|userClassName": "MyDataView",
-                "designer|userAlias": "mydataview"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen6546",
-            "type": "object",
-            "reference": {
-                "name": "tab",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "implHandler": [
-                    "{ iconCls : 'icon-debt',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
-                ],
-                "designer|displayName": "tab",
-                "designer|userClassName": "tab"
+                "disableSelection": true
             },
             "customConfigs": []
         }

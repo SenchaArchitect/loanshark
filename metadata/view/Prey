@@ -7,9 +7,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "layout": "fit",
+        "tab": "{\n    iconCls: 'icon-contacts',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
         "designer|userClassName": "Prey",
-        "designer|userAlias": "Prey"
+        "designer|userAlias": "Prey",
+        "layout": "fit"
     },
     "customConfigs": [
         {
@@ -30,9 +31,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyTitleBar",
                 "docked": "bottom",
-                "title": null,
-                "designer|userClassName": "MyTitleBar"
+                "title": null
             },
             "customConfigs": [],
             "cn": [
@@ -45,6 +46,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton",
                         "cls": "my-buttons",
                         "id": "addContact",
                         "itemId": null,
@@ -52,9 +55,7 @@
                         "iconAlign": null,
                         "iconCls": "icon-add-contact",
                         "iconMask": true,
-                        "text": "Add Prey",
-                        "designer|userClassName": "MyButton",
-                        "layout|flex": null
+                        "text": "Add Prey"
                     },
                     "customConfigs": []
                 }
@@ -69,6 +70,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyDataView1",
                 "baseCls": "x-list",
                 "cls": [
                     "x-list-normal"
@@ -78,25 +80,7 @@
                 "defaultType": "myContactListItem",
                 "store": "People",
                 "useComponents": true,
-                "disableSelection": true,
-                "designer|userClassName": "MyDataView1"
-            },
-            "customConfigs": []
-        },
-        {
-            "id": "ExtBox1-ext-gen6891",
-            "type": "object",
-            "reference": {
-                "name": "tab",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "implHandler": [
-                    "{ iconCls : 'icon-contacts',iconMask:true, baseCls: 'x-button', flex: 1, iconAlign: 'center'}"
-                ],
-                "designer|displayName": "tab",
-                "designer|userClassName": "tab"
+                "disableSelection": true
             },
             "customConfigs": []
         }

@@ -7,12 +7,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|initialView": true,
-        "id": null,
-        "ui": null,
+        "container|animation": null,
         "designer|userClassName": "MainView",
         "designer|userAlias": "MainView",
-        "container|animation": null
+        "designer|initialView": true,
+        "id": null,
+        "ui": null
     },
     "customConfigs": [
         {
@@ -82,12 +82,12 @@
             },
             "codeClass": null,
             "userConfig": {
+                "container|align": "stretchmax",
+                "container|pack": null,
+                "designer|userClassName": "MyTabBar",
                 "docked": "top",
                 "itemId": "mytabbar",
-                "ui": "light",
-                "designer|userClassName": "MyTabBar",
-                "container|align": "stretchmax",
-                "container|pack": null
+                "ui": "light"
             },
             "customConfigs": [],
             "iconCls": "icon-tab-bar"

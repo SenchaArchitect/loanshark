@@ -19,6 +19,12 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
+    startupImage: {
+        /*320x460: 'resources/images/splash/loading/Default.png',
+        640x920: 'resources/images/splash/loading/Default@2x.png',
+        768x1004: 'resources/images/splash/loading/Default~ipad',
+        748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/
+    },
     models: [
         'Person',
         'Payment',
@@ -60,12 +66,6 @@ Ext.application({
         'Payment',
         'Routing'
     ],
-    startupImage: {
-        /*320x460: 'resources/images/splash/loading/Default.png',
-        640x920: 'resources/images/splash/loading/Default@2x.png',
-        768x1004: 'resources/images/splash/loading/Default~ipad',
-        748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/
-    },
 
     launch: function() {
 
