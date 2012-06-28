@@ -134,6 +134,14 @@ Ext.define('Payback.controller.Contact', {
         //clear form
         this.getContactDetail().reset();
 
+        //refresh debt panel dataview with any new data
+        this.getMainView().getInnerItems()[1].down('dataview').refresh();
+
+        //update url
+        this.getApplication().getHistory().add(new Ext.app.Action({
+            url: '/Prey'
+        }), true);
+
         //set active item
         Ext.Viewport.setActiveItem(0);
     },
