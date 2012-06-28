@@ -211,12 +211,6 @@
                 "metadata/resource/js"
             ],
             "className": "js"
-        },
-        "cb669005-aa14-437d-9ef6-91fb574df36e": {
-            "paths": [
-                "metadata/resource/js1"
-            ],
-            "className": "js1"
         }
     }
 }

@@ -6,3 +6,11 @@ Ext.dom.Element.override({
         return [round(rect.left + window.pageXOffset), round(rect.top + window.pageYOffset)];
     }
 });
+
+if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
+	Ext.viewport.Android.override({
+		getWindowHeight: function() {
+			return window.outerHeight;
+		}
+	})
+}
