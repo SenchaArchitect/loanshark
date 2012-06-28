@@ -49,5 +49,12 @@ if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
         return autoBlurInput;
     }
 	});
+	
+	Payback.view.MainView.addConfig({
+		layout: {
+			type: 'card',
+			animation: false
+		}
+	});
 }
 
