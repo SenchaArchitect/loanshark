@@ -12,7 +12,7 @@
         "ui": null,
         "designer|userClassName": "MainView",
         "designer|userAlias": "MainView",
-        "container|animation": false
+        "container|animation": null
     },
     "customConfigs": [
         {

@@ -24,10 +24,6 @@ Ext.define('Payback.view.MainView', {
     ],
 
     config: {
-        layout: {
-            animation: false,
-            type: 'card'
-        },
         items: [
             {
                 xtype: 'Summary',
