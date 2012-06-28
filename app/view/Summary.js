@@ -41,11 +41,11 @@ Ext.define('Payback.view.Summary', {
             {
                 xtype: 'component',
                 docked: 'bottom',
-                height: '2em',
+                height: '',
                 id: 'SummaryContents',
                 style: 'font-weight: bold;font-size:1.5em;background-color:#910002;',
                 tpl: [
-                    '<center style=\'color:white;padding-top: .43em;\'>You\'re Owed: {totalOwed}</center>'
+                    '<center style=\'color:white;padding-top: .43em;padding-bottom: .43em;\'>You\'re Owed: {totalOwed}</center>'
                 ]
             }
         ]
