@@ -11,7 +11,8 @@
         "id": null,
         "ui": null,
         "designer|userClassName": "MainView",
-        "designer|userAlias": "MainView"
+        "designer|userAlias": "MainView",
+        "container|animation": false
     },
     "customConfigs": [
         {
