@@ -43,6 +43,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "my-buttons",
                         "docked": "right",
                         "height": null,
                         "hidden": true,

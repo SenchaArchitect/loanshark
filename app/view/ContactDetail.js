@@ -32,6 +32,7 @@ Ext.define('Payback.view.ContactDetail', {
                 items: [
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'cancelContact',
                         iconCls: 'icon-back',
                         iconMask: true,
@@ -48,6 +49,7 @@ Ext.define('Payback.view.ContactDetail', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'saveContact',
                         iconCls: 'icon-save',
                         iconMask: true,
@@ -67,6 +69,7 @@ Ext.define('Payback.view.ContactDetail', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'addDebt',
                         margin: '10px 10px 5px 10px',
                         style: 'border-radius: 0; color: black;',

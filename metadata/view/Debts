@@ -47,6 +47,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "my-buttons",
                         "id": "addDebt",
                         "itemId": null,
                         "ui": null,

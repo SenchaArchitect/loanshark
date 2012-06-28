@@ -36,6 +36,7 @@ Ext.define('Payback.view.Debts', {
                 items: [
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'addDebt',
                         iconCls: 'icon-add-debt',
                         iconMask: true,

@@ -35,6 +35,7 @@ Ext.define('Payback.view.Prey', {
                 items: [
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'addContact',
                         iconCls: 'icon-add-contact',
                         iconMask: true,

@@ -51,6 +51,7 @@ Ext.define('Payback.view.myDebtListItem', {
                 items: [
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         docked: 'right',
                         hidden: true,
                         itemId: 'deleteDebt',

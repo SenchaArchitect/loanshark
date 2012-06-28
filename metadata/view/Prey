@@ -45,6 +45,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "my-buttons",
                         "id": "addContact",
                         "itemId": null,
                         "ui": null,

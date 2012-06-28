@@ -34,6 +34,7 @@ Ext.define('Payback.view.DebtDetail', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'saveDebt',
                         iconCls: 'icon-save',
                         iconMask: true,
@@ -49,6 +50,7 @@ Ext.define('Payback.view.DebtDetail', {
                 items: [
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'cancelDebt',
                         iconCls: 'icon-back',
                         iconMask: true,
@@ -56,6 +58,7 @@ Ext.define('Payback.view.DebtDetail', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'emailDebt',
                         iconCls: 'icon-email',
                         iconMask: true,
@@ -76,6 +79,7 @@ Ext.define('Payback.view.DebtDetail', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'addPayment',
                         margin: '10px 10px 5px 10px',
                         padding: '5px',
@@ -104,9 +108,11 @@ Ext.define('Payback.view.DebtDetail', {
                                 picker: {
                                     ui: 'dark',
                                     doneButton: {
+                                        cls: 'my-buttons',
                                         ui: 'gray-button'
                                     },
                                     cancelButton: {
+                                        cls: 'my-buttons',
                                         ui: 'gray-light-button'
                                     }
                                 }

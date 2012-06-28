@@ -48,6 +48,7 @@ Ext.define('Payback.view.myContactListItem', {
                 items: [
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         docked: 'right',
                         hidden: true,
                         itemId: 'deleteContact',

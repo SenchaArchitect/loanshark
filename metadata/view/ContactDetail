@@ -42,6 +42,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "my-buttons",
                         "id": "cancelContact",
                         "ui": null,
                         "iconCls": "icon-back",
@@ -89,6 +90,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "my-buttons",
                         "id": "saveContact",
                         "itemId": null,
                         "ui": null,
@@ -144,6 +146,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "my-buttons",
                         "id": "addDebt",
                         "itemId": null,
                         "margin": "10px 10px 5px 10px",

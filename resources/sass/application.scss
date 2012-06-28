@@ -54,8 +54,12 @@ body {
 .x-toolbar .x-button, .x-tabbar-inner .x-button, .x-list-inner .x-button{
     border: none !important;
 	background-image: none !important;
-	background: transparent !important;  
 	border-bottom: 2px solid transparent !important;  
+	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+}
+.x-toolbar .x-button:not(.x-tab-pressed):not(.x-button-pressing), .x-tabbar-inner .x-button:not(.x-tab-pressed):not(.x-button-pressing), .x-list-inner .x-button:not(.x-tab-pressed):not(.x-button-pressing) {
+	background: transparent !important;  
 }
 .x-list-inner .x-button .x-button-icon.x-icon-mask{
 	-webkit-mask-size: 1.54em;
@@ -71,15 +75,17 @@ body {
 	opacity: .6;
 	height: 1.4em;
 }
-/*
-.x-tabbar-inner .x-button .x-button-icon.x-icon-mask {
-	height: 1.3em;
-
-}*/
 .x-tabbar-inner .x-tab-active {
-	border-bottom: 7px solid red !important;
-	border-radius: 0;
-	margin-top: .3em;
+	position: relative;
+}
+.x-tabbar-inner .x-tab-active:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 7px;
+	background-color: red;
 }
 .x-tabbar {
 	padding: 0 !important;
@@ -131,7 +137,6 @@ body {
 }
 #addPayment .x-button-label {
 	font-weight: normal;
-
 }
 #contactHeaderLabel .x-innerhtml, #debtHeaderLabel .x-innerhtml {
 	text-overflow: ellipsis;
@@ -148,12 +153,6 @@ body {
 	background: none !important;
 	background-color: #555 !important;
 }
-/*.x-android .x-container.x-data-item.x-list-item,.x-android .x-container.x-list-item-label {
-	height: 61px;
-}
-.x-desktop .x-container.x-data-item.x-list-item, .x-desktop .x-container.x-list-item-label {
-	min-height: 38px;
-}*/
 .x-container.x-list-item-label .x-innerhtml {
 	padding-top: 4px;
 }
@@ -171,4 +170,15 @@ body {
 .x-picker-bar {
 	background-color: rgba(50, 50, 50, 0.3);
 	background-image: none;
+}
+.x-tab-pressed {
+	background-color: #33B5E5 !important;
+}
+.x-tab-pressed .x-button-icon, .my-buttons.x-button-pressing .x-button-icon {
+	opacity: 1 !important;
+}
+.my-buttons.x-button-pressing {
+	background-color: #33B5E5 !important;
+	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
 }

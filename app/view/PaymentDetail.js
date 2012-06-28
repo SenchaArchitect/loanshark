@@ -28,6 +28,7 @@ Ext.define('Payback.view.PaymentDetail', {
                 items: [
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'cancelPayment',
                         iconCls: 'icon-back',
                         iconMask: true,
@@ -44,6 +45,7 @@ Ext.define('Payback.view.PaymentDetail', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'my-buttons',
                         id: 'savePayment',
                         iconCls: 'icon-save',
                         iconMask: true,
