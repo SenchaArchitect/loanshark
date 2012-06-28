@@ -35,5 +35,19 @@ if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
 	    }
 	});
 	
+	Ext.viewport.Default.override({
+	applyAutoBlurInput: function(autoBlurInput) {
+        var touchstart = (Ext.feature.has.Touch) ? 'touchend' : 'mouseup';
+
+        if (autoBlurInput) {
+            this.addWindowListener(touchstart, this.doBlurInput, false);
+        }
+        else {
+            this.removeWindowListener(touchstart, this.doBlurInput, false);
+        }
+
+        return autoBlurInput;
+    }
+	});
 }
 
