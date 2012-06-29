@@ -7,18 +7,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "tab": "{\n    iconCls: 'icon-contacts',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
         "designer|userClassName": "Prey",
         "designer|userAlias": "Prey",
         "layout": "fit"
     },
-    "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "tab",
-            "type": "object"
-        }
-    ],
+    "customConfigs": [],
     "designerId": "dde4c54b-3964-4d6d-927f-dbd7c91717bc",
     "$viewOrder": 9,
     "cn": [

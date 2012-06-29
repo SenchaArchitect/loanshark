@@ -24,13 +24,6 @@ Ext.define('Payback.view.Summary', {
             type: 'fit'
         },
         scrollable: false,
-        tab: {
-            iconCls: 'icon-home',
-            iconMask: true,
-            baseCls: 'x-button',
-            flex: 1,
-            iconAlign: 'center'
-        },
         items: [
             {
                 xtype: 'image',

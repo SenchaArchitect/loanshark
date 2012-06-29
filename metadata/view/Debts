@@ -7,20 +7,13 @@
     },
     "codeClass": null,
     "userConfig": {
-        "tab": "{\n    iconCls: 'icon-debt',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
         "designer|userClassName": "Debts",
         "designer|userAlias": "Debts",
         "id": null,
         "ui": "light",
         "layout": "fit"
     },
-    "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "tab",
-            "type": "object"
-        }
-    ],
+    "customConfigs": [],
     "designerId": "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba",
     "$viewOrder": 8,
     "cn": [

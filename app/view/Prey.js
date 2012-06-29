@@ -21,13 +21,6 @@ Ext.define('Payback.view.Prey', {
         layout: {
             type: 'fit'
         },
-        tab: {
-            iconCls: 'icon-contacts',
-            iconMask: true,
-            baseCls: 'x-button',
-            flex: 1,
-            iconAlign: 'center'
-        },
         items: [
             {
                 xtype: 'titlebar',
