@@ -38,7 +38,13 @@
                 "top": null,
                 "title": " "
             },
-            "customConfigs": [],
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "tab",
+                    "type": "object"
+                }
+            ],
             "iconCls": "icon-linkedinstance",
             "masterInstanceId": "ExtBox1-ext-gen2239"
         },
@@ -55,7 +61,13 @@
                 "itemId": "Debt",
                 "title": " "
             },
-            "customConfigs": [],
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "tab",
+                    "type": "object"
+                }
+            ],
             "iconCls": "icon-linkedinstance",
             "masterInstanceId": "ExtBox1-ext-gen25568"
         },
@@ -68,11 +80,17 @@
             },
             "codeClass": null,
             "userConfig": {
-                "tab": "{\n    iconCls: 'icon-contacts',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
+                "tab": "{\n    iconCls: 'icon-home',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
                 "itemId": "Prey",
                 "title": " "
             },
-            "customConfigs": [],
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "tab",
+                    "type": "object"
+                }
+            ],
             "iconCls": "icon-linkedinstance",
             "masterInstanceId": "ExtBox1-ext-gen2255"
         },

@@ -1,0 +1,15 @@
+{
+    "id": "ExtBox1-ext-gen11998",
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "app/model/PersonOverride.js"
+    },
+    "customConfigs": [],
+    "designerId": "5bd5e9ce-0679-423b-8aca-73eade9884f6",
+    "$viewOrder": 5
+}

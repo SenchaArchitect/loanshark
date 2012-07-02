@@ -34,16 +34,10 @@ Ext.define('Payback.controller.Routing', {
 
     onTabpanelActiveItemChange: function(container, value, oldValue, options) {
 
-
-        //setTimeout removes the flickering that happens when switching tabs
-        //var me = this;
-        //setTimeout(function(){
-
+        //this method and even controller should be added to one of the other controllers
         this.getApplication().getHistory().add(new Ext.app.Action({
             url: '/' + value.getItemId()
         }), true);
-
-        //},1);
     },
 
     gotoTab: function(tabId) {

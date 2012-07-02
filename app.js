@@ -15,7 +15,12 @@
 
 Ext.Loader.setConfig({
     disableCaching: false,
-    enabled: true
+    enabled: true,
+    paths: {
+        //'use these for dynamic loading- the way architect works right now does not allow Sencha.io so leave commented for now',
+    //'Ext.io': 'lib/io/src/io',
+        //'Ext.cf': 'lib/io/src/cf'
+    }
 });
 
 Ext.application({
@@ -24,6 +29,11 @@ Ext.application({
         640x920: 'resources/images/splash/loading/Default@2x.png',
         768x1004: 'resources/images/splash/loading/Default~ipad',
         748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/
+    },
+    io: {
+        appId: 'P4sx9af4tlTYSzMsZ7HeLXgxi1V',
+        appSecret: 'xLNaMluepda4oFYH',
+        logLevel: 'debug'
     },
     models: [
         'Person',
@@ -64,7 +74,8 @@ Ext.application({
         'Summary',
         'Debt',
         'Payment',
-        'Routing'
+        'Routing',
+        'Ext.io.Controller'
     ],
 
     launch: function() {

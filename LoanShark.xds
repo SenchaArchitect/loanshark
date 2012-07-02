@@ -15,7 +15,7 @@
         "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": 210000000509,
+    "xdsBuild": 210000000511,
     "framework": "touch20",
     "topInstanceFileMap": {
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
@@ -36,11 +36,11 @@
         },
         "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51": {
             "paths": [
-                "metadata/model/Person",
-                "app/model/override/Person.js",
-                "app/model/Person.js"
+                "metadata/model/Person2",
+                "app/model/override/Person2.js",
+                "app/model/Person2.js"
             ],
-            "className": "Person"
+            "className": "Person2"
         },
         "5f8fbc87-7f38-40ea-af4e-4e27c41555b7": {
             "paths": [
@@ -211,6 +211,24 @@
                 "metadata/resource/js"
             ],
             "className": "js"
+        },
+        "ba574cb5-066d-4677-83d0-9eacdc937910": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "5bd5e9ce-0679-423b-8aca-73eade9884f6": {
+            "paths": [
+                "metadata/resource/js2"
+            ],
+            "className": "js2"
+        },
+        "857475f5-098a-4e0b-b616-6706edc1562c": {
+            "paths": [
+                "metadata/resource/js3"
+            ],
+            "className": "js3"
         }
     }
 }

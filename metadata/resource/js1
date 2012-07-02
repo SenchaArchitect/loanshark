@@ -1,0 +1,15 @@
+{
+    "id": "ExtBox1-ext-gen7524",
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "lib/socket.io.js"
+    },
+    "customConfigs": [],
+    "designerId": "ba574cb5-066d-4677-83d0-9eacdc937910",
+    "$viewOrder": 3
+}

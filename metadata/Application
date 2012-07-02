@@ -8,6 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "startupImage": "{\n    /*320x460: 'resources/images/splash/loading/Default.png',\n    640x920: 'resources/images/splash/loading/Default@2x.png',\n    768x1004: 'resources/images/splash/loading/Default~ipad',\n    748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/\n}",
+        "io": "{\n    appId: \"P4sx9af4tlTYSzMsZ7HeLXgxi1V\",\n    appSecret: \"xLNaMluepda4oFYH\",\n    logLevel: \"debug\"\n}   ",
         "models": [
             "Person",
             "Payment",
@@ -44,13 +45,19 @@
             "Summary",
             "Debt",
             "Payment",
-            "Routing"
+            "Routing",
+            "Ext.io.Controller"
         ]
     },
     "customConfigs": [
         {
             "group": "(Custom Properties)",
             "name": "startupImage",
+            "type": "object"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "io",
             "type": "object"
         }
     ],
@@ -69,7 +76,8 @@
             "userConfig": {
                 "designer|userClassName": "Loader",
                 "disableCaching": false,
-                "enabled": true
+                "enabled": true,
+                "paths": "{\n    //'use these for dynamic loading- the way architect works right now does not allow Sencha.io so leave commented for now',\n    //'Ext.io': 'lib/io/src/io',\n    //'Ext.cf': 'lib/io/src/cf'\n}"
             },
             "customConfigs": [],
             "iconCls": "icon-loader"

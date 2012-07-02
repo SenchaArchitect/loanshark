@@ -1,0 +1,15 @@
+{
+    "id": "ExtBox1-ext-gen5722",
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "lib/io/sencha-io-debug.js"
+    },
+    "customConfigs": [],
+    "designerId": "857475f5-098a-4e0b-b616-6706edc1562c",
+    "$viewOrder": 4
+}

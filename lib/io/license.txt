@@ -1,0 +1,12 @@
+Sencha.io
+Copyright (c) 2011, 2012, Sencha Inc.
+All rights reserved.
+licensing@sencha.com
+
+License details available at
+
+http://www.sencha.com/legal/sencha-io-terms-of-service
+
+This software is distributed WITHOUT ANY WARRANTY, without the implied 
+warranty of MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND 
+NON-INFRINGEMENT OF THIRD-PARTY INTELLECTUAL PROPERTY RIGHTS.  
