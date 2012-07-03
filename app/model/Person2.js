@@ -17,7 +17,7 @@ Ext.define('Payback.model.Person2', {
     extend: 'Ext.data.Model',
 
     uses: [
-        'Payback.model.Debt'
+        'Payback.model.Debt2'
     ],
 
     config: {
@@ -30,7 +30,7 @@ Ext.define('Payback.model.Person2', {
         },
         hasMany: {
             associationKey: 'person_id',
-            model: 'Payback.model.Debt',
+            model: 'Payback.model.Debt2',
             autoLoad: true,
             foreignKey: 'person_id',
             name: 'debts',

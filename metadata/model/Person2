@@ -45,7 +45,7 @@
             "userConfig": {
                 "designer|userClassName": "MyHasManyAssociation",
                 "associationKey": "person_id",
-                "model": "Debt",
+                "model": "Debt2",
                 "autoLoad": true,
                 "foreignKey": "person_id",
                 "name": "debts",

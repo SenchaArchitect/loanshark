@@ -7,8 +7,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Debt",
-        "designer|userAlias": "Debt",
+        "designer|userClassName": "Debt2",
+        "designer|userAlias": "Debt2",
         "identifier": "{\n    type:'uuid'\n}"
     },
     "customConfigs": [
@@ -145,7 +145,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyHasManyAssociation1",
-                "model": "Payment",
+                "model": "Payment2",
                 "autoLoad": true,
                 "foreignKey": "debt_id",
                 "name": "payments",

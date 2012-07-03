@@ -80,7 +80,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "tab": "{\n    iconCls: 'icon-home',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
+                "tab": "{\n    iconCls: 'icon-contacts',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
                 "itemId": "Prey",
                 "title": " "
             },

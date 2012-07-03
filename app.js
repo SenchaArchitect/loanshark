@@ -79,7 +79,16 @@ Ext.application({
     ],
 
     launch: function() {
-
+        //this may take longer then expected
+        //Ext.getStore('People').sync();
+        //Ext.getStore('Debts').sync();
+        //Ext.getStore('Payments').sync();
+        //localStorage.clear();
+        /*Ext.io.User.getCurrent(
+        function(user){
+        user.logout();
+        } 
+        );*/
         Ext.create('Payback.view.MainView', {fullscreen: true});
     }
 

@@ -52,7 +52,7 @@ Ext.define('Payback.view.MainView', {
             {
                 xtype: 'Prey',
                 tab: {
-                    iconCls: 'icon-home',
+                    iconCls: 'icon-contacts',
                     iconMask: true,
                     baseCls: 'x-button',
                     flex: 1,

@@ -44,11 +44,11 @@
         },
         "5f8fbc87-7f38-40ea-af4e-4e27c41555b7": {
             "paths": [
-                "metadata/model/Payment",
-                "app/model/override/Payment.js",
-                "app/model/Payment.js"
+                "metadata/model/Payment2",
+                "app/model/override/Payment2.js",
+                "app/model/Payment2.js"
             ],
-            "className": "Payment"
+            "className": "Payment2"
         },
         "4924b61f-714b-45ce-aa6a-944c48e631e4": {
             "paths": [
@@ -76,11 +76,11 @@
         },
         "0da47a2f-b44a-4fc0-87f8-d59223d82d8d": {
             "paths": [
-                "metadata/model/Debt",
-                "app/model/override/Debt.js",
-                "app/model/Debt.js"
+                "metadata/model/Debt2",
+                "app/model/override/Debt2.js",
+                "app/model/Debt2.js"
             ],
-            "className": "Debt"
+            "className": "Debt2"
         },
         "d3b832b6-4996-4c75-bb54-57aee2c88185": {
             "paths": [

@@ -7,7 +7,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Payment",
+        "designer|userClassName": "Payment2",
         "identifier": "{\n    type: 'uuid'\n}"
     },
     "customConfigs": [],
@@ -112,7 +112,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyBelongsToAssociation1",
-                "model": "Debt",
+                "model": "Debt2",
                 "foreignKey": "debt_id"
             },
             "customConfigs": []

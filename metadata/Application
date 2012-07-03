@@ -81,6 +81,33 @@
             },
             "customConfigs": [],
             "iconCls": "icon-loader"
+        },
+        {
+            "id": "ExtBox1-ext-gen12952",
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "//this may take longer then expected",
+                    "//Ext.getStore('People').sync();",
+                    "//Ext.getStore('Debts').sync();",
+                    "//Ext.getStore('Payments').sync();",
+                    "//localStorage.clear();",
+                    "/*Ext.io.User.getCurrent(",
+                    "     function(user){",
+                    "        user.logout();",
+                    "     } ",
+                    " );*/"
+                ]
+            },
+            "customConfigs": [],
+            "iconCls": "icon-launch-function"
         }
     ]
 }
