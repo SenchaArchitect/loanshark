@@ -110,10 +110,11 @@ Ext.define('Payback.controller.Contact', {
 
             record.save();
 
-            if (record.isModified('name')) {
-                Ext.getStore('Debts').removeAll(); //bug in framework, these two lines update the debts with the new person name.
-                Ext.getStore('Debts').load();
-            }
+            //bug in framework(not a bug, dataview just needs to be refreshed with new data),
+            //if (record.isModified('name')) {
+            //    Ext.getStore('Debts').removeAll();  these two lines update the debts with the new person name.
+            //    Ext.getStore('Debts').load();
+            //}
 
         } else { //if new record
 
@@ -122,7 +123,6 @@ Ext.define('Payback.controller.Contact', {
             //validate
             // if(!isValid(record)) 
             //    return;
-
 
             Ext.getStore('People').add(record);
             Ext.getStore('People').sync();

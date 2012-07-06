@@ -125,14 +125,14 @@ Ext.define('Payback.controller.Debt', {
         } else {  //new record 
             var debt = person.debts().add(values)[0]; //add values
             person.debts().sync();
-            debt.getPerson(); //bug in the framework, this associates the debt with the person in the store
+            debt.getPerson(); //bug in the framework(reported), this associates the debt with the person in the store
 
-            //bug in the framework, this allows the dataview to update the list when a record is added the first time and no other are in the store
-            debt.save({
-                callback:function(){
-                    this.getMyDebtDataView().refresh();
-                }
-            },this);
+            //bug in the framework(fixed), this allows the dataview to update the list when a record is added the first time and no other are in the store
+            //debt.save({
+            //    callback:function(){
+            //        this.getMyDebtDataView().refresh();
+            //    }
+            //},this);
 
         }
 
