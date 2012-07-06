@@ -27,39 +27,39 @@ Ext.define('Payback.view.MainView', {
         items: [
             {
                 xtype: 'Summary',
-                itemId: 'Summary',
-                title: ' ',
                 tab: {
                     iconCls: 'icon-home',
                     iconMask: true,
                     baseCls: 'x-button',
                     flex: 1,
                     iconAlign: 'center'
-                }
+                },
+                itemId: 'Summary',
+                title: ' '
             },
             {
                 xtype: 'Debts',
-                itemId: 'Debt',
-                title: ' ',
                 tab: {
                     iconCls: 'icon-debt',
                     iconMask: true,
                     baseCls: 'x-button',
                     flex: 1,
                     iconAlign: 'center'
-                }
+                },
+                itemId: 'Debt',
+                title: ' '
             },
             {
                 xtype: 'Prey',
-                itemId: 'Prey',
-                title: ' ',
                 tab: {
                     iconCls: 'icon-contacts',
                     iconMask: true,
                     baseCls: 'x-button',
                     flex: 1,
                     iconAlign: 'center'
-                }
+                },
+                itemId: 'Prey',
+                title: ' '
             }
         ],
         tabBar: {

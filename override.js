@@ -1,3 +1,4 @@
+//Fixes datepicker display bug
 Ext.dom.Element.override({
     getXY: function() {
         var rect = this.dom.getBoundingClientRect(),

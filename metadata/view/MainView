@@ -33,10 +33,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "tab": "{\n    iconCls: 'icon-home',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
                 "itemId": "Summary",
                 "top": null,
-                "title": " ",
-                "tab": "{\n    iconCls: 'icon-home',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}"
+                "title": " "
             },
             "customConfigs": [
                 {
@@ -57,9 +57,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "tab": "{\n    iconCls: 'icon-debt',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
                 "itemId": "Debt",
-                "title": " ",
-                "tab": "{\n    iconCls: 'icon-debt',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}"
+                "title": " "
             },
             "customConfigs": [
                 {
@@ -80,9 +80,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "tab": "{\n    iconCls: 'icon-contacts',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
                 "itemId": "Prey",
-                "title": " ",
-                "tab": "{\n    iconCls: 'icon-contacts',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}"
+                "title": " "
             },
             "customConfigs": [
                 {

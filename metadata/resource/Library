@@ -8,6 +8,7 @@
     "codeClass": null,
     "userConfig": {
         "basePath": "http://extjs.cachefly.net/touch/sencha-touch-2.0.1.1/",
+        "debug": true,
         "includeCss": false
     },
     "customConfigs": [],
