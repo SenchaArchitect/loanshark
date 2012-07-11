@@ -97,13 +97,12 @@ Ext.define('Payback.controller.Payment', {
             }
             },this);*/
 
-            //bug in framework, debt_id is not correctly set in filter, work around is to delete the store and reassociate
+            //bug in framework(reported as TOUCH-3105), debt_id is not correctly set in filter, work around is to delete the store and reassociate
             delete debt.paymentsStore; 
             debt.payments();
         }
 
         //update the debt balance on new payments
-        //var debtRecord = this.getDebtDetail().getRecord();
         debt.set('balance',0); // calls convert field on debt
         debt.getPerson().calcBalance(); //calc balance of updated payments and debt in person
 

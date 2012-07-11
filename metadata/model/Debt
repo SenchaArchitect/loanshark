@@ -177,6 +177,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyBelongsToAssociation",
+                "designer|displayName": "BelongsToPerson",
                 "model": "Person",
                 "foreignKey": "person_id"
             },

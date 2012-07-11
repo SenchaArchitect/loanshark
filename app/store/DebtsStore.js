@@ -28,8 +28,6 @@ Ext.define('Payback.store.DebtsStore', {
         storeId: 'Debts',
         grouper: {
             groupFn: function(record) {
-                // console.log(record);
-                //   debugger;
                 return record.get('date');
             },
             direction: 'DESC'

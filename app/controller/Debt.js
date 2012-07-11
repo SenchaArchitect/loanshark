@@ -112,9 +112,9 @@ Ext.define('Payback.controller.Debt', {
             //if the person is changed in the record
             if (record.isModified('person_id')) {
                 record.getPerson().debts().remove(record); //remove debts from old
-                record.setPerson(values.person_id); //sets new
+                record.setPerson(values.person_id); //sets new person
 
-                // The following two lines work around a bug that causes the Person instance not to be updated correctly
+                //bug in the framework(reported as TOUCH-3106),sets up the Person instance again with the correct person value
                 delete record.PersonBelongsToInstance;
                 record.getPerson(); // bug, Sets up the Person instance reference again
             }

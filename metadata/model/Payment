@@ -112,6 +112,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyBelongsToAssociation1",
+                "designer|displayName": "BelongsToDebt",
                 "model": "Debt",
                 "foreignKey": "debt_id"
             },

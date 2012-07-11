@@ -142,7 +142,7 @@ Ext.define('Payback.view.ContactDetail', {
         //refresh Debt dataview
         this.down('dataview').refresh();
 
-        //get rid of person in dataview when viewed from contact view
+        //remove person label in debt dataview when viewed from contact detail
         Ext.select('.x-form .debt-person-label').setStyle({display:'none'});
     }
 

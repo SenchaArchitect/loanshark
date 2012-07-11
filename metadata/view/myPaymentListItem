@@ -90,10 +90,7 @@
                                     "Ext.getCmp('debtHeaderLabel').setHtml(str);",
                                     "",
                                     "//update the summary",
-                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();",
-                                    "",
-                                    "//refresh DataView",
-                                    "//dataview.refresh();"
+                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
                                 ],
                                 "name": "tap"
                             },
@@ -140,7 +137,7 @@
                     "oldeRecord"
                 ],
                 "implHandler": [
-                    "//bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store",
+                    "//this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store",
                     "this.callParent(arguments);",
                     "",
                     "newRecord.getData(true);",

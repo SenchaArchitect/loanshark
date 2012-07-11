@@ -47,8 +47,6 @@
                             "record"
                         ],
                         "implHandler": [
-                            "  // console.log(record);",
-                            " //   debugger;",
                             "return record.get('date');"
                         ]
                     },

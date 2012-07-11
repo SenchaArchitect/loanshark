@@ -1,24 +1,24 @@
 //Fixes datepicker display bug
-Ext.dom.Element.override({
+/*Ext.dom.Element.override({
     getXY: function() {
         var rect = this.dom.getBoundingClientRect(),
             round = Math.round;
 
         return [round(rect.left + window.pageXOffset), round(rect.top + window.pageYOffset)];
     }
-});
+});*/
 
 //fixes android chrome bugs
 if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
 	
 	//fixes 2 pixel spacing at bottom of screen
-	Ext.viewport.Android.override({
+	/*Ext.viewport.Android.override({
 		getWindowHeight: function() {
 			return window.outerHeight;
 		}
-	});
+	});*/
 	
-	//Removes 3d rendering,
+	//Removes 3d rendering, this fixes blurriness on android chrome
 	Ext.os.is.Android2 = true;
 	
 	//fixes keyboard issues on chrome
