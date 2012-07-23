@@ -65,11 +65,6 @@ Ext.define('Payback.controller.Payment', {
 
         form.setValues({debt_id:this.getDebtDetail().getRecord().get('id')});
 
-        //update url
-        //this.getApplication().getHistory().add(new Ext.app.Action({
-        //    url: location.hash+'/payment'
-        //}), true);
-
         //set active item
         Ext.Viewport.setActiveItem(form);
     },
@@ -89,13 +84,6 @@ Ext.define('Payback.controller.Payment', {
             var payment = debt.payments().add(values)[0];
             debt.payments().sync();
             payment.getDebt(); //bug in framework(reported as TOUCH-3073), associates payment with debt 
-
-            //bug in the framework(fixed), this allows the dataview to update the list when a record is added the first time and no other are in the store
-            /*payment.save({
-            callback:function(){
-            this.getMyPaymentDataView().refresh();
-            }
-            },this);*/
 
             //bug in framework(reported as TOUCH-3105), debt_id is not correctly set in filter, work around is to delete the store and reassociate
             delete debt.paymentsStore; 
@@ -145,7 +133,6 @@ Ext.define('Payback.controller.Payment', {
 
         //show current button
         target.query('button')[0].show();
-
 
         //hides delete button if anywhere else is tapped
         Ext.Viewport.element.on({tap:function(){

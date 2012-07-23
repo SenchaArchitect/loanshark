@@ -33,8 +33,7 @@
                     "",
                     "var tabPanel = this.getMainView(), //uses our Controller Reference",
                     "tabCmp = tabPanel.child('#' + tabId);",
-                    "tabPanel.setActiveItem(tabCmp || 0);",
-                    ""
+                    "tabPanel.setActiveItem(tabCmp || 0);"
                 ],
                 "url": "/:tabId"
             },
@@ -67,17 +66,9 @@
                 "designer|userClassName": "onTabpanelActiveItemChange",
                 "fn": "onTabpanelActiveItemChange",
                 "implHandler": [
-                    "",
-                    "",
-                    "//setTimeout removes the flickering that happens when switching tabs",
-                    "//var me = this;",
-                    "//setTimeout(function(){",
-                    "",
                     "this.getApplication().getHistory().add(new Ext.app.Action({",
                     "    url: '/' + value.getItemId()",
-                    "}), true);",
-                    "",
-                    "//},1);"
+                    "}), true);"
                 ],
                 "name": "activeitemchange",
                 "designer|targetType": "Ext.tab.Panel",

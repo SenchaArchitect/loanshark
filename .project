@@ -7,7 +7,7 @@
         "resource": false,
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
             "id": "ExtBox1-ext-gen2225",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen15360",
@@ -33,7 +33,7 @@
         },
         "1b7b0c08-5968-4072-ba7f-815dd2cfe595": {
             "id": "ExtBox1-ext-gen25572",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25582",
@@ -146,7 +146,7 @@
         },
         "d2bdb0dd-5320-4693-8b47-e897fdfdca71": {
             "id": "ExtBox1-ext-gen17065",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen17069",
@@ -237,7 +237,7 @@
         },
         "2b83fda6-da12-4c2f-a259-389ef8f3e683": {
             "id": "ExtBox1-ext-gen25971",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen25975",
@@ -313,7 +313,7 @@
         },
         "9290d4e2-55ef-4f81-b844-ff9efd351b2b": {
             "id": "ExtBox1-ext-gen6975",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen20879",
@@ -854,7 +854,7 @@
         },
         "ebea6ac0-ebc3-4e23-a80f-c90cae112f2a": {
             "id": "ExtBox1-ext-gen12167",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen29060",

@@ -33,17 +33,9 @@ Ext.define('Payback.controller.Routing', {
     },
 
     onTabpanelActiveItemChange: function(container, value, oldValue, options) {
-
-
-        //setTimeout removes the flickering that happens when switching tabs
-        //var me = this;
-        //setTimeout(function(){
-
         this.getApplication().getHistory().add(new Ext.app.Action({
             url: '/' + value.getItemId()
         }), true);
-
-        //},1);
     },
 
     gotoTab: function(tabId) {
@@ -53,7 +45,6 @@ Ext.define('Payback.controller.Routing', {
         var tabPanel = this.getMainView(), //uses our Controller Reference
         tabCmp = tabPanel.child('#' + tabId);
         tabPanel.setActiveItem(tabCmp || 0);
-
     }
 
 });

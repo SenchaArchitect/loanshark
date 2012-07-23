@@ -120,23 +120,12 @@ Ext.define('Payback.controller.Debt', {
             }
 
             record.set('balance',0); //setting the balance calls the convert field again to update the debt
-
-            //record.commit(); //bug in the framework(now fixed), saving a record does not remove modified flags
-
             record.save();
 
         } else {  //new record 
             var debt = person.debts().add(values)[0]; //add values
             person.debts().sync();
             debt.getPerson(); //bug in the framework(reported as TOUCH-3073), this associates the debt with the person in the store
-
-            //bug in the framework(now fixed), this allows the dataview to update the list when a record is added the first time and no other are in the store
-            //debt.save({
-            //    callback:function(){
-            //        this.getMyDebtDataView().refresh();
-            //    }
-            //},this);
-
         }
 
         //calc balance for the person
