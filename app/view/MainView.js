@@ -20,7 +20,8 @@ Ext.define('Payback.view.MainView', {
     requires: [
         'Payback.view.Summary',
         'Payback.view.Debts',
-        'Payback.view.Prey'
+        'Payback.view.Prey',
+        'Payback.view.Sync'
     ],
 
     config: {
@@ -60,6 +61,17 @@ Ext.define('Payback.view.MainView', {
                 },
                 itemId: 'Prey',
                 title: ' '
+            },
+            {
+                xtype: 'sync',
+                tab: {
+                    iconCls: 'icon-sync',
+                    iconMask: true,
+                    baseCls: 'x-button',
+                    flex: 1,
+                    iconAlign: 'center'
+                },
+                title: 'Sync'
             }
         ],
         tabBar: {

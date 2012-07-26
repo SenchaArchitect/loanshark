@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen7584",
     "type": "store",
     "reference": {
         "name": "items",
@@ -14,12 +13,10 @@
         "model": "Debt",
         "storeId": "Debts"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen7584",
     "designerId": "ef0bd167-5093-4697-a61f-0595c4aafc73",
-    "$viewOrder": 1,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen6372",
             "type": "grouper",
             "reference": {
                 "name": "grouper",
@@ -30,10 +27,8 @@
                 "designer|userClassName": "MyGrouper",
                 "direction": "DESC"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen6485",
                     "type": "fixedfunction",
                     "reference": {
                         "name": "items",
@@ -52,7 +47,6 @@
                             "return record.get('date');"
                         ]
                     },
-                    "customConfigs": [],
                     "iconCls": "icon-basic-function"
                 }
             ]

@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen25568",
     "type": "panel",
     "reference": {
         "name": "items",
@@ -13,12 +12,10 @@
         "ui": "light",
         "layout": "fit"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen25568",
     "designerId": "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba",
-    "$viewOrder": 8,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen41266",
             "type": "titlebar",
             "reference": {
                 "name": "items",
@@ -30,10 +27,8 @@
                 "docked": "bottom",
                 "title": null
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen41270",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -49,13 +44,11 @@
                         "iconCls": "icon-add-debt",
                         "iconMask": true,
                         "text": "Add Loan"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen30172",
             "type": "basiceventbinding",
             "reference": {
                 "name": "listeners",
@@ -70,11 +63,9 @@
                     "Ext.getStore('Debts').clearFilter();"
                 ],
                 "name": "show"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen16724",
             "type": "dataview",
             "reference": {
                 "name": "items",
@@ -94,8 +85,7 @@
                 "store": "Debts",
                 "useComponents": true,
                 "disableSelection": true
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

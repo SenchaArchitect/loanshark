@@ -110,6 +110,7 @@ Ext.define('Payback.view.PaymentDetail', {
         }, 100);
         }, 50);
         }, single:true});*/
+
     }
 
 });

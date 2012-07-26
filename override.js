@@ -8,55 +8,55 @@ Ext.dom.Element.override({
 });
 
 if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
-	Ext.viewport.Android.override({
-		getWindowHeight: function() {
-			return window.outerHeight;
-		}
-	});
-	
-	Ext.os.is.Android2 = true;
-	
-	Ext.event.recognizer.Tap.override({
-	onTouchStart: function(e) {
-        if (Ext.event.recognizer.Tap.superclass.onTouchStart.apply(this, arguments) === false) {
-            return false;
+    Ext.viewport.Android.override({
+        getWindowHeight: function() {
+            return window.outerHeight;
         }
+    });
 
-        this.startPoint = e.changedTouches[0].point;
-    },
+    Ext.os.is.Android2 = true;
 
-		onTouchMove: function(e) {
-	        var touch = e.changedTouches[0],
-	            point = touch.point;
+    Ext.event.recognizer.Tap.override({
+        onTouchStart: function(e) {
+            if (Ext.event.recognizer.Tap.superclass.onTouchStart.apply(this, arguments) === false) {
+                return false;
+            }
 
-	        if (Math.abs(point.getDistanceTo(this.startPoint)) >= 15) {
-	            return this.fail(this.self.TOUCH_MOVED);
-	        }
-	    }
-	});
-	
-	Ext.viewport.Default.override({
-	applyAutoBlurInput: function(autoBlurInput) {
-        var touchstart = (Ext.feature.has.Touch) ? 'touchend' : 'mouseup';
+            this.startPoint = e.changedTouches[0].point;
+        },
 
-        if (autoBlurInput) {
-            this.addWindowListener(touchstart, this.doBlurInput, false);
+        onTouchMove: function(e) {
+            var touch = e.changedTouches[0],
+                point = touch.point;
+
+            if (Math.abs(point.getDistanceTo(this.startPoint)) >= 15) {
+                return this.fail(this.self.TOUCH_MOVED);
+            }
         }
-        else {
-            this.removeWindowListener(touchstart, this.doBlurInput, false);
-        }
+    });
 
-        return autoBlurInput;
-    }
-	});
-	
-	Ext.define('MainViewOverride', {
-		override: 'Payback.view.MainView',
-		config: {
-			layout: {
-				type: 'card',
-				animation: false
-			}
-		}
-	});
+    Ext.viewport.Default.override({
+        applyAutoBlurInput: function(autoBlurInput) {
+            var touchstart = (Ext.feature.has.Touch) ? 'touchend' : 'mouseup';
+
+            if (autoBlurInput) {
+                this.addWindowListener(touchstart, this.doBlurInput, false);
+            }
+            else {
+                this.removeWindowListener(touchstart, this.doBlurInput, false);
+            }
+
+            return autoBlurInput;
+        }
+    });
+
+    Ext.define('MainViewOverride', {
+        override: 'Payback.view.MainView',
+        config: {
+            layout: {
+                type: 'card',
+                animation: false
+            }
+        }
+    });
 }

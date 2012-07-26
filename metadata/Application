@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2164",
     "type": "application",
     "reference": {
         "name": "items",
@@ -7,7 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "startupImage": "{\n    /*320x460: 'resources/images/splash/loading/Default.png',\n    640x920: 'resources/images/splash/loading/Default@2x.png',\n    768x1004: 'resources/images/splash/loading/Default~ipad',\n    748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/\n}",
         "io": "{\n    appId: \"P4sx9af4tlTYSzMsZ7HeLXgxi1V\",\n    appSecret: \"xLNaMluepda4oFYH\",\n    logLevel: \"debug\"\n}   ",
         "models": [
             "Person",
@@ -28,18 +26,13 @@
             "ContactDetail",
             "myContactListItem",
             "Debts",
-            "Prey",
             "PaymentDetail",
             "myPaymentListItem"
         ],
-        "glossOnIcon": false,
         "icon": "{\n    57: 'resources/images/splash/icons/Icon.png',\n    72: 'resources/images/splash/icons/Icon~ipad.png',\n    114: 'resources/images/splash/icons/Icon@2x.png',\n    144: 'resources/images/splash/icons/Icon~ipad@2x.png'\n}",
         "name": "Payback",
-        "phoneIcon": "",
-        "phoneStartupScreen": "resources/images/spash/loading/Default.png",
+        "startupImage": "{\n    /*320x460: 'resources/images/splash/loading/Default.png',\n    640x920: 'resources/images/splash/loading/Default@2x.png',\n    768x1004: 'resources/images/splash/loading/Default~ipad',\n    748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/\n}",
         "statusBarStyle": null,
-        "tabletIcon": null,
-        "tabletStartupScreen": "resources/images/spash/loading/Default~ipad.png",
         "controllers": [
             "Contact",
             "Summary",
@@ -49,24 +42,18 @@
             "Ext.io.Controller"
         ]
     },
+    "id": "ExtBox1-ext-gen2164",
+    "designerId": "application",
+    "iconCls": "icon-application",
     "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "startupImage",
-            "type": "object"
-        },
         {
             "group": "(Custom Properties)",
             "name": "io",
             "type": "object"
         }
     ],
-    "designerId": "application",
-    "$viewOrder": 0,
-    "iconCls": "icon-application",
     "cn": [
         {
-            "id": "ExtBox1-ext-gen12319",
             "type": "loader",
             "reference": {
                 "name": "loader",
@@ -77,13 +64,11 @@
                 "designer|userClassName": "Loader",
                 "disableCaching": false,
                 "enabled": true,
-                "paths": "{\n    //'use these for dynamic loading- the way architect works right now does not allow Sencha.io so leave commented for now',\n    //'Ext.io': 'lib/io/src/io',\n    //'Ext.cf': 'lib/io/src/cf'\n}"
+                "paths": "{\n    //'use these for dynamic loading- the way architect works right now does not allow Sencha.io so leave commented for now',\n    //'Ext.io': 'lib/io/src/io',\n    //'Ext.cf': 'lib/io/src/cf'\n}\n"
             },
-            "customConfigs": [],
             "iconCls": "icon-loader"
         },
         {
-            "id": "ExtBox1-ext-gen12952",
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -94,19 +79,16 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
-                    "//this may take longer then expected",
-                    "//Ext.getStore('People').sync();",
-                    "//Ext.getStore('Debts').sync();",
-                    "//Ext.getStore('Payments').sync();",
                     "//localStorage.clear();",
                     "/*Ext.io.User.getCurrent(",
-                    "     function(user){",
-                    "        user.logout();",
-                    "     } ",
-                    " );*/"
+                    "function(user){",
+                    "user.logout();",
+                    "} ",
+                    ");*/",
+                    "",
+                    ""
                 ]
             },
-            "customConfigs": [],
             "iconCls": "icon-launch-function"
         }
     ]

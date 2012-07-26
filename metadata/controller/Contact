@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen51189",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -15,12 +14,10 @@
             "ContactDetail"
         ]
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen51189",
     "designerId": "4924b61f-714b-45ce-aa6a-944c48e631e4",
-    "$viewOrder": 0,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen51194",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -56,11 +53,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#addContact"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen18558",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -135,11 +130,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveContact"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen13510",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -164,11 +157,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#cancelContact"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen31779",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -201,11 +192,9 @@
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myContactDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen4127",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -214,15 +203,13 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "ContactDetail",
+                "autoCreate": true,
                 "ref": "ContactDetail",
                 "selector": "ContactDetail",
-                "xtype": "ContactDetail",
-                "autoCreate": true
-            },
-            "customConfigs": []
+                "xtype": "ContactDetail"
+            }
         },
         {
-            "id": "ExtBox1-ext-gen14311",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -284,11 +271,9 @@
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
                 "designer|controlQuery": "#myContactDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen44167",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -299,11 +284,9 @@
                 "designer|userClassName": "myContactDataView",
                 "ref": "myContactDataView",
                 "selector": "#myContactDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen19190",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -314,11 +297,9 @@
                 "designer|userClassName": "myDebtDataView",
                 "ref": "myDebtDataView",
                 "selector": "#myDebtDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen28858",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -329,11 +310,9 @@
                 "designer|userClassName": "contactHeaderLabel",
                 "ref": "contactHeaderLabel",
                 "selector": "#contactHeaderLabel"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen8408",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -344,11 +323,9 @@
                 "designer|userClassName": "loanHistoryLabel",
                 "ref": "loanHistoryLabel",
                 "selector": "#loanHistoryLabel"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen27991",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -359,11 +336,9 @@
                 "designer|userClassName": "addContactButton",
                 "ref": "addContactButton",
                 "selector": "#addContact"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen28735",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -374,11 +349,9 @@
                 "designer|userClassName": "MainView",
                 "ref": "MainView",
                 "selector": "MainView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen5163",
             "type": "controllerroute",
             "reference": {
                 "name": "items",
@@ -409,8 +382,7 @@
                     "}"
                 ],
                 "url": "/Prey/:id"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

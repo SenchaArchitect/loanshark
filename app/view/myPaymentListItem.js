@@ -19,13 +19,6 @@ Ext.define('Payback.view.myPaymentListItem', {
 
     config: {
         baseCls: 'x-data-item',
-        updateRecord: function(newRecord, oldeRecord) {
-            //bug in framework, this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store
-            this.callParent(arguments);
-
-            newRecord.getData(true);
-            this.child('component').setData(newRecord.data);
-        },
         cls: [
             'x-list-item'
         ],
@@ -92,6 +85,7 @@ Ext.define('Payback.view.myPaymentListItem', {
 
         //refresh DataView
         //dataview.refresh();
+
     },
 
     updateRecord: function(newRecord, oldeRecord) {
@@ -100,6 +94,7 @@ Ext.define('Payback.view.myPaymentListItem', {
 
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
+
     }
 
 });

@@ -1,0 +1,122 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Sync",
+        "designer|userAlias": "sync",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen7771",
+    "designerId": "6b64fea3-fb57-452e-b0ba-77daa643ebf5",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar",
+                "docked": "bottom",
+                "title": null
+            },
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton",
+                        "cls": "my-buttons",
+                        "id": "syncButton",
+                        "itemId": null,
+                        "ui": null,
+                        "iconAlign": null,
+                        "iconCls": "icon-sync",
+                        "iconMask": true,
+                        "text": "Add Prey"
+                    },
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//this may take longer then expected",
+                                    "Ext.getStore('People').sync();",
+                                    "Ext.getStore('Debts').sync();",
+                                    "Ext.getStore('Payments').sync();"
+                                ]
+                            },
+                            "iconCls": "icon-basic-function"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton",
+                        "cls": "my-buttons",
+                        "id": "logoutButton",
+                        "itemId": null,
+                        "ui": null,
+                        "iconAlign": null,
+                        "iconCls": "delete",
+                        "iconMask": true,
+                        "text": "Add Prey"
+                    },
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//this may take longer then expected",
+                                    "Ext.getStore('People').sync();",
+                                    "Ext.getStore('Debts').sync();",
+                                    "Ext.getStore('Payments').sync();"
+                                ]
+                            },
+                            "iconCls": "icon-basic-function"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

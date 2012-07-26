@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen11998",
     "type": "jsresource",
     "reference": {
         "name": "items",
@@ -7,9 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "app/model/ModelOverrides.js"
+        "url": "lib/io/sencha-io-debug.js"
     },
-    "customConfigs": [],
-    "designerId": "5bd5e9ce-0679-423b-8aca-73eade9884f6",
-    "$viewOrder": 5
+    "id": "ExtBox1-ext-gen5722",
+    "designerId": "857475f5-098a-4e0b-b616-6706edc1562c"
 }

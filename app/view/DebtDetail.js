@@ -192,6 +192,7 @@ Ext.define('Payback.view.DebtDetail', {
         }, 100);
         }, 50);
         }, single:true});*/
+
     }
 
 });

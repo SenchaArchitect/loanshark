@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen40483",
     "type": "datamodel",
     "reference": {
         "name": "items",
@@ -11,6 +10,8 @@
         "designer|userAlias": "Debt2",
         "identifier": "{\n    type:'uuid'\n}"
     },
+    "id": "ExtBox1-ext-gen40483",
+    "designerId": "0da47a2f-b44a-4fc0-87f8-d59223d82d8d",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
@@ -18,11 +19,8 @@
             "type": "object"
         }
     ],
-    "designerId": "0da47a2f-b44a-4fc0-87f8-d59223d82d8d",
-    "$viewOrder": 2,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen40722",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -33,11 +31,9 @@
                 "designer|userClassName": "MyField10",
                 "name": "id",
                 "type": "auto"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen40824",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -47,11 +43,9 @@
             "userConfig": {
                 "designer|userClassName": "MyField11",
                 "name": "reason"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen40932",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -61,11 +55,9 @@
             "userConfig": {
                 "designer|userClassName": "MyField12",
                 "name": "amount"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen25205",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -77,10 +69,8 @@
                 "name": "balance",
                 "type": "float"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen26154",
                     "type": "fixedfunction",
                     "reference": {
                         "name": "items",
@@ -101,13 +91,11 @@
                             "return sum;"
                         ]
                     },
-                    "customConfigs": [],
                     "iconCls": "icon-basic-function"
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen41488",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -118,11 +106,9 @@
                 "designer|userClassName": "MyField13",
                 "name": "date",
                 "type": "date"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen42330",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -132,11 +118,9 @@
             "userConfig": {
                 "designer|userClassName": "MyField14",
                 "name": "person_id"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen41780",
             "type": "hasmanyassociation",
             "reference": {
                 "name": "hasMany",
@@ -150,11 +134,9 @@
                 "foreignKey": "debt_id",
                 "name": "payments",
                 "store": "{\n    modelDefaults: null,\n    remoteFilter: false\n}"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen15286",
             "type": "localstorageproxy",
             "reference": {
                 "name": "proxy",
@@ -164,11 +146,9 @@
             "userConfig": {
                 "designer|userClassName": "MyLocalStorageProxy2",
                 "id": "Debts"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen7917",
             "type": "belongstoassociation",
             "reference": {
                 "name": "belongsTo",
@@ -179,8 +159,7 @@
                 "designer|userClassName": "MyBelongsToAssociation",
                 "model": "Person",
                 "foreignKey": "person_id"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

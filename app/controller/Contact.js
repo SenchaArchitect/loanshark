@@ -30,9 +30,9 @@ Ext.define('Payback.controller.Contact', {
 
         refs: {
             ContactDetail: {
+                autoCreate: true,
                 selector: 'ContactDetail',
-                xtype: 'ContactDetail',
-                autoCreate: true
+                xtype: 'ContactDetail'
             },
             myContactDataView: '#myContactDataView',
             myDebtDataView: '#myDebtDataView',
@@ -57,6 +57,7 @@ Ext.define('Payback.controller.Contact', {
                 itemtap: 'onDataviewItemTap'
             }
         }
+
     },
 
     onAddContactTap: function(button, e, options) {
@@ -81,6 +82,7 @@ Ext.define('Payback.controller.Contact', {
 
         //set active item
         Ext.Viewport.setActiveItem(this.getContactDetail());
+
     },
 
     onSaveContactTap: function(button, e, options) {
@@ -144,6 +146,7 @@ Ext.define('Payback.controller.Contact', {
 
         //set active item
         Ext.Viewport.setActiveItem(0);
+
     },
 
     onCancelContactTap: function(button, e, options) {
@@ -157,6 +160,7 @@ Ext.define('Payback.controller.Contact', {
 
         //set active item
         Ext.Viewport.setActiveItem(0);
+
     },
 
     onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
@@ -178,6 +182,7 @@ Ext.define('Payback.controller.Contact', {
             target.query('button')[0].hide();
             labels.show();
         }, single:true});
+
     },
 
     onDataviewItemTap: function(dataview, index, target, record, e, options) {
@@ -228,6 +233,7 @@ Ext.define('Payback.controller.Contact', {
             fontSize = fontSize - 1;
         } while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
         header.setStyle({'padding-top': (100-textHeight)/2+'px'}); //center text
+
     },
 
     showContactDetail: function(id) {
@@ -246,6 +252,7 @@ Ext.define('Payback.controller.Contact', {
                 this.onDataviewItemTap(dataView,id,null, dataItem.getRecord());  
             }
         }
+
     }
 
 });

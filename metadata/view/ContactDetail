@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen17065",
     "type": "formpanel",
     "reference": {
         "name": "items",
@@ -13,12 +12,10 @@
         "autoDestroy": false,
         "layout": "vbox"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen17065",
     "designerId": "d2bdb0dd-5320-4693-8b47-e897fdfdca71",
-    "$viewOrder": 2,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen17069",
             "type": "titlebar",
             "reference": {
                 "name": "items",
@@ -31,10 +28,8 @@
                 "ui": "light",
                 "title": "Prey Details"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen17079",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -49,13 +44,11 @@
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen17075",
             "type": "toolbar",
             "reference": {
                 "name": "items",
@@ -66,10 +59,8 @@
                 "designer|userClassName": "MyToolbar",
                 "docked": "bottom"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen17084",
                     "type": "spacer",
                     "reference": {
                         "name": "items",
@@ -78,11 +69,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySpacer"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen17089",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -98,13 +87,11 @@
                         "iconCls": "icon-save",
                         "iconMask": true,
                         "text": "save"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen5377",
             "type": "container",
             "reference": {
                 "name": "items",
@@ -116,10 +103,8 @@
                 "height": null,
                 "margin": "0 0 10px 0"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen27681",
                     "type": "label",
                     "reference": {
                         "name": "items",
@@ -134,11 +119,9 @@
                         "id": "contactHeaderLabel",
                         "padding": null,
                         "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen23029",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -154,11 +137,9 @@
                         "style": "border-radius: 0; color: black;",
                         "ui": "gray-light-button",
                         "text": "New Loan"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen17096",
                     "type": "fieldset",
                     "reference": {
                         "name": "items",
@@ -169,10 +150,8 @@
                         "designer|userClassName": "MyFieldSet",
                         "title": null
                     },
-                    "customConfigs": [],
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen17100",
                             "type": "textfield",
                             "reference": {
                                 "name": "items",
@@ -184,11 +163,9 @@
                                 "label": "Name",
                                 "labelAlign": "top",
                                 "name": "name"
-                            },
-                            "customConfigs": []
+                            }
                         },
                         {
-                            "id": "ExtBox1-ext-gen17105",
                             "type": "emailfield",
                             "reference": {
                                 "name": "items",
@@ -201,11 +178,9 @@
                                 "labelAlign": "top",
                                 "name": "email",
                                 "placeHolder": null
-                            },
-                            "customConfigs": []
+                            }
                         },
                         {
-                            "id": "ExtBox1-ext-gen17110",
                             "type": "textfield",
                             "reference": {
                                 "name": "items",
@@ -217,15 +192,13 @@
                                 "label": "Phone",
                                 "labelAlign": "top",
                                 "name": "phone"
-                            },
-                            "customConfigs": []
+                            }
                         }
                     ]
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen5504",
             "type": "container",
             "reference": {
                 "name": "items",
@@ -236,10 +209,8 @@
                 "layout|flex": null,
                 "designer|userClassName": "MyContainer8"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen17845",
                     "type": "label",
                     "reference": {
                         "name": "items",
@@ -256,11 +227,9 @@
                         "padding": "0 0 8px 8px",
                         "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
                         "styleHtmlCls": null
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen20017",
                     "type": "dataview",
                     "reference": {
                         "name": "items",
@@ -283,13 +252,11 @@
                         "store": "Debts",
                         "useComponents": true,
                         "disableSelection": true
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen15926",
             "type": "basiceventbinding",
             "reference": {
                 "name": "listeners",
@@ -308,8 +275,7 @@
                     "Ext.select('.x-form .debt-person-label').setStyle({display:'none'});"
                 ],
                 "name": "show"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

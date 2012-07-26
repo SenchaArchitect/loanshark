@@ -3,7 +3,7 @@ Ext.define('Payback.model.Person', {
     extend: 'Ext.data.Model',
 
     uses: [
-        'Payback.model.Debt'
+    'Payback.model.Debt'
     ],
 
     config: {
@@ -28,24 +28,24 @@ Ext.define('Payback.model.Person', {
             }
         },
         fields: [
-            {
-                name: 'id',
-                type: 'auto'
-            },
-            {
-                name: 'name'
-            },
-            {
-                name: 'phone'
-            },
-            {
-                name: 'email'
-            },
-            {
-                defaultValue: 0,
-                name: 'balance',
-                type: 'float'
-            }
+        {
+            name: 'id',
+            type: 'auto'
+        },
+        {
+            name: 'name'
+        },
+        {
+            name: 'phone'
+        },
+        {
+            name: 'email'
+        },
+        {
+            defaultValue: 0,
+            name: 'balance',
+            type: 'float'
+        }
         ]
     },
 
@@ -60,7 +60,7 @@ Ext.define('Payback.model.Payment', {
     extend: 'Ext.data.Model',
 
     uses: [
-        'Payback.model.Debt'
+    'Payback.model.Debt'
     ],
 
     config: {
@@ -68,25 +68,25 @@ Ext.define('Payback.model.Payment', {
             type: 'uuid'
         },
         fields: [
-            {
-                name: 'id',
-                type: 'auto'
-            },
-            {
-                name: 'debt_id'
-            },
-            {
-                name: 'amount',
-                type: 'float'
-            },
-            {
-                name: 'date',
-                type: 'date'
-            },
-            {
-                name: 'memo',
-                type: 'string'
-            }
+        {
+            name: 'id',
+            type: 'auto'
+        },
+        {
+            name: 'debt_id'
+        },
+        {
+            name: 'amount',
+            type: 'float'
+        },
+        {
+            name: 'date',
+            type: 'date'
+        },
+        {
+            name: 'memo',
+            type: 'string'
+        }
         ],
         proxy: {
             type: 'syncstorage',
@@ -107,8 +107,8 @@ Ext.define('Payback.model.Debt', {
     alias: 'model.Debt',
 
     uses: [
-        'Payback.model.Payment',
-        'Payback.model.Person'
+    'Payback.model.Payment',
+    'Payback.model.Person'
     ],
 
     config: {
@@ -116,33 +116,33 @@ Ext.define('Payback.model.Debt', {
             type: 'uuid'
         },
         fields: [
-            {
-                name: 'id',
-                type: 'auto'
-            },
-            {
-                name: 'reason'
-            },
-            {
-                name: 'amount'
-            },
-            {
-                convert: function(v, rec) {
-                    var sum = rec.get('amount') - rec.payments().sum('amount');
-                    sum = Math.round(sum*100)/100;
+        {
+            name: 'id',
+            type: 'auto'
+        },
+        {
+            name: 'reason'
+        },
+        {
+            name: 'amount'
+        },
+        {
+            convert: function(v, rec) {
+                var sum = rec.get('amount') - rec.payments().sum('amount');
+                sum = Math.round(sum*100)/100;
 
-                    return sum;
-                },
-                name: 'balance',
-                type: 'float'
+                return sum;
             },
-            {
-                name: 'date',
-                type: 'date'
-            },
-            {
-                name: 'person_id'
-            }
+            name: 'balance',
+            type: 'float'
+        },
+        {
+            name: 'date',
+            type: 'date'
+        },
+        {
+            name: 'person_id'
+        }
         ],
         hasMany: {
             model: 'Payback.model.Payment',

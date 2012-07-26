@@ -31,8 +31,8 @@ $form-input-color: white;
 @include sencha-form;
 @include sencha-msgbox;
 @include sencha-loading-spinner;
-@include sencha-draw;
-@include sencha-charts;
+/*@include sencha-draw;
+@include sencha-charts;*/
 
 @include custom-pictos-iconmask('icon-contacts');
 @include custom-pictos-iconmask('icon-debt');
@@ -43,6 +43,7 @@ $form-input-color: white;
 @include custom-pictos-iconmask('icon-delete');
 @include custom-pictos-iconmask('icon-back');
 @include custom-pictos-iconmask('icon-email');
+@include custom-pictos-iconmask('icon-sync');
 
 @include sencha-button-ui('gray-button', gray, 'matte');
 @include sencha-button-ui('gray-light-button', #484848, 'flat');

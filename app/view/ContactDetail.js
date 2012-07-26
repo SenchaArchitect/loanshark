@@ -144,6 +144,7 @@ Ext.define('Payback.view.ContactDetail', {
 
         //get rid of person in dataview when viewed from contact view
         Ext.select('.x-form .debt-person-label').setStyle({display:'none'});
+
     }
 
 });

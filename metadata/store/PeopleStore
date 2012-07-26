@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen34156",
     "type": "store",
     "reference": {
         "name": "items",
@@ -14,12 +13,10 @@
         "model": "Person",
         "storeId": "People"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen34156",
     "designerId": "5c1a3711-4411-4d34-a283-c9149d1e681e",
-    "$viewOrder": 0,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen40178",
             "type": "basiceventbinding",
             "reference": {
                 "name": "listeners",
@@ -35,8 +32,7 @@
                     "});"
                 ],
                 "name": "load"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

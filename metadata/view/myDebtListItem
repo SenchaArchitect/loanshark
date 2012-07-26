@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen6975",
     "type": "dataitem",
     "reference": {
         "name": "items",
@@ -15,12 +14,10 @@
         ],
         "minHeight": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen6975",
     "designerId": "9290d4e2-55ef-4f81-b844-ff9efd351b2b",
-    "$viewOrder": 4,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen20879",
             "type": "container",
             "reference": {
                 "name": "items",
@@ -32,10 +29,8 @@
                 "baseCls": "x-list-item-label",
                 "itemId": "debtListItemDetail"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen7405",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -56,10 +51,8 @@
                         "iconMask": true,
                         "text": "delete"
                     },
-                    "customConfigs": [],
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen33855",
                             "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
@@ -101,13 +94,11 @@
                                     "dataview.refresh();"
                                 ],
                                 "name": "tap"
-                            },
-                            "customConfigs": []
+                            }
                         }
                     ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen8051",
                     "type": "template",
                     "reference": {
                         "name": "tpl",
@@ -130,13 +121,11 @@
                             "    </div>",
                             "</div>"
                         ]
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen3339",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -156,8 +145,7 @@
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
                 ]
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

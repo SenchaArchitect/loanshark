@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen12167",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -12,12 +11,10 @@
             "PaymentStore"
         ]
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen12167",
     "designerId": "ebea6ac0-ebc3-4e23-a80f-c90cae112f2a",
-    "$viewOrder": 3,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen29060",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -26,15 +23,13 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "PaymentDetail",
+                "autoCreate": true,
                 "ref": "PaymentDetail",
                 "selector": "PaymentDetail",
-                "xtype": "PaymentDetail",
-                "autoCreate": true
-            },
-            "customConfigs": []
+                "xtype": "PaymentDetail"
+            }
         },
         {
-            "id": "ExtBox1-ext-gen3457",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -67,11 +62,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#addPayment"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen5895",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -138,11 +131,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#savePayment"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen4905",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -161,11 +152,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#cancelPayment"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen11556",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -174,15 +163,13 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "DebtDetail",
+                "autoCreate": true,
                 "ref": "DebtDetail",
                 "selector": "DebtDetail",
-                "xtype": "DebtDetail",
-                "autoCreate": true
-            },
-            "customConfigs": []
+                "xtype": "DebtDetail"
+            }
         },
         {
-            "id": "ExtBox1-ext-gen17508",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -216,11 +203,9 @@
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myPaymentDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen14983",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -242,11 +227,9 @@
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myPaymentDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen21992",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -257,11 +240,9 @@
                 "designer|userClassName": "myPaymentDataView",
                 "ref": "myPaymentDataView",
                 "selector": "#myPaymentDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen2360",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -272,8 +253,7 @@
                 "designer|userClassName": "debtHeaderLabel",
                 "ref": "debtHeaderLabel",
                 "selector": "#debtHeaderLabel"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

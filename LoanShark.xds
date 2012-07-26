@@ -3,19 +3,21 @@
     "settings": {
         "urlPrefix": "http://localhost:8888/loanshark",
         "spacesToIndent": 4,
-        "codeGenFormat": "Class",
         "exportPath": "/Users/ericbowden/Documents/repos/loanshark2",
-        "senchaIoKey": "",
-        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
         "lineEnding": "",
-        "instantiateStore": true,
         "genTimestamps": false,
         "cacheBust": false,
+        "codeGenFormat": "Class",
+        "senchaIoKey": "",
+        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
+        "instantiateStore": true,
         "saveOnDeploy": false,
         "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": 210000000511,
+    "xdsBuild": 550,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000495,
     "framework": "touch20",
     "topInstanceFileMap": {
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
@@ -220,15 +222,67 @@
         },
         "5bd5e9ce-0679-423b-8aca-73eade9884f6": {
             "paths": [
+                "metadata/resource/js3"
+            ],
+            "className": "js3"
+        },
+        "857475f5-098a-4e0b-b616-6706edc1562c": {
+            "paths": [
                 "metadata/resource/js2"
             ],
             "className": "js2"
         },
-        "857475f5-098a-4e0b-b616-6706edc1562c": {
+        "6b64fea3-fb57-452e-b0ba-77daa643ebf5": {
             "paths": [
-                "metadata/resource/js3"
+                "metadata/view/Sync",
+                "app/view/override/Sync.js",
+                "app/view/Sync.js"
             ],
-            "className": "js3"
+            "className": "Sync"
         }
+    },
+    "viewOrderMap": {
+        "view": [
+            "d2bdb0dd-5320-4693-8b47-e897fdfdca71",
+            "1b7b0c08-5968-4072-ba7f-815dd2cfe595",
+            "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba",
+            "d3b832b6-4996-4c75-bb54-57aee2c88185",
+            "dde4c54b-3964-4d6d-927f-dbd7c91717bc",
+            "6b64fea3-fb57-452e-b0ba-77daa643ebf5",
+            "9c7e563e-7ff0-4ba7-9556-9c0d6c286927",
+            "2b83fda6-da12-4c2f-a259-389ef8f3e683",
+            "ed8e32a8-2bee-4972-82cc-60fdcab2e506",
+            "9290d4e2-55ef-4f81-b844-ff9efd351b2b",
+            "8ee13c44-dec0-4ae8-b3a8-ed30c67f9f80"
+        ],
+        "store": [
+            "5c1a3711-4411-4d34-a283-c9149d1e681e",
+            "ef0bd167-5093-4697-a61f-0595c4aafc73",
+            "517bbd27-6be2-4dd8-b7d7-5d2ebb2e78f6"
+        ],
+        "controller": [
+            "4924b61f-714b-45ce-aa6a-944c48e631e4",
+            "5ed004d8-012c-4630-9207-238a99ceafdf",
+            "9492a36c-015b-4b23-8dad-68f6f48b9841",
+            "ebea6ac0-ebc3-4e23-a80f-c90cae112f2a",
+            "3482a60a-7318-4e06-8b50-c3cfccd4d927"
+        ],
+        "model": [
+            "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51",
+            "5f8fbc87-7f38-40ea-af4e-4e27c41555b7",
+            "0da47a2f-b44a-4fc0-87f8-d59223d82d8d",
+            "49e77106-a613-44e5-8af8-44300ffc6595"
+        ],
+        "resource": [
+            "ce8f1709-75f8-4f81-b948-890b2047ecd8",
+            "e0fc0f11-5bd9-4b48-890e-e5d786ed821d",
+            "87119690-45e1-432b-bbc9-b1f91c965bb3",
+            "ba574cb5-066d-4677-83d0-9eacdc937910",
+            "857475f5-098a-4e0b-b616-6706edc1562c",
+            "5bd5e9ce-0679-423b-8aca-73eade9884f6"
+        ],
+        "app": [
+            "application"
+        ]
     }
 }

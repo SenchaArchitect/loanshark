@@ -17,19 +17,12 @@ Ext.Loader.setConfig({
     disableCaching: false,
     enabled: true,
     paths: {
-        //'use these for dynamic loading- the way architect works right now does not allow Sencha.io so leave commented for now',
-    //'Ext.io': 'lib/io/src/io',
+        //'Ext.io'sefordynamicloading-thewayarchitectworksrightnowdoesnotallowSencha.iosoleavecommentedfornow'Ext.io'/'Ext.io': 'lib/io/src/io',
         //'Ext.cf': 'lib/io/src/cf'
     }
 });
 
 Ext.application({
-    startupImage: {
-        /*320x460: 'resources/images/splash/loading/Default.png',
-        640x920: 'resources/images/splash/loading/Default@2x.png',
-        768x1004: 'resources/images/splash/loading/Default~ipad',
-        748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/
-    },
     io: {
         appId: 'P4sx9af4tlTYSzMsZ7HeLXgxi1V',
         appSecret: 'xLNaMluepda4oFYH',
@@ -54,11 +47,9 @@ Ext.application({
         'ContactDetail',
         'myContactListItem',
         'Debts',
-        'Prey',
         'PaymentDetail',
         'myPaymentListItem'
     ],
-    glossOnIcon: false,
     icon: {
         57: 'resources/images/splash/icons/Icon.png',
         72: 'resources/images/splash/icons/Icon~ipad.png',
@@ -66,9 +57,12 @@ Ext.application({
         144: 'resources/images/splash/icons/Icon~ipad@2x.png'
     },
     name: 'Payback',
-    phoneIcon: '',
-    phoneStartupScreen: 'resources/images/spash/loading/Default.png',
-    tabletStartupScreen: 'resources/images/spash/loading/Default~ipad.png',
+    startupImage: {
+        /*320x460: 'resources/images/splash/loading/Default.png',
+        640x920: 'resources/images/splash/loading/Default@2x.png',
+        768x1004: 'resources/images/splash/loading/Default~ipad',
+        748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/
+    },
     controllers: [
         'Contact',
         'Summary',
@@ -79,17 +73,16 @@ Ext.application({
     ],
 
     launch: function() {
-        //this may take longer then expected
-        //Ext.getStore('People').sync();
-        //Ext.getStore('Debts').sync();
-        //Ext.getStore('Payments').sync();
         //localStorage.clear();
         /*Ext.io.User.getCurrent(
         function(user){
         user.logout();
         } 
         );*/
+
+
         Ext.create('Payback.view.MainView', {fullscreen: true});
+
     }
 
 });

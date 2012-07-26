@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen11025",
     "type": "datamodel",
     "reference": {
         "name": "items",
@@ -9,12 +8,10 @@
     "userConfig": {
         "designer|userClassName": "Summary"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen11025",
     "designerId": "49e77106-a613-44e5-8af8-44300ffc6595",
-    "$viewOrder": 3,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen11242",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -24,8 +21,7 @@
             "userConfig": {
                 "designer|userClassName": "MyField17",
                 "name": "totalOwed"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

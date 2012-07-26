@@ -31,6 +31,7 @@ Ext.define('Payback.store.DebtsStore', {
                 // console.log(record);
                 //   debugger;
                 return record.get('date');
+
             },
             direction: 'DESC'
         }

@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen21470",
     "type": "datamodel",
     "reference": {
         "name": "items",
@@ -10,6 +9,8 @@
         "designer|userClassName": "Person2",
         "identifier": "{\n    type: 'uuid'\n}"
     },
+    "id": "ExtBox1-ext-gen21470",
+    "designerId": "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
@@ -17,11 +18,8 @@
             "type": "object"
         }
     ],
-    "designerId": "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51",
-    "$viewOrder": 0,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen37320",
             "type": "localstorageproxy",
             "reference": {
                 "name": "proxy",
@@ -31,11 +29,9 @@
             "userConfig": {
                 "designer|userClassName": "MyLocalStorageProxy",
                 "id": "Person2"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen33350",
             "type": "hasmanyassociation",
             "reference": {
                 "name": "hasMany",
@@ -50,11 +46,9 @@
                 "foreignKey": "person_id",
                 "name": "debts",
                 "store": "{\n     remoteFilter: false,\n     modelDefaults: null\n}"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen21927",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -65,11 +59,9 @@
                 "designer|userClassName": "MyField7",
                 "name": "id",
                 "type": "auto"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen30739",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -79,11 +71,9 @@
             "userConfig": {
                 "designer|userClassName": "MyField",
                 "name": "name"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen33039",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -93,11 +83,9 @@
             "userConfig": {
                 "designer|userClassName": "MyField",
                 "name": "phone"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen32724",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -107,11 +95,9 @@
             "userConfig": {
                 "designer|userClassName": "MyField",
                 "name": "email"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen24451",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -123,11 +109,9 @@
                 "defaultValue": "0",
                 "name": "balance",
                 "type": "float"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen38941",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -140,8 +124,7 @@
                 "implHandler": [
                     "return this.set('balance', this.debts().sum('balance'));"
                 ]
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

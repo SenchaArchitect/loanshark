@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen25572",
     "type": "formpanel",
     "reference": {
         "name": "items",
@@ -16,12 +15,10 @@
         "layout": "vbox",
         "scrollable": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen25572",
     "designerId": "1b7b0c08-5968-4072-ba7f-815dd2cfe595",
-    "$viewOrder": 1,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen25582",
             "type": "toolbar",
             "reference": {
                 "name": "items",
@@ -33,10 +30,8 @@
                 "docked": "bottom",
                 "ui": null
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen25591",
                     "type": "spacer",
                     "reference": {
                         "name": "items",
@@ -45,11 +40,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySpacer"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen25596",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -65,13 +58,11 @@
                         "iconCls": "icon-save",
                         "iconMask": true,
                         "text": "save"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen25576",
             "type": "titlebar",
             "reference": {
                 "name": "items",
@@ -84,10 +75,8 @@
                 "ui": "light",
                 "title": "Loan Details"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen25586",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -102,11 +91,9 @@
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen2443",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -124,13 +111,11 @@
                         "iconCls": "icon-email",
                         "iconMask": true,
                         "text": "Send Email"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen3551",
             "type": "container",
             "reference": {
                 "name": "items",
@@ -144,10 +129,8 @@
                 "margin": "0 0 10px 0",
                 "scrollable": null
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen18917",
                     "type": "label",
                     "reference": {
                         "name": "items",
@@ -162,11 +145,9 @@
                         "id": "debtHeaderLabel",
                         "padding": null,
                         "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen14447",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -183,11 +164,9 @@
                         "ui": "gray-light-button",
                         "iconCls": null,
                         "text": "Add Payment"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen25603",
                     "type": "fieldset",
                     "reference": {
                         "name": "items",
@@ -199,10 +178,8 @@
                         "itemId": "myfieldset1",
                         "title": null
                     },
-                    "customConfigs": [],
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen42211",
                             "type": "selectfield",
                             "reference": {
                                 "name": "items",
@@ -218,11 +195,9 @@
                                 "store": "People",
                                 "ui": null,
                                 "valueField": "id"
-                            },
-                            "customConfigs": []
+                            }
                         },
                         {
-                            "id": "ExtBox1-ext-gen43674",
                             "type": "datepickerfield",
                             "reference": {
                                 "name": "items",
@@ -235,10 +210,8 @@
                                 "labelAlign": "top",
                                 "name": "date"
                             },
-                            "customConfigs": [],
                             "cn": [
                                 {
-                                    "id": "ExtBox1-ext-gen43683",
                                     "type": "datepicker",
                                     "reference": {
                                         "name": "picker",
@@ -250,10 +223,8 @@
                                         "style": null,
                                         "ui": "dark"
                                     },
-                                    "customConfigs": [],
                                     "cn": [
                                         {
-                                            "id": "ExtBox1-ext-gen43694",
                                             "type": "button",
                                             "reference": {
                                                 "name": "doneButton",
@@ -265,11 +236,9 @@
                                                 "cls": "my-buttons",
                                                 "ui": "gray-button",
                                                 "text": "Done"
-                                            },
-                                            "customConfigs": []
+                                            }
                                         },
                                         {
-                                            "id": "ExtBox1-ext-gen43702",
                                             "type": "button",
                                             "reference": {
                                                 "name": "cancelButton",
@@ -281,15 +250,13 @@
                                                 "cls": "my-buttons",
                                                 "ui": "gray-light-button",
                                                 "text": "Cancel"
-                                            },
-                                            "customConfigs": []
+                                            }
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "id": "ExtBox1-ext-gen25612",
                             "type": "numberfield",
                             "reference": {
                                 "name": "items",
@@ -303,10 +270,8 @@
                                 "labelAlign": "top",
                                 "name": "amount"
                             },
-                            "customConfigs": [],
                             "cn": [
                                 {
-                                    "id": "ExtBox1-ext-gen4970",
                                     "type": "basiceventbinding",
                                     "reference": {
                                         "name": "listeners",
@@ -336,13 +301,11 @@
                                             "}, single:true});*/"
                                         ],
                                         "name": "focus"
-                                    },
-                                    "customConfigs": []
+                                    }
                                 }
                             ]
                         },
                         {
-                            "id": "ExtBox1-ext-gen25607",
                             "type": "textfield",
                             "reference": {
                                 "name": "items",
@@ -354,15 +317,13 @@
                                 "label": "Notes",
                                 "labelAlign": "top",
                                 "name": "reason"
-                            },
-                            "customConfigs": []
+                            }
                         }
                     ]
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen3716",
             "type": "container",
             "reference": {
                 "name": "items",
@@ -374,10 +335,8 @@
                 "designer|userClassName": "MyContainer8",
                 "style": null
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen7260",
                     "type": "label",
                     "reference": {
                         "name": "items",
@@ -394,11 +353,9 @@
                         "padding": "0 0 8px 8px",
                         "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
                         "styleHtmlCls": null
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen27809",
                     "type": "dataview",
                     "reference": {
                         "name": "items",
@@ -423,8 +380,7 @@
                         "store": "Payments",
                         "useComponents": true,
                         "disableSelection": true
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         }

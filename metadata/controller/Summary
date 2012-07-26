@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen31514",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -13,6 +12,8 @@
             "Summary"
         ]
     },
+    "id": "ExtBox1-ext-gen31514",
+    "designerId": "5ed004d8-012c-4630-9207-238a99ceafdf",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
@@ -20,11 +21,8 @@
             "type": "number"
         }
     ],
-    "designerId": "5ed004d8-012c-4630-9207-238a99ceafdf",
-    "$viewOrder": 1,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen34030",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -46,7 +44,6 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen18077",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -65,11 +62,9 @@
                     "    totalOwed: balance",
                     "});"
                 ]
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen16843",
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -88,11 +83,9 @@
                     "}, this);"
                 ]
             },
-            "customConfigs": [],
             "iconCls": "icon-launch-function"
         },
         {
-            "id": "ExtBox1-ext-gen28313",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -112,8 +105,7 @@
                     "}",
                     "return summaryRecord;"
                 ]
-            },
-            "customConfigs": []
+            }
         }
     ]
 }
