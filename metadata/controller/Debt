@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen43233",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -9,12 +8,10 @@
     "userConfig": {
         "designer|userClassName": "Debt"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen43233",
     "designerId": "9492a36c-015b-4b23-8dad-68f6f48b9841",
-    "$viewOrder": 2,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen43445",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -63,11 +60,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#addDebt"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen43569",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -76,15 +71,13 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "DebtDetail",
+                "autoCreate": true,
                 "ref": "DebtDetail",
                 "selector": "DebtDetail",
-                "xtype": "DebtDetail",
-                "autoCreate": true
-            },
-            "customConfigs": []
+                "xtype": "DebtDetail"
+            }
         },
         {
-            "id": "ExtBox1-ext-gen46395",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -154,11 +147,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveDebt"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen19956",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -184,11 +175,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#cancelDebt"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen16408",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -222,11 +211,9 @@
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myDebtDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen29385",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -237,11 +224,9 @@
                 "designer|userClassName": "myDebtDataView",
                 "ref": "myDebtDataView",
                 "selector": "#myDebtDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen12376",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -305,11 +290,9 @@
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myDebtDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen16447",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -320,11 +303,9 @@
                 "designer|userClassName": "myPaymentDataView",
                 "ref": "myPaymentDataView",
                 "selector": "#myPaymentDataView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen16755",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -335,11 +316,9 @@
                 "designer|userClassName": "addPaymentButton",
                 "ref": "addPaymentButton",
                 "selector": "#addPayment"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen9237",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -365,11 +344,9 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#emailDebt"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen10264",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -380,11 +357,9 @@
                 "designer|userClassName": "emailDebtButton",
                 "ref": "emailDebtButton",
                 "selector": "#emailDebt"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen24341",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -395,11 +370,9 @@
                 "designer|userClassName": "MainView",
                 "ref": "MainView",
                 "selector": "MainView"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen12285",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -410,11 +383,9 @@
                 "designer|userClassName": "addDebtButton",
                 "ref": "addDebtButton",
                 "selector": "#addDebt"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen21758",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -425,11 +396,9 @@
                 "designer|userClassName": "debtHeaderLabel",
                 "ref": "debtHeaderLabel",
                 "selector": "#debtHeaderLabel"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen7389",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -440,11 +409,9 @@
                 "designer|userClassName": "paymentHistoryLabel",
                 "ref": "paymentHistoryLabel",
                 "selector": "#paymentHistoryLabel"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen22603",
             "type": "controllerroute",
             "reference": {
                 "name": "items",
@@ -475,8 +442,7 @@
                     "}"
                 ],
                 "url": "/Debt/:id"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

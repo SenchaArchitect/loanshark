@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen6432",
     "type": "jsresource",
     "reference": {
         "name": "items",
@@ -9,7 +8,6 @@
     "userConfig": {
         "url": "override.js"
     },
-    "customConfigs": [],
-    "designerId": "87119690-45e1-432b-bbc9-b1f91c965bb3",
-    "$viewOrder": 2
+    "id": "ExtBox1-ext-gen6432",
+    "designerId": "87119690-45e1-432b-bbc9-b1f91c965bb3"
 }

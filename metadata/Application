@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2164",
     "type": "application",
     "reference": {
         "name": "items",
@@ -7,7 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "startupImage": "{\n    /*320x460: 'resources/images/splash/loading/Default.png',\n    640x920: 'resources/images/splash/loading/Default@2x.png',\n    768x1004: 'resources/images/splash/loading/Default~ipad',\n    748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/\n}",
         "models": [
             "Person",
             "Payment",
@@ -31,14 +29,11 @@
             "PaymentDetail",
             "myPaymentListItem"
         ],
-        "glossOnIcon": false,
-        "icon": "{\n    57: 'resources/images/splash/icons/Icon.png',\n    72: 'resources/images/splash/icons/Icon~ipad.png',\n    114: 'resources/images/splash/icons/Icon@2x.png',\n    144: 'resources/images/splash/icons/Icon~ipad@2x.png'\n}",
+        "icon": "{\n    57: 'resources/images/splash/icons/Icon.png',\n    72: 'resources/images/splash/icons/Icon~ipad.png',\n    114: 'resources/images/splash/icons/Icon@2x.png',\n    144: 'resources/images/splash/icons/Icon~ipad@2x.png'\n}\n",
+        "isIconPrecomposed": true,
         "name": "Payback",
-        "phoneIcon": "",
-        "phoneStartupScreen": "resources/images/spash/loading/Default.png",
+        "startupImage": "{\n    '320x460': 'resources/images/splash/loading/Default.png',\n    '640x920': 'resources/images/splash/loading/Default@2x.png',\n    '768x1004': 'resources/images/splash/loading/Default~ipad',\n    '748x1024': 'resources/images/splash/loading/Default-Landscape~ipad.png'\n}\n\n\n",
         "statusBarStyle": null,
-        "tabletIcon": null,
-        "tabletStartupScreen": "resources/images/spash/loading/Default~ipad.png",
         "controllers": [
             "Contact",
             "Summary",
@@ -47,19 +42,11 @@
             "Routing"
         ]
     },
-    "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "startupImage",
-            "type": "object"
-        }
-    ],
+    "id": "ExtBox1-ext-gen2164",
     "designerId": "application",
-    "$viewOrder": 0,
     "iconCls": "icon-application",
     "cn": [
         {
-            "id": "ExtBox1-ext-gen12319",
             "type": "loader",
             "reference": {
                 "name": "loader",
@@ -71,7 +58,6 @@
                 "disableCaching": false,
                 "enabled": true
             },
-            "customConfigs": [],
             "iconCls": "icon-loader"
         }
     ]

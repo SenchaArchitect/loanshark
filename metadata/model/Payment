@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen21583",
     "type": "datamodel",
     "reference": {
         "name": "items",
@@ -10,12 +9,10 @@
         "designer|userClassName": "Payment",
         "identifier": "{\n    type: 'uuid'\n}"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen21583",
     "designerId": "5f8fbc87-7f38-40ea-af4e-4e27c41555b7",
-    "$viewOrder": 1,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen21394",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -26,11 +23,9 @@
                 "designer|userClassName": "MyField6",
                 "name": "id",
                 "type": "auto"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen22738",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -40,11 +35,9 @@
             "userConfig": {
                 "designer|userClassName": "MyField8",
                 "name": "debt_id"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen20118",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -55,11 +48,9 @@
                 "designer|userClassName": "MyField3",
                 "name": "amount",
                 "type": "float"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen20523",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -70,11 +61,9 @@
                 "designer|userClassName": "MyField4",
                 "name": "date",
                 "type": "date"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen37448",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -85,11 +74,9 @@
                 "designer|userClassName": "MyField5",
                 "name": "memo",
                 "type": "string"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen15151",
             "type": "localstorageproxy",
             "reference": {
                 "name": "proxy",
@@ -99,11 +86,9 @@
             "userConfig": {
                 "designer|userClassName": "MyLocalStorageProxy1",
                 "id": "Payments"
-            },
-            "customConfigs": []
+            }
         },
         {
-            "id": "ExtBox1-ext-gen23513",
             "type": "belongstoassociation",
             "reference": {
                 "name": "belongsTo",
@@ -115,8 +100,7 @@
                 "designer|displayName": "BelongsToDebt",
                 "model": "Debt",
                 "foreignKey": "debt_id"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

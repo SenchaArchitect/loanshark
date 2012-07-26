@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen25971",
     "type": "formpanel",
     "reference": {
         "name": "items",
@@ -12,12 +11,10 @@
         "minHeight": null,
         "autoDestroy": false
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen25971",
     "designerId": "2b83fda6-da12-4c2f-a259-389ef8f3e683",
-    "$viewOrder": 3,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen25975",
             "type": "titlebar",
             "reference": {
                 "name": "items",
@@ -30,10 +27,8 @@
                 "ui": "light",
                 "title": "Payment Details"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen25985",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -48,13 +43,11 @@
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen25981",
             "type": "toolbar",
             "reference": {
                 "name": "items",
@@ -66,10 +59,8 @@
                 "docked": "bottom",
                 "ui": null
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen25990",
                     "type": "spacer",
                     "reference": {
                         "name": "items",
@@ -78,11 +69,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySpacer"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen25995",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -99,13 +88,11 @@
                         "iconCls": "icon-save",
                         "iconMask": true,
                         "text": "save"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen26002",
             "type": "fieldset",
             "reference": {
                 "name": "items",
@@ -116,10 +103,8 @@
                 "designer|userClassName": "MyFieldSet",
                 "title": null
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen26006",
                     "type": "numberfield",
                     "reference": {
                         "name": "items",
@@ -132,11 +117,9 @@
                         "label": "Amount",
                         "labelAlign": "top",
                         "name": "amount"
-                    },
-                    "customConfigs": []
+                    }
                 },
                 {
-                    "id": "ExtBox1-ext-gen28867",
                     "type": "datepickerfield",
                     "reference": {
                         "name": "items",
@@ -150,10 +133,8 @@
                         "name": "date",
                         "placeHolder": "mm/dd/yyyy"
                     },
-                    "customConfigs": [],
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen28876",
                             "type": "datepicker",
                             "reference": {
                                 "name": "picker",
@@ -163,10 +144,8 @@
                             "userConfig": {
                                 "designer|userClassName": "MyDatePicker"
                             },
-                            "customConfigs": [],
                             "cn": [
                                 {
-                                    "id": "ExtBox1-ext-gen28887",
                                     "type": "button",
                                     "reference": {
                                         "name": "doneButton",
@@ -176,11 +155,9 @@
                                     "userConfig": {
                                         "designer|userClassName": "MyButton7",
                                         "text": "Done"
-                                    },
-                                    "customConfigs": []
+                                    }
                                 },
                                 {
-                                    "id": "ExtBox1-ext-gen28895",
                                     "type": "button",
                                     "reference": {
                                         "name": "cancelButton",
@@ -190,15 +167,13 @@
                                     "userConfig": {
                                         "designer|userClassName": "MyButton8",
                                         "text": "Cancel"
-                                    },
-                                    "customConfigs": []
+                                    }
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen9852",
                     "type": "textfield",
                     "reference": {
                         "name": "items",
@@ -210,13 +185,11 @@
                         "label": "Notes",
                         "labelAlign": "top",
                         "name": "memo"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen5589",
             "type": "hiddenfield",
             "reference": {
                 "name": "items",
@@ -226,8 +199,7 @@
             "userConfig": {
                 "designer|userClassName": "MyHiddenField",
                 "name": "debt_id"
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

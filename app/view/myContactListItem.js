@@ -19,13 +19,6 @@ Ext.define('Payback.view.myContactListItem', {
 
     config: {
         baseCls: 'x-data-item',
-        updateRecord: function(newRecord, oldeRecord) {
-            //this stops propagation of event in deleteButtonTap and allows the record to be deleted from the store
-            this.callParent(arguments);
-
-            newRecord.getData(true);
-            this.child('component').setData(newRecord.data);
-        },
         cls: [
             'x-list-item'
         ],
@@ -43,7 +36,8 @@ Ext.define('Payback.view.myContactListItem', {
                     '{[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}',
                     '</b>',
                     '<br>',
-                    '</div>'
+                    '</div>',
+                    ''
                 ],
                 items: [
                     {
@@ -99,6 +93,8 @@ Ext.define('Payback.view.myContactListItem', {
 
         //update the summary
         Payback.app.application.getController('Payback.controller.Summary').updateSummary();
+
+
     },
 
     updateRecord: function(newRecord, oldeRecord) {
@@ -107,6 +103,7 @@ Ext.define('Payback.view.myContactListItem', {
 
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
+
     }
 
 });

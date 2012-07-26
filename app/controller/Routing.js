@@ -30,12 +30,14 @@ Ext.define('Payback.controller.Routing', {
                 activeitemchange: 'onTabpanelActiveItemChange'
             }
         }
+
     },
 
     onTabpanelActiveItemChange: function(container, value, oldValue, options) {
         this.getApplication().getHistory().add(new Ext.app.Action({
             url: '/' + value.getItemId()
         }), true);
+
     },
 
     gotoTab: function(tabId) {
@@ -45,6 +47,7 @@ Ext.define('Payback.controller.Routing', {
         var tabPanel = this.getMainView(), //uses our Controller Reference
         tabCmp = tabPanel.child('#' + tabId);
         tabPanel.setActiveItem(tabCmp || 0);
+
     }
 
 });

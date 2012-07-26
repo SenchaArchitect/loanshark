@@ -19,12 +19,6 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-    startupImage: {
-        /*320x460: 'resources/images/splash/loading/Default.png',
-        640x920: 'resources/images/splash/loading/Default@2x.png',
-        768x1004: 'resources/images/splash/loading/Default~ipad',
-        748x1024: 'resources/images/splash/loading/Default-Landscape~ipad.png'*/
-    },
     models: [
         'Person',
         'Payment',
@@ -48,17 +42,20 @@ Ext.application({
         'PaymentDetail',
         'myPaymentListItem'
     ],
-    glossOnIcon: false,
     icon: {
         57: 'resources/images/splash/icons/Icon.png',
         72: 'resources/images/splash/icons/Icon~ipad.png',
         114: 'resources/images/splash/icons/Icon@2x.png',
         144: 'resources/images/splash/icons/Icon~ipad@2x.png'
     },
+    isIconPrecomposed: true,
     name: 'Payback',
-    phoneIcon: '',
-    phoneStartupScreen: 'resources/images/spash/loading/Default.png',
-    tabletStartupScreen: 'resources/images/spash/loading/Default~ipad.png',
+    startupImage: {
+        '320x460': 'resources/images/splash/loading/Default.png',
+        '640x920': 'resources/images/splash/loading/Default@2x.png',
+        '768x1004': 'resources/images/splash/loading/Default~ipad',
+        '748x1024': 'resources/images/splash/loading/Default-Landscape~ipad.png'
+    },
     controllers: [
         'Contact',
         'Summary',
@@ -70,6 +67,7 @@ Ext.application({
     launch: function() {
 
         Ext.create('Payback.view.MainView', {fullscreen: true});
+
     }
 
 });

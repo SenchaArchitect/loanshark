@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen3716",
     "type": "store",
     "reference": {
         "name": "items",
@@ -12,7 +11,6 @@
         "model": "Payment",
         "storeId": "Payments"
     },
-    "customConfigs": [],
-    "designerId": "517bbd27-6be2-4dd8-b7d7-5d2ebb2e78f6",
-    "$viewOrder": 2
+    "id": "ExtBox1-ext-gen3716",
+    "designerId": "517bbd27-6be2-4dd8-b7d7-5d2ebb2e78f6"
 }

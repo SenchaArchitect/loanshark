@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2225",
     "type": "tabpanel",
     "reference": {
         "name": "items",
@@ -14,6 +13,8 @@
         "id": null,
         "ui": null
     },
+    "id": "ExtBox1-ext-gen2225",
+    "designerId": "9c7e563e-7ff0-4ba7-9556-9c0d6c286927",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
@@ -21,11 +22,8 @@
             "type": "object"
         }
     ],
-    "designerId": "9c7e563e-7ff0-4ba7-9556-9c0d6c286927",
-    "$viewOrder": 0,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen15360",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -38,6 +36,7 @@
                 "top": null,
                 "title": " "
             },
+            "iconCls": "icon-linkedinstance",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -45,11 +44,9 @@
                     "type": "object"
                 }
             ],
-            "iconCls": "icon-linkedinstance",
             "masterInstanceId": "ExtBox1-ext-gen2239"
         },
         {
-            "id": "ExtBox1-ext-gen50261",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -61,6 +58,7 @@
                 "itemId": "Debt",
                 "title": " "
             },
+            "iconCls": "icon-linkedinstance",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -68,11 +66,9 @@
                     "type": "object"
                 }
             ],
-            "iconCls": "icon-linkedinstance",
             "masterInstanceId": "ExtBox1-ext-gen25568"
         },
         {
-            "id": "ExtBox1-ext-gen51418",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -84,6 +80,7 @@
                 "itemId": "Prey",
                 "title": " "
             },
+            "iconCls": "icon-linkedinstance",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -91,11 +88,9 @@
                     "type": "object"
                 }
             ],
-            "iconCls": "icon-linkedinstance",
             "masterInstanceId": "ExtBox1-ext-gen2255"
         },
         {
-            "id": "ExtBox1-ext-gen2986",
             "type": "tabbar",
             "reference": {
                 "name": "tabBar",
@@ -110,7 +105,6 @@
                 "itemId": "mytabbar",
                 "ui": "light"
             },
-            "customConfigs": [],
             "iconCls": "icon-tab-bar"
         }
     ]

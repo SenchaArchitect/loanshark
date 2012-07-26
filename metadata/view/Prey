@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2255",
     "type": "panel",
     "reference": {
         "name": "items",
@@ -11,12 +10,10 @@
         "designer|userAlias": "Prey",
         "layout": "fit"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen2255",
     "designerId": "dde4c54b-3964-4d6d-927f-dbd7c91717bc",
-    "$viewOrder": 9,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen23993",
             "type": "titlebar",
             "reference": {
                 "name": "items",
@@ -28,10 +25,8 @@
                 "docked": "bottom",
                 "title": null
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen45200",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -49,13 +44,11 @@
                         "iconCls": "icon-add-contact",
                         "iconMask": true,
                         "text": "Add Prey"
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen19269",
             "type": "dataview",
             "reference": {
                 "name": "items",
@@ -74,8 +67,7 @@
                 "store": "People",
                 "useComponents": true,
                 "disableSelection": true
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

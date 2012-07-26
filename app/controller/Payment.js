@@ -23,14 +23,14 @@ Ext.define('Payback.controller.Payment', {
 
         refs: {
             PaymentDetail: {
+                autoCreate: true,
                 selector: 'PaymentDetail',
-                xtype: 'PaymentDetail',
-                autoCreate: true
+                xtype: 'PaymentDetail'
             },
             DebtDetail: {
+                autoCreate: true,
                 selector: 'DebtDetail',
-                xtype: 'DebtDetail',
-                autoCreate: true
+                xtype: 'DebtDetail'
             },
             myPaymentDataView: '#myPaymentDataView',
             debtHeaderLabel: '#debtHeaderLabel'
@@ -51,6 +51,7 @@ Ext.define('Payback.controller.Payment', {
                 itemtap: 'onDataviewItemTap'
             }
         }
+
     },
 
     onAddPaymentTap: function(button, e, options) {
@@ -67,6 +68,7 @@ Ext.define('Payback.controller.Payment', {
 
         //set active item
         Ext.Viewport.setActiveItem(form);
+
     },
 
     onSavePaymentTap: function(button, e, options) {
@@ -111,6 +113,7 @@ Ext.define('Payback.controller.Payment', {
         //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
 
+
     },
 
     onCancelButtonTap: function(button, e, options) {
@@ -118,6 +121,7 @@ Ext.define('Payback.controller.Payment', {
 
         //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
+
     },
 
     onDataviewItemSwipe: function(dataview, index, target, record, e, options) {
@@ -139,6 +143,7 @@ Ext.define('Payback.controller.Payment', {
             target.query('button')[0].hide();
             labels.show();
         }, single:true});
+
     },
 
     onDataviewItemTap: function(dataview, index, target, record, e, options) {
@@ -149,6 +154,7 @@ Ext.define('Payback.controller.Payment', {
 
         //set active item
         Ext.Viewport.setActiveItem(form);
+
     }
 
 });

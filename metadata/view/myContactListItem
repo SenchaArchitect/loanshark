@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen28985",
     "type": "dataitem",
     "reference": {
         "name": "items",
@@ -15,12 +14,10 @@
         ],
         "minHeight": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen28985",
     "designerId": "ed8e32a8-2bee-4972-82cc-60fdcab2e506",
-    "$viewOrder": 6,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen28989",
             "type": "container",
             "reference": {
                 "name": "items",
@@ -32,10 +29,8 @@
                 "baseCls": "x-list-item-label",
                 "itemId": "contactListItemDetail"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen28993",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -55,10 +50,8 @@
                         "iconMask": true,
                         "text": "delete"
                     },
-                    "customConfigs": [],
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen28997",
                             "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
@@ -97,16 +90,15 @@
                                     "dataview.getStore().sync(); //sync with localStorage",
                                     "",
                                     "//update the summary",
-                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
+                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();",
+                                    ""
                                 ],
                                 "name": "tap"
-                            },
-                            "customConfigs": []
+                            }
                         }
                     ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen10082",
                     "type": "template",
                     "reference": {
                         "name": "tpl",
@@ -124,15 +116,14 @@
                             "{[(values.balance<0)?'-':'']}${[Math.abs(values.balance).toFixed(2)]}",
                             "</b>",
                             "<br>",
-                            "</div>"
+                            "</div>",
+                            ""
                         ]
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen29002",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -153,8 +144,7 @@
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
                 ]
-            },
-            "customConfigs": []
+            }
         }
     ]
 }

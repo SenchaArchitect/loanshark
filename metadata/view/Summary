@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2239",
     "type": "container",
     "reference": {
         "name": "items",
@@ -15,12 +14,10 @@
         "layout": "fit",
         "scrollable": false
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen2239",
     "designerId": "d3b832b6-4996-4c75-bb54-57aee2c88185",
-    "$viewOrder": 7,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen11916",
             "type": "image",
             "reference": {
                 "name": "items",
@@ -45,7 +42,6 @@
             ]
         },
         {
-            "id": "ExtBox1-ext-gen12065",
             "type": "component",
             "reference": {
                 "name": "items",
@@ -60,10 +56,8 @@
                 "minHeight": null,
                 "style": "font-weight: bold;font-size:1.5em;background-color:#910002;"
             },
-            "customConfigs": [],
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen11555",
                     "type": "template",
                     "reference": {
                         "name": "tpl",
@@ -75,8 +69,7 @@
                         "implHandler": [
                             "<center style='color:white;padding-top: .43em;padding-bottom: .43em;'>You're Owed: {totalOwed}</center>"
                         ]
-                    },
-                    "customConfigs": []
+                    }
                 }
             ]
         }
