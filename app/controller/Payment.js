@@ -75,6 +75,7 @@ Ext.define('Payback.controller.Payment', {
         Ext.Viewport.setActiveItem(form);
 
 
+
     },
 
     onSavePaymentTap: function(button, e, options) {
@@ -131,6 +132,7 @@ Ext.define('Payback.controller.Payment', {
         Ext.Viewport.setActiveItem(this.getDebtDetail());
 
 
+
     },
 
     onCancelButtonTap: function(button, e, options) {
@@ -138,6 +140,7 @@ Ext.define('Payback.controller.Payment', {
 
         //set active item
         Ext.Viewport.setActiveItem(this.getDebtDetail());
+
 
     },
 
@@ -162,6 +165,7 @@ Ext.define('Payback.controller.Payment', {
             labels.show();
         }, single:true});
 
+
     },
 
     onDataviewItemTap: function(dataview, index, target, record, e, options) {
@@ -172,6 +176,7 @@ Ext.define('Payback.controller.Payment', {
 
         //set active item
         Ext.Viewport.setActiveItem(form);
+
 
     }
 

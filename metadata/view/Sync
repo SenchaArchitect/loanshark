@@ -67,6 +67,7 @@
                                     "Ext.getStore('Payments').sync();",
                                     "",
                                     "",
+                                    "",
                                     ""
                                 ]
                             },
@@ -109,12 +110,19 @@
                                     "event"
                                 ],
                                 "implHandler": [
-                                    "Ext.io.User.getCurrent(",
+                                    "/*Ext.io.User.getCurrent(",
                                     "function(user){",
                                     "    user.logout();",
                                     "} ",
-                                    ");",
-                                    "localStorage.clear();"
+                                    ");*/",
+                                    "",
+                                    "Payback.app.sio.logout();",
+                                    "",
+                                    "localStorage.clear();",
+                                    "",
+                                    "",
+                                    "",
+                                    "Payback.app.sio.showLogin();"
                                 ]
                             },
                             "iconCls": "icon-basic-function"

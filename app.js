@@ -48,7 +48,8 @@ Ext.application({
         'myContactListItem',
         'Debts',
         'PaymentDetail',
-        'myPaymentListItem'
+        'myPaymentListItem',
+        'Prey'
     ],
     icon: {
         57: 'resources/images/splash/icons/Icon.png',
@@ -80,9 +81,23 @@ Ext.application({
         } 
         );*/
 
+        //debugger;
+
+        this.sio.on({
+
+            authorized: {fn: function(){
+                Ext.getStore('People').sync();
+                Ext.getStore('Debts').sync();
+                Ext.getStore('Payments').sync();
+
+            }, scope: this}
+
+            //logout: {fn: function(){
 
 
+            // }, scope: this}
 
+        });   
         Ext.create('Payback.view.MainView', {fullscreen: true});
 
     }

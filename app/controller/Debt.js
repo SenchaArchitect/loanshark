@@ -94,7 +94,6 @@ Ext.define('Payback.controller.Debt', {
         //set active item
         Ext.Viewport.setActiveItem(form);
 
-
     },
 
     onSaveDebtTap: function(button, e, options) {
@@ -160,6 +159,7 @@ Ext.define('Payback.controller.Debt', {
         Ext.Viewport.setActiveItem(this.prevPanel);
 
 
+
     },
 
     onCanelButtonTap: function(button, e, options) {
@@ -174,6 +174,7 @@ Ext.define('Payback.controller.Debt', {
 
         //set active item
         Ext.Viewport.setActiveItem(this.prevPanel);
+
 
     },
 
@@ -196,6 +197,7 @@ Ext.define('Payback.controller.Debt', {
             target.query('button')[0].hide();
             labels.show();
         }, single:true});
+
 
     },
 
@@ -250,6 +252,7 @@ Ext.define('Payback.controller.Debt', {
         } while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
         header.setStyle({'padding-top': (100-textHeight)/2+'px'}); //center text
 
+
     },
 
     onEmailDebtTap: function(button, e, options) {
@@ -264,6 +267,7 @@ Ext.define('Payback.controller.Debt', {
         body = encodeURIComponent("Dear "+name+",\n\nYou owe me $"+record.get('balance')+". Pay soon or my friend Li'l Abe will come pay ya a visit.\n\nSincerely,\n\nYour friendly neighborhood loan shark");
 
         window.location.href = "mailto:"+email+"?subject=" + subject+"&body="+body; 
+
 
     },
 

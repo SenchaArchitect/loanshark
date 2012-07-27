@@ -27,7 +27,8 @@
             "myContactListItem",
             "Debts",
             "PaymentDetail",
-            "myPaymentListItem"
+            "myPaymentListItem",
+            "Prey"
         ],
         "icon": "{\n    57: 'resources/images/splash/icons/Icon.png',\n    72: 'resources/images/splash/icons/Icon~ipad.png',\n    114: 'resources/images/splash/icons/Icon@2x.png',\n    144: 'resources/images/splash/icons/Icon~ipad@2x.png'\n}",
         "name": "Payback",
@@ -86,9 +87,23 @@
                     "} ",
                     ");*/",
                     "",
+                    "//debugger;",
                     "",
-                    "",
-                    ""
+                    "this.sio.on({",
+                    "    ",
+                    "    authorized: {fn: function(){",
+                    "        Ext.getStore('People').sync();",
+                    "        Ext.getStore('Debts').sync();",
+                    "        Ext.getStore('Payments').sync();",
+                    "    ",
+                    "    }, scope: this}",
+                    "    ",
+                    "    //logout: {fn: function(){",
+                    "    ",
+                    "    ",
+                    "   // }, scope: this}",
+                    "    ",
+                    "});   "
                 ]
             },
             "iconCls": "icon-launch-function"

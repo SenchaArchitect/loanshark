@@ -37,6 +37,7 @@ Ext.define('Payback.view.Sync', {
 
 
 
+
                         },
                         cls: 'my-buttons',
                         id: 'syncButton',
@@ -47,12 +48,19 @@ Ext.define('Payback.view.Sync', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
-                            Ext.io.User.getCurrent(
+                            /*Ext.io.User.getCurrent(
                             function(user){
-                                user.logout();
+                            user.logout();
                             } 
-                            );
+                            );*/
+
+                            Payback.app.sio.logout();
+
                             localStorage.clear();
+
+
+
+                            Payback.app.sio.showLogin();
 
                         },
                         cls: 'my-buttons',

@@ -58,6 +58,7 @@
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(form);",
+                    "",
                     ""
                 ],
                 "name": "tap",
@@ -127,6 +128,7 @@
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(this.getDebtDetail());",
+                    "",
                     ""
                 ],
                 "name": "tap",
@@ -148,7 +150,8 @@
                     "this.getPaymentDetail().reset(); //clears form",
                     "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(this.getDebtDetail());"
+                    "Ext.Viewport.setActiveItem(this.getDebtDetail());",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -199,7 +202,8 @@
                     "Ext.Viewport.element.on({tap:function(){",
                     "    target.query('button')[0].hide();",
                     "    labels.show();",
-                    "}, single:true});"
+                    "}, single:true});",
+                    ""
                 ],
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
@@ -223,7 +227,8 @@
                     "form.setRecord(record); //set form record",
                     "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(form);"
+                    "Ext.Viewport.setActiveItem(form);",
+                    ""
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",

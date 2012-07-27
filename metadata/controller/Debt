@@ -55,8 +55,7 @@
                     "}), true);",
                     "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(form);",
-                    ""
+                    "Ext.Viewport.setActiveItem(form);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -149,6 +148,7 @@
                     "",
                     "//set active item",
                     "Ext.Viewport.setActiveItem(this.prevPanel);",
+                    "",
                     ""
                 ],
                 "name": "tap",
@@ -177,7 +177,8 @@
                     "}",
                     "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(this.prevPanel);"
+                    "Ext.Viewport.setActiveItem(this.prevPanel);",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -212,7 +213,8 @@
                     "Ext.Viewport.element.on({tap:function(){",
                     "    target.query('button')[0].hide();",
                     "    labels.show();",
-                    "}, single:true});"
+                    "}, single:true});",
+                    ""
                 ],
                 "element": null,
                 "name": "itemswipe",
@@ -292,7 +294,8 @@
                     "    textWidth = header.innerHtmlElement.getWidth();",
                     "    fontSize = fontSize - 1;",
                     "} while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);",
-                    "header.setStyle({'padding-top': (100-textHeight)/2+'px'}); //center text"
+                    "header.setStyle({'padding-top': (100-textHeight)/2+'px'}); //center text",
+                    ""
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",
@@ -346,7 +349,8 @@
                     "subject = encodeURIComponent(\"Where's my money?!\"),",
                     "body = encodeURIComponent(\"Dear \"+name+\",\\n\\nYou owe me $\"+record.get('balance')+\". Pay soon or my friend Li'l Abe will come pay ya a visit.\\n\\nSincerely,\\n\\nYour friendly neighborhood loan shark\");",
                     "",
-                    "window.location.href = \"mailto:\"+email+\"?subject=\" + subject+\"&body=\"+body; "
+                    "window.location.href = \"mailto:\"+email+\"?subject=\" + subject+\"&body=\"+body; ",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",

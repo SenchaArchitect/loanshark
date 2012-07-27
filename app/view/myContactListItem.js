@@ -95,6 +95,7 @@ Ext.define('Payback.view.myContactListItem', {
         //update the summary
         Payback.app.application.getController('Payback.controller.Summary').updateSummary();
 
+
     },
 
     updateRecord: function(newRecord, oldeRecord) {

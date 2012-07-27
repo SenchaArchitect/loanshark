@@ -90,7 +90,8 @@
                                     "dataview.getStore().sync(); //sync with localStorage",
                                     "",
                                     "//update the summary",
-                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
+                                    "Payback.app.application.getController('Payback.controller.Summary').updateSummary();",
+                                    ""
                                 ],
                                 "name": "tap"
                             }
