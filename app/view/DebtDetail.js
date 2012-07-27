@@ -101,23 +101,6 @@ Ext.define('Payback.view.DebtDetail', {
                                 valueField: 'id'
                             },
                             {
-                                xtype: 'datepickerfield',
-                                label: 'Date',
-                                labelAlign: 'top',
-                                name: 'date',
-                                picker: {
-                                    ui: 'dark',
-                                    doneButton: {
-                                        cls: 'my-buttons',
-                                        ui: 'gray-button'
-                                    },
-                                    cancelButton: {
-                                        cls: 'my-buttons',
-                                        ui: 'gray-light-button'
-                                    }
-                                }
-                            },
-                            {
                                 xtype: 'numberfield',
                                 itemId: 'mynumberfield',
                                 label: 'Original Loan Amount',

@@ -47,7 +47,7 @@
                     "form.setRecord(null); //clears record from form",
                     "",
                     "//sets date field to today",
-                    "form.down('datepickerfield').setValue(new Date());",
+                    "//form.down('datepickerfield').setValue(new Date());",
                     "",
                     "form.setValues({debt_id:this.getDebtDetail().getRecord().get('id')});",
                     "",
@@ -57,7 +57,8 @@
                     "//}), true);",
                     "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(form);"
+                    "Ext.Viewport.setActiveItem(form);",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",

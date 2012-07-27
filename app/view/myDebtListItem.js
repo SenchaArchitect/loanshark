@@ -30,7 +30,7 @@ Ext.define('Payback.view.myDebtListItem', {
                 tpl: [
                     '<div>   ',
                     '<div>',
-                    '<!--span style=\'color:#777\'>{[Ext.Date.format(values.date,\'m/d\')]}</span-->&nbsp;&nbsp;&nbsp;',
+                    '&nbsp;&nbsp;&nbsp;',
                     '<span class=\'debt-person-label\'><tpl for="Person">{name}</tpl></span>',
                     '<b class=\'money-label\' style=\'float: right;color:red;font-size: .9em;\'> Loan: {[(values.amount<0)?\'-\':\'\']}${[Math.abs(values.amount).toFixed(2)]}</b>',
                     '</div>',
@@ -40,6 +40,7 @@ Ext.define('Payback.view.myDebtListItem', {
                     '<b class=\'money-label\' style=\'float: right;color:orange;clear:both;\'>Balance: {[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}</b>',
                     '</div>',
                     '</div>',
+                    '',
                     ''
                 ],
                 items: [
@@ -106,6 +107,7 @@ Ext.define('Payback.view.myDebtListItem', {
 
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
+
 
     }
 

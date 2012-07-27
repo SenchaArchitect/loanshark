@@ -31,9 +31,9 @@ Ext.define('Payback.view.myPaymentListItem', {
                     '<div>',
                     '',
                     '<span>{[(values.amount<0)?\'-\':\'\']}${[Math.abs(values.amount).toFixed(2)]}</span>',
-                    '<!--span class=\'money-label\' style=\'float:right;color:#555;font-size:15px;\'>{[Ext.Date.format(values.date,\'m/d\')]}</span-->',
                     '',
                     '</div>',
+                    '',
                     ''
                 ],
                 items: [
@@ -87,6 +87,7 @@ Ext.define('Payback.view.myPaymentListItem', {
         //refresh DataView
         //dataview.refresh();
 
+
     },
 
     updateRecord: function(newRecord, oldeRecord) {
@@ -95,6 +96,7 @@ Ext.define('Payback.view.myPaymentListItem', {
 
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
+
 
     }
 

@@ -27,7 +27,7 @@
                     "form.setRecord(null); //remove record from form",
                     "",
                     "//sets date field to today",
-                    "form.down('datepickerfield').setValue(new Date());",
+                    "//form.down('datepickerfield').setValue(new Date());",
                     "",
                     "//clears filter placed on Payment store",
                     "Ext.getStore('Payments').clearFilter();",
@@ -55,7 +55,8 @@
                     "}), true);",
                     "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(form);"
+                    "Ext.Viewport.setActiveItem(form);",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -147,7 +148,8 @@
                     "}), true);",
                     "",
                     "//set active item",
-                    "Ext.Viewport.setActiveItem(this.prevPanel);"
+                    "Ext.Viewport.setActiveItem(this.prevPanel);",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",

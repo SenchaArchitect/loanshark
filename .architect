@@ -3,7 +3,7 @@
         "data": false,
         "model": false,
         "component": true,
-        "controller": false,
+        "controller": true,
         "resource": true,
         "d2bdb0dd-5320-4693-8b47-e897fdfdca71": {
             "id": "ExtBox1-ext-gen17065",
@@ -138,26 +138,6 @@
                                     "expanded": true
                                 },
                                 {
-                                    "id": "ExtBox1-ext-gen1794",
-                                    "expanded": true,
-                                    "cn": [
-                                        {
-                                            "id": "ExtBox1-ext-gen1795",
-                                            "expanded": true,
-                                            "cn": [
-                                                {
-                                                    "id": "ExtBox1-ext-gen1796",
-                                                    "expanded": true
-                                                },
-                                                {
-                                                    "id": "ExtBox1-ext-gen1797",
-                                                    "expanded": true
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
                                     "id": "ExtBox1-ext-gen1802",
                                     "expanded": true,
                                     "cn": [
@@ -257,7 +237,7 @@
         },
         "6b64fea3-fb57-452e-b0ba-77daa643ebf5": {
             "id": "ExtBox1-ext-gen7771",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen1822",
@@ -289,7 +269,7 @@
         },
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
             "id": "ExtBox1-ext-gen2225",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen1828",
@@ -356,26 +336,6 @@
                             ]
                         },
                         {
-                            "id": "ExtBox1-ext-gen1849",
-                            "expanded": true,
-                            "cn": [
-                                {
-                                    "id": "ExtBox1-ext-gen1850",
-                                    "expanded": true,
-                                    "cn": [
-                                        {
-                                            "id": "ExtBox1-ext-gen1851",
-                                            "expanded": true
-                                        },
-                                        {
-                                            "id": "ExtBox1-ext-gen1852",
-                                            "expanded": true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "id": "ExtBox1-ext-gen1857",
                             "expanded": true
                         }
@@ -389,7 +349,7 @@
         },
         "ed8e32a8-2bee-4972-82cc-60fdcab2e506": {
             "id": "ExtBox1-ext-gen28985",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen1859",
@@ -719,7 +679,7 @@
         },
         "9492a36c-015b-4b23-8dad-68f6f48b9841": {
             "id": "ExtBox1-ext-gen43233",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen1897",

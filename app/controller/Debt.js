@@ -64,7 +64,7 @@ Ext.define('Payback.controller.Debt', {
         form.setRecord(null); //remove record from form
 
         //sets date field to today
-        form.down('datepickerfield').setValue(new Date());
+        //form.down('datepickerfield').setValue(new Date());
 
         //clears filter placed on Payment store
         Ext.getStore('Payments').clearFilter();
@@ -93,6 +93,7 @@ Ext.define('Payback.controller.Debt', {
 
         //set active item
         Ext.Viewport.setActiveItem(form);
+
 
     },
 
@@ -157,6 +158,7 @@ Ext.define('Payback.controller.Debt', {
 
         //set active item
         Ext.Viewport.setActiveItem(this.prevPanel);
+
 
     },
 

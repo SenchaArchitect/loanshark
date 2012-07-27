@@ -198,65 +198,6 @@
                             }
                         },
                         {
-                            "type": "datepickerfield",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MyDateField1",
-                                "label": "Date",
-                                "labelAlign": "top",
-                                "name": "date"
-                            },
-                            "cn": [
-                                {
-                                    "type": "datepicker",
-                                    "reference": {
-                                        "name": "picker",
-                                        "type": "object"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "designer|userClassName": "MyDatePicker1",
-                                        "style": null,
-                                        "ui": "dark"
-                                    },
-                                    "cn": [
-                                        {
-                                            "type": "button",
-                                            "reference": {
-                                                "name": "doneButton",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "designer|userClassName": "MyButton9",
-                                                "cls": "my-buttons",
-                                                "ui": "gray-button",
-                                                "text": "Done"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "reference": {
-                                                "name": "cancelButton",
-                                                "type": "object"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "designer|userClassName": "MyButton10",
-                                                "cls": "my-buttons",
-                                                "ui": "gray-light-button",
-                                                "text": "Cancel"
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "type": "numberfield",
                             "reference": {
                                 "name": "items",

@@ -67,7 +67,8 @@
                     "userConfig": {
                         "designer|userClassName": "tpl",
                         "implHandler": [
-                            "<center style='color:white;padding-top: .43em;padding-bottom: .43em;'>You're Owed: {totalOwed}</center>"
+                            "<center style='color:white;padding-top: .43em;padding-bottom: .43em;'>You're Owed: {totalOwed}</center>",
+                            ""
                         ]
                     }
                 }

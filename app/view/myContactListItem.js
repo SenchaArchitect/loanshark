@@ -37,6 +37,7 @@ Ext.define('Payback.view.myContactListItem', {
                     '</b>',
                     '<br>',
                     '</div>',
+                    '',
                     ''
                 ],
                 items: [
@@ -102,6 +103,7 @@ Ext.define('Payback.view.myContactListItem', {
 
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
+
 
 
     }

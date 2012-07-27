@@ -154,60 +154,6 @@
                     ]
                 },
                 {
-                    "type": "datepickerfield",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyDateField",
-                        "label": "Date",
-                        "labelAlign": "top",
-                        "name": "date",
-                        "placeHolder": "mm/dd/yyyy"
-                    },
-                    "cn": [
-                        {
-                            "type": "datepicker",
-                            "reference": {
-                                "name": "picker",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "MyDatePicker"
-                            },
-                            "cn": [
-                                {
-                                    "type": "button",
-                                    "reference": {
-                                        "name": "doneButton",
-                                        "type": "object"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "designer|userClassName": "MyButton7",
-                                        "text": "Done"
-                                    }
-                                },
-                                {
-                                    "type": "button",
-                                    "reference": {
-                                        "name": "cancelButton",
-                                        "type": "object"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "designer|userClassName": "MyButton8",
-                                        "text": "Cancel"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
                     "type": "textfield",
                     "reference": {
                         "name": "items",
