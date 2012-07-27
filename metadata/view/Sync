@@ -64,7 +64,10 @@
                                     "//this may take longer then expected",
                                     "Ext.getStore('People').sync();",
                                     "Ext.getStore('Debts').sync();",
-                                    "Ext.getStore('Payments').sync();"
+                                    "Ext.getStore('Payments').sync();",
+                                    "",
+                                    "",
+                                    ""
                                 ]
                             },
                             "iconCls": "icon-basic-function"
@@ -85,7 +88,7 @@
                         "id": "logoutButton",
                         "itemId": null,
                         "ui": null,
-                        "iconAlign": null,
+                        "iconAlign": "right",
                         "iconCls": "delete",
                         "iconMask": true,
                         "text": "Add Prey"
@@ -106,10 +109,12 @@
                                     "event"
                                 ],
                                 "implHandler": [
-                                    "//this may take longer then expected",
-                                    "Ext.getStore('People').sync();",
-                                    "Ext.getStore('Debts').sync();",
-                                    "Ext.getStore('Payments').sync();"
+                                    "Ext.io.User.getCurrent(",
+                                    "function(user){",
+                                    "    user.logout();",
+                                    "} ",
+                                    ");",
+                                    "localStorage.clear();"
                                 ]
                             },
                             "iconCls": "icon-basic-function"

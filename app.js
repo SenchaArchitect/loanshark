@@ -26,7 +26,7 @@ Ext.application({
     io: {
         appId: 'P4sx9af4tlTYSzMsZ7HeLXgxi1V',
         appSecret: 'xLNaMluepda4oFYH',
-        logLevel: 'debug'
+        //logLevel: 'debug'
     },
     models: [
         'Person',
@@ -79,6 +79,8 @@ Ext.application({
         user.logout();
         } 
         );*/
+
+
 
 
         Ext.create('Payback.view.MainView', {fullscreen: true});

@@ -81,7 +81,7 @@ Ext.define('Payback.model.Payment', {
         },
         {
             name: 'date',
-            type: 'date'
+            //type: 'date'
         },
         {
             name: 'memo',
@@ -138,7 +138,7 @@ Ext.define('Payback.model.Debt', {
         },
         {
             name: 'date',
-            type: 'date'
+            //type: 'date'
         },
         {
             name: 'person_id'

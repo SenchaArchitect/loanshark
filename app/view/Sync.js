@@ -34,6 +34,9 @@ Ext.define('Payback.view.Sync', {
                             Ext.getStore('Debts').sync();
                             Ext.getStore('Payments').sync();
 
+
+
+
                         },
                         cls: 'my-buttons',
                         id: 'syncButton',
@@ -44,14 +47,17 @@ Ext.define('Payback.view.Sync', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
-                            //this may take longer then expected
-                            Ext.getStore('People').sync();
-                            Ext.getStore('Debts').sync();
-                            Ext.getStore('Payments').sync();
+                            Ext.io.User.getCurrent(
+                            function(user){
+                                user.logout();
+                            } 
+                            );
+                            localStorage.clear();
 
                         },
                         cls: 'my-buttons',
                         id: 'logoutButton',
+                        iconAlign: 'right',
                         iconCls: 'delete',
                         iconMask: true,
                         text: 'Add Prey'

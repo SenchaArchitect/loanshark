@@ -36,7 +36,8 @@ Ext.define('Payback.view.myContactListItem', {
                     '{[(values.balance<0)?\'-\':\'\']}${[Math.abs(values.balance).toFixed(2)]}',
                     '</b>',
                     '<br>',
-                    '</div>'
+                    '</div>',
+                    ''
                 ],
                 items: [
                     {
@@ -101,6 +102,7 @@ Ext.define('Payback.view.myContactListItem', {
 
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
+
 
     }
 

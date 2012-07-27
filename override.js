@@ -60,3 +60,4 @@ if (Ext.os.is.Android4 && Ext.browser.is.Chrome) {
         }
     });
 }
+

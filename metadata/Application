@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "io": "{\n    appId: \"P4sx9af4tlTYSzMsZ7HeLXgxi1V\",\n    appSecret: \"xLNaMluepda4oFYH\",\n    logLevel: \"debug\"\n}   ",
+        "io": "{\n    appId: \"P4sx9af4tlTYSzMsZ7HeLXgxi1V\",\n    appSecret: \"xLNaMluepda4oFYH\",\n    //logLevel: \"debug\"\n}   \n\n\n\n",
         "models": [
             "Person",
             "Payment",
@@ -85,6 +85,8 @@
                     "user.logout();",
                     "} ",
                     ");*/",
+                    "",
+                    "",
                     "",
                     ""
                 ]
