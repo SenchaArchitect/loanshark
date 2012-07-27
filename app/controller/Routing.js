@@ -40,6 +40,7 @@ Ext.define('Payback.controller.Routing', {
             url: '/' + value.getItemId()
         }), true);
 
+
     },
 
     gotoTab: function(tabId) {

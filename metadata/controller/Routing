@@ -64,7 +64,8 @@
                     "//this method and even controller should be added to one of the other controllers",
                     "this.getApplication().getHistory().add(new Ext.app.Action({",
                     "    url: '/' + value.getItemId()",
-                    "}), true);"
+                    "}), true);",
+                    ""
                 ],
                 "name": "activeitemchange",
                 "designer|targetType": "Ext.tab.Panel",
