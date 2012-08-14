@@ -7,7 +7,11 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Payment",
-        "identifier": "{\n    type: 'uuid'\n}"
+        "identifier": [
+            "{",
+            "    type: 'uuid'",
+            "}"
+        ]
     },
     "id": "ExtBox1-ext-gen21583",
     "designerId": "5f8fbc87-7f38-40ea-af4e-4e27c41555b7",
@@ -23,7 +27,8 @@
                 "designer|userClassName": "MyField6",
                 "name": "id",
                 "type": "auto"
-            }
+            },
+            "designerId": "26878ecc-6d5a-45aa-95e3-25683e700457"
         },
         {
             "type": "datafield",
@@ -35,7 +40,8 @@
             "userConfig": {
                 "designer|userClassName": "MyField8",
                 "name": "debt_id"
-            }
+            },
+            "designerId": "4626a5d6-0cd7-4cca-ac4b-dad445a4eb47"
         },
         {
             "type": "datafield",
@@ -48,7 +54,8 @@
                 "designer|userClassName": "MyField3",
                 "name": "amount",
                 "type": "float"
-            }
+            },
+            "designerId": "67f09ffe-46ec-4033-ba89-780451b2adb3"
         },
         {
             "type": "datafield",
@@ -61,7 +68,8 @@
                 "designer|userClassName": "MyField4",
                 "name": "date",
                 "type": "date"
-            }
+            },
+            "designerId": "cd556de8-21ac-4f6c-a7d8-429da25992fd"
         },
         {
             "type": "datafield",
@@ -74,7 +82,8 @@
                 "designer|userClassName": "MyField5",
                 "name": "memo",
                 "type": "string"
-            }
+            },
+            "designerId": "cc003acc-a5c8-4b0b-b5f9-e2ae44205422"
         },
         {
             "type": "localstorageproxy",
@@ -86,7 +95,8 @@
             "userConfig": {
                 "designer|userClassName": "MyLocalStorageProxy1",
                 "id": "Payments"
-            }
+            },
+            "designerId": "e17d93d4-cc20-4c8d-bef3-9bbbc3096370"
         },
         {
             "type": "belongstoassociation",
@@ -100,7 +110,8 @@
                 "designer|displayName": "BelongsToDebt",
                 "model": "Debt",
                 "foreignKey": "debt_id"
-            }
+            },
+            "designerId": "98b45ae2-f23c-419d-845c-c714b481bf23"
         }
     ]
 }

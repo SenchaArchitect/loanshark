@@ -27,6 +27,7 @@
                 "ui": "light",
                 "title": "Payment Details"
             },
+            "designerId": "776996f2-69f6-4ef4-bf36-1976468a865d",
             "cn": [
                 {
                     "type": "button",
@@ -43,7 +44,8 @@
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
-                    }
+                    },
+                    "designerId": "036c6d06-63a9-483b-a8ea-66e5364b8b35"
                 }
             ]
         },
@@ -59,6 +61,7 @@
                 "docked": "bottom",
                 "ui": null
             },
+            "designerId": "d82c5389-9b5d-461d-b7bd-6529abf19c4c",
             "cn": [
                 {
                     "type": "spacer",
@@ -69,7 +72,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySpacer"
-                    }
+                    },
+                    "designerId": "3ab5ff35-a236-45dc-b384-c4c1206291a5"
                 },
                 {
                     "type": "button",
@@ -88,7 +92,8 @@
                         "iconCls": "icon-save",
                         "iconMask": true,
                         "text": "save"
-                    }
+                    },
+                    "designerId": "ce440b95-220c-4d01-b360-f46ecf330e5e"
                 }
             ]
         },
@@ -103,6 +108,7 @@
                 "designer|userClassName": "MyFieldSet",
                 "title": null
             },
+            "designerId": "de876203-c9c0-42ac-b7dd-ef30728a420b",
             "cn": [
                 {
                     "type": "numberfield",
@@ -117,7 +123,8 @@
                         "label": "Amount",
                         "labelAlign": "top",
                         "name": "amount"
-                    }
+                    },
+                    "designerId": "bcbbf053-cdd7-48c7-9f4f-cc1577c17aeb"
                 },
                 {
                     "type": "datepickerfield",
@@ -133,6 +140,7 @@
                         "name": "date",
                         "placeHolder": "mm/dd/yyyy"
                     },
+                    "designerId": "3a47fae4-01cd-4fec-8e20-21f59600f28d",
                     "cn": [
                         {
                             "type": "datepicker",
@@ -144,6 +152,7 @@
                             "userConfig": {
                                 "designer|userClassName": "MyDatePicker"
                             },
+                            "designerId": "75c0b50b-c447-46c2-afe7-6797a9db0ec1",
                             "cn": [
                                 {
                                     "type": "button",
@@ -155,7 +164,8 @@
                                     "userConfig": {
                                         "designer|userClassName": "MyButton7",
                                         "text": "Done"
-                                    }
+                                    },
+                                    "designerId": "2c46828c-d20c-47ac-924b-8993654a8c99"
                                 },
                                 {
                                     "type": "button",
@@ -167,7 +177,8 @@
                                     "userConfig": {
                                         "designer|userClassName": "MyButton8",
                                         "text": "Cancel"
-                                    }
+                                    },
+                                    "designerId": "7c07b3ca-8d2a-41e2-8e81-1fe8cb3a7f68"
                                 }
                             ]
                         }
@@ -185,7 +196,8 @@
                         "label": "Notes",
                         "labelAlign": "top",
                         "name": "memo"
-                    }
+                    },
+                    "designerId": "74272504-61bf-4fbc-82b3-6bd9c712110e"
                 }
             ]
         },
@@ -199,7 +211,8 @@
             "userConfig": {
                 "designer|userClassName": "MyHiddenField",
                 "name": "debt_id"
-            }
+            },
+            "designerId": "462bc337-73d2-404a-8919-a66b9b2d0217"
         }
     ]
 }

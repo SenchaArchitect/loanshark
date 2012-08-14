@@ -53,7 +53,8 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#addContact"
-            }
+            },
+            "designerId": "f912e989-8fa1-4087-8cf3-b2f34b8732a2"
         },
         {
             "type": "controlleraction",
@@ -102,7 +103,8 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveContact"
-            }
+            },
+            "designerId": "86550dfa-27fd-4bec-9e73-5e8e859290a8"
         },
         {
             "type": "controlleraction",
@@ -129,7 +131,8 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#cancelContact"
-            }
+            },
+            "designerId": "c309b35f-3547-4af3-9873-92d10627a20c"
         },
         {
             "type": "controlleraction",
@@ -164,7 +167,8 @@
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myContactDataView"
-            }
+            },
+            "designerId": "40b16ff5-0ef6-4fac-9b36-16e77204199b"
         },
         {
             "type": "controllerref",
@@ -179,7 +183,8 @@
                 "ref": "ContactDetail",
                 "selector": "ContactDetail",
                 "xtype": "ContactDetail"
-            }
+            },
+            "designerId": "17b18bd4-bed7-44f0-8405-acb7d5680060"
         },
         {
             "type": "controlleraction",
@@ -243,7 +248,8 @@
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
                 "designer|controlQuery": "#myContactDataView"
-            }
+            },
+            "designerId": "b061cea5-50f9-49c1-94b6-124c1a09284f"
         },
         {
             "type": "controllerref",
@@ -256,7 +262,8 @@
                 "designer|userClassName": "myContactDataView",
                 "ref": "myContactDataView",
                 "selector": "#myContactDataView"
-            }
+            },
+            "designerId": "16ca7c33-3acb-494a-9790-b09c2214c579"
         },
         {
             "type": "controllerref",
@@ -269,7 +276,8 @@
                 "designer|userClassName": "myDebtDataView",
                 "ref": "myDebtDataView",
                 "selector": "#myDebtDataView"
-            }
+            },
+            "designerId": "2142bc08-1796-4ebf-b951-9c9022c4a5a9"
         },
         {
             "type": "controllerref",
@@ -282,7 +290,8 @@
                 "designer|userClassName": "contactHeaderLabel",
                 "ref": "contactHeaderLabel",
                 "selector": "#contactHeaderLabel"
-            }
+            },
+            "designerId": "464e6b15-f892-4962-86f2-1862473d1ee8"
         },
         {
             "type": "controllerref",
@@ -295,7 +304,8 @@
                 "designer|userClassName": "loanHistoryLabel",
                 "ref": "loanHistoryLabel",
                 "selector": "#loanHistoryLabel"
-            }
+            },
+            "designerId": "dda033d4-67fa-45f7-83aa-15604b709f80"
         },
         {
             "type": "controllerref",
@@ -308,7 +318,8 @@
                 "designer|userClassName": "addContactButton",
                 "ref": "addContactButton",
                 "selector": "#addContact"
-            }
+            },
+            "designerId": "4e3bb212-dff7-4f6e-b136-ef8f3bf262ea"
         },
         {
             "type": "controllerref",
@@ -321,7 +332,8 @@
                 "designer|userClassName": "MainView",
                 "ref": "MainView",
                 "selector": "MainView"
-            }
+            },
+            "designerId": "eebea3e9-deec-452f-be72-f45cacf164b4"
         },
         {
             "type": "controllerroute",
@@ -354,7 +366,8 @@
                     "}"
                 ],
                 "url": "/Prey/:id"
-            }
+            },
+            "designerId": "e881ac87-6e14-4684-a0ba-a35ee8cc8caf"
         }
     ]
 }

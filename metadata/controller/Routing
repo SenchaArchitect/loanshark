@@ -33,7 +33,8 @@
                     "tabPanel.setActiveItem(tabCmp || 0);"
                 ],
                 "url": "/:tabId"
-            }
+            },
+            "designerId": "c7cf6907-eb75-4538-a0c0-f53ba521ccc6"
         },
         {
             "type": "controllerref",
@@ -46,7 +47,8 @@
                 "designer|userClassName": "MainView",
                 "ref": "MainView",
                 "selector": ">tabpanel"
-            }
+            },
+            "designerId": "9324accb-8271-4266-865d-fe70c2bb5eda"
         },
         {
             "type": "controlleraction",
@@ -66,7 +68,8 @@
                 "name": "activeitemchange",
                 "designer|targetType": "Ext.tab.Panel",
                 "designer|controlQuery": "tabpanel"
-            }
+            },
+            "designerId": "b30a011c-9c05-43a5-9299-99e65d47cd48"
         }
     ]
 }

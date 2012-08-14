@@ -31,12 +31,20 @@
             },
             "codeClass": null,
             "userConfig": {
-                "tab": "{\n    iconCls: 'icon-home',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
+                "tab": [
+                    "{",
+                    "    iconCls: 'icon-home',",
+                    "    iconMask: true,",
+                    "    baseCls: 'x-button',",
+                    "    flex: 1,",
+                    "    iconAlign: 'center'",
+                    "}"
+                ],
                 "itemId": "Summary",
                 "top": null,
                 "title": " "
             },
-            "iconCls": "icon-linkedinstance",
+            "designerId": "f184594f-2bb8-4c9a-a5f7-2cb9cc50695e",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -54,11 +62,19 @@
             },
             "codeClass": null,
             "userConfig": {
-                "tab": "{\n    iconCls: 'icon-debt',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
+                "tab": [
+                    "{",
+                    "    iconCls: 'icon-debt',",
+                    "    iconMask: true,",
+                    "    baseCls: 'x-button',",
+                    "    flex: 1,",
+                    "    iconAlign: 'center'",
+                    "}"
+                ],
                 "itemId": "Debt",
                 "title": " "
             },
-            "iconCls": "icon-linkedinstance",
+            "designerId": "bf4d50d7-93f8-479b-9a1c-2c2c6afed755",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -76,11 +92,19 @@
             },
             "codeClass": null,
             "userConfig": {
-                "tab": "{\n    iconCls: 'icon-contacts',\n    iconMask: true,\n    baseCls: 'x-button',\n    flex: 1,\n    iconAlign: 'center'\n}",
+                "tab": [
+                    "{",
+                    "    iconCls: 'icon-contacts',",
+                    "    iconMask: true,",
+                    "    baseCls: 'x-button',",
+                    "    flex: 1,",
+                    "    iconAlign: 'center'",
+                    "}"
+                ],
                 "itemId": "Prey",
                 "title": " "
             },
-            "iconCls": "icon-linkedinstance",
+            "designerId": "14706eb5-08e6-4df5-8e19-680300a97c2d",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -105,7 +129,7 @@
                 "itemId": "mytabbar",
                 "ui": "light"
             },
-            "iconCls": "icon-tab-bar"
+            "designerId": "d7b91b3f-e083-445a-90f3-e3b9951ccf04"
         }
     ]
 }

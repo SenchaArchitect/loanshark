@@ -29,6 +29,7 @@
                 "baseCls": "x-list-item-label",
                 "itemId": "paymentListItemDetail"
             },
+            "designerId": "021348e9-fc07-42d0-9a08-6cb507cfc09b",
             "cn": [
                 {
                     "type": "button",
@@ -50,6 +51,7 @@
                         "iconMask": true,
                         "text": "delete"
                     },
+                    "designerId": "d0c3293e-085c-4091-a2d3-65b5a84a4f2d",
                     "cn": [
                         {
                             "type": "basiceventbinding",
@@ -86,7 +88,8 @@
                                     "Payback.app.application.getController('Payback.controller.Summary').updateSummary();"
                                 ],
                                 "name": "tap"
-                            }
+                            },
+                            "designerId": "2d3fc8e7-f3e7-4abc-94fc-bc8206c0d46e"
                         }
                     ]
                 },
@@ -107,7 +110,8 @@
                             "",
                             "</div>"
                         ]
-                    }
+                    },
+                    "designerId": "e1174985-df25-4ceb-93c7-177d12442209"
                 }
             ]
         },
@@ -132,7 +136,8 @@
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
                 ]
-            }
+            },
+            "designerId": "bc1f9f41-5686-4bdf-a8d0-e6a84b941388"
         }
     ]
 }

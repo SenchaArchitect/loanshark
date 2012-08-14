@@ -33,6 +33,7 @@
                 "width": null,
                 "src": "resources/images/sharky.png"
             },
+            "designerId": "4d4b85b5-ffe2-4f8c-9de0-831b8f0f4338",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -56,6 +57,7 @@
                 "minHeight": null,
                 "style": "font-weight: bold;font-size:1.5em;background-color:#910002;"
             },
+            "designerId": "57f731de-13aa-452d-8afc-c712122443aa",
             "cn": [
                 {
                     "type": "template",
@@ -69,7 +71,8 @@
                         "implHandler": [
                             "<center style='color:white;padding-top: .43em;padding-bottom: .43em;'>You're Owed: {totalOwed}</center>"
                         ]
-                    }
+                    },
+                    "designerId": "ecb2d65a-909c-4c7b-a55e-80118b2a32d3"
                 }
             ]
         }

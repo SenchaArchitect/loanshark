@@ -15,7 +15,7 @@
         "appName": "MyApp"
     },
     "xdsVersion": "2.0.0",
-    "xdsBuild": 550,
+    "xdsBuild": 575,
     "schemaVersion": 1,
     "upgradeVersion": 210000000495,
     "framework": "touch20",

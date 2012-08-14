@@ -29,6 +29,7 @@
                 "baseCls": "x-list-item-label",
                 "itemId": "debtListItemDetail"
             },
+            "designerId": "e182b6dc-9b37-4657-b2c1-2ed557ef92a1",
             "cn": [
                 {
                     "type": "button",
@@ -51,6 +52,7 @@
                         "iconMask": true,
                         "text": "delete"
                     },
+                    "designerId": "c7f2953c-77f8-4a81-8834-87f8e71cd180",
                     "cn": [
                         {
                             "type": "basiceventbinding",
@@ -94,7 +96,8 @@
                                     "dataview.refresh();"
                                 ],
                                 "name": "tap"
-                            }
+                            },
+                            "designerId": "01b68854-7c82-4f2f-8e42-6ba98a8b6013"
                         }
                     ]
                 },
@@ -121,7 +124,8 @@
                             "</div>",
                             "</div>"
                         ]
-                    }
+                    },
+                    "designerId": "d27da4e3-3cc8-48d9-961a-abc4e2fe5c54"
                 }
             ]
         },
@@ -145,7 +149,8 @@
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
                 ]
-            }
+            },
+            "designerId": "216e6096-231e-4ef8-86bb-2784b540264c"
         }
     ]
 }

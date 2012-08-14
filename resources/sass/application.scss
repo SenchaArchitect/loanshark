@@ -31,8 +31,8 @@ $form-input-color: white;
 @include sencha-form;
 @include sencha-msgbox;
 @include sencha-loading-spinner;
-@include sencha-draw;
-@include sencha-charts;
+//@include sencha-draw;
+//@include sencha-charts;
 
 @include custom-pictos-iconmask('icon-contacts');
 @include custom-pictos-iconmask('icon-debt');
@@ -87,12 +87,14 @@ body {
 	height: 7px;
 	background-color: red;
 }
-.x-tabbar {
+.x-tabbar,.x-title .x-innerhtml {
 	padding: 0 !important;
 
 }
+
 .x-tabbar-inner {
-	position: relative;top: 1px;
+	position: relative;
+	top: 1px;
 }
 .x-list-item {
 	border-bottom: 1px solid #333;
@@ -166,6 +168,7 @@ body {
 	background: url('../images/clear_icon.png') no-repeat !important;
 	margin: 0.1em !important;
 	margin-top: -.7em !important;
+	background-size: 55% 55% !important;
 }
 .x-picker-bar {
 	background-color: rgba(50, 50, 50, 0.3);
@@ -181,4 +184,8 @@ body {
 	background-color: #33B5E5 !important;
 	border-radius: 0 !important;
 	-webkit-border-radius: 0 !important;
+}
+
+.x-selectmark-base, .x-field-select .x-component-outer::after {
+	top: 75%;
 }

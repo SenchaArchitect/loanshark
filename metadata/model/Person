@@ -7,7 +7,11 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Person",
-        "identifier": "{\n    type: 'uuid'\n}"
+        "identifier": [
+            "{",
+            "    type: 'uuid'",
+            "}"
+        ]
     },
     "id": "ExtBox1-ext-gen21470",
     "designerId": "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51",
@@ -29,7 +33,8 @@
             "userConfig": {
                 "designer|userClassName": "MyLocalStorageProxy",
                 "id": "Person"
-            }
+            },
+            "designerId": "8cbf9d6c-e2cb-40ad-8510-6a7f94c0d2cd"
         },
         {
             "type": "hasmanyassociation",
@@ -45,8 +50,14 @@
                 "autoLoad": true,
                 "foreignKey": "person_id",
                 "name": "debts",
-                "store": "{\n     remoteFilter: false,\n     modelDefaults: null\n}"
-            }
+                "store": [
+                    "{",
+                    "     remoteFilter: false,",
+                    "     modelDefaults: null",
+                    "}"
+                ]
+            },
+            "designerId": "aab84bcf-5948-4602-94cc-8660b58b6ba8"
         },
         {
             "type": "datafield",
@@ -59,7 +70,8 @@
                 "designer|userClassName": "MyField7",
                 "name": "id",
                 "type": "auto"
-            }
+            },
+            "designerId": "fa65d037-3f6d-4771-9b84-11138309722e"
         },
         {
             "type": "datafield",
@@ -71,7 +83,8 @@
             "userConfig": {
                 "designer|userClassName": "MyField",
                 "name": "name"
-            }
+            },
+            "designerId": "171b9950-6971-45c4-a8ef-4ff484f44774"
         },
         {
             "type": "datafield",
@@ -83,7 +96,8 @@
             "userConfig": {
                 "designer|userClassName": "MyField",
                 "name": "phone"
-            }
+            },
+            "designerId": "f96094bc-df96-4df2-8829-1b9927e6f852"
         },
         {
             "type": "datafield",
@@ -95,7 +109,8 @@
             "userConfig": {
                 "designer|userClassName": "MyField",
                 "name": "email"
-            }
+            },
+            "designerId": "8600b0f8-b8c9-4b1e-ba82-55783ba81073"
         },
         {
             "type": "datafield",
@@ -106,10 +121,13 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyField",
-                "defaultValue": "0",
+                "defaultValue": [
+                    "0"
+                ],
                 "name": "balance",
                 "type": "float"
-            }
+            },
+            "designerId": "61181811-04da-476e-a829-1b88183a03ba"
         },
         {
             "type": "basicfunction",
@@ -124,7 +142,8 @@
                 "implHandler": [
                     "return this.set('balance', this.debts().sum('balance'));"
                 ]
-            }
+            },
+            "designerId": "f7336f74-2cb6-4162-91ef-b4f99043942b"
         }
     ]
 }

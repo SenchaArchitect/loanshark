@@ -43,7 +43,6 @@ Ext.define('Payback.model.Debt', {
                     sum = Math.round(sum*100)/100;
 
                     return sum;
-
                 },
                 name: 'balance',
                 type: 'float'
