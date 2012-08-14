@@ -27,6 +27,7 @@
                 "designer|userClassName": "MyGrouper",
                 "direction": "DESC"
             },
+            "designerId": "07a9b1bb-48b5-45a7-a3a2-c82aec115a88",
             "cn": [
                 {
                     "type": "fixedfunction",
@@ -45,7 +46,7 @@
                             "return record.get('date');"
                         ]
                     },
-                    "iconCls": "icon-basic-function"
+                    "designerId": "bfa13147-17e8-4833-a139-0021b6723f64"
                 }
             ]
         }

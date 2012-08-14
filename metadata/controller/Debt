@@ -60,7 +60,8 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#addDebt"
-            }
+            },
+            "designerId": "7321cce9-05f4-4795-9b24-0907999e2718"
         },
         {
             "type": "controllerref",
@@ -75,7 +76,8 @@
                 "ref": "DebtDetail",
                 "selector": "DebtDetail",
                 "xtype": "DebtDetail"
-            }
+            },
+            "designerId": "0c423b35-6060-4423-861a-4920bfcf483b"
         },
         {
             "type": "controlleraction",
@@ -147,7 +149,8 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#saveDebt"
-            }
+            },
+            "designerId": "41642191-b6dc-49b4-8792-54648b41bd19"
         },
         {
             "type": "controlleraction",
@@ -175,7 +178,8 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#cancelDebt"
-            }
+            },
+            "designerId": "1268a6d4-9362-47de-97d5-4d9a8caecdcf"
         },
         {
             "type": "controlleraction",
@@ -211,7 +215,8 @@
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myDebtDataView"
-            }
+            },
+            "designerId": "b355c721-c09e-47e2-acfe-ef3f61570186"
         },
         {
             "type": "controllerref",
@@ -224,7 +229,8 @@
                 "designer|userClassName": "myDebtDataView",
                 "ref": "myDebtDataView",
                 "selector": "#myDebtDataView"
-            }
+            },
+            "designerId": "e5505c69-da54-4c0b-a1e4-89201b79a9b7"
         },
         {
             "type": "controlleraction",
@@ -290,7 +296,8 @@
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myDebtDataView"
-            }
+            },
+            "designerId": "134cdc4d-ba1b-4076-a82a-ed7289c7d19e"
         },
         {
             "type": "controllerref",
@@ -303,7 +310,8 @@
                 "designer|userClassName": "myPaymentDataView",
                 "ref": "myPaymentDataView",
                 "selector": "#myPaymentDataView"
-            }
+            },
+            "designerId": "70b9b9b5-ad74-4ac2-b69e-0954dacaf1c8"
         },
         {
             "type": "controllerref",
@@ -316,7 +324,8 @@
                 "designer|userClassName": "addPaymentButton",
                 "ref": "addPaymentButton",
                 "selector": "#addPayment"
-            }
+            },
+            "designerId": "ab82322c-a104-4718-a518-36eb7317a2f6"
         },
         {
             "type": "controlleraction",
@@ -344,7 +353,8 @@
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "#emailDebt"
-            }
+            },
+            "designerId": "f186ce03-ea76-4de8-b6bc-39e0677c0662"
         },
         {
             "type": "controllerref",
@@ -357,7 +367,8 @@
                 "designer|userClassName": "emailDebtButton",
                 "ref": "emailDebtButton",
                 "selector": "#emailDebt"
-            }
+            },
+            "designerId": "abf86e40-f07e-4204-88e3-b05f9f673a97"
         },
         {
             "type": "controllerref",
@@ -370,7 +381,8 @@
                 "designer|userClassName": "MainView",
                 "ref": "MainView",
                 "selector": "MainView"
-            }
+            },
+            "designerId": "d6ca54aa-56fa-4231-8835-82934730d4a1"
         },
         {
             "type": "controllerref",
@@ -383,7 +395,8 @@
                 "designer|userClassName": "addDebtButton",
                 "ref": "addDebtButton",
                 "selector": "#addDebt"
-            }
+            },
+            "designerId": "cc2e8b92-fdd1-400a-97bd-1b9e91767da8"
         },
         {
             "type": "controllerref",
@@ -396,7 +409,8 @@
                 "designer|userClassName": "debtHeaderLabel",
                 "ref": "debtHeaderLabel",
                 "selector": "#debtHeaderLabel"
-            }
+            },
+            "designerId": "e8ec462a-96b4-4987-bd85-789367c18be8"
         },
         {
             "type": "controllerref",
@@ -409,7 +423,8 @@
                 "designer|userClassName": "paymentHistoryLabel",
                 "ref": "paymentHistoryLabel",
                 "selector": "#paymentHistoryLabel"
-            }
+            },
+            "designerId": "722c9d57-b862-4057-befa-fd3f9e29bb97"
         },
         {
             "type": "controllerroute",
@@ -442,7 +457,8 @@
                     "}"
                 ],
                 "url": "/Debt/:id"
-            }
+            },
+            "designerId": "69d50fef-47fd-4c29-8e8d-079d944ebc84"
         }
     ]
 }

@@ -35,6 +35,7 @@
                 "selector": "#SummaryContents",
                 "xtype": null
             },
+            "designerId": "82a99657-9ca7-4173-8a39-485c4bd60fa1",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -62,7 +63,8 @@
                     "    totalOwed: balance",
                     "});"
                 ]
-            }
+            },
+            "designerId": "d53332f0-2c89-44f9-8854-95592545d3eb"
         },
         {
             "type": "fixedfunction",
@@ -83,7 +85,7 @@
                     "}, this);"
                 ]
             },
-            "iconCls": "icon-launch-function"
+            "designerId": "4d6f171c-0205-416a-8744-d98ea9e8f0de"
         },
         {
             "type": "basicfunction",
@@ -105,7 +107,8 @@
                     "}",
                     "return summaryRecord;"
                 ]
-            }
+            },
+            "designerId": "f57e64c6-e2ee-4751-9ed2-799b6d5e59de"
         }
     ]
 }

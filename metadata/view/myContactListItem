@@ -29,6 +29,7 @@
                 "baseCls": "x-list-item-label",
                 "itemId": "contactListItemDetail"
             },
+            "designerId": "5ffcbaa2-1179-4082-9ca3-f9b75397f924",
             "cn": [
                 {
                     "type": "button",
@@ -50,6 +51,7 @@
                         "iconMask": true,
                         "text": "delete"
                     },
+                    "designerId": "7310c0f3-9fbd-4c51-bce6-9484b273e325",
                     "cn": [
                         {
                             "type": "basiceventbinding",
@@ -94,7 +96,8 @@
                                     ""
                                 ],
                                 "name": "tap"
-                            }
+                            },
+                            "designerId": "80ea7302-8d9d-47e1-9abe-89eb3a846522"
                         }
                     ]
                 },
@@ -119,7 +122,8 @@
                             "</div>",
                             ""
                         ]
-                    }
+                    },
+                    "designerId": "30aee7fa-c74d-447c-aad5-921fea05f4a4"
                 }
             ]
         },
@@ -144,7 +148,8 @@
                     "newRecord.getData(true);",
                     "this.child('component').setData(newRecord.data);"
                 ]
-            }
+            },
+            "designerId": "08faa253-4ebc-4599-ad0c-f6360de4da4b"
         }
     ]
 }

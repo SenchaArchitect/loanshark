@@ -96,7 +96,6 @@ Ext.define('Payback.view.myDebtListItem', {
 
         //refresh DataView
         dataview.refresh();
-
     },
 
     updateRecord: function(newRecord, oldRecord) {
@@ -105,7 +104,6 @@ Ext.define('Payback.view.myDebtListItem', {
 
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
-
     }
 
 });

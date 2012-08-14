@@ -82,7 +82,6 @@ Ext.define('Payback.view.myPaymentListItem', {
 
         //update the summary
         Payback.app.application.getController('Payback.controller.Summary').updateSummary();
-
     },
 
     updateRecord: function(newRecord, oldeRecord) {
@@ -91,7 +90,6 @@ Ext.define('Payback.view.myPaymentListItem', {
 
         newRecord.getData(true);
         this.child('component').setData(newRecord.data);
-
     }
 
 });

@@ -67,7 +67,6 @@ Ext.application({
     launch: function() {
 
         Ext.create('Payback.view.MainView', {fullscreen: true});
-
     }
 
 });

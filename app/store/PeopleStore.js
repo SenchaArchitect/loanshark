@@ -38,7 +38,6 @@ Ext.define('Payback.store.PeopleStore', {
         this.each(function(record){
             record.calcBalance();
         });
-
     }
 
 });

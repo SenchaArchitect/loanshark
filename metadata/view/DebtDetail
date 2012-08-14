@@ -30,6 +30,7 @@
                 "docked": "bottom",
                 "ui": null
             },
+            "designerId": "a3e76cd8-511f-4a9a-b413-8aab309ad402",
             "cn": [
                 {
                     "type": "spacer",
@@ -40,7 +41,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySpacer"
-                    }
+                    },
+                    "designerId": "d047fde9-ec46-4298-9c9d-7d08c237c7c9"
                 },
                 {
                     "type": "button",
@@ -58,7 +60,8 @@
                         "iconCls": "icon-save",
                         "iconMask": true,
                         "text": "save"
-                    }
+                    },
+                    "designerId": "c4486c09-15dd-42cd-aab5-8865a4ec7e99"
                 }
             ]
         },
@@ -75,6 +78,7 @@
                 "ui": "light",
                 "title": "Loan Details"
             },
+            "designerId": "4f84be6f-83d8-497c-b1ac-f5a60ceba491",
             "cn": [
                 {
                     "type": "button",
@@ -91,7 +95,8 @@
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
-                    }
+                    },
+                    "designerId": "a48499b1-bc85-4e33-b9f0-9162d37bbea3"
                 },
                 {
                     "type": "button",
@@ -111,7 +116,8 @@
                         "iconCls": "icon-email",
                         "iconMask": true,
                         "text": "Send Email"
-                    }
+                    },
+                    "designerId": "bebe64da-1da9-4bae-b7df-4144799dd5d7"
                 }
             ]
         },
@@ -129,6 +135,7 @@
                 "margin": "0 0 10px 0",
                 "scrollable": null
             },
+            "designerId": "858866cc-7388-477e-92ce-e6d7596941bc",
             "cn": [
                 {
                     "type": "label",
@@ -145,7 +152,8 @@
                         "id": "debtHeaderLabel",
                         "padding": null,
                         "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
-                    }
+                    },
+                    "designerId": "ef57bc50-4489-4af5-8d31-ec40c01daf4b"
                 },
                 {
                     "type": "button",
@@ -164,7 +172,8 @@
                         "ui": "gray-light-button",
                         "iconCls": null,
                         "text": "Add Payment"
-                    }
+                    },
+                    "designerId": "daea8fce-f6bc-4f60-805b-6e46475da0a1"
                 },
                 {
                     "type": "fieldset",
@@ -178,6 +187,7 @@
                         "itemId": "myfieldset1",
                         "title": null
                     },
+                    "designerId": "2d84ec3f-b424-4ec0-b2ab-d1e4350e09a9",
                     "cn": [
                         {
                             "type": "selectfield",
@@ -195,7 +205,8 @@
                                 "store": "People",
                                 "ui": null,
                                 "valueField": "id"
-                            }
+                            },
+                            "designerId": "24090648-ab3d-4fa4-badc-24f5086623e1"
                         },
                         {
                             "type": "datepickerfield",
@@ -210,6 +221,7 @@
                                 "labelAlign": "top",
                                 "name": "date"
                             },
+                            "designerId": "7055dae5-23c7-42e0-996c-5cfbb7677fd4",
                             "cn": [
                                 {
                                     "type": "datepicker",
@@ -223,6 +235,7 @@
                                         "style": null,
                                         "ui": "dark"
                                     },
+                                    "designerId": "09884122-5cae-453b-bd79-70e2786328af",
                                     "cn": [
                                         {
                                             "type": "button",
@@ -236,7 +249,8 @@
                                                 "cls": "my-buttons",
                                                 "ui": "gray-button",
                                                 "text": "Done"
-                                            }
+                                            },
+                                            "designerId": "065f0052-81d1-4302-9f6d-221624f21722"
                                         },
                                         {
                                             "type": "button",
@@ -250,7 +264,8 @@
                                                 "cls": "my-buttons",
                                                 "ui": "gray-light-button",
                                                 "text": "Cancel"
-                                            }
+                                            },
+                                            "designerId": "77295d35-706d-47ae-a259-b8f910d9e16f"
                                         }
                                     ]
                                 }
@@ -269,7 +284,8 @@
                                 "label": "Original Loan Amount",
                                 "labelAlign": "top",
                                 "name": "amount"
-                            }
+                            },
+                            "designerId": "753db45f-f78c-47f4-92c9-d3e0dac99a60"
                         },
                         {
                             "type": "textfield",
@@ -283,7 +299,8 @@
                                 "label": "Notes",
                                 "labelAlign": "top",
                                 "name": "reason"
-                            }
+                            },
+                            "designerId": "51b0e2cd-821c-41f3-b6c4-3e57256d82c7"
                         }
                     ]
                 }
@@ -301,6 +318,7 @@
                 "designer|userClassName": "MyContainer8",
                 "style": null
             },
+            "designerId": "9862db9b-499b-4583-b8ba-c42ce66526ce",
             "cn": [
                 {
                     "type": "label",
@@ -319,7 +337,8 @@
                         "padding": "0 0 8px 8px",
                         "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
                         "styleHtmlCls": null
-                    }
+                    },
+                    "designerId": "bfa4bc2f-8e41-431d-87e8-442c4bbcb019"
                 },
                 {
                     "type": "dataview",
@@ -342,11 +361,15 @@
                         "padding": "0 22px",
                         "style": "color: white;",
                         "defaultType": "myPaymentListItem",
-                        "scrollable": "false\n",
+                        "scrollable": [
+                            "false",
+                            ""
+                        ],
                         "store": "Payments",
                         "useComponents": true,
                         "disableSelection": true
-                    }
+                    },
+                    "designerId": "cf6f83d7-71da-4490-814e-118c64c37e9e"
                 }
             ]
         }

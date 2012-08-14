@@ -25,6 +25,7 @@
                 "docked": "bottom",
                 "title": null
             },
+            "designerId": "7bd1cc98-6a12-453d-88ab-fc76a1009441",
             "cn": [
                 {
                     "type": "button",
@@ -44,7 +45,8 @@
                         "iconCls": "icon-add-contact",
                         "iconMask": true,
                         "text": "Add Prey"
-                    }
+                    },
+                    "designerId": "89ecc96f-3c17-42d4-91e4-de7a2b86a24a"
                 }
             ]
         },
@@ -67,7 +69,8 @@
                 "store": "People",
                 "useComponents": true,
                 "disableSelection": true
-            }
+            },
+            "designerId": "4ac5e8a7-d1a3-4585-b087-a39a2a60d253"
         }
     ]
 }

@@ -63,7 +63,6 @@ Ext.define('Payback.model.Person', {
 
     calcBalance: function() {
         return this.set('balance', this.debts().sum('balance'));
-
     }
 
 });

@@ -21,7 +21,8 @@
             "userConfig": {
                 "designer|userClassName": "MyField17",
                 "name": "totalOwed"
-            }
+            },
+            "designerId": "de8356a0-aa51-4b7e-bbbb-30863971ef73"
         }
     ]
 }

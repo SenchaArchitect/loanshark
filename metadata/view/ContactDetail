@@ -28,6 +28,7 @@
                 "ui": "light",
                 "title": "Prey Details"
             },
+            "designerId": "bdbd3b46-7c2a-4495-aa70-f9f00a940e9b",
             "cn": [
                 {
                     "type": "button",
@@ -44,7 +45,8 @@
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
-                    }
+                    },
+                    "designerId": "4db60796-d97e-4f92-9b9b-615d9425fc99"
                 }
             ]
         },
@@ -59,6 +61,7 @@
                 "designer|userClassName": "MyToolbar",
                 "docked": "bottom"
             },
+            "designerId": "0c718cb8-fa24-486a-9462-944706eb38ce",
             "cn": [
                 {
                     "type": "spacer",
@@ -69,7 +72,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MySpacer"
-                    }
+                    },
+                    "designerId": "6d480fcd-250b-4437-905e-d2a4ce7f44dd"
                 },
                 {
                     "type": "button",
@@ -87,7 +91,8 @@
                         "iconCls": "icon-save",
                         "iconMask": true,
                         "text": "save"
-                    }
+                    },
+                    "designerId": "94a8f4cf-0e33-4539-82cc-9a363e5c6664"
                 }
             ]
         },
@@ -103,6 +108,7 @@
                 "height": null,
                 "margin": "0 0 10px 0"
             },
+            "designerId": "6648c790-2bf9-42ad-8643-d9ca02f27861",
             "cn": [
                 {
                     "type": "label",
@@ -119,7 +125,8 @@
                         "id": "contactHeaderLabel",
                         "padding": null,
                         "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
-                    }
+                    },
+                    "designerId": "9ca2bea9-7bdd-4e46-b2f5-c8ed59a02ed4"
                 },
                 {
                     "type": "button",
@@ -137,7 +144,8 @@
                         "style": "border-radius: 0; color: black;",
                         "ui": "gray-light-button",
                         "text": "New Loan"
-                    }
+                    },
+                    "designerId": "c9660dce-9039-43c7-999d-e84a9314f24f"
                 },
                 {
                     "type": "fieldset",
@@ -150,6 +158,7 @@
                         "designer|userClassName": "MyFieldSet",
                         "title": null
                     },
+                    "designerId": "a2070b04-a63b-4f94-bb52-35f8bcbaaf49",
                     "cn": [
                         {
                             "type": "textfield",
@@ -163,7 +172,8 @@
                                 "label": "Name",
                                 "labelAlign": "top",
                                 "name": "name"
-                            }
+                            },
+                            "designerId": "250487bb-67f7-456a-b740-8e43d199339d"
                         },
                         {
                             "type": "emailfield",
@@ -178,7 +188,8 @@
                                 "labelAlign": "top",
                                 "name": "email",
                                 "placeHolder": null
-                            }
+                            },
+                            "designerId": "5c0f9331-de10-4cbc-8097-4ccc8d190d3e"
                         },
                         {
                             "type": "textfield",
@@ -192,7 +203,8 @@
                                 "label": "Phone",
                                 "labelAlign": "top",
                                 "name": "phone"
-                            }
+                            },
+                            "designerId": "52f70018-c902-4313-b30c-269a20ff07c8"
                         }
                     ]
                 }
@@ -209,6 +221,7 @@
                 "layout|flex": null,
                 "designer|userClassName": "MyContainer8"
             },
+            "designerId": "f282a32c-f89a-4c7f-94e7-3c8d5a6ce2dd",
             "cn": [
                 {
                     "type": "label",
@@ -227,7 +240,8 @@
                         "padding": "0 0 8px 8px",
                         "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
                         "styleHtmlCls": null
-                    }
+                    },
+                    "designerId": "91dd2649-c3a0-4663-8f92-a05377672d62"
                 },
                 {
                     "type": "dataview",
@@ -248,11 +262,15 @@
                         "itemId": null,
                         "padding": "0 22px",
                         "defaultType": "myDebtListItem",
-                        "scrollable": "false\n",
+                        "scrollable": [
+                            "false",
+                            ""
+                        ],
                         "store": "Debts",
                         "useComponents": true,
                         "disableSelection": true
-                    }
+                    },
+                    "designerId": "cbb6c1e5-2d1d-4b02-9862-835d804d0f52"
                 }
             ]
         },
@@ -275,7 +293,8 @@
                     "Ext.select('.x-form .debt-person-label').setStyle({display:'none'});"
                 ],
                 "name": "show"
-            }
+            },
+            "designerId": "c0c88f1e-eddf-471d-ba5e-5b7cb4dcb435"
         }
     ]
 }

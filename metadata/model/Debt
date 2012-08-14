@@ -8,7 +8,11 @@
     "userConfig": {
         "designer|userClassName": "Debt",
         "designer|userAlias": "Debt",
-        "identifier": "{\n    type:'uuid'\n}"
+        "identifier": [
+            "{",
+            "    type:'uuid'",
+            "}"
+        ]
     },
     "id": "ExtBox1-ext-gen40483",
     "designerId": "0da47a2f-b44a-4fc0-87f8-d59223d82d8d",
@@ -31,7 +35,8 @@
                 "designer|userClassName": "MyField10",
                 "name": "id",
                 "type": "auto"
-            }
+            },
+            "designerId": "175fe91b-452b-4e7f-ab28-95b1118ef124"
         },
         {
             "type": "datafield",
@@ -43,7 +48,8 @@
             "userConfig": {
                 "designer|userClassName": "MyField11",
                 "name": "reason"
-            }
+            },
+            "designerId": "6b209885-748b-4192-9d95-50de75286122"
         },
         {
             "type": "datafield",
@@ -55,7 +61,8 @@
             "userConfig": {
                 "designer|userClassName": "MyField12",
                 "name": "amount"
-            }
+            },
+            "designerId": "594c911d-72c9-4158-91ed-d12aa7bba6ee"
         },
         {
             "type": "datafield",
@@ -69,6 +76,7 @@
                 "name": "balance",
                 "type": "float"
             },
+            "designerId": "8231de36-2c13-40fa-95bb-e5ea1dbece36",
             "cn": [
                 {
                     "type": "fixedfunction",
@@ -91,7 +99,7 @@
                             "return sum;"
                         ]
                     },
-                    "iconCls": "icon-basic-function"
+                    "designerId": "f5b70b99-13e7-4e86-9fc8-54bc07de29e8"
                 }
             ]
         },
@@ -106,7 +114,8 @@
                 "designer|userClassName": "MyField13",
                 "name": "date",
                 "type": "date"
-            }
+            },
+            "designerId": "c8303f3a-3726-48f9-957c-fc3656f76953"
         },
         {
             "type": "datafield",
@@ -118,7 +127,8 @@
             "userConfig": {
                 "designer|userClassName": "MyField14",
                 "name": "person_id"
-            }
+            },
+            "designerId": "ef1f6a84-93f5-4b03-bb76-785342c61cbd"
         },
         {
             "type": "hasmanyassociation",
@@ -133,8 +143,14 @@
                 "autoLoad": true,
                 "foreignKey": "debt_id",
                 "name": "payments",
-                "store": "{\n    modelDefaults: null,\n    remoteFilter: false\n}"
-            }
+                "store": [
+                    "{",
+                    "    modelDefaults: null,",
+                    "    remoteFilter: false",
+                    "}"
+                ]
+            },
+            "designerId": "ce4adc9e-1380-43fb-adb1-1834aa7c2f24"
         },
         {
             "type": "localstorageproxy",
@@ -146,7 +162,8 @@
             "userConfig": {
                 "designer|userClassName": "MyLocalStorageProxy2",
                 "id": "Debts"
-            }
+            },
+            "designerId": "fb7f0080-90c0-4590-8560-0abf6f718b7e"
         },
         {
             "type": "belongstoassociation",
@@ -160,7 +177,8 @@
                 "designer|displayName": "BelongsToPerson",
                 "model": "Person",
                 "foreignKey": "person_id"
-            }
+            },
+            "designerId": "5630e765-37f4-4920-8657-f341f31f2914"
         }
     ]
 }

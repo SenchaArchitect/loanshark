@@ -35,7 +35,6 @@ Ext.define('Payback.controller.Summary', {
         this.getSummaryRecord().set({
             totalOwed: balance
         });
-
     },
 
     launch: function() {
@@ -45,7 +44,6 @@ Ext.define('Payback.controller.Summary', {
             this.updateSummary();
 
         }, this);
-
     },
 
     applySummaryRecord: function(summaryRecord) {
@@ -54,7 +52,6 @@ Ext.define('Payback.controller.Summary', {
             summaryRecord = Ext.create('Payback.model.Summary');
         }
         return summaryRecord;
-
     }
 
 });
