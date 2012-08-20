@@ -47,9 +47,10 @@
                         "itemId": "deleteContact",
                         "margin": "0 0 0 10px",
                         "ui": null,
+                        "width": 40,
                         "iconCls": "icon-delete",
                         "iconMask": true,
-                        "text": "delete"
+                        "text": null
                     },
                     "designerId": "7310c0f3-9fbd-4c51-bce6-9484b273e325",
                     "cn": [

@@ -3,4 +3,8 @@ node_modules
 
 .DS_Store
 
-resources/.DS_Store
+/resources/.DS_Store
+/resources/sass/.sass-cache/*
+/.senchasdk
+/simulator.json
+/packager.json

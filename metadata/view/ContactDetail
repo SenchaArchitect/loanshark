@@ -8,6 +8,9 @@
     "userConfig": {
         "designer|userClassName": "ContactDetail",
         "designer|userAlias": "ContactDetail",
+        "cls": [
+            "ContactDetail"
+        ],
         "padding": "0 0 12px 0",
         "autoDestroy": false,
         "layout": "vbox"

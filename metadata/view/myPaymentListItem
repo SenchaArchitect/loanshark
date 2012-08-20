@@ -47,9 +47,10 @@
                         "itemId": "deletePayment",
                         "margin": "0 0 0 10px",
                         "ui": null,
+                        "width": 40,
                         "iconCls": "icon-delete",
                         "iconMask": true,
-                        "text": "delete"
+                        "text": null
                     },
                     "designerId": "d0c3293e-085c-4091-a2d3-65b5a84a4f2d",
                     "cn": [

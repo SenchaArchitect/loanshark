@@ -23,6 +23,9 @@ Ext.define('Payback.view.ContactDetail', {
         layout: {
             type: 'vbox'
         },
+        cls: [
+            'ContactDetail'
+        ],
         items: [
             {
                 xtype: 'titlebar',

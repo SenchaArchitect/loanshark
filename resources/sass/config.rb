@@ -2,7 +2,7 @@
 dir = File.dirname(__FILE__)
 
 # Load the sencha-touch framework automatically.
-load File.join(dir, '..','..','..','SDK','touch','resources', 'themes')
+load File.join(dir, '..','..','..','SDK2','resources', 'themes')
 
 # Compass configurations
 images_path = File.join(dir, '..', 'images')

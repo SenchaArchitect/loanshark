@@ -50,9 +50,9 @@ Ext.define('Payback.view.myDebtListItem', {
                         itemId: 'deleteDebt',
                         margin: '0 0 0 10px',
                         maxHeight: '',
+                        width: 40,
                         iconCls: 'icon-delete',
-                        iconMask: true,
-                        text: 'delete'
+                        iconMask: true
                     }
                 ]
             }

@@ -48,9 +48,10 @@
                         "margin": "0 0 0 10px",
                         "maxHeight": "",
                         "ui": null,
+                        "width": 40,
                         "iconCls": "icon-delete",
                         "iconMask": true,
-                        "text": "delete"
+                        "text": null
                     },
                     "designerId": "c7f2953c-77f8-4a81-8834-87f8e71cd180",
                     "cn": [

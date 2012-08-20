@@ -46,10 +46,7 @@
             "    '640x920': 'resources/images/splash/loading/Default@2x.png',",
             "    '768x1004': 'resources/images/splash/loading/Default~ipad',",
             "    '748x1024': 'resources/images/splash/loading/Default-Landscape~ipad.png'",
-            "}",
-            "",
-            "",
-            ""
+            "}"
         ],
         "statusBarStyle": null,
         "controllers": [

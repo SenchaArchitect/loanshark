@@ -8,6 +8,9 @@
     "userConfig": {
         "designer|userClassName": "DebtDetail",
         "designer|userAlias": "DebtDetail",
+        "cls": [
+            "DebtDetail"
+        ],
         "margin": null,
         "padding": "0 0 12px 0",
         "style": "background:  black; ",
@@ -151,7 +154,7 @@
                         "html": null,
                         "id": "debtHeaderLabel",
                         "padding": null,
-                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
+                        "style": "overflow: hidden; width: 100%;font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
                     },
                     "designerId": "ef57bc50-4489-4af5-8d31-ec40c01daf4b"
                 },

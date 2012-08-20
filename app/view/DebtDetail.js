@@ -24,6 +24,9 @@ Ext.define('Payback.view.DebtDetail', {
         layout: {
             type: 'vbox'
         },
+        cls: [
+            'DebtDetail'
+        ],
         items: [
             {
                 xtype: 'toolbar',
@@ -75,7 +78,7 @@ Ext.define('Payback.view.DebtDetail', {
                         xtype: 'label',
                         height: 100,
                         id: 'debtHeaderLabel',
-                        style: 'font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;'
+                        style: 'overflow: hidden; width: 100%;font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;'
                     },
                     {
                         xtype: 'button',

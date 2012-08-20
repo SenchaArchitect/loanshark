@@ -47,9 +47,9 @@ Ext.define('Payback.view.myContactListItem', {
                         hidden: true,
                         itemId: 'deleteContact',
                         margin: '0 0 0 10px',
+                        width: 40,
                         iconCls: 'icon-delete',
-                        iconMask: true,
-                        text: 'delete'
+                        iconMask: true
                     }
                 ]
             }
