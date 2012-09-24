@@ -121,10 +121,10 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyField",
+                "name": "balance",
                 "defaultValue": [
                     "0"
                 ],
-                "name": "balance",
                 "type": "float"
             },
             "designerId": "61181811-04da-476e-a829-1b88183a03ba"

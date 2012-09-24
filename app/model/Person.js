@@ -54,8 +54,8 @@ Ext.define('Payback.model.Person', {
                 name: 'email'
             },
             {
-                defaultValue: 0,
                 name: 'balance',
+                defaultValue: 0,
                 type: 'float'
             }
         ]
