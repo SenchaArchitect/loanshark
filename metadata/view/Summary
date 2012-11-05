@@ -25,7 +25,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "mode": "background",
                 "designer|userClassName": "MyImage",
                 "centered": null,
                 "height": null,
@@ -33,14 +32,7 @@
                 "width": null,
                 "src": "resources/images/sharky.png"
             },
-            "designerId": "4d4b85b5-ffe2-4f8c-9de0-831b8f0f4338",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "mode",
-                    "type": "string"
-                }
-            ]
+            "designerId": "4d4b85b5-ffe2-4f8c-9de0-831b8f0f4338"
         },
         {
             "type": "component",

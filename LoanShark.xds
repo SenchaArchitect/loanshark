@@ -4,6 +4,7 @@
         "urlPrefix": "http://localhost:8888/loanshark",
         "spacesToIndent": 4,
         "exportPath": "/Users/ericbowden/Documents/repos/loanshark2",
+        "sdkPath": "",
         "lineEnding": "",
         "genTimestamps": false,
         "cacheBust": false,
@@ -15,10 +16,10 @@
         "appName": "MyApp"
     },
     "xdsVersion": "2.1.0",
-    "xdsBuild": 613,
+    "xdsBuild": 670,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000497,
-    "framework": "touch20",
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
     "topInstanceFileMap": {
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
             "paths": [
@@ -213,6 +214,14 @@
                 "metadata/resource/js"
             ],
             "className": "js"
+        },
+        "52c2451e-ca75-479b-ad33-232f2a4eae28": {
+            "paths": [
+                "metadata/resource/PackageSettings",
+                "",
+                "PackageSettings.json"
+            ],
+            "className": "PackageSettings"
         }
     },
     "viewOrderMap": {
@@ -249,7 +258,8 @@
         "resource": [
             "ce8f1709-75f8-4f81-b948-890b2047ecd8",
             "e0fc0f11-5bd9-4b48-890e-e5d786ed821d",
-            "87119690-45e1-432b-bbc9-b1f91c965bb3"
+            "87119690-45e1-432b-bbc9-b1f91c965bb3",
+            "52c2451e-ca75-479b-ad33-232f2a4eae28"
         ],
         "app": [
             "application"

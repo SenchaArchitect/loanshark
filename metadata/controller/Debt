@@ -211,7 +211,6 @@
                     "    labels.show();",
                     "}, single:true});"
                 ],
-                "element": null,
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myDebtDataView"
