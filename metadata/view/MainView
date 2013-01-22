@@ -1,5 +1,5 @@
 {
-    "type": "tabpanel",
+    "type": "Ext.tab.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,13 +7,12 @@
     "codeClass": null,
     "userConfig": {
         "container|animation": null,
+        "id": null,
+        "ui": null,
         "designer|userClassName": "MainView",
         "designer|userAlias": "MainView",
-        "designer|initialView": true,
-        "id": null,
-        "ui": null
+        "designer|initialView": true
     },
-    "id": "ExtBox1-ext-gen2225",
     "designerId": "9c7e563e-7ff0-4ba7-9556-9c0d6c286927",
     "customConfigs": [
         {
@@ -52,7 +51,7 @@
                     "type": "object"
                 }
             ],
-            "masterInstanceId": "ExtBox1-ext-gen2239"
+            "masterInstanceId": "d3b832b6-4996-4c75-bb54-57aee2c88185"
         },
         {
             "type": "linkedinstance",
@@ -82,7 +81,7 @@
                     "type": "object"
                 }
             ],
-            "masterInstanceId": "ExtBox1-ext-gen25568"
+            "masterInstanceId": "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba"
         },
         {
             "type": "linkedinstance",
@@ -112,10 +111,10 @@
                     "type": "object"
                 }
             ],
-            "masterInstanceId": "ExtBox1-ext-gen2255"
+            "masterInstanceId": "dde4c54b-3964-4d6d-927f-dbd7c91717bc"
         },
         {
-            "type": "tabbar",
+            "type": "Ext.tab.Bar",
             "reference": {
                 "name": "tabBar",
                 "type": "object"
@@ -124,10 +123,10 @@
             "userConfig": {
                 "container|align": "stretchmax",
                 "container|pack": null,
-                "designer|userClassName": "MyTabBar",
                 "docked": "top",
                 "itemId": "mytabbar",
-                "ui": "light"
+                "ui": "light",
+                "designer|userClassName": "MyTabBar"
             },
             "designerId": "d7b91b3f-e083-445a-90f3-e3b9951ccf04"
         }

@@ -1,19 +1,18 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "PeopleStore",
         "autoLoad": true,
         "autoSync": true,
         "groupField": "name",
         "model": "Person",
-        "storeId": "People"
+        "storeId": "People",
+        "designer|userClassName": "PeopleStore"
     },
-    "id": "ExtBox1-ext-gen34156",
     "designerId": "5c1a3711-4411-4d34-a283-c9149d1e681e",
     "cn": [
         {

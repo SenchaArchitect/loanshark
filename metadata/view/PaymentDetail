@@ -1,46 +1,47 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "minHeight": null,
         "designer|userClassName": "PaymentDetail",
         "designer|userAlias": "PaymentDetail",
-        "minHeight": null,
         "autoDestroy": false
     },
-    "id": "ExtBox1-ext-gen25971",
     "designerId": "2b83fda6-da12-4c2f-a259-389ef8f3e683",
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar2",
                 "docked": "top",
                 "ui": "light",
+                "designer|userClassName": "MyTitleBar2",
                 "title": "Payment Details"
             },
             "designerId": "776996f2-69f6-4ef4-bf36-1976468a865d",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton1",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "cancelPayment",
                         "ui": null,
+                        "designer|userClassName": "MyButton1",
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
@@ -50,21 +51,21 @@
             ]
         },
         {
-            "type": "toolbar",
+            "type": "Ext.Toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyToolbar",
                 "docked": "bottom",
-                "ui": null
+                "ui": null,
+                "designer|userClassName": "MyToolbar"
             },
             "designerId": "d82c5389-9b5d-461d-b7bd-6529abf19c4c",
             "cn": [
                 {
-                    "type": "spacer",
+                    "type": "Ext.Spacer",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -76,18 +77,20 @@
                     "designerId": "3ab5ff35-a236-45dc-b384-c4c1206291a5"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton2",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "savePayment",
                         "itemId": null,
                         "ui": null,
+                        "designer|userClassName": "MyButton2",
                         "iconAlign": null,
                         "iconCls": "icon-save",
                         "iconMask": true,
@@ -98,7 +101,7 @@
             ]
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -111,15 +114,15 @@
             "designerId": "de876203-c9c0-42ac-b7dd-ef30728a420b",
             "cn": [
                 {
-                    "type": "numberfield",
+                    "type": "Ext.field.Number",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyNumberField1",
                         "itemId": "mynumberfield1",
+                        "designer|userClassName": "MyNumberField1",
                         "label": "Amount",
                         "labelAlign": "top",
                         "name": "amount"
@@ -127,7 +130,7 @@
                     "designerId": "bcbbf053-cdd7-48c7-9f4f-cc1577c17aeb"
                 },
                 {
-                    "type": "datepickerfield",
+                    "type": "Ext.field.DatePicker",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -143,7 +146,7 @@
                     "designerId": "3a47fae4-01cd-4fec-8e20-21f59600f28d",
                     "cn": [
                         {
-                            "type": "datepicker",
+                            "type": "Ext.picker.Date",
                             "reference": {
                                 "name": "picker",
                                 "type": "object"
@@ -155,7 +158,7 @@
                             "designerId": "75c0b50b-c447-46c2-afe7-6797a9db0ec1",
                             "cn": [
                                 {
-                                    "type": "button",
+                                    "type": "Ext.Button",
                                     "reference": {
                                         "name": "doneButton",
                                         "type": "object"
@@ -168,7 +171,7 @@
                                     "designerId": "2c46828c-d20c-47ac-924b-8993654a8c99"
                                 },
                                 {
-                                    "type": "button",
+                                    "type": "Ext.Button",
                                     "reference": {
                                         "name": "cancelButton",
                                         "type": "object"
@@ -185,7 +188,7 @@
                     ]
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -202,7 +205,7 @@
             ]
         },
         {
-            "type": "hiddenfield",
+            "type": "Ext.field.Hidden",
             "reference": {
                 "name": "items",
                 "type": "array"

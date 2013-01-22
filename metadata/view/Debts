@@ -1,47 +1,48 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Debts",
-        "designer|userAlias": "Debts",
         "id": null,
         "ui": "light",
+        "designer|userClassName": "Debts",
+        "designer|userAlias": "Debts",
         "layout": "fit"
     },
-    "id": "ExtBox1-ext-gen25568",
     "designerId": "e7c5fb19-7a4d-48aa-b3d6-2f33416c14ba",
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar",
                 "docked": "bottom",
+                "designer|userClassName": "MyTitleBar",
                 "title": null
             },
             "designerId": "d82ac63b-4d51-4c0d-adf5-a9c45705a1df",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "addDebt",
                         "itemId": null,
                         "ui": null,
+                        "designer|userClassName": "MyButton",
                         "iconCls": "icon-add-debt",
                         "iconMask": true,
                         "text": "Add Loan"
@@ -69,25 +70,25 @@
             "designerId": "b2155608-ba31-4289-b560-b58c7ddc3cbe"
         },
         {
-            "type": "dataview",
+            "type": "Ext.dataview.DataView",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyDataView",
-                "designer|userAlias": "mydataview",
                 "baseCls": "x-list",
                 "cls": [
                     "x-list-normal"
                 ],
                 "id": "myDebtDataView",
                 "itemId": null,
+                "designer|userClassName": "MyDataView",
+                "designer|userAlias": "mydataview",
+                "disableSelection": true,
                 "defaultType": "myDebtListItem",
                 "store": "Debts",
-                "useComponents": true,
-                "disableSelection": true
+                "useComponents": true
             },
             "designerId": "0a92a9aa-35d9-469a-878f-2160b3fdbc29"
         }

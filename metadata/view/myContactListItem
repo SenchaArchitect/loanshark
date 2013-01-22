@@ -1,52 +1,52 @@
 {
-    "type": "dataitem",
+    "type": "Ext.dataview.component.DataItem",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "myContactListItem",
-        "designer|userAlias": "myContactListItem",
-        "baseCls": "x-data-item",
         "cls": [
             "x-list-item"
         ],
-        "minHeight": null
+        "minHeight": null,
+        "designer|userClassName": "myContactListItem",
+        "designer|userAlias": "myContactListItem"
     },
-    "id": "ExtBox1-ext-gen28985",
     "designerId": "ed8e32a8-2bee-4972-82cc-60fdcab2e506",
     "cn": [
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer5",
                 "baseCls": "x-list-item-label",
-                "itemId": "contactListItemDetail"
+                "itemId": "contactListItemDetail",
+                "designer|userClassName": "MyContainer5"
             },
             "designerId": "5ffcbaa2-1179-4082-9ca3-f9b75397f924",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton12",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "docked": "right",
                         "height": null,
                         "hidden": true,
                         "itemId": "deleteContact",
                         "margin": "0 0 0 10px",
                         "ui": null,
+                        "designer|userClassName": "MyButton12",
                         "iconCls": "icon-delete",
                         "iconMask": true,
                         "text": "delete"
@@ -102,7 +102,7 @@
                     ]
                 },
                 {
-                    "type": "template",
+                    "type": "Ext.XTemplate",
                     "reference": {
                         "name": "tpl",
                         "type": "object"

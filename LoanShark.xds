@@ -14,10 +14,10 @@
         "saveOnDeploy": false,
         "appName": "MyApp"
     },
-    "xdsVersion": "2.1.0",
-    "xdsBuild": 613,
+    "xdsVersion": "2.2.0",
+    "xdsBuild": 830,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000497,
+    "upgradeVersion": 210000000499,
     "framework": "touch20",
     "topInstanceFileMap": {
         "9c7e563e-7ff0-4ba7-9556-9c0d6c286927": {
@@ -213,6 +213,14 @@
                 "metadata/resource/js"
             ],
             "className": "js"
+        },
+        "52c2451e-ca75-479b-ad33-232f2a4eae28": {
+            "paths": [
+                "metadata/resource/PackageSettings",
+                "",
+                "PackageSettings.json"
+            ],
+            "className": "PackageSettings"
         }
     },
     "viewOrderMap": {
@@ -247,6 +255,7 @@
             "49e77106-a613-44e5-8af8-44300ffc6595"
         ],
         "resource": [
+            "52c2451e-ca75-479b-ad33-232f2a4eae28",
             "ce8f1709-75f8-4f81-b948-890b2047ecd8",
             "e0fc0f11-5bd9-4b48-890e-e5d786ed821d",
             "87119690-45e1-432b-bbc9-b1f91c965bb3"

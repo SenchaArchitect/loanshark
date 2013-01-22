@@ -1,47 +1,48 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "padding": "0 0 12px 0",
         "designer|userClassName": "ContactDetail",
         "designer|userAlias": "ContactDetail",
-        "padding": "0 0 12px 0",
         "autoDestroy": false,
         "layout": "vbox"
     },
-    "id": "ExtBox1-ext-gen17065",
     "designerId": "d2bdb0dd-5320-4693-8b47-e897fdfdca71",
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar2",
                 "docked": "top",
                 "ui": "light",
+                "designer|userClassName": "MyTitleBar2",
                 "title": "Prey Details"
             },
             "designerId": "bdbd3b46-7c2a-4495-aa70-f9f00a940e9b",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton1",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "cancelContact",
                         "ui": null,
+                        "designer|userClassName": "MyButton1",
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
@@ -51,20 +52,20 @@
             ]
         },
         {
-            "type": "toolbar",
+            "type": "Ext.Toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyToolbar",
-                "docked": "bottom"
+                "docked": "bottom",
+                "designer|userClassName": "MyToolbar"
             },
             "designerId": "0c718cb8-fa24-486a-9462-944706eb38ce",
             "cn": [
                 {
-                    "type": "spacer",
+                    "type": "Ext.Spacer",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -76,18 +77,20 @@
                     "designerId": "6d480fcd-250b-4437-905e-d2a4ce7f44dd"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton2",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "saveContact",
                         "itemId": null,
                         "ui": null,
+                        "designer|userClassName": "MyButton2",
                         "iconCls": "icon-save",
                         "iconMask": true,
                         "text": "save"
@@ -97,58 +100,60 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer7",
                 "height": null,
-                "margin": "0 0 10px 0"
+                "margin": "0 0 10px 0",
+                "designer|userClassName": "MyContainer7"
             },
             "designerId": "6648c790-2bf9-42ad-8643-d9ca02f27861",
             "cn": [
                 {
-                    "type": "label",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyLabel2",
-                        "designer|displayName": null,
                         "height": 100,
                         "html": null,
                         "id": "contactHeaderLabel",
                         "padding": null,
-                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
+                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;",
+                        "designer|userClassName": "MyLabel2",
+                        "designer|displayName": null
                     },
                     "designerId": "9ca2bea9-7bdd-4e46-b2f5-c8ed59a02ed4"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "addDebt",
                         "itemId": null,
                         "margin": "10px 10px 5px 10px",
                         "style": "border-radius: 0; color: black;",
                         "ui": "gray-light-button",
+                        "designer|userClassName": "MyButton",
                         "text": "New Loan"
                     },
                     "designerId": "c9660dce-9039-43c7-999d-e84a9314f24f"
                 },
                 {
-                    "type": "fieldset",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -161,7 +166,7 @@
                     "designerId": "a2070b04-a63b-4f94-bb52-35f8bcbaaf49",
                     "cn": [
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -176,7 +181,7 @@
                             "designerId": "250487bb-67f7-456a-b740-8e43d199339d"
                         },
                         {
-                            "type": "emailfield",
+                            "type": "Ext.field.Email",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -192,7 +197,7 @@
                             "designerId": "5c0f9331-de10-4cbc-8097-4ccc8d190d3e"
                         },
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -211,7 +216,7 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -224,35 +229,33 @@
             "designerId": "f282a32c-f89a-4c7f-94e7-3c8d5a6ce2dd",
             "cn": [
                 {
-                    "type": "label",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyLabel",
-                        "designer|displayName": "Loan History",
                         "baseCls": null,
                         "html": "Loan History",
                         "id": "loanHistoryLabel",
                         "margin": "0 12px",
                         "padding": "0 0 8px 8px",
                         "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
-                        "styleHtmlCls": null
+                        "styleHtmlCls": null,
+                        "designer|userClassName": "MyLabel",
+                        "designer|displayName": "Loan History"
                     },
                     "designerId": "91dd2649-c3a0-4663-8f92-a05377672d62"
                 },
                 {
-                    "type": "dataview",
+                    "type": "Ext.dataview.DataView",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyDataView",
-                        "designer|userAlias": "mydataview",
                         "baseCls": "x-list",
                         "cls": [
                             "x-list-normal"
@@ -261,14 +264,12 @@
                         "id": "myDebtDataView",
                         "itemId": null,
                         "padding": "0 22px",
+                        "designer|userClassName": "MyDataView",
+                        "designer|userAlias": "mydataview",
+                        "disableSelection": true,
                         "defaultType": "myDebtListItem",
-                        "scrollable": [
-                            "false",
-                            ""
-                        ],
                         "store": "Debts",
-                        "useComponents": true,
-                        "disableSelection": true
+                        "useComponents": true
                     },
                     "designerId": "cbb6c1e5-2d1d-4b02-9862-835d804d0f52"
                 }

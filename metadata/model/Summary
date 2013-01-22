@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,19 +8,18 @@
     "userConfig": {
         "designer|userClassName": "Summary"
     },
-    "id": "ExtBox1-ext-gen11025",
     "designerId": "49e77106-a613-44e5-8af8-44300ffc6595",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField17",
-                "name": "totalOwed"
+                "name": "totalOwed",
+                "designer|userClassName": "MyField17"
             },
             "designerId": "de8356a0-aa51-4b7e-bbbb-30863971ef73"
         }

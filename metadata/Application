@@ -1,5 +1,5 @@
 {
-    "type": "application",
+    "type": "Ext.app.Application",
     "reference": {
         "name": "items",
         "type": "array"
@@ -29,6 +29,13 @@
             "PaymentDetail",
             "myPaymentListItem"
         ],
+        "controllers": [
+            "Contact",
+            "Summary",
+            "Debt",
+            "Payment",
+            "Routing"
+        ],
         "icon": [
             "{",
             "    57: 'resources/images/splash/icons/Icon.png',",
@@ -38,8 +45,9 @@
             "}",
             ""
         ],
-        "isIconPrecomposed": true,
         "name": "Payback",
+        "statusBarStyle": null,
+        "isIconPrecomposed": true,
         "startupImage": [
             "{",
             "    '320x460': 'resources/images/splash/loading/Default.png',",
@@ -50,30 +58,20 @@
             "",
             "",
             ""
-        ],
-        "statusBarStyle": null,
-        "controllers": [
-            "Contact",
-            "Summary",
-            "Debt",
-            "Payment",
-            "Routing"
         ]
     },
-    "id": "ExtBox1-ext-gen2164",
     "designerId": "application",
     "cn": [
         {
-            "type": "loader",
+            "type": "Ext.Loader",
             "reference": {
                 "name": "loader",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "Loader",
                 "disableCaching": false,
-                "enabled": true
+                "designer|userClassName": "Loader"
             },
             "designerId": "5be3ef8a-0f0e-484d-a1cc-08041ef1ba4d"
         }

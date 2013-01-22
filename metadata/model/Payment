@@ -1,92 +1,91 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Payment",
         "identifier": [
             "{",
             "    type: 'uuid'",
             "}"
-        ]
+        ],
+        "designer|userClassName": "Payment"
     },
-    "id": "ExtBox1-ext-gen21583",
     "designerId": "5f8fbc87-7f38-40ea-af4e-4e27c41555b7",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField6",
                 "name": "id",
-                "type": "auto"
+                "type": "auto",
+                "designer|userClassName": "MyField6"
             },
             "designerId": "26878ecc-6d5a-45aa-95e3-25683e700457"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField8",
-                "name": "debt_id"
+                "name": "debt_id",
+                "designer|userClassName": "MyField8"
             },
             "designerId": "4626a5d6-0cd7-4cca-ac4b-dad445a4eb47"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField3",
                 "name": "amount",
-                "type": "float"
+                "type": "float",
+                "designer|userClassName": "MyField3"
             },
             "designerId": "67f09ffe-46ec-4033-ba89-780451b2adb3"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField4",
                 "name": "date",
-                "type": "date"
+                "type": "date",
+                "designer|userClassName": "MyField4"
             },
             "designerId": "cd556de8-21ac-4f6c-a7d8-429da25992fd"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField5",
                 "name": "memo",
-                "type": "string"
+                "type": "string",
+                "designer|userClassName": "MyField5"
             },
             "designerId": "cc003acc-a5c8-4b0b-b5f9-e2ae44205422"
         },
         {
-            "type": "localstorageproxy",
+            "type": "Ext.data.proxy.LocalStorage",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -99,7 +98,7 @@
             "designerId": "e17d93d4-cc20-4c8d-bef3-9bbbc3096370"
         },
         {
-            "type": "belongstoassociation",
+            "type": "Ext.data.association.BelongsTo",
             "reference": {
                 "name": "belongsTo",
                 "type": "object"
