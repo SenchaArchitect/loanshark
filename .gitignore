@@ -1,8 +1,7 @@
-.DS_Store
-app/.DS_Store
+*.DS_Store
 
-resources/.DS_Store
-resources/sass/.sass-cache/*
+LoanShark/resources/sass/.sass-cache
 
-.senchasdk
-.architect
+LoanShark/.senchasdk
+LoanShark/.architect
+*.idea
