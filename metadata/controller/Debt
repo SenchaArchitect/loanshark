@@ -1,5 +1,5 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,7 +8,6 @@
     "userConfig": {
         "designer|userClassName": "Debt"
     },
-    "id": "ExtBox1-ext-gen43233",
     "designerId": "9492a36c-015b-4b23-8dad-68f6f48b9841",
     "cn": [
         {
@@ -211,7 +210,6 @@
                     "    labels.show();",
                     "}, single:true});"
                 ],
-                "element": null,
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "#myDebtDataView"
@@ -427,13 +425,14 @@
             "designerId": "722c9d57-b862-4057-befa-fd3f9e29bb97"
         },
         {
-            "type": "controllerroute",
+            "type": "Ext.app.Route",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "url": "/Debt/:id",
                 "designer|userClassName": "gotoDebtDetail",
                 "fn": "gotoDebtDetail",
                 "designer|params": [
@@ -455,8 +454,7 @@
                     "        this.onDataviewItemTap(dataView,id,null, dataItem.getRecord());  ",
                     "    }",
                     "}"
-                ],
-                "url": "/Debt/:id"
+                ]
             },
             "designerId": "69d50fef-47fd-4c29-8e8d-079d944ebc84"
         }

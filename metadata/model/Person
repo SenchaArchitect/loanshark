@@ -1,19 +1,18 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Person",
         "identifier": [
             "{",
             "    type: 'uuid'",
             "}"
-        ]
+        ],
+        "designer|userClassName": "Person"
     },
-    "id": "ExtBox1-ext-gen21470",
     "designerId": "8f5b5a7e-3ece-48a2-9e58-f61bb1c1bf51",
     "customConfigs": [
         {
@@ -24,7 +23,7 @@
     ],
     "cn": [
         {
-            "type": "localstorageproxy",
+            "type": "Ext.data.proxy.LocalStorage",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -37,15 +36,15 @@
             "designerId": "8cbf9d6c-e2cb-40ad-8510-6a7f94c0d2cd"
         },
         {
-            "type": "hasmanyassociation",
+            "type": "Ext.data.association.HasMany",
             "reference": {
                 "name": "hasMany",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyHasManyAssociation",
                 "associationKey": "person_id",
+                "designer|userClassName": "MyHasManyAssociation",
                 "model": "Debt",
                 "autoLoad": true,
                 "foreignKey": "person_id",
@@ -60,72 +59,72 @@
             "designerId": "aab84bcf-5948-4602-94cc-8660b58b6ba8"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField7",
                 "name": "id",
-                "type": "auto"
+                "type": "auto",
+                "designer|userClassName": "MyField7"
             },
             "designerId": "fa65d037-3f6d-4771-9b84-11138309722e"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField",
-                "name": "name"
+                "name": "name",
+                "designer|userClassName": "MyField"
             },
             "designerId": "171b9950-6971-45c4-a8ef-4ff484f44774"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField",
-                "name": "phone"
+                "name": "phone",
+                "designer|userClassName": "MyField"
             },
             "designerId": "f96094bc-df96-4df2-8829-1b9927e6f852"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField",
-                "name": "email"
+                "name": "email",
+                "designer|userClassName": "MyField"
             },
             "designerId": "8600b0f8-b8c9-4b1e-ba82-55783ba81073"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField",
-                "name": "balance",
                 "defaultValue": [
                     "0"
                 ],
-                "type": "float"
+                "name": "balance",
+                "type": "float",
+                "designer|userClassName": "MyField"
             },
             "designerId": "61181811-04da-476e-a829-1b88183a03ba"
         },

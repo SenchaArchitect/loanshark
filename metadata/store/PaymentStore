@@ -1,16 +1,15 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "PaymentStore",
         "autoLoad": true,
         "model": "Payment",
-        "storeId": "Payments"
+        "storeId": "Payments",
+        "designer|userClassName": "PaymentStore"
     },
-    "id": "ExtBox1-ext-gen3716",
     "designerId": "517bbd27-6be2-4dd8-b7d7-5d2ebb2e78f6"
 }

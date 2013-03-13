@@ -1,5 +1,5 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,17 +8,17 @@
     "userConfig": {
         "designer|userClassName": "Routing"
     },
-    "id": "ExtBox1-ext-gen1987",
     "designerId": "3482a60a-7318-4e06-8b50-c3cfccd4d927",
     "cn": [
         {
-            "type": "controllerroute",
+            "type": "Ext.app.Route",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "url": "/:tabId",
                 "designer|userClassName": "gotoTab",
                 "fn": "gotoTab",
                 "designer|params": [
@@ -31,8 +31,7 @@
                     "var tabPanel = this.getMainView(), //uses our Controller Reference",
                     "tabCmp = tabPanel.child('#' + tabId);",
                     "tabPanel.setActiveItem(tabCmp || 0);"
-                ],
-                "url": "/:tabId"
+                ]
             },
             "designerId": "c7cf6907-eb75-4538-a0c0-f53ba521ccc6"
         },

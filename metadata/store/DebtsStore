@@ -1,31 +1,30 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "DebtsStore",
         "autoLoad": true,
         "groupDir": "DESC",
         "groupField": "date",
         "model": "Debt",
-        "storeId": "Debts"
+        "storeId": "Debts",
+        "designer|userClassName": "DebtsStore"
     },
-    "id": "ExtBox1-ext-gen7584",
     "designerId": "ef0bd167-5093-4697-a61f-0595c4aafc73",
     "cn": [
         {
-            "type": "grouper",
+            "type": "Ext.util.Grouper",
             "reference": {
                 "name": "grouper",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyGrouper",
-                "direction": "DESC"
+                "direction": "DESC",
+                "designer|userClassName": "MyGrouper"
             },
             "designerId": "07a9b1bb-48b5-45a7-a3a2-c82aec115a88",
             "cn": [

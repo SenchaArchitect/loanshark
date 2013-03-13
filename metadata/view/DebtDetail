@@ -1,39 +1,38 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "DebtDetail",
-        "designer|userAlias": "DebtDetail",
         "margin": null,
         "padding": "0 0 12px 0",
         "style": "background:  black; ",
+        "designer|userClassName": "DebtDetail",
+        "designer|userAlias": "DebtDetail",
         "autoDestroy": false,
         "layout": "vbox",
         "scrollable": null
     },
-    "id": "ExtBox1-ext-gen25572",
     "designerId": "1b7b0c08-5968-4072-ba7f-815dd2cfe595",
     "cn": [
         {
-            "type": "toolbar",
+            "type": "Ext.Toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyToolbar",
                 "docked": "bottom",
-                "ui": null
+                "ui": null,
+                "designer|userClassName": "MyToolbar"
             },
             "designerId": "a3e76cd8-511f-4a9a-b413-8aab309ad402",
             "cn": [
                 {
-                    "type": "spacer",
+                    "type": "Ext.Spacer",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -45,18 +44,20 @@
                     "designerId": "d047fde9-ec46-4298-9c9d-7d08c237c7c9"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton2",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "saveDebt",
                         "itemId": null,
                         "ui": null,
+                        "designer|userClassName": "MyButton2",
                         "iconCls": "icon-save",
                         "iconMask": true,
                         "text": "save"
@@ -66,32 +67,34 @@
             ]
         },
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar2",
                 "docked": "top",
                 "ui": "light",
+                "designer|userClassName": "MyTitleBar2",
                 "title": "Loan Details"
             },
             "designerId": "4f84be6f-83d8-497c-b1ac-f5a60ceba491",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton1",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "cancelDebt",
                         "ui": null,
+                        "designer|userClassName": "MyButton1",
                         "iconCls": "icon-back",
                         "iconMask": true,
                         "text": "Cancel"
@@ -99,7 +102,7 @@
                     "designerId": "a48499b1-bc85-4e33-b9f0-9162d37bbea3"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -107,10 +110,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "align": "right",
-                        "designer|userClassName": "MyButton16",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "emailDebt",
                         "ui": null,
+                        "designer|userClassName": "MyButton16",
                         "icon": null,
                         "iconAlign": null,
                         "iconCls": "icon-email",
@@ -122,7 +127,7 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -130,67 +135,69 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": null,
-                "designer|userClassName": "MyContainer7",
                 "height": null,
                 "margin": "0 0 10px 0",
+                "designer|userClassName": "MyContainer7",
                 "scrollable": null
             },
             "designerId": "858866cc-7388-477e-92ce-e6d7596941bc",
             "cn": [
                 {
-                    "type": "label",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyLabel2",
-                        "designer|displayName": null,
                         "height": 100,
                         "html": null,
                         "id": "debtHeaderLabel",
                         "padding": null,
-                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;"
+                        "style": "font-weight: bold;text-align: center; font-size: 75px;background-color: #FE8A28; color: white;",
+                        "designer|userClassName": "MyLabel2",
+                        "designer|displayName": null
                     },
                     "designerId": "ef57bc50-4489-4af5-8d31-ec40c01daf4b"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton15",
-                        "cls": "my-buttons",
+                        "cls": [
+                            "my-buttons"
+                        ],
                         "id": "addPayment",
                         "margin": "10px 10px 5px 10px",
                         "padding": "5px",
                         "style": "border-radius: 0; color: black;",
                         "ui": "gray-light-button",
+                        "designer|userClassName": "MyButton15",
                         "iconCls": null,
                         "text": "Add Payment"
                     },
                     "designerId": "daea8fce-f6bc-4f60-805b-6e46475da0a1"
                 },
                 {
-                    "type": "fieldset",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet",
                         "itemId": "myfieldset1",
+                        "designer|userClassName": "MyFieldSet",
                         "title": null
                     },
                     "designerId": "2d84ec3f-b424-4ec0-b2ab-d1e4350e09a9",
                     "cn": [
                         {
-                            "type": "selectfield",
+                            "type": "Ext.field.Select",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -201,15 +208,15 @@
                                 "label": "Prey",
                                 "labelAlign": "top",
                                 "name": "person_id",
+                                "ui": null,
                                 "displayField": "name",
                                 "store": "People",
-                                "ui": null,
                                 "valueField": "id"
                             },
                             "designerId": "24090648-ab3d-4fa4-badc-24f5086623e1"
                         },
                         {
-                            "type": "datepickerfield",
+                            "type": "Ext.field.DatePicker",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -224,45 +231,49 @@
                             "designerId": "7055dae5-23c7-42e0-996c-5cfbb7677fd4",
                             "cn": [
                                 {
-                                    "type": "datepicker",
+                                    "type": "Ext.picker.Date",
                                     "reference": {
                                         "name": "picker",
                                         "type": "object"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyDatePicker1",
                                         "style": null,
-                                        "ui": "dark"
+                                        "ui": "dark",
+                                        "designer|userClassName": "MyDatePicker1"
                                     },
                                     "designerId": "09884122-5cae-453b-bd79-70e2786328af",
                                     "cn": [
                                         {
-                                            "type": "button",
+                                            "type": "Ext.Button",
                                             "reference": {
                                                 "name": "doneButton",
                                                 "type": "object"
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "MyButton9",
-                                                "cls": "my-buttons",
+                                                "cls": [
+                                                    "my-buttons"
+                                                ],
                                                 "ui": "gray-button",
+                                                "designer|userClassName": "MyButton9",
                                                 "text": "Done"
                                             },
                                             "designerId": "065f0052-81d1-4302-9f6d-221624f21722"
                                         },
                                         {
-                                            "type": "button",
+                                            "type": "Ext.Button",
                                             "reference": {
                                                 "name": "cancelButton",
                                                 "type": "object"
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "MyButton10",
-                                                "cls": "my-buttons",
+                                                "cls": [
+                                                    "my-buttons"
+                                                ],
                                                 "ui": "gray-light-button",
+                                                "designer|userClassName": "MyButton10",
                                                 "text": "Cancel"
                                             },
                                             "designerId": "77295d35-706d-47ae-a259-b8f910d9e16f"
@@ -272,15 +283,15 @@
                             ]
                         },
                         {
-                            "type": "numberfield",
+                            "type": "Ext.field.Number",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyNumberField",
                                 "itemId": "mynumberfield",
+                                "designer|userClassName": "MyNumberField",
                                 "label": "Original Loan Amount",
                                 "labelAlign": "top",
                                 "name": "amount"
@@ -288,7 +299,7 @@
                             "designerId": "753db45f-f78c-47f4-92c9-d3e0dac99a60"
                         },
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -307,7 +318,7 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -315,40 +326,39 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": null,
-                "designer|userClassName": "MyContainer8",
-                "style": null
+                "style": null,
+                "designer|userClassName": "MyContainer8"
             },
             "designerId": "9862db9b-499b-4583-b8ba-c42ce66526ce",
             "cn": [
                 {
-                    "type": "label",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyLabel",
-                        "designer|displayName": "Payment History",
                         "baseCls": null,
                         "html": "Payment History",
                         "id": "paymentHistoryLabel",
                         "margin": "0 12px",
                         "padding": "0 0 8px 8px",
                         "style": "font-size: .8em; font-weight: bold;color: gray;border-bottom: 2px solid #333;",
-                        "styleHtmlCls": null
+                        "styleHtmlCls": null,
+                        "designer|userClassName": "MyLabel",
+                        "designer|displayName": "Payment History"
                     },
                     "designerId": "bfa4bc2f-8e41-431d-87e8-442c4bbcb019"
                 },
                 {
-                    "type": "dataview",
+                    "type": "Ext.dataview.DataView",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyDataView",
                         "baseCls": "x-list",
                         "cls": [
                             "x-list-normal"
@@ -360,14 +370,11 @@
                         "minHeight": "",
                         "padding": "0 22px",
                         "style": "color: white;",
+                        "designer|userClassName": "MyDataView",
+                        "disableSelection": true,
                         "defaultType": "myPaymentListItem",
-                        "scrollable": [
-                            "false",
-                            ""
-                        ],
                         "store": "Payments",
-                        "useComponents": true,
-                        "disableSelection": true
+                        "useComponents": true
                     },
                     "designerId": "cf6f83d7-71da-4490-814e-118c64c37e9e"
                 }

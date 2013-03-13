@@ -1,20 +1,19 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Contact",
         "stores": [
             "PeopleStore"
         ],
         "views": [
             "ContactDetail"
-        ]
+        ],
+        "designer|userClassName": "Contact"
     },
-    "id": "ExtBox1-ext-gen51189",
     "designerId": "4924b61f-714b-45ce-aa6a-944c48e631e4",
     "cn": [
         {
@@ -336,13 +335,14 @@
             "designerId": "eebea3e9-deec-452f-be72-f45cacf164b4"
         },
         {
-            "type": "controllerroute",
+            "type": "Ext.app.Route",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "url": "/Prey/:id",
                 "designer|userClassName": "showContactDetail",
                 "fn": "showContactDetail",
                 "designer|params": [
@@ -364,8 +364,7 @@
                     "        this.onDataviewItemTap(dataView,id,null, dataItem.getRecord());  ",
                     "    }",
                     "}"
-                ],
-                "url": "/Prey/:id"
+                ]
             },
             "designerId": "e881ac87-6e14-4684-a0ba-a35ee8cc8caf"
         }

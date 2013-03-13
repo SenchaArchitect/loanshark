@@ -1,24 +1,23 @@
 {
-    "type": "container",
+    "type": "Ext.Container",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Summary",
-        "designer|userAlias": "Summary",
         "id": "SummaryView",
         "padding": null,
         "style": "background:black;",
+        "designer|userClassName": "Summary",
+        "designer|userAlias": "Summary",
         "layout": "fit",
         "scrollable": false
     },
-    "id": "ExtBox1-ext-gen2239",
     "designerId": "d3b832b6-4996-4c75-bb54-57aee2c88185",
     "cn": [
         {
-            "type": "image",
+            "type": "Ext.Img",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -26,11 +25,11 @@
             "codeClass": null,
             "userConfig": {
                 "mode": "background",
-                "designer|userClassName": "MyImage",
                 "centered": null,
                 "height": null,
                 "style": "background-repeat: no-repeat; background-size: auto 100%;background-position: center center;",
                 "width": null,
+                "designer|userClassName": "MyImage",
                 "src": "resources/images/sharky.png"
             },
             "designerId": "4d4b85b5-ffe2-4f8c-9de0-831b8f0f4338",
@@ -43,24 +42,24 @@
             ]
         },
         {
-            "type": "component",
+            "type": "Ext.Component",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyComponent",
                 "docked": "bottom",
                 "height": "",
                 "id": "SummaryContents",
                 "minHeight": null,
-                "style": "font-weight: bold;font-size:1.5em;background-color:#910002;"
+                "style": "font-weight: bold;font-size:1.5em;background-color:#910002;",
+                "designer|userClassName": "MyComponent"
             },
             "designerId": "57f731de-13aa-452d-8afc-c712122443aa",
             "cn": [
                 {
-                    "type": "template",
+                    "type": "Ext.XTemplate",
                     "reference": {
                         "name": "tpl",
                         "type": "object"
