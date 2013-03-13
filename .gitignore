@@ -2,7 +2,6 @@
 app/.DS_Store
 
 resources/.DS_Store
-resources/sass/.sass-cache/*
 
 .senchasdk
 .architect
